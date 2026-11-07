@@ -1,0 +1,132 @@
+# Compile Chevêche pour Android (AAB pour Google Play) à chaque envoi sur main.
+# Les secrets ANDROID_KEYSTORE_BASE64, ANDROID_KEYSTORE_ALIAS et ANDROID_KEYSTORE_PASSWORD
+# servent à signer l'AAB avec la clé de publication. Sans eux, l'AAB est signé avec une clé de test.
+name: Android
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  GODOT_VERSION: "4.4.1"
+
+jobs:
+  aab:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Cache de Godot
+        id: cache-godot
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/godot
+            ~/.local/share/godot/export_templates
+          key: godot-${{ env.GODOT_VERSION }}
+
+      - name: Godot et modèles d'export
+        if: steps.cache-godot.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p "$HOME/godot" && cd "$HOME/godot"
+          base="https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable"
+          curl -fsSL -o godot.zip "$base/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          unzip -q godot.zip && rm godot.zip
+          curl -fsSL -o templates.tpz "$base/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
+          dest="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
+          mkdir -p "$dest" && unzip -q templates.tpz && mv templates/* "$dest/" && rm -rf templates templates.tpz
+
+      - name: Préparer
+        run: |
+          echo "GODOT=$HOME/godot/Godot_v${GODOT_VERSION}-stable_linux.x86_64" >> "$GITHUB_ENV"
+          mkdir -p journal build
+          sdkm="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+          yes | "$sdkm" --licenses > /dev/null || true
+          "$sdkm" --install "platform-tools" "platforms;android-34" "build-tools;34.0.0" "build-tools;36.0.0" > /dev/null
+          keytool -genkeypair -noprompt -keystore "$HOME/debug.keystore" -storepass android -keypass android \
+            -alias androiddebugkey -dname "CN=Android Debug,O=Android,C=US" -keyalg RSA -keysize 2048 -validity 10000
+          major_minor=$(echo "$GODOT_VERSION" | cut -d. -f1,2)
+          mkdir -p "$HOME/.config/godot"
+          {
+            echo '[gd_resource type="EditorSettings" format=3]'
+            echo ''
+            echo '[resource]'
+            echo "export/android/android_sdk_path = \"$ANDROID_HOME\""
+            echo "export/android/java_sdk_path = \"$JAVA_HOME\""
+            echo "export/android/debug_keystore = \"$HOME/debug.keystore\""
+            echo 'export/android/debug_keystore_user = "androiddebugkey"'
+            echo 'export/android/debug_keystore_pass = "android"'
+          } > "$HOME/.config/godot/editor_settings-${major_minor}.tres"
+
+      - name: Tests du jeu
+        run: |
+          pip install --quiet pillow
+          bash tests/run_all.sh "$GODOT" 2>&1 | tee journal/tests.txt
+
+      - name: Modèle de compilation Android
+        run: |
+          "$GODOT" --headless --path . --install-android-build-template 2>&1 | tail -5 || true
+          if [ ! -f android/build/build.gradle ]; then
+            mkdir -p android/build
+            unzip -q "$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable/android_source.zip" -d android/build
+            echo "${GODOT_VERSION}.stable" > android/.build_version
+            touch android/build/.gdignore
+          fi
+          grep -E "androidGradlePlugin|compileSdk|targetSdk|buildTools" android/build/config.gradle | tee journal/gradle.txt
+
+      - name: Exporter l'AAB
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          KEYSTORE_ALIAS: ${{ secrets.ANDROID_KEYSTORE_ALIAS }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+        run: |
+          if [ -n "$KEYSTORE_B64" ]; then
+            echo "$KEYSTORE_B64" | base64 -d > "$HOME/upload.jks"
+            export GODOT_ANDROID_KEYSTORE_RELEASE_PATH="$HOME/upload.jks"
+            export GODOT_ANDROID_KEYSTORE_RELEASE_USER="$KEYSTORE_ALIAS"
+            export GODOT_ANDROID_KEYSTORE_RELEASE_PASSWORD="$KEYSTORE_PASSWORD"
+            mode=--export-release
+            echo "Signature : clé de publication" | tee journal/export.txt
+          else
+            mode=--export-debug
+            echo "Pas de clé de publication dans les secrets : AAB signé avec une clé de test, non publiable" | tee journal/export.txt
+          fi
+          "$GODOT" --headless --path . $mode "Android AAB" "$PWD/build/cheveche.aab" 2>&1 | tee -a journal/export.txt
+          test -s build/cheveche.aab
+
+      - name: Vérifier l'AAB
+        run: |
+          curl -fsSL -o "$HOME/bundletool.jar" https://github.com/google/bundletool/releases/download/1.17.2/bundletool-all-1.17.2.jar
+          java -jar "$HOME/bundletool.jar" dump manifest --bundle build/cheveche.aab > journal/manifest.xml
+          grep -oE '(package|android:versionCode|android:versionName|android:minSdkVersion|android:targetSdkVersion)="[^"]+"' journal/manifest.xml | tee journal/resume.txt
+          ls -la build/cheveche.aab | tee -a journal/resume.txt
+
+      - name: AAB à télécharger
+        uses: actions/upload-artifact@v4
+        with:
+          name: cheveche-aab
+          path: build/cheveche.aab
+          if-no-files-found: error
+
+      # Journal lisible sans connexion : poussé sur la branche journal-ci.
+      - name: Journal
+        if: always()
+        run: |
+          mkdir -p /tmp/journal && cp -r journal/. /tmp/journal/ 2>/dev/null || true
+          echo "run ${{ github.run_number }} : ${{ job.status }} ($(date -u +%FT%TZ), commit ${GITHUB_SHA::7})" > /tmp/journal/etat.txt
+          cd /tmp/journal && git init -q && git checkout -q -b journal-ci && git add -A
+          git -c user.name="CI Chevêche" -c user.email="ci@users.noreply.github.com" commit -qm "Journal du run ${{ github.run_number }}"
+          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" journal-ci

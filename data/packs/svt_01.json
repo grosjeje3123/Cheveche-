@@ -1,0 +1,636 @@
+{
+  "pack": {
+    "id": "svt_01",
+    "titre": "Pack SVT n° 1",
+    "premier_numero": 1,
+    "langue": "fr",
+    "version": 2,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Botanique": "Nature",
+      "Biologie végétale": "Nature",
+      "Zoologie": "Nature",
+      "Paléontologie": "Nature",
+      "Biologie": "Nature",
+      "Biologie humaine": "Sciences",
+      "Biologie moléculaire": "Sciences",
+      "Géologie": "Sciences",
+      "Sciences de la Terre": "Sciences"
+    }
+  },
+  "questions": [
+    {
+      "id": "svt01-q01",
+      "titre": "Pollinisation",
+      "categorie": "Botanique",
+      "difficulte": "facile",
+      "question": "Quel service les abeilles rendent-elles aux plantes à fleurs en allant de fleur en fleur ?",
+      "indices": [
+        "Ce service concerne la reproduction des plantes.",
+        "Des grains produits par les étamines sont déposés sur le pistil."
+      ],
+      "reponse": "La pollinisation par les abeilles.",
+      "reponse_courte": "La pollinisation",
+      "distracteurs": [
+        "La dispersion des graines",
+        "La photosynthèse",
+        "La fixation de l’azote"
+      ],
+      "variantes_acceptees": [
+        "pollinisation",
+        "la pollinisation",
+        "pollinisation par les abeilles",
+        "pollinisation entomophile",
+        "transport du pollen",
+        "il transporte le pollen",
+        "il pollinise les fleurs"
+      ],
+      "explication": "Les abeilles butinent les fleurs pour récolter nectar et pollen. En passant d’une fleur à l’autre, elles déposent des grains de pollen sur le stigmate, ce qui permet la fécondation, puis la formation des graines et des fruits. Ce transport de pollen par les insectes s’appelle la pollinisation entomophile ; l’abeille n’en est qu’un acteur parmi d’autres (bourdons, syrphes, papillons, coléoptères…).",
+      "anecdote": "Pour signaler à ses congénères où se trouvent les fleurs, l’abeille effectue une « danse frétillante » dont l’orientation et la durée codent la direction et la distance. Karl von Frisch, qui l’a décryptée, a reçu le prix Nobel de physiologie ou médecine en 1973.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "abeille transportant du pollen sur une fleur",
+        "fichier": "svt01-q01.jpg",
+        "auteur": "U.S. Fish and Wildlife Service - Midwest Region",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Bee_covered_in_pollen_(51339971962).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/7/72/Bee_covered_in_pollen_%2851339971962%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "svt01-q02",
+      "titre": "Plante carnivore",
+      "categorie": "Botanique",
+      "difficulte": "moyenne",
+      "question": "Pourquoi certaines plantes, comme la dionée ou le drosera, capturent-elles des insectes ?",
+      "indices": [
+        "Elles poussent souvent sur des sols très pauvres, comme les tourbières.",
+        "Elles digèrent leurs proies pour compléter ce que le sol ne fournit pas."
+      ],
+      "reponse": "Pour obtenir notamment de l’azote et d’autres nutriments minéraux.",
+      "reponse_courte": "Pour se procurer azote et sels minéraux",
+      "distracteurs": [
+        "Pour remplacer la photosynthèse",
+        "Pour se protéger des herbivores",
+        "Pour attirer des pollinisateurs"
+      ],
+      "variantes_acceptees": [
+        "pour obtenir de l’azote",
+        "pour l’azote",
+        "apport d’azote",
+        "obtenir des nutriments",
+        "obtenir des sels minéraux",
+        "azote et phosphore",
+        "compléter son alimentation en azote"
+      ],
+      "explication": "Les plantes carnivores poussent souvent dans des milieux acides et pauvres en azote et en phosphore, comme les tourbières. Elles réalisent la photosynthèse comme les autres plantes, mais leurs feuilles transformées en pièges capturent des proies dont elles digèrent les tissus pour absorber ces nutriments minéraux qui manquent au sol.",
+      "anecdote": "Chez la dionée, le piège ne se referme que si deux poils sensibles sont touchés à une vingtaine de secondes d’intervalle : une simple goutte de pluie ne suffit pas.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Dionée attrape-mouche",
+        "fichier": "svt01-q02.jpg",
+        "auteur": "Philiptdotcom",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Dionaea_muscipula_PT_20240516_063394.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Dionaea_muscipula_PT_20240516_063394.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "svt01-q03",
+      "titre": "Grains de pollen",
+      "categorie": "Botanique",
+      "difficulte": "facile",
+      "question": "Quels grains microscopiques portent les cellules reproductrices mâles des plantes à fleurs ?",
+      "indices": [
+        "Leur surface, vue au microscope, est souvent ornée de piquants ou de sillons.",
+        "Le vent et les insectes les transportent d’une fleur à l’autre."
+      ],
+      "reponse": "Des grains de pollen.",
+      "reponse_courte": "Des grains de pollen",
+      "distracteurs": [
+        "Des spores de fougère",
+        "Des œufs d’insectes",
+        "Des cellules de levure"
+      ],
+      "variantes_acceptees": [
+        "pollen",
+        "du pollen",
+        "grain de pollen",
+        "grains de pollen",
+        "des grains de pollen"
+      ],
+      "explication": "Un grain de pollen est protégé par une paroi très résistante, l’exine, riche en sporopollénine. Il renferme le gamétophyte mâle des plantes à graines. Sa forme et son ornementation varient d’une espèce à l’autre, ce qui permet de les identifier au microscope.",
+      "anecdote": "Le pollen se conserve très bien dans les sédiments des lacs et des tourbières : son étude, la palynologie, permet de reconstituer les végétations et les climats du passé.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "grains de pollen observés au microscope",
+        "fichier": "svt01-q03.jpg",
+        "auteur": "Pavel.Somov",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Pollen_grain_FoV_40um.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/18/Pollen_grain_FoV_40um.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "svt01-q04",
+      "titre": "Stomates",
+      "categorie": "Biologie végétale",
+      "difficulte": "difficile",
+      "question": "Comment s’appellent les pores des feuilles par lesquels la plante échange des gaz ?",
+      "indices": [
+        "Chacun s’ouvre et se ferme grâce à deux cellules en forme de haricot.",
+        "Ils laissent entrer le dioxyde de carbone et sortir la vapeur d’eau."
+      ],
+      "reponse": "Les stomates.",
+      "reponse_courte": "Les stomates",
+      "distracteurs": [
+        "Les lenticelles",
+        "Les nervures",
+        "Les poils absorbants"
+      ],
+      "variantes_acceptees": [
+        "stomate",
+        "stomates",
+        "les stomates",
+        "des stomates",
+        "ostiole",
+        "échanges gazeux",
+        "régulation des échanges gazeux",
+        "transpiration"
+      ],
+      "explication": "Un stomate est un pore de l’épiderme, entouré de deux cellules de garde qui l’ouvrent ou le ferment selon leur turgescence. Il laisse entrer le dioxyde de carbone nécessaire à la photosynthèse, et sortir le dioxygène et la vapeur d’eau (transpiration). Cette transpiration entretient la montée de la sève brute dans la plante.",
+      "anecdote": "Chez de nombreuses espèces, les stomates sont plus nombreux sur la face inférieure des feuilles, à l’abri du soleil direct, ce qui limite les pertes d’eau.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "stomates observés au microscope électronique",
+        "fichier": "svt01-q04.jpg",
+        "auteur": "Andel",
+        "licence": "CC0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:SEM_Furcraea_foetida_leave_14.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/5d/SEM_Furcraea_foetida_leave_14.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "svt01-q05",
+      "titre": "Trompe du papillon",
+      "categorie": "Zoologie",
+      "difficulte": "facile",
+      "question": "À quoi sert la trompe enroulée du papillon ?",
+      "indices": [
+        "C’est une pièce buccale, enroulée quand elle ne sert pas.",
+        "Le papillon s’en sert comme d’une paille."
+      ],
+      "reponse": "La trompe, ou proboscis.",
+      "reponse_courte": "À aspirer le nectar",
+      "distracteurs": [
+        "À percevoir les odeurs",
+        "À pondre ses œufs",
+        "À se défendre des prédateurs"
+      ],
+      "variantes_acceptees": [
+        "trompe",
+        "la trompe",
+        "proboscis",
+        "spiritrompe",
+        "la trompe du papillon",
+        "aspirer le nectar",
+        "pour aspirer le nectar",
+        "se nourrir de nectar"
+      ],
+      "explication": "Chez les papillons, la trompe (ou spiritrompe) est formée par deux pièces buccales allongées, les galéas, qui s’emboîtent en un canal. Au repos, elle reste enroulée sous la tête ; elle se déroule pour aspirer le nectar des fleurs ou d’autres liquides sucrés.",
+      "anecdote": "En 1862, Charles Darwin examine une orchidée de Madagascar dont le nectar se trouve au fond d’un éperon d’une trentaine de centimètres et prédit l’existence d’un papillon à très longue trompe. Le sphinx correspondant est découvert en 1903.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "macro de la trompe d’un papillon",
+        "fichier": "svt01-q05.jpg",
+        "auteur": "Marco Dias",
+        "licence": "CC BY 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Hummingbird_Hawk_Moth_(122460975).jpeg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Hummingbird_Hawk_Moth_%28122460975%29.jpeg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by/3.0"
+      }
+    },
+    {
+      "id": "svt01-q06",
+      "titre": "Camouflage du poulpe",
+      "categorie": "Zoologie",
+      "difficulte": "difficile",
+      "question": "Comment le poulpe parvient-il à changer de couleur pour se camoufler ?",
+      "indices": [
+        "Le mécanisme se trouve dans sa peau.",
+        "De petits sacs de pigments, entourés de muscles, s’étirent ou se resserrent."
+      ],
+      "reponse": "Grâce aux chromatophores.",
+      "reponse_courte": "Grâce aux chromatophores",
+      "distracteurs": [
+        "En projetant un nuage d’encre",
+        "Grâce à des algues dans sa peau",
+        "En absorbant les pigments des proies"
+      ],
+      "variantes_acceptees": [
+        "le camouflage du poulpe",
+        "chromatophores",
+        "les chromatophores",
+        "grâce aux chromatophores",
+        "cellules pigmentaires",
+        "changer de couleur",
+        "changement de couleur",
+        "camouflage",
+        "le camouflage"
+      ],
+      "explication": "La peau des poulpes contient des milliers de chromatophores : de petits sacs de pigments entourés de muscles que le système nerveux peut contracter ou relâcher en une fraction de seconde. Associés à des cellules réfléchissantes et à des papilles qui modifient la texture de la peau, ils permettent de reproduire les couleurs, les motifs et même le relief du milieu.",
+      "anecdote": "Les yeux du poulpe commun ne possèdent qu’un seul type de photorécepteur : il ne distinguerait pas les couleurs, et la façon dont il ajuste si bien les siennes reste en partie un mystère.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "poulpe camouflé dans un récif",
+        "fichier": "svt01-q06.jpg",
+        "auteur": "LASZLO ILYES from Cleveland, Ohio, USA",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Night_Moves_(48885233693).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Night_Moves_%2848885233693%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "svt01-q07",
+      "titre": "Globules rouges",
+      "categorie": "Biologie humaine",
+      "difficulte": "facile",
+      "question": "Quelle est la fonction principale des globules rouges du sang ?",
+      "indices": [
+        "Ce sont les cellules les plus nombreuses du sang, en forme de disque creux.",
+        "Elles renferment une protéine riche en fer, qui colore le sang en rouge."
+      ],
+      "reponse": "Transporter le dioxygène, des poumons vers les tissus.",
+      "reponse_courte": "Transporter l’oxygène",
+      "distracteurs": [
+        "Combattre les infections",
+        "Coaguler le sang",
+        "Produire des anticorps"
+      ],
+      "variantes_acceptees": [
+        "globules rouges",
+        "les globules rouges",
+        "hématies",
+        "les hématies",
+        "érythrocytes",
+        "transport de l’oxygène",
+        "transporter l’oxygène",
+        "transport du dioxygène"
+      ],
+      "explication": "Les globules rouges (hématies ou érythrocytes) sont des cellules en forme de disque creux qui circulent dans le sang. Elles contiennent de l’hémoglobine, une protéine riche en fer qui fixe le dioxygène dans les poumons et le libère dans les tissus. Fabriquées dans la moelle osseuse, elles vivent environ quatre mois.",
+      "anecdote": "Les globules rouges des mammifères n’ont plus de noyau à maturité, ce qui laisse plus de place à l’hémoglobine. L’organisme humain en fabrique de l’ordre de deux millions par seconde.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "globules rouges observés au microscope",
+        "fichier": "svt01-q07.jpg",
+        "auteur": "Joan-Lluis Vives-Corrons, Elena Krishnevskaya",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Red_Blood_Cells_observed_with_scanning_electron_microscope_(SEM)._Left_spherocyte._Right_normal_red_blood_cell.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Red_Blood_Cells_observed_with_scanning_electron_microscope_%28SEM%29._Left_spherocyte._Right_normal_red_blood_cell.png",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "svt01-q08",
+      "titre": "Nautile",
+      "categorie": "Zoologie",
+      "difficulte": "moyenne",
+      "question": "Quel mollusque marin règle sa flottabilité grâce à une coquille spiralée cloisonnée ?",
+      "indices": [
+        "C’est un cousin de la pieuvre et du calmar.",
+        "Il vit dans l’Indo-Pacifique, jusqu’à plusieurs centaines de mètres de profondeur."
+      ],
+      "reponse": "Le nautile.",
+      "reponse_courte": "Le nautile",
+      "distracteurs": [
+        "L’escargot",
+        "L’huître perlière",
+        "Le bernard-l’ermite"
+      ],
+      "variantes_acceptees": [
+        "nautile",
+        "le nautile",
+        "un nautile",
+        "nautilus"
+      ],
+      "explication": "Le nautile est un mollusque céphalopode de l’Indo-Pacifique qui vit dans une coquille spiralée divisée en loges. L’animal occupe la dernière loge ; les autres contiennent du gaz et un peu de liquide, ce qui lui permet de régler sa flottabilité grâce à un tube, le siphon.",
+      "anecdote": "On associe souvent la coquille du nautile au nombre d’or, mais sa spirale n’est pas une spirale d’or : c’est une spirale logarithmique, comme celle de beaucoup de coquilles.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "coquille de nautile en coupe",
+        "fichier": "svt01-q08.jpg",
+        "auteur": "Sérgio Valle Duarte",
+        "licence": "CC BY 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:A_Nautilus_macromphalus_shell_inside.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/0c/A_Nautilus_macromphalus_shell_inside.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by/3.0"
+      }
+    },
+    {
+      "id": "svt01-q09",
+      "titre": "Ammonite",
+      "categorie": "Paléontologie",
+      "difficulte": "difficile",
+      "question": "Les ammonites, fossiles très recherchés, appartenaient à quel groupe d’animaux ?",
+      "indices": [
+        "Ce sont des mollusques marins qui ont vécu pendant plus de 300 millions d’années.",
+        "Leurs cousins actuels sont les pieuvres et les calmars."
+      ],
+      "reponse": "Les ammonites, des céphalopodes aujourd’hui disparus.",
+      "reponse_courte": "Les céphalopodes",
+      "distracteurs": [
+        "Les gastéropodes",
+        "Les bivalves",
+        "Les brachiopodes"
+      ],
+      "variantes_acceptees": [
+        "ammonite",
+        "ammonites",
+        "les ammonites",
+        "céphalopodes",
+        "des céphalopodes",
+        "les céphalopodes"
+      ],
+      "explication": "Les ammonites étaient des mollusques céphalopodes marins à coquille spiralée cloisonnée, présents du Dévonien à la fin du Crétacé. Elles ont disparu il y a environ 66 millions d’années, lors de l’extinction de masse qui a aussi mis fin au règne des dinosaures non aviens. Leur évolution rapide en fait d’excellents fossiles repères pour dater les roches.",
+      "anecdote": "Leur nom vient du dieu égyptien Ammon, représenté avec des cornes de bélier, que rappelle la coquille enroulée.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "fossile d’ammonite",
+        "fichier": "svt01-q09.jpg",
+        "auteur": "Becks",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Ammonite_fossil_(8606998286).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Ammonite_fossil_%288606998286%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "svt01-q10",
+      "titre": "Trilobite",
+      "categorie": "Paléontologie",
+      "difficulte": "difficile",
+      "question": "Quels arthropodes marins de l’ère primaire ont disparu il y a environ 250 millions d’années ?",
+      "indices": [
+        "Leur corps était protégé par une carapace articulée, renouvelée à chaque mue.",
+        "Leur nom évoque la division de leur corps en trois parties."
+      ],
+      "reponse": "Les trilobites.",
+      "reponse_courte": "Les trilobites",
+      "distracteurs": [
+        "Les crinoïdes",
+        "Les brachiopodes",
+        "Les graptolites"
+      ],
+      "variantes_acceptees": [
+        "trilobite",
+        "trilobites",
+        "les trilobites",
+        "arthropodes",
+        "des arthropodes",
+        "les arthropodes"
+      ],
+      "explication": "Les trilobites étaient des arthropodes marins au corps divisé en trois lobes et couvert d’une carapace articulée, qu’ils renouvelaient en grandissant par mues successives. Apparus au Cambrien, il y a environ 520 millions d’années, ils ont disparu à la fin du Permien, il y a environ 252 millions d’années.",
+      "anecdote": "Les yeux de certains trilobites étaient formés de lentilles de calcite : ils comptent parmi les plus anciens yeux complexes connus à l’état fossile.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "fossile complet de trilobite",
+        "fichier": "svt01-q10.jpg",
+        "auteur": "Gary Todd",
+        "licence": "CC0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Fossil_Trilobite_(with_cast).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Fossil_Trilobite_%28with_cast%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "svt01-q11",
+      "titre": "Colonnes basaltiques",
+      "categorie": "Géologie",
+      "difficulte": "difficile",
+      "question": "Quel phénomène découpe la lave en colonnes régulières, comme à la Chaussée des Géants ?",
+      "indices": [
+        "Il se produit lorsqu’une roche d’origine volcanique refroidit.",
+        "La roche se contracte et se fissure en prismes, souvent à six côtés."
+      ],
+      "reponse": "La prismation du basalte.",
+      "reponse_courte": "La prismation du basalte",
+      "distracteurs": [
+        "L’érosion marine",
+        "La sédimentation en couches",
+        "Le métamorphisme sous pression"
+      ],
+      "variantes_acceptees": [
+        "prismation",
+        "la prismation",
+        "prismation du basalte",
+        "disjonction prismatique",
+        "disjonction colonnaire",
+        "contraction thermique",
+        "refroidissement de la lave"
+      ],
+      "explication": "Quand une coulée de lave épaisse refroidit, elle se contracte. Cette contraction crée des tensions qui font apparaître des fractures régulières, perpendiculaires à la surface de refroidissement, et découpent la roche en prismes, souvent à six côtés. On parle de prismation, ou de disjonction prismatique.",
+      "anecdote": "Selon la légende irlandaise, la Chaussée des Géants aurait été construite par le géant Fionn mac Cumhaill pour rejoindre l’Écosse. On retrouve d’ailleurs des colonnes de basalte semblables sur l’île de Staffa, en Écosse.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "colonnes basaltiques de la Chaussée des Géants",
+        "fichier": "svt01-q11.jpg",
+        "auteur": "Suzanne Mischyshyn",
+        "licence": "CC BY-SA 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:County_Antrim_-_Giant%27s_Causeway_-_Grand_Causeway_-_Uneven_Basalt_Columns_-_geograph.org.uk_-_3987835.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/fb/County_Antrim_-_Giant%27s_Causeway_-_Grand_Causeway_-_Uneven_Basalt_Columns_-_geograph.org.uk_-_3987835.jpg",
+        "modifications": "Aucune",
+        "licence_source": "CC BY-SA 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "svt01-q12",
+      "titre": "Tectonique des plaques",
+      "categorie": "Géologie",
+      "difficulte": "moyenne",
+      "question": "Quelle théorie explique le mouvement des continents, les séismes et la naissance des montagnes ?",
+      "indices": [
+        "Elle découpe la couche rigide externe de la Terre en grands morceaux.",
+        "Ces morceaux se déplacent de quelques centimètres par an."
+      ],
+      "reponse": "La tectonique des plaques.",
+      "reponse_courte": "La tectonique des plaques",
+      "distracteurs": [
+        "La Terre en expansion",
+        "Les cycles de Milankovitch",
+        "La sélection naturelle"
+      ],
+      "variantes_acceptees": [
+        "tectonique des plaques",
+        "la tectonique des plaques",
+        "théorie de la tectonique des plaques",
+        "tectonique"
+      ],
+      "explication": "D’après la tectonique des plaques, la lithosphère, enveloppe rigide de la Terre, est découpée en plusieurs grandes plaques qui se déplacent de quelques centimètres par an sur l’asthénosphère, plus ductile. C’est aux frontières entre plaques que se concentrent la plupart des séismes, des volcans et des chaînes de montagnes.",
+      "anecdote": "L’idée d’une « dérive des continents » est proposée en 1912 par Alfred Wegener. Son hypothèse a longtemps été rejetée, avant que la tectonique des plaques ne s’impose dans les années 1960.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "carte scientifique des limites des plaques tectoniques",
+        "fichier": "svt01-q12.png",
+        "auteur": "AlexCovarrubias",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Mexico_tectonic_plates.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Mexico_tectonic_plates.png",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "svt01-q13",
+      "titre": "Lichens",
+      "categorie": "Biologie",
+      "difficulte": "difficile",
+      "question": "Quelle association d’un champignon et d’une algue colonise roches et écorces ?",
+      "indices": [
+        "Elle résiste à des milieux très secs ou très froids, où peu d’êtres vivants survivent.",
+        "Le champignon protège et retient l’eau ; l’algue fabrique des sucres par photosynthèse."
+      ],
+      "reponse": "Un lichen, association entre un champignon et une algue et/ou une cyanobactérie.",
+      "reponse_courte": "Un lichen",
+      "distracteurs": [
+        "Une mycorhize",
+        "Une mousse",
+        "Un biofilm bactérien"
+      ],
+      "variantes_acceptees": [
+        "lichen",
+        "un lichen",
+        "lichens",
+        "les lichens",
+        "symbiose champignon algue",
+        "symbiose entre un champignon et une algue",
+        "association champignon et algue"
+      ],
+      "explication": "Un lichen n’est pas un organisme unique mais une symbiose entre un champignon et un partenaire photosynthétique : une algue verte ou une cyanobactérie, parfois les deux. Le champignon apporte protection et eau, son partenaire fournit des sucres issus de la photosynthèse. Cette association colonise des milieux très pauvres, comme les roches nues et les écorces.",
+      "anecdote": "Certains lichens poussent si lentement que leur taille sert à dater des surfaces rocheuses, par exemple des moraines abandonnées par des glaciers : c’est la lichénométrie.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "lichen sur écorce d’arbre en macro",
+        "fichier": "svt01-q13.jpg",
+        "auteur": "Photo by and (c)2016 Derek Ramsey (Ram-Man)",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Sweetbay_Magnolia_Magnolia_virginiana_Tree_Lichen.JPG",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/33/Sweetbay_Magnolia_Magnolia_virginiana_Tree_Lichen.JPG",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "svt01-q14",
+      "titre": "Aurore boréale",
+      "categorie": "Sciences de la Terre",
+      "difficulte": "moyenne",
+      "question": "Quel phénomène fait onduler dans le ciel nocturne de grands rideaux lumineux verts ?",
+      "indices": [
+        "On l’observe surtout aux hautes latitudes, près des pôles.",
+        "Des particules du vent solaire excitent les gaz de la haute atmosphère."
+      ],
+      "reponse": "Une aurore polaire, ici une aurore boréale.",
+      "reponse_courte": "Une aurore polaire",
+      "distracteurs": [
+        "Un halo solaire",
+        "Une pluie de météores",
+        "Un reflet sur les glaces polaires"
+      ],
+      "variantes_acceptees": [
+        "aurore polaire",
+        "aurore boréale",
+        "une aurore boréale",
+        "une aurore polaire",
+        "aurores polaires",
+        "aurores boréales",
+        "aurore"
+      ],
+      "explication": "Les aurores polaires se produisent lorsque des particules chargées issues du vent solaire, guidées par le champ magnétique terrestre vers les régions proches des pôles magnétiques, heurtent les atomes et molécules de la haute atmosphère. Ceux-ci, excités, émettent de la lumière : le vert vient surtout de l’oxygène, à plus de cent kilomètres d’altitude. On parle d’aurore boréale dans l’hémisphère nord et d’aurore australe dans l’hémisphère sud.",
+      "anecdote": "Des aurores existent aussi sur d’autres planètes dotées d’un champ magnétique, comme Jupiter et Saturne, où elles ont été observées par des télescopes spatiaux.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "aurore boréale dans un paysage nordique",
+        "fichier": "svt01-q14.jpg",
+        "auteur": "United States Air Force photo by Senior Airman Joshua Strang",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Aurora_borealis_over_Eielson_Air_Force_Base,_Alaska.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Aurora_borealis_over_Eielson_Air_Force_Base%2C_Alaska.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "svt01-q15",
+      "titre": "ADN",
+      "categorie": "Biologie moléculaire",
+      "difficulte": "moyenne",
+      "question": "Quelle molécule porte l’essentiel de l’information génétique des êtres vivants ?",
+      "indices": [
+        "Elle est formée de deux brins enroulés l’un sur l’autre.",
+        "Son alphabet compte quatre lettres : A, T, C et G."
+      ],
+      "reponse": "L’ADN, acide désoxyribonucléique.",
+      "reponse_courte": "L’ADN",
+      "distracteurs": [
+        "L’ARN messager",
+        "L’ATP",
+        "L’hémoglobine"
+      ],
+      "variantes_acceptees": [
+        "adn",
+        "l’adn",
+        "acide désoxyribonucléique",
+        "l’acide désoxyribonucléique"
+      ],
+      "explication": "L’ADN (acide désoxyribonucléique) est une longue molécule formée de deux brins complémentaires enroulés en double hélice. Chaque brin est une succession de nucléotides de quatre types (A, T, C, G) : l’adénine s’apparie toujours à la thymine, la cytosine à la guanine. L’ordre de ces bases constitue l’information génétique.",
+      "anecdote": "Étirée, la molécule d’ADN contenue dans le noyau d’une seule cellule humaine mesurerait environ deux mètres.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "modèle moléculaire de la double hélice d’ADN",
+        "fichier": "svt01-q15.jpg",
+        "auteur": "Ude",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:DNA_Helix_CPK.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/05/DNA_Helix_CPK.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    }
+  ]
+}

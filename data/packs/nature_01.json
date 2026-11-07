@@ -1,0 +1,761 @@
+{
+  "pack": {
+    "id": "nature_01",
+    "titre": "Pack Nature n° 1",
+    "premier_numero": 16,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Botanique": "Nature",
+      "Arbres": "Nature",
+      "Champignons": "Nature",
+      "Écologie": "Nature",
+      "Environnement": "Nature",
+      "Paléontologie": "Nature"
+    }
+  },
+  "questions": [
+    {
+      "id": "nature01-q01",
+      "titre": "Photosynthèse",
+      "categorie": "Botanique",
+      "difficulte": "facile",
+      "question": "Quel gaz les plantes rejettent-elles grâce à la photosynthèse ?",
+      "indices": [
+        "Cette réaction se fait à la lumière, dans les parties vertes de la plante.",
+        "C’est le gaz que nous respirons."
+      ],
+      "reponse": "Le dioxygène.",
+      "reponse_courte": "Le dioxygène",
+      "distracteurs": [
+        "Le dioxyde de carbone",
+        "L’azote",
+        "Le méthane"
+      ],
+      "variantes_acceptees": [
+        "dioxygène",
+        "oxygène",
+        "o2"
+      ],
+      "explication": "Grâce à la photosynthèse, les plantes fabriquent des sucres à partir du dioxyde de carbone de l’air, de l’eau et de l’énergie de la lumière, captée par la chlorophylle. Le dioxygène est rejeté dans l’air.",
+      "anecdote": "Une grande partie du dioxygène de l’atmosphère vient du plancton marin, et pas seulement des forêts.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "feuille verte éclairée par le soleil",
+        "fichier": "nature01-q01.jpg",
+        "auteur": "Joselodos",
+        "licence": "CC0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Green_leaf_with_sunlight.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Green_leaf_with_sunlight.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "nature01-q02",
+      "titre": "Chlorophylle",
+      "categorie": "Botanique",
+      "difficulte": "facile",
+      "question": "Quel pigment donne aux feuilles leur couleur verte ?",
+      "indices": [
+        "Il capte l’énergie de la lumière.",
+        "En automne, il disparaît et laisse voir d’autres couleurs."
+      ],
+      "reponse": "La chlorophylle.",
+      "reponse_courte": "La chlorophylle",
+      "distracteurs": [
+        "Le carotène",
+        "La mélanine",
+        "L’hémoglobine"
+      ],
+      "variantes_acceptees": [
+        "chlorophylle"
+      ],
+      "explication": "La chlorophylle absorbe surtout la lumière bleue et rouge et renvoie le vert : c’est pourquoi les feuilles nous paraissent vertes. Elle se trouve dans de petits organites des cellules, les chloroplastes.",
+      "anecdote": "Les feuilles rouges de l’automne doivent leur teinte à d’autres pigments, les anthocyanes, souvent fabriqués à ce moment-là.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "feuilles d’érable vertes et rouges en automne",
+        "fichier": "nature01-q02.jpg",
+        "auteur": "Shadowmeld Photography",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Turning_Maple_Leaves_Close-up_PLT-LV-5.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Turning_Maple_Leaves_Close-up_PLT-LV-5.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "nature01-q03",
+      "titre": "Âge d’un arbre",
+      "categorie": "Arbres",
+      "difficulte": "facile",
+      "question": "Comment peut-on connaître l’âge d’un arbre abattu ?",
+      "indices": [
+        "Il suffit d’observer la souche, coupée bien à plat.",
+        "Chaque année, l’arbre fabrique une nouvelle couche de bois."
+      ],
+      "reponse": "En comptant ses cernes.",
+      "reponse_courte": "En comptant ses cernes",
+      "distracteurs": [
+        "En mesurant sa hauteur",
+        "En comptant ses branches",
+        "En pesant son tronc"
+      ],
+      "variantes_acceptees": [
+        "cernes",
+        "les cernes",
+        "compter les cernes",
+        "anneaux de croissance"
+      ],
+      "explication": "Dans les régions à saisons marquées, l’arbre produit chaque année un bois clair au printemps puis un bois plus sombre en été : chaque paire forme un cerne. Leur largeur renseigne aussi sur le climat de chaque année.",
+      "anecdote": "Les cernes servent aussi à dater des charpentes anciennes ou des instruments de musique : c’est la dendrochronologie.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "souche d’arbre montrant ses cernes",
+        "fichier": "nature01-q03.jpg",
+        "auteur": "Seney Natural History Association",
+        "licence": "CC BY-SA 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Tree_Rings_(7342753338).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/04/Tree_Rings_%287342753338%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "nature01-q04",
+      "titre": "Séquoia géant",
+      "categorie": "Arbres",
+      "difficulte": "moyenne",
+      "question": "Quel arbre est le plus massif du monde, par son volume de bois ?",
+      "indices": [
+        "Il pousse sur les pentes de la Sierra Nevada, en Californie.",
+        "Le plus gros, surnommé General Sherman, dépasse 80 mètres de haut."
+      ],
+      "reponse": "Le séquoia géant.",
+      "reponse_courte": "Le séquoia géant",
+      "distracteurs": [
+        "Le baobab",
+        "Le chêne pédonculé",
+        "L’eucalyptus"
+      ],
+      "variantes_acceptees": [
+        "séquoia",
+        "séquoia géant",
+        "sequoiadendron"
+      ],
+      "explication": "Le séquoia géant n’est pas le plus haut des arbres, mais aucun ne le dépasse en volume : le tronc de General Sherman représente environ 1 500 m³ de bois. Ces arbres peuvent vivre plus de 3 000 ans.",
+      "anecdote": "Son écorce épaisse et spongieuse le protège des incendies, qui aident même ses cônes à s’ouvrir et ses graines à germer.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "séquoias géants dans un parc de Californie",
+        "fichier": "nature01-q04.jpg",
+        "auteur": "Tuxyso",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Giant_sequoias_in_Sequoia_National_Park_2013.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Giant_sequoias_in_Sequoia_National_Park_2013.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "nature01-q05",
+      "titre": "Amanite phalloïde",
+      "categorie": "Champignons",
+      "difficulte": "moyenne",
+      "question": "Quel champignon mortel est responsable de la plupart des intoxications graves en France ?",
+      "indices": [
+        "Son chapeau est souvent vert olive à jaunâtre.",
+        "Ses toxines s’attaquent surtout au foie."
+      ],
+      "reponse": "L’amanite phalloïde.",
+      "reponse_courte": "L’amanite phalloïde",
+      "distracteurs": [
+        "Le cèpe de Bordeaux",
+        "La girolle",
+        "La trompette-de-la-mort"
+      ],
+      "variantes_acceptees": [
+        "amanite phalloïde",
+        "amanite"
+      ],
+      "explication": "L’amanite phalloïde contient des toxines qui détruisent le foie ; les premiers symptômes n’apparaissent souvent qu’après plusieurs heures, quand le poison a déjà agi. En cas de doute, il faut faire vérifier sa cueillette par un pharmacien ou une association de mycologie.",
+      "anecdote": "La trompette-de-la-mort, malgré son nom inquiétant, est un excellent champignon comestible.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "amanite phalloïde dans une forêt",
+        "fichier": "nature01-q05.jpg",
+        "auteur": "George Chernilevsky",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Amanita_phalloides_2011_G3.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/8/82/Amanita_phalloides_2011_G3.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "nature01-q06",
+      "titre": "Le règne des champignons",
+      "categorie": "Champignons",
+      "difficulte": "moyenne",
+      "question": "Les champignons sont-ils des plantes ?",
+      "indices": [
+        "Ils ne font pas de photosynthèse.",
+        "Leur paroi contient de la chitine, comme la carapace des insectes."
+      ],
+      "reponse": "Non : ils forment un règne à part.",
+      "reponse_courte": "Non, ils forment un règne à part",
+      "distracteurs": [
+        "Oui, ce sont des plantes sans fleurs",
+        "Non, ce sont des animaux",
+        "Non, ce sont des bactéries"
+      ],
+      "variantes_acceptees": [
+        "non",
+        "règne à part",
+        "règne des champignons",
+        "fungi"
+      ],
+      "explication": "Les champignons se nourrissent en absorbant la matière organique qui les entoure, grâce à un réseau de filaments, le mycélium. Ils forment un règne du vivant à part entière, plus proche des animaux que des plantes.",
+      "anecdote": "Le plus grand organisme vivant connu serait un champignon de l’Oregon, dont le réseau souterrain couvre environ 9 km².",
+      "image": {
+        "statut": "verifie",
+        "recherche": "champignons poussant sur un tronc mort",
+        "fichier": "nature01-q06.jpg",
+        "auteur": "Pawar Pooja",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Bracket_Fungi_Anamalai_Hills.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Bracket_Fungi_Anamalai_Hills.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "nature01-q07",
+      "titre": "Les producteurs",
+      "categorie": "Écologie",
+      "difficulte": "moyenne",
+      "question": "Comment appelle-t-on les êtres vivants qui, grâce à la lumière, forment le début des chaînes alimentaires ?",
+      "indices": [
+        "Ce sont surtout les plantes et les algues.",
+        "Ils forment le premier maillon de la chaîne."
+      ],
+      "reponse": "Les producteurs.",
+      "reponse_courte": "Les producteurs",
+      "distracteurs": [
+        "Les consommateurs",
+        "Les décomposeurs",
+        "Les prédateurs"
+      ],
+      "variantes_acceptees": [
+        "producteurs",
+        "les producteurs",
+        "autotrophes"
+      ],
+      "explication": "Les producteurs fabriquent leur propre matière organique ; les consommateurs (herbivores, puis carnivores) la mangent, et les décomposeurs recyclent les restes en éléments minéraux réutilisables par les plantes.",
+      "anecdote": "Près des sources chaudes des grands fonds marins, des bactéries fabriquent leur matière sans lumière, à partir de composés chimiques.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "prairie avec herbe et fleurs",
+        "fichier": "nature01-q07.jpg",
+        "auteur": "Steve Redman (MORA)",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Evan_and_Adrie_Redman_hiking_through_wildflowers_(Bistort)_on_Lakes_Trail._(a6b2ec04cad94f64b0d7d694b1abcaa5).JPG",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/41/Evan_and_Adrie_Redman_hiking_through_wildflowers_%28Bistort%29_on_Lakes_Trail._%28a6b2ec04cad94f64b0d7d694b1abcaa5%29.JPG",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "nature01-q08",
+      "titre": "Gaz à effet de serre",
+      "categorie": "Environnement",
+      "difficulte": "facile",
+      "question": "Quel gaz, rejeté en brûlant charbon, pétrole et gaz, est le principal responsable du réchauffement actuel ?",
+      "indices": [
+        "Sa concentration dans l’air a augmenté de plus de moitié depuis le XIXe siècle.",
+        "Les plantes l’absorbent pour faire leur photosynthèse."
+      ],
+      "reponse": "Le dioxyde de carbone.",
+      "reponse_courte": "Le dioxyde de carbone",
+      "distracteurs": [
+        "Le dioxygène",
+        "L’azote",
+        "L’hélium"
+      ],
+      "variantes_acceptees": [
+        "dioxyde de carbone",
+        "co2",
+        "gaz carbonique"
+      ],
+      "explication": "Le dioxyde de carbone retient une partie de la chaleur émise par la Terre : c’est l’effet de serre. En brûlant des combustibles fossiles, les activités humaines en ont fortement augmenté la quantité dans l’atmosphère, ce qui réchauffe le climat.",
+      "anecdote": "L’effet de serre naturel est pourtant indispensable : sans lui, la température moyenne de la Terre serait d’environ −18 °C.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "cheminées d’usine fumant au crépuscule",
+        "fichier": "nature01-q08.jpg",
+        "auteur": "Auteur inconnu",
+        "licence": "CC0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Swedish_Factory_Pollution.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Swedish_Factory_Pollution.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "nature01-q09",
+      "titre": "La taïga",
+      "categorie": "Écologie",
+      "difficulte": "moyenne",
+      "question": "Quel est le plus grand ensemble forestier du monde, qui couvre le nord de la Russie et du Canada ?",
+      "indices": [
+        "On l’appelle aussi forêt boréale.",
+        "Elle est dominée par les conifères : épicéas, pins, mélèzes."
+      ],
+      "reponse": "La taïga.",
+      "reponse_courte": "La taïga",
+      "distracteurs": [
+        "La toundra",
+        "La savane",
+        "La forêt amazonienne"
+      ],
+      "variantes_acceptees": [
+        "taïga",
+        "taiga",
+        "forêt boréale"
+      ],
+      "explication": "La taïga forme une immense ceinture de forêts de conifères dans les régions froides de l’hémisphère nord. Ses hivers sont longs et rigoureux, ses étés courts. Plus au nord, les arbres laissent place à la toundra.",
+      "anecdote": "Le mélèze est l’un des rares conifères à perdre ses aiguilles en hiver.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "forêt de conifères de la taïga sous la neige",
+        "fichier": "nature01-q09.png",
+        "auteur": "Mark Baldwin-Smith",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Taiga_ecoregion.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Taiga_ecoregion.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "nature01-q10",
+      "titre": "Le lotus",
+      "categorie": "Botanique",
+      "difficulte": "moyenne",
+      "question": "Quelle plante aquatique, sacrée en Asie, a des feuilles sur lesquelles l’eau perle sans les mouiller ?",
+      "indices": [
+        "Cette propriété a donné son nom à un effet utilisé pour des surfaces autonettoyantes.",
+        "Sa fleur est un symbole important du bouddhisme et de l’hindouisme."
+      ],
+      "reponse": "Le lotus.",
+      "reponse_courte": "Le lotus",
+      "distracteurs": [
+        "Le nénuphar",
+        "Le papyrus",
+        "La jacinthe d’eau"
+      ],
+      "variantes_acceptees": [
+        "lotus",
+        "le lotus",
+        "lotus sacré"
+      ],
+      "explication": "La surface des feuilles de lotus est couverte de minuscules bosses recouvertes de cire : les gouttes d’eau y roulent en emportant les poussières. Cet « effet lotus » inspire des peintures et des vitres qui se salissent moins.",
+      "anecdote": "Des graines de lotus vieilles d’environ 1 300 ans, retrouvées en Chine, ont réussi à germer.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "fleur et feuilles de lotus sur un étang",
+        "fichier": "nature01-q10.jpg",
+        "auteur": "Hong Zhang (jennyzhh2008)",
+        "licence": "CC0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Lotus_flower_(978659).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Lotus_flower_%28978659%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "nature01-q11",
+      "titre": "Fin des dinosaures",
+      "categorie": "Paléontologie",
+      "difficulte": "facile",
+      "question": "Qu’est-ce qui a sans doute causé la disparition des dinosaures non aviens, il y a 66 millions d’années ?",
+      "indices": [
+        "Un cratère d’environ 200 km de large en garde la trace, au Mexique.",
+        "De grandes éruptions volcaniques en Inde ont peut-être aggravé la crise."
+      ],
+      "reponse": "La chute d’un astéroïde.",
+      "reponse_courte": "La chute d’un astéroïde",
+      "distracteurs": [
+        "Une épidémie",
+        "Une glaciation",
+        "La chasse par les premiers humains"
+      ],
+      "variantes_acceptees": [
+        "astéroïde",
+        "météorite",
+        "chute d'un astéroïde"
+      ],
+      "explication": "L’impact d’un astéroïde d’une dizaine de kilomètres, à Chicxulub, a projeté des poussières et des gaz qui ont plongé la Terre dans l’obscurité et le froid. Les plantes ont dépéri, puis les chaînes alimentaires se sont effondrées. Les premiers humains n’apparaîtront que des dizaines de millions d’années plus tard.",
+      "anecdote": "Les oiseaux descendent de dinosaures : en ce sens, tous les dinosaures n’ont pas disparu.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "squelette de dinosaure dans un muséum",
+        "fichier": "nature01-q11.jpg",
+        "auteur": "Brian Deegan",
+        "licence": "CC BY-SA 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Cetiosaurus_Dinosaur_Skeleton,_Leicester_Museum_-_geograph.org.uk_-_7771936.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Cetiosaurus_Dinosaur_Skeleton%2C_Leicester_Museum_-_geograph.org.uk_-_7771936.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "nature01-q12",
+      "titre": "Tyrannosaure",
+      "categorie": "Paléontologie",
+      "difficulte": "facile",
+      "question": "Quel dinosaure carnivore géant d’Amérique du Nord avait de minuscules bras à deux doigts ?",
+      "indices": [
+        "Il a vécu à la toute fin du Crétacé.",
+        "Ses dents pouvaient dépasser 30 cm, racine comprise."
+      ],
+      "reponse": "Le tyrannosaure.",
+      "reponse_courte": "Le tyrannosaure",
+      "distracteurs": [
+        "Le vélociraptor",
+        "Le brachiosaure",
+        "Le tricératops"
+      ],
+      "variantes_acceptees": [
+        "tyrannosaure",
+        "t-rex",
+        "tyrannosaurus rex"
+      ],
+      "explication": "Le Tyrannosaurus rex mesurait environ 12 mètres de long et pesait plusieurs tonnes. Ses bras étaient courts mais musclés ; sa force tenait surtout à ses mâchoires, parmi les plus puissantes du règne animal.",
+      "anecdote": "Il est plus proche de nous dans le temps que du stégosaure : environ 66 millions d’années nous en séparent, contre environ 80 millions entre eux.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "squelette de tyrannosaure dans un muséum",
+        "fichier": "nature01-q12.jpg",
+        "auteur": "Robosorne",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Tyrannosaurus_rex_skeleton_(cast_of_specimen_MOR_555)_at_Cleveland_Museum_of_Natural_History.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Tyrannosaurus_rex_skeleton_%28cast_of_specimen_MOR_555%29_at_Cleveland_Museum_of_Natural_History.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "nature01-q13",
+      "titre": "Paléontologie",
+      "categorie": "Paléontologie",
+      "difficulte": "facile",
+      "question": "Comment s’appelle la science qui étudie les fossiles ?",
+      "indices": [
+        "Elle s’intéresse aux êtres vivants disparus.",
+        "Georges Cuvier en est l’un des fondateurs, au début du XIXe siècle."
+      ],
+      "reponse": "La paléontologie.",
+      "reponse_courte": "La paléontologie",
+      "distracteurs": [
+        "L’archéologie",
+        "La géologie",
+        "L’anthropologie"
+      ],
+      "variantes_acceptees": [
+        "paléontologie"
+      ],
+      "explication": "La paléontologie étudie les traces des êtres vivants du passé : os, coquilles, empreintes, pollens. L’archéologie, elle, s’intéresse aux traces laissées par les humains et leurs sociétés.",
+      "anecdote": "Vers 1811, sur les falaises anglaises de Lyme Regis, Joseph Anning et sa sœur Mary ont dégagé le premier squelette d’ichtyosaure reconnu par les savants.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "fossile d’ichtyosaure dans une roche",
+        "fichier": "nature01-q13.jpg",
+        "auteur": "Zach Tirrell from Plymouth, USA",
+        "licence": "CC BY-SA 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Ichthyosaur_fossil_(1).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Ichthyosaur_fossil_%281%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "nature01-q14",
+      "titre": "L’ambre",
+      "categorie": "Paléontologie",
+      "difficulte": "moyenne",
+      "question": "Qu’est-ce que l’ambre, dans lequel on trouve parfois des insectes fossiles ?",
+      "indices": [
+        "Il peut être vieux de plusieurs dizaines de millions d’années.",
+        "Les plus riches gisements d’Europe bordent la mer Baltique."
+      ],
+      "reponse": "De la résine d’arbre fossilisée.",
+      "reponse_courte": "De la résine d’arbre fossilisée",
+      "distracteurs": [
+        "Du miel fossilisé",
+        "Une pierre volcanique",
+        "Du corail"
+      ],
+      "variantes_acceptees": [
+        "résine fossile",
+        "résine d'arbre",
+        "résine fossilisée"
+      ],
+      "explication": "La résine collante qui coule de certains arbres peut piéger des insectes, des graines ou des plumes. Enfouie et durcie pendant des millions d’années, elle devient de l’ambre, qui conserve ces inclusions avec une finesse remarquable.",
+      "anecdote": "Le mot « électricité » vient du grec elektron, qui désignait l’ambre : frotté, il attire les poussières.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "insecte fossile pris dans l’ambre",
+        "fichier": "nature01-q14.jpg",
+        "auteur": "Amber Bugs",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Four-Winged_Insect_in_Burmese_Amber_Possible_Lacewing_or_Mayfly_from_the_Cretaceous.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Four-Winged_Insect_in_Burmese_Amber_Possible_Lacewing_or_Mayfly_from_the_Cretaceous.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "nature01-q15",
+      "titre": "La fleur et le fruit",
+      "categorie": "Botanique",
+      "difficulte": "moyenne",
+      "question": "Quelle partie de la fleur devient le fruit ?",
+      "indices": [
+        "Elle se trouve au cœur de la fleur, à la base du pistil.",
+        "Après la fécondation, les ovules qu’elle contient deviennent des graines."
+      ],
+      "reponse": "L’ovaire.",
+      "reponse_courte": "L’ovaire",
+      "distracteurs": [
+        "Le pétale",
+        "L’étamine",
+        "Le sépale"
+      ],
+      "variantes_acceptees": [
+        "ovaire",
+        "l'ovaire"
+      ],
+      "explication": "Après la pollinisation et la fécondation, les pétales fanent et l’ovaire grossit pour former le fruit, qui protège et aide à disperser les graines. La tomate, la cerise ou la pêche se forment ainsi.",
+      "anecdote": "La fraise est un « faux fruit » : ses vrais fruits sont les petits grains à sa surface, les akènes.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "coupe d’une fleur montrant l’ovaire",
+        "fichier": "nature01-q15.jpg",
+        "auteur": "Carlquist, Sherwin John, 1930-2021",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:(Diphylleia_cross-section_in_Mount_Shirouma,_Japan)_-_DPLA_-_6566bb7398fc3061295b3e6c1639c0c8.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/6c/%28Diphylleia_cross-section_in_Mount_Shirouma%2C_Japan%29_-_DPLA_-_6566bb7398fc3061295b3e6c1639c0c8.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "nature01-q16",
+      "titre": "Les légumineuses",
+      "categorie": "Botanique",
+      "difficulte": "difficile",
+      "question": "Quelles plantes enrichissent le sol en azote grâce à des bactéries logées dans leurs racines ?",
+      "indices": [
+        "Le pois, la lentille et le trèfle en font partie.",
+        "Les bactéries vivent dans de petites boules sur les racines, les nodosités."
+      ],
+      "reponse": "Les légumineuses.",
+      "reponse_courte": "Les légumineuses",
+      "distracteurs": [
+        "Les graminées",
+        "Les conifères",
+        "Les fougères"
+      ],
+      "variantes_acceptees": [
+        "légumineuses",
+        "fabacées"
+      ],
+      "explication": "Les bactéries des nodosités captent l’azote de l’air et le transforment en une forme que la plante peut utiliser. Le sol en profite après la récolte : c’est pourquoi on alterne souvent céréales et légumineuses dans les champs.",
+      "anecdote": "Les agriculteurs de l’Antiquité savaient déjà que semer des fèves ou de la luzerne améliorait leurs champs.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "racines de trèfle avec leurs nodosités",
+        "fichier": "nature01-q16.jpg",
+        "auteur": "Rosser1954",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Root_Nodules_on_White_Clover.JPG",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Root_Nodules_on_White_Clover.JPG",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "nature01-q17",
+      "titre": "Chute des feuilles",
+      "categorie": "Arbres",
+      "difficulte": "moyenne",
+      "question": "Pourquoi beaucoup d’arbres perdent-ils leurs feuilles en automne ?",
+      "indices": [
+        "Quand le sol est gelé, l’eau y est difficile à puiser.",
+        "Avant la chute, l’arbre récupère une partie des nutriments de ses feuilles."
+      ],
+      "reponse": "Pour économiser l’eau et l’énergie pendant l’hiver.",
+      "reponse_courte": "Pour économiser l’eau en hiver",
+      "distracteurs": [
+        "Parce qu’elles meurent de froid",
+        "Pour nourrir les vers de terre",
+        "Parce que le vent les arrache"
+      ],
+      "variantes_acceptees": [
+        "économiser l'eau",
+        "pour économiser l'eau",
+        "se protéger de l'hiver"
+      ],
+      "explication": "Les feuilles laissent s’évaporer beaucoup d’eau. En hiver, quand le sol est froid ou gelé et la lumière faible, l’arbre a intérêt à s’en séparer : il forme une petite cloison à la base de chaque feuille, qui finit par tomber.",
+      "anecdote": "Le chêne garde parfois ses feuilles sèches tout l’hiver : on parle de marcescence.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "allée d’arbres aux feuilles d’automne",
+        "fichier": "nature01-q17.jpg",
+        "auteur": "David Stowell",
+        "licence": "CC BY-SA 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Autumn_in_Northumberland_Avenue_-_geograph.org.uk_-_90407.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Autumn_in_Northumberland_Avenue_-_geograph.org.uk_-_90407.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "CC BY-SA 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "nature01-q18",
+      "titre": "Blanchissement des coraux",
+      "categorie": "Écologie",
+      "difficulte": "moyenne",
+      "question": "Qu’est-ce qui provoque surtout le blanchissement des coraux ?",
+      "indices": [
+        "Le corail expulse alors les algues microscopiques qui vivent dans ses tissus.",
+        "Les vagues de chaleur marine se multiplient avec le réchauffement climatique."
+      ],
+      "reponse": "Une eau trop chaude.",
+      "reponse_courte": "Une eau trop chaude",
+      "distracteurs": [
+        "La lumière de la Lune",
+        "Les requins",
+        "Le sable charrié par les vagues"
+      ],
+      "variantes_acceptees": [
+        "eau trop chaude",
+        "réchauffement de l'eau",
+        "chaleur"
+      ],
+      "explication": "Les coraux vivent en association avec des algues microscopiques qui leur fournissent des sucres et leur couleur. Quand l’eau reste trop chaude, le corail les expulse et blanchit ; si l’épisode dure, il peut mourir de faim.",
+      "anecdote": "La Grande Barrière de corail, en Australie, est le plus vaste ensemble construit par des êtres vivants.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "récif de corail coloré",
+        "fichier": "nature01-q18.png",
+        "auteur": "NOAA Fisheries/Mia Lamirand",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Mimic_goatfish_coral_reef_Howland_Island_2023.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Mimic_goatfish_coral_reef_Howland_Island_2023.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "nature01-q19",
+      "titre": "Palétuviers",
+      "categorie": "Écologie",
+      "difficulte": "difficile",
+      "question": "Quels arbres poussent les pieds dans l’eau salée, sur les côtes tropicales ?",
+      "indices": [
+        "Leurs racines en échasses émergent à marée basse.",
+        "Ces forêts côtières protègent le littoral des tempêtes."
+      ],
+      "reponse": "Les palétuviers, qui forment les mangroves.",
+      "reponse_courte": "Les palétuviers",
+      "distracteurs": [
+        "Les cocotiers",
+        "Les saules",
+        "Les baobabs"
+      ],
+      "variantes_acceptees": [
+        "palétuviers",
+        "mangrove",
+        "mangroves"
+      ],
+      "explication": "Les palétuviers supportent l’eau salée et les marées. Leurs forêts, les mangroves, freinent les vagues, retiennent les sédiments et servent de nurserie à de nombreux poissons et crustacés.",
+      "anecdote": "Certains palétuviers rejettent le sel par leurs feuilles, où l’on peut voir de petits cristaux.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "mangrove et racines de palétuviers",
+        "fichier": "nature01-q19.jpg",
+        "auteur": "David Goehring",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Mangrove_roots_2.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Mangrove_roots_2.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "nature01-q20",
+      "titre": "La pomme de terre",
+      "categorie": "Botanique",
+      "difficulte": "moyenne",
+      "question": "Quelle partie de la plante mange-t-on quand on mange une pomme de terre ?",
+      "indices": [
+        "Ses « yeux » sont des bourgeons qui peuvent donner de nouvelles pousses.",
+        "C’est une tige souterraine gorgée de réserves."
+      ],
+      "reponse": "Un tubercule, c’est-à-dire une tige souterraine.",
+      "reponse_courte": "Un tubercule",
+      "distracteurs": [
+        "Une racine",
+        "Un fruit",
+        "Un bulbe"
+      ],
+      "variantes_acceptees": [
+        "tubercule",
+        "un tubercule",
+        "tige souterraine"
+      ],
+      "explication": "Le tubercule de pomme de terre est une tige souterraine renflée, remplie d’amidon, qui permet à la plante de passer l’hiver et de se multiplier. La carotte, elle, est bien une racine.",
+      "anecdote": "Au XVIIIe siècle, l’apothicaire Antoine Parmentier a beaucoup œuvré pour faire adopter la pomme de terre en France.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "pommes de terre germées",
+        "fichier": "nature01-q20.jpg",
+        "auteur": "Bmerva",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Top_view_of_sprouting_potato.JPG",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Top_view_of_sprouting_potato.JPG",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,570 @@
+{
+  "pack": {
+    "id": "arts_01",
+    "titre": "Pack Arts n° 1",
+    "premier_numero": 401,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Peinture": "Arts",
+      "Sculpture": "Arts",
+      "Architecture": "Arts",
+      "Musique": "Arts"
+    }
+  },
+  "questions": [
+    {
+      "id": "arts01-q01",
+      "titre": "La Joconde",
+      "categorie": "Peinture",
+      "difficulte": "facile",
+      "question": "Quel artiste a peint La Joconde ?",
+      "indices": [
+        "Cet Italien était aussi ingénieur et inventeur.",
+        "Il a passé ses dernières années en France, à Amboise."
+      ],
+      "reponse": "Léonard de Vinci.",
+      "reponse_courte": "Léonard de Vinci",
+      "distracteurs": [
+        "Michel-Ange",
+        "Raphaël",
+        "Sandro Botticelli"
+      ],
+      "variantes_acceptees": [
+        "léonard de vinci",
+        "vinci",
+        "leonardo da vinci"
+      ],
+      "explication": "Léonard de Vinci peint ce portrait, sans doute celui de Lisa Gherardini, épouse d’un marchand florentin, au début du XVIe siècle. Il l’emporte en France, où il meurt en 1519. Le tableau est aujourd’hui au musée du Louvre.",
+      "anecdote": "En 1911, La Joconde a été volée au Louvre par un vitrier italien ; elle n’a été retrouvée qu’en 1913, à Florence.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "La Joconde de Léonard de Vinci",
+        "fichier": "arts01-q01.jpg",
+        "auteur": "Léonard de Vinci",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_-_presumed_self-portrait_-_WGA12798.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/38/Leonardo_da_Vinci_-_presumed_self-portrait_-_WGA12798.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts01-q02",
+      "titre": "La Nuit étoilée",
+      "categorie": "Peinture",
+      "difficulte": "moyenne",
+      "question": "Quel peintre a réalisé La Nuit étoilée, en 1889 ?",
+      "indices": [
+        "Ce Néerlandais a beaucoup peint en Provence.",
+        "De son vivant, il n’a vendu presque aucune toile."
+      ],
+      "reponse": "Vincent van Gogh.",
+      "reponse_courte": "Vincent van Gogh",
+      "distracteurs": [
+        "Claude Monet",
+        "Paul Gauguin",
+        "Paul Cézanne"
+      ],
+      "variantes_acceptees": [
+        "van gogh",
+        "vincent van gogh"
+      ],
+      "explication": "Van Gogh peint La Nuit étoilée en juin 1889 à Saint-Rémy-de-Provence, d’après la vue de sa fenêtre et de mémoire. Ses ciels tourbillonnants et ses couleurs intenses ont fortement marqué la peinture du XXe siècle. La toile est conservée à New York.",
+      "anecdote": "Il a écrit des centaines de lettres à son frère Théo, qui le soutenait financièrement.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "La Nuit étoilée de Vincent van Gogh",
+        "fichier": "arts01-q02.jpg",
+        "auteur": "Vincent van Gogh",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:VanGogh-starry_night_ballance1.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/66/VanGogh-starry_night_ballance1.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts01-q03",
+      "titre": "L’impressionnisme",
+      "categorie": "Peinture",
+      "difficulte": "moyenne",
+      "question": "Quel mouvement de peinture est né en France dans les années 1870, avec Monet, Renoir et Degas ?",
+      "indices": [
+        "Ses peintres aimaient travailler en plein air, pour saisir la lumière.",
+        "Ils posaient la couleur par petites touches bien visibles."
+      ],
+      "reponse": "L’impressionnisme.",
+      "reponse_courte": "L’impressionnisme",
+      "distracteurs": [
+        "Le cubisme",
+        "Le surréalisme",
+        "Le romantisme"
+      ],
+      "variantes_acceptees": [
+        "impressionnisme",
+        "l'impressionnisme",
+        "impressionnistes"
+      ],
+      "explication": "Les impressionnistes rompent avec la peinture académique : sujets de la vie moderne, paysages peints sur le motif, touches rapides et couleurs claires pour rendre les variations de la lumière. Leur première exposition commune a lieu à Paris en 1874.",
+      "anecdote": "Le nom vient d’un critique, Louis Leroy, qui s’est moqué en 1874 d’un tableau de Monet intitulé Impression, soleil levant.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Impression, soleil levant de Claude Monet",
+        "fichier": "arts01-q03.jpg",
+        "auteur": "Claude Monet",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Claude_Monet,_Impression,_soleil_levant.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/54/Claude_Monet%2C_Impression%2C_soleil_levant.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts01-q04",
+      "titre": "Le Penseur",
+      "categorie": "Sculpture",
+      "difficulte": "moyenne",
+      "question": "Quel sculpteur a créé Le Penseur ?",
+      "indices": [
+        "L’œuvre devait d’abord surmonter une grande porte inspirée de Dante.",
+        "Son musée, à Paris, occupe l’hôtel Biron."
+      ],
+      "reponse": "Auguste Rodin.",
+      "reponse_courte": "Auguste Rodin",
+      "distracteurs": [
+        "Camille Claudel",
+        "Michel-Ange",
+        "Antoine Bourdelle"
+      ],
+      "variantes_acceptees": [
+        "rodin",
+        "auguste rodin"
+      ],
+      "explication": "Le Penseur est d’abord une petite figure de La Porte de l’Enfer, une commande inspirée de La Divine Comédie de Dante ; elle devait représenter le poète méditant sur son œuvre. Rodin l’agrandit ensuite et en fait une sculpture indépendante, devenue l’une des plus célèbres au monde.",
+      "anecdote": "Il existe plus d’une vingtaine de grands exemplaires du Penseur en bronze, répartis dans le monde.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Le Penseur de Rodin dans le jardin du musée Rodin",
+        "fichier": "arts01-q04.jpg",
+        "auteur": "Auguste Rodin",
+        "licence": "CC0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Auguste_Rodin_-_The_Thinker_-_1917.42_-_Cleveland_Museum_of_Art.tif",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Auguste_Rodin_-_The_Thinker_-_1917.42_-_Cleveland_Museum_of_Art.tif",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "arts01-q05",
+      "titre": "La tour Eiffel",
+      "categorie": "Architecture",
+      "difficulte": "moyenne",
+      "question": "Pour quel événement la tour Eiffel a-t-elle été construite ?",
+      "indices": [
+        "Elle a été inaugurée cent ans après le début de la Révolution française.",
+        "Elle ne devait au départ rester debout que vingt ans."
+      ],
+      "reponse": "Pour l’Exposition universelle de 1889.",
+      "reponse_courte": "L’Exposition universelle de 1889",
+      "distracteurs": [
+        "Les Jeux olympiques de 1900",
+        "La fin de la guerre de 1870",
+        "L’inauguration du métro"
+      ],
+      "variantes_acceptees": [
+        "exposition universelle",
+        "l'exposition universelle de 1889"
+      ],
+      "explication": "Construite en à peine plus de deux ans par l’entreprise de Gustave Eiffel, la tour sert d’entrée à l’Exposition universelle de 1889, qui célèbre le centenaire de la Révolution. Critiquée par de nombreux artistes, elle est sauvée notamment par son utilité pour les antennes de radio.",
+      "anecdote": "Avec ses 300 mètres, elle a été la plus haute construction du monde pendant plus de quarante ans, jusqu’en 1930.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "tour Eiffel lors de l’Exposition universelle de 1889",
+        "fichier": "arts01-q05.jpg",
+        "auteur": "GTC",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:L%27Exposition_universelle_de_Paris,_1889.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/9/9d/L%27Exposition_universelle_de_Paris%2C_1889.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts01-q06",
+      "titre": "La Sagrada Família",
+      "categorie": "Architecture",
+      "difficulte": "moyenne",
+      "question": "Dans quelle ville se trouve la Sagrada Família, imaginée par Antoni Gaudí ?",
+      "indices": [
+        "Sa construction a commencé en 1882 et se poursuit encore.",
+        "Cette ville est la capitale de la Catalogne."
+      ],
+      "reponse": "Barcelone.",
+      "reponse_courte": "Barcelone",
+      "distracteurs": [
+        "Madrid",
+        "Séville",
+        "Valence"
+      ],
+      "variantes_acceptees": [
+        "barcelone",
+        "barcelona"
+      ],
+      "explication": "Gaudí reprend le projet de cette basilique en 1883 et y consacre le reste de sa vie. À sa mort, en 1926, seule une petite partie est construite ; les travaux se poursuivent depuis, financés par les dons et les visites. L’église a été consacrée en 2010.",
+      "anecdote": "Gaudí, qui savait ne pas la voir achevée, aurait répondu : « Mon client n’est pas pressé. »",
+      "image": {
+        "statut": "verifie",
+        "recherche": "façade de la Sagrada Família à Barcelone",
+        "fichier": "arts01-q06.jpg",
+        "auteur": "Jopparn",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Sagrada_Fam%C3%ADlia_2010.JPG",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Sagrada_Fam%C3%ADlia_2010.JPG",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "arts01-q07",
+      "titre": "La Neuvième Symphonie",
+      "categorie": "Musique",
+      "difficulte": "facile",
+      "question": "Quel compositeur, devenu sourd, a pourtant écrit la Neuvième Symphonie ?",
+      "indices": [
+        "Il est né à Bonn en 1770.",
+        "Le final de cette symphonie est devenu l’hymne européen."
+      ],
+      "reponse": "Ludwig van Beethoven.",
+      "reponse_courte": "Ludwig van Beethoven",
+      "distracteurs": [
+        "Wolfgang Amadeus Mozart",
+        "Jean-Sébastien Bach",
+        "Frédéric Chopin"
+      ],
+      "variantes_acceptees": [
+        "beethoven",
+        "ludwig van beethoven"
+      ],
+      "explication": "Beethoven commence à perdre l’ouïe avant 30 ans, et il est presque totalement sourd quand il compose la Neuvième Symphonie, créée à Vienne en 1824. Son final met en musique l’Ode à la joie du poète Schiller, choisie comme hymne de l’Europe.",
+      "anecdote": "Selon le récit traditionnel, à la première, il n’entendit pas les applaudissements : une chanteuse le fit se retourner vers le public.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "manuscrit de la Neuvième Symphonie de Beethoven",
+        "fichier": "arts01-q07.jpg",
+        "auteur": "Ludwig van Beethoven",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Ninth_Symphony_original.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Ninth_Symphony_original.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts01-q08",
+      "titre": "Les cordes du violon",
+      "categorie": "Musique",
+      "difficulte": "moyenne",
+      "question": "Combien de cordes compte un violon ?",
+      "indices": [
+        "Elles sont accordées de quinte en quinte.",
+        "La plus grave donne un sol, la plus aiguë un mi."
+      ],
+      "reponse": "Quatre.",
+      "reponse_courte": "Quatre",
+      "distracteurs": [
+        "Six",
+        "Trois",
+        "Cinq"
+      ],
+      "variantes_acceptees": [
+        "4",
+        "quatre",
+        "quatre cordes"
+      ],
+      "explication": "Le violon a quatre cordes, accordées de la plus grave à la plus aiguë en sol, ré, la et mi. Il est le plus aigu de la famille des cordes frottées, avec l’alto, le violoncelle et la contrebasse.",
+      "anecdote": "Les violons d’Antonio Stradivari, fabriqués à Crémone il y a plus de trois siècles, peuvent se vendre plusieurs millions d’euros.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "violon et son archet",
+        "fichier": "arts01-q08.jpg",
+        "auteur": "Jefferson David Chalfant",
+        "licence": "CC0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Violin_and_Bow_MET_ap66.169.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/46/Violin_and_Bow_MET_ap66.169.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "arts01-q09",
+      "titre": "Le cubisme",
+      "categorie": "Peinture",
+      "difficulte": "moyenne",
+      "question": "Quel peintre espagnol est l’un des fondateurs du cubisme ?",
+      "indices": [
+        "Il a passé l’essentiel de sa vie en France.",
+        "Il a peint Guernica en 1937."
+      ],
+      "reponse": "Pablo Picasso.",
+      "reponse_courte": "Pablo Picasso",
+      "distracteurs": [
+        "Salvador Dalí",
+        "Francisco de Goya",
+        "Diego Velázquez"
+      ],
+      "variantes_acceptees": [
+        "picasso",
+        "pablo picasso"
+      ],
+      "explication": "Avec le Français Georges Braque, Picasso invente vers 1907-1908 le cubisme, qui représente les objets sous plusieurs angles à la fois, en formes géométriques. Les Demoiselles d’Avignon (1907) est souvent considérée comme l’œuvre qui annonce ce mouvement.",
+      "anecdote": "Son nom de baptême complet aligne une longue série de prénoms, avant les noms de son père et de sa mère, Ruiz et Picasso.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "maison natale de Picasso à Malaga (aucune œuvre de Picasso : elles sont encore protégées)",
+        "fichier": "arts01-q09.jpg",
+        "auteur": "Argentina. Revista Vea y Lea",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Pablo_picasso_1.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/9/98/Pablo_picasso_1.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts01-q10",
+      "titre": "La statue de la Liberté",
+      "categorie": "Sculpture",
+      "difficulte": "facile",
+      "question": "Quelle statue, offerte par la France, se dresse à l’entrée du port de New York ?",
+      "indices": [
+        "Sa structure interne a été conçue par Gustave Eiffel.",
+        "Œuvre du sculpteur Auguste Bartholdi, elle a été inaugurée en 1886."
+      ],
+      "reponse": "La statue de la Liberté.",
+      "reponse_courte": "La statue de la Liberté",
+      "distracteurs": [
+        "Le Christ Rédempteur",
+        "Le Colosse de Rhodes",
+        "La Petite Sirène"
+      ],
+      "variantes_acceptees": [
+        "statue de la liberté",
+        "la liberté éclairant le monde"
+      ],
+      "explication": "La Liberté éclairant le monde est un cadeau de la France aux États-Unis pour le centenaire de leur indépendance. Fabriquée à Paris en plaques de cuivre fixées sur une charpente de fer, elle est démontée, expédiée par bateau puis remontée à New York, où elle est inaugurée en 1886.",
+      "anecdote": "Sa couleur verte vient de l’oxydation du cuivre : à l’origine, elle avait la couleur brun-orangé d’une pièce neuve.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "statue de la Liberté à New York",
+        "fichier": "arts01-q10.jpg",
+        "auteur": "William Warby",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Statue_of_Liberty,_NY.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Statue_of_Liberty%2C_NY.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "arts01-q11",
+      "titre": "Le gothique",
+      "categorie": "Architecture",
+      "difficulte": "difficile",
+      "question": "Quel style d’architecture, né en France au XIIe siècle, se reconnaît à ses arcs brisés et à ses vitraux ?",
+      "indices": [
+        "Les croisées d’ogives et les arcs-boutants permettent d’élever des murs très hauts.",
+        "La basilique de Saint-Denis en est l’un des premiers exemples."
+      ],
+      "reponse": "Le gothique.",
+      "reponse_courte": "Le gothique",
+      "distracteurs": [
+        "Le roman",
+        "Le baroque",
+        "L’art nouveau"
+      ],
+      "variantes_acceptees": [
+        "gothique",
+        "le gothique",
+        "art gothique"
+      ],
+      "explication": "L’art gothique naît en Île-de-France vers 1140, avec le chœur de la basilique de Saint-Denis. Ogives et arcs-boutants reportent le poids des voûtes vers l’extérieur : les murs peuvent s’élever et s’ouvrir sur de grandes verrières. Chartres, Reims et Amiens en sont de grands exemples.",
+      "anecdote": "Le mot « gothique » était au départ péjoratif : à la Renaissance, il désignait un art jugé barbare, celui des Goths.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "nef de la cathédrale Notre-Dame d’Amiens",
+        "fichier": "arts01-q11.jpg",
+        "auteur": "Diliff",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Amiens_Cathedral_Nave_1,_Picardy,_France_-_Diliff.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Amiens_Cathedral_Nave_1%2C_Picardy%2C_France_-_Diliff.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "arts01-q12",
+      "titre": "Le Radeau de la Méduse",
+      "categorie": "Peinture",
+      "difficulte": "difficile",
+      "question": "Quel peintre a réalisé Le Radeau de la Méduse, exposé au Louvre ?",
+      "indices": [
+        "Le tableau raconte le naufrage d’une frégate française en 1816.",
+        "Le peintre est mort jeune, à 32 ans, en 1824."
+      ],
+      "reponse": "Théodore Géricault.",
+      "reponse_courte": "Théodore Géricault",
+      "distracteurs": [
+        "Eugène Delacroix",
+        "Jacques-Louis David",
+        "Gustave Courbet"
+      ],
+      "variantes_acceptees": [
+        "géricault",
+        "théodore géricault"
+      ],
+      "explication": "En 1816, la frégate La Méduse, en route vers le Sénégal, s’échoue au large de l’actuelle Mauritanie ; près de cent cinquante personnes sont abandonnées sur un radeau, et une quinzaine seulement survivent. Géricault en tire une immense toile, présentée au Salon de 1819, qui fait scandale par son réalisme et sa charge contre le gouvernement.",
+      "anecdote": "Pour préparer le tableau, il a interrogé des survivants et étudié des corps et des membres à l’hôpital.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Le Radeau de la Méduse de Théodore Géricault",
+        "fichier": "arts01-q12.jpg",
+        "auteur": "Théodore Géricault",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_(Museo_del_Louvre,_1818-19).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/15/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts01-q13",
+      "titre": "La Flûte enchantée",
+      "categorie": "Musique",
+      "difficulte": "moyenne",
+      "question": "Quel compositeur autrichien a écrit l’opéra La Flûte enchantée ?",
+      "indices": [
+        "Enfant prodige, il donnait des concerts à travers l’Europe dès six ans.",
+        "Il est né à Salzbourg en 1756."
+      ],
+      "reponse": "Wolfgang Amadeus Mozart.",
+      "reponse_courte": "Wolfgang Amadeus Mozart",
+      "distracteurs": [
+        "Joseph Haydn",
+        "Franz Schubert",
+        "Richard Wagner"
+      ],
+      "variantes_acceptees": [
+        "mozart",
+        "wolfgang amadeus mozart"
+      ],
+      "explication": "La Flûte enchantée est créée à Vienne en septembre 1791, un peu plus de deux mois avant la mort de Mozart, à 35 ans. Cet opéra en allemand mêle conte, comédie et symboles maçonniques ; il connaît tout de suite un grand succès.",
+      "anecdote": "L’air de la Reine de la nuit monte jusqu’à un fa suraigu : c’est l’un des airs les plus redoutés des sopranos.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "décor ancien de La Flûte enchantée",
+        "fichier": "arts01-q13.jpg",
+        "auteur": "Barbara Krafft",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Wolfgang-amadeus-mozart_1.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Wolfgang-amadeus-mozart_1.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts01-q14",
+      "titre": "La chapelle Sixtine",
+      "categorie": "Peinture",
+      "difficulte": "facile",
+      "question": "Quel artiste de la Renaissance a peint le plafond de la chapelle Sixtine ?",
+      "indices": [
+        "Il se considérait avant tout comme un sculpteur, l’auteur du David.",
+        "Il a peint ce plafond, au Vatican, entre 1508 et 1512."
+      ],
+      "reponse": "Michel-Ange.",
+      "reponse_courte": "Michel-Ange",
+      "distracteurs": [
+        "Léonard de Vinci",
+        "Raphaël",
+        "Titien"
+      ],
+      "variantes_acceptees": [
+        "michel-ange",
+        "michelangelo",
+        "michel ange"
+      ],
+      "explication": "À la demande du pape Jules II, Michel-Ange couvre de fresques la voûte de la chapelle Sixtine : scènes de la Genèse, dont La Création d’Adam, prophètes et sibylles. Il revient plus tard peindre Le Jugement dernier sur le mur de l’autel.",
+      "anecdote": "Contrairement à la légende, il n’a pas peint couché, mais debout sur un échafaudage, la tête renversée en arrière.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "La Création d’Adam de Michel-Ange",
+        "fichier": "arts01-q14.jpg",
+        "auteur": "Michel-Ange Buronarroti",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:The_Creation_of_Adam_perspective_fix.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/29/The_Creation_of_Adam_perspective_fix.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts01-q15",
+      "titre": "L’Arc de triomphe",
+      "categorie": "Architecture",
+      "difficulte": "moyenne",
+      "question": "Quel monument parisien, achevé en 1836, célèbre les victoires des armées françaises ?",
+      "indices": [
+        "Napoléon Ier en a ordonné la construction en 1806.",
+        "Sous sa voûte repose le Soldat inconnu, depuis 1921."
+      ],
+      "reponse": "L’Arc de triomphe de l’Étoile.",
+      "reponse_courte": "L’Arc de triomphe",
+      "distracteurs": [
+        "Le Panthéon",
+        "L’Opéra Garnier",
+        "Le Grand Palais"
+      ],
+      "variantes_acceptees": [
+        "arc de triomphe",
+        "l'arc de triomphe",
+        "arc de triomphe de l'étoile"
+      ],
+      "explication": "Voulu par Napoléon après la victoire d’Austerlitz, l’Arc de triomphe de l’Étoile n’est achevé qu’en 1836, sous Louis-Philippe. Haut d’environ 50 mètres, il porte les noms de batailles et de généraux. La flamme du Soldat inconnu y est ravivée chaque soir.",
+      "anecdote": "En 1919, l’aviateur Charles Godefroy est passé en avion sous sa voûte.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Arc de triomphe de l’Étoile à Paris",
+        "fichier": "arts01-q15.jpg",
+        "auteur": "Wilfredo Rafael Rodriguez Hernandez",
+        "licence": "CC0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe_de_l%27%C3%89toile_at_night_vertical_fix.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Arc_de_Triomphe_de_l%27%C3%89toile_at_night_vertical_fix.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    }
+  ]
+}

@@ -1,0 +1,565 @@
+{
+  "pack": {
+    "id": "geographie_01",
+    "titre": "Pack Géographie n° 1",
+    "premier_numero": 501,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Pays et capitales": "Géographie",
+      "Fleuves et mers": "Géographie",
+      "Reliefs et paysages": "Géographie",
+      "Climats et repères": "Géographie"
+    }
+  },
+  "questions": [
+    {
+      "id": "geographie01-q01",
+      "titre": "La Loire",
+      "categorie": "Fleuves et mers",
+      "difficulte": "facile",
+      "question": "Quel est le plus long fleuve de France ?",
+      "indices": [
+        "Il se jette dans l’océan Atlantique, près de Saint-Nazaire.",
+        "Ses rives sont célèbres pour leurs châteaux de la Renaissance."
+      ],
+      "reponse": "La Loire.",
+      "reponse_courte": "La Loire",
+      "distracteurs": [
+        "La Seine",
+        "Le Rhône",
+        "La Garonne"
+      ],
+      "variantes_acceptees": [
+        "loire",
+        "la loire"
+      ],
+      "explication": "Longue d’environ 1 000 km, la Loire coule entièrement en France, du Massif central jusqu’à l’Atlantique. Son cours irrégulier, entre basses eaux d’été et crues violentes, l’a rendue difficile à naviguer. Le Val de Loire est inscrit au patrimoine mondial de l’Unesco.",
+      "anecdote": "Elle prend sa source au pied du mont Gerbier-de-Jonc, en Ardèche.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "la Loire et un château du Val de Loire",
+        "fichier": "geographie01-q01.jpg",
+        "auteur": "LPLT",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Loire_%C3%A0_Br%C3%A9h%C3%A9mont2.JPG",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Loire_%C3%A0_Br%C3%A9h%C3%A9mont2.JPG",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "geographie01-q02",
+      "titre": "Canberra",
+      "categorie": "Pays et capitales",
+      "difficulte": "moyenne",
+      "question": "Quelle est la capitale de l’Australie ?",
+      "indices": [
+        "Elle a été construite exprès pour être capitale, au début du XXe siècle.",
+        "Son plan a été dessiné par un couple d’architectes américains."
+      ],
+      "reponse": "Canberra.",
+      "reponse_courte": "Canberra",
+      "distracteurs": [
+        "Sydney",
+        "Melbourne",
+        "Perth"
+      ],
+      "variantes_acceptees": [
+        "canberra"
+      ],
+      "explication": "Sydney et Melbourne se disputant le titre, l’Australie décide de bâtir une nouvelle capitale entre les deux. Le plan de Canberra, dessiné par Walter Burley Griffin et Marion Mahony Griffin, est retenu en 1912, et le Parlement s’y installe en 1927.",
+      "anecdote": "Le lac qui occupe le centre de la ville porte le nom de son architecte : le lac Burley Griffin.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Parlement australien à Canberra",
+        "fichier": "geographie01-q02.jpg",
+        "auteur": "Dietmar Rabich",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Canberra_(AU),_Parliament_House_and_Old_Parliament_House_--_2019_--_1767.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/11/Canberra_%28AU%29%2C_Parliament_House_and_Old_Parliament_House_--_2019_--_1767.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "geographie01-q03",
+      "titre": "L’Everest",
+      "categorie": "Reliefs et paysages",
+      "difficulte": "facile",
+      "question": "Quel est le plus haut sommet du monde ?",
+      "indices": [
+        "Il culmine à près de 8 850 mètres.",
+        "Il se dresse à la frontière entre le Népal et la Chine."
+      ],
+      "reponse": "L’Everest.",
+      "reponse_courte": "L’Everest",
+      "distracteurs": [
+        "Le K2",
+        "Le mont Blanc",
+        "L’Aconcagua"
+      ],
+      "variantes_acceptees": [
+        "everest",
+        "l'everest",
+        "mont everest"
+      ],
+      "explication": "L’Everest, dans l’Himalaya, culmine à 8 848,86 mètres selon la mesure commune du Népal et de la Chine publiée en 2020. Le Néo-Zélandais Edmund Hillary et le sherpa Tenzing Norgay en ont atteint le sommet pour la première fois en 1953.",
+      "anecdote": "Il porte le nom d’un géographe britannique, George Everest ; les Népalais l’appellent Sagarmatha et les Tibétains Chomolungma.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "mont Everest dans l’Himalaya",
+        "fichier": "geographie01-q03.jpg",
+        "auteur": "Vyacheslav Argenberg",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Everest,_Himalayas.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/9/90/Everest%2C_Himalayas.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "geographie01-q04",
+      "titre": "Le Sahara",
+      "categorie": "Reliefs et paysages",
+      "difficulte": "facile",
+      "question": "Quel est le plus grand désert chaud du monde ?",
+      "indices": [
+        "Il couvre une grande partie du nord de l’Afrique.",
+        "Son nom vient d’un mot arabe qui signifie « désert »."
+      ],
+      "reponse": "Le Sahara.",
+      "reponse_courte": "Le Sahara",
+      "distracteurs": [
+        "Le désert de Gobi",
+        "Le Kalahari",
+        "Le désert d’Atacama"
+      ],
+      "variantes_acceptees": [
+        "sahara",
+        "le sahara"
+      ],
+      "explication": "Le Sahara s’étend sur environ 9 millions de km², de l’Atlantique à la mer Rouge. Il n’est fait de dunes que pour une partie : on y trouve surtout des plateaux rocheux et des plaines de cailloux. Le plus grand désert du monde, lui, est froid : c’est l’Antarctique.",
+      "anecdote": "Il y a quelques milliers d’années, pendant la « période humide africaine », le Sahara était couvert de savanes et parsemé de lacs.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "dunes du Sahara",
+        "fichier": "geographie01-q04.png",
+        "auteur": "Epicman111",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Sahara_Dunes_2.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Sahara_Dunes_2.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "geographie01-q05",
+      "titre": "L’océan Pacifique",
+      "categorie": "Fleuves et mers",
+      "difficulte": "facile",
+      "question": "Quel est le plus grand océan du monde ?",
+      "indices": [
+        "Il couvre à lui seul environ un tiers de la surface de la Terre.",
+        "Le navigateur Magellan lui a donné son nom, pour son calme."
+      ],
+      "reponse": "L’océan Pacifique.",
+      "reponse_courte": "L’océan Pacifique",
+      "distracteurs": [
+        "L’océan Atlantique",
+        "L’océan Indien",
+        "L’océan Arctique"
+      ],
+      "variantes_acceptees": [
+        "pacifique",
+        "océan pacifique"
+      ],
+      "explication": "Le Pacifique s’étend de l’Asie et de l’Océanie jusqu’aux Amériques : il est plus vaste que toutes les terres émergées réunies. Il est bordé par la « ceinture de feu », une ceinture de volcans et de séismes très actifs.",
+      "anecdote": "Sa plus grande profondeur, dans la fosse des Mariannes, dépasse 10 900 mètres.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "vue de l’océan Pacifique depuis l’espace",
+        "fichier": "geographie01-q05.jpg",
+        "auteur": "ABI imagery from NOAA's GOES-18 satellite",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Pacific_Ocean_as_viewed_from_GOES-18_on_September_23,_2023.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/db/Pacific_Ocean_as_viewed_from_GOES-18_on_September_23%2C_2023.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "geographie01-q06",
+      "titre": "L’Inde",
+      "categorie": "Pays et capitales",
+      "difficulte": "difficile",
+      "question": "Quel pays compte le plus d’habitants au monde ?",
+      "indices": [
+        "Il a dépassé son voisin, longtemps premier, vers 2023.",
+        "Son fleuve sacré est le Gange."
+      ],
+      "reponse": "L’Inde.",
+      "reponse_courte": "L’Inde",
+      "distracteurs": [
+        "La Chine",
+        "Les États-Unis",
+        "L’Indonésie"
+      ],
+      "variantes_acceptees": [
+        "inde",
+        "l'inde"
+      ],
+      "explication": "Selon les estimations des Nations unies, l’Inde est devenue en 2023 le pays le plus peuplé du monde, devant la Chine, avec plus de 1,4 milliard d’habitants. Sa population est aussi l’une des plus jeunes parmi les grands pays.",
+      "anecdote": "On y parle des centaines de langues ; la Constitution en reconnaît officiellement 22.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "foule sur les marches au bord du Gange, à Varanasi",
+        "fichier": "geographie01-q06.jpg",
+        "auteur": "Marcin Białek",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Varanasi_Munshi_Ghat3.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Varanasi_Munshi_Ghat3.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "geographie01-q07",
+      "titre": "Le Nil",
+      "categorie": "Fleuves et mers",
+      "difficulte": "moyenne",
+      "question": "Quel est le plus long fleuve d’Afrique ?",
+      "indices": [
+        "Il se jette dans la Méditerranée par un vaste delta.",
+        "Ses crues annuelles ont longtemps fertilisé les terres de l’Égypte."
+      ],
+      "reponse": "Le Nil.",
+      "reponse_courte": "Le Nil",
+      "distracteurs": [
+        "Le Congo",
+        "Le Niger",
+        "Le Zambèze"
+      ],
+      "variantes_acceptees": [
+        "nil",
+        "le nil"
+      ],
+      "explication": "Long de près de 6 700 km, le Nil naît de la rencontre, à Khartoum, du Nil Blanc, venu de la région des Grands Lacs, et du Nil Bleu, venu d’Éthiopie. Il traverse le désert jusqu’à la Méditerranée ; près de neuf Égyptiens sur dix vivent dans sa vallée ou son delta.",
+      "anecdote": "Pour construire le haut barrage d’Assouan, achevé en 1970, les temples d’Abou Simbel ont été découpés et déplacés bloc par bloc.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "le Nil et ses rives cultivées",
+        "fichier": "geographie01-q07.jpg",
+        "auteur": "Mustang Joe",
+        "licence": "CC0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:On_the_banks_of_the_Nile_-_Flickr_-_Mustang_Joe.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/eb/On_the_banks_of_the_Nile_-_Flickr_-_Mustang_Joe.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "geographie01-q08",
+      "titre": "Ottawa",
+      "categorie": "Pays et capitales",
+      "difficulte": "moyenne",
+      "question": "Quelle est la capitale du Canada ?",
+      "indices": [
+        "Elle se trouve en Ontario, à la limite du Québec.",
+        "La reine Victoria l’a choisie en 1857."
+      ],
+      "reponse": "Ottawa.",
+      "reponse_courte": "Ottawa",
+      "distracteurs": [
+        "Toronto",
+        "Montréal",
+        "Vancouver"
+      ],
+      "variantes_acceptees": [
+        "ottawa"
+      ],
+      "explication": "Ottawa a été préférée à Toronto, Montréal, Québec et Kingston, notamment parce qu’elle se trouvait entre les régions anglophone et francophone. C’est une ville bilingue, où siège le Parlement, sur la colline du Parlement.",
+      "anecdote": "En hiver, le canal Rideau, qui la traverse, devient une patinoire de près de 8 km.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "colline du Parlement à Ottawa",
+        "fichier": "geographie01-q08.jpg",
+        "auteur": "Acediscovery",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:William-Lyon-Mackenzie-King-statue-Parliament-Hill-Ottawa-May-2024.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/4b/William-Lyon-Mackenzie-King-statue-Parliament-Hill-Ottawa-May-2024.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "geographie01-q09",
+      "titre": "La mer Caspienne",
+      "categorie": "Fleuves et mers",
+      "difficulte": "moyenne",
+      "question": "Quelle « mer », entre l’Europe et l’Asie, est en fait le plus grand lac du monde ?",
+      "indices": [
+        "Ses eaux sont légèrement salées.",
+        "Elle borde notamment la Russie, l’Iran et le Kazakhstan."
+      ],
+      "reponse": "La mer Caspienne.",
+      "reponse_courte": "La mer Caspienne",
+      "distracteurs": [
+        "La mer Noire",
+        "La mer d’Aral",
+        "La mer Morte"
+      ],
+      "variantes_acceptees": [
+        "caspienne",
+        "mer caspienne"
+      ],
+      "explication": "La Caspienne couvre environ 370 000 km², à peu près la surface de l’Allemagne. Sans lien avec l’océan, elle est alimentée surtout par la Volga. Sa nature, mer ou lac, a longtemps été discutée, car elle change le partage de ses ressources entre les pays riverains.",
+      "anecdote": "On y pêche des esturgeons, dont les œufs donnent le caviar.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "rivage de la mer Caspienne",
+        "fichier": "geographie01-q09.jpg",
+        "auteur": "Jeff Schmaltz, MODIS Land Rapid Response Team, NASA GSFC",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Caspian_Sea_(MODIS_2016-04-26).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Caspian_Sea_%28MODIS_2016-04-26%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "geographie01-q10",
+      "titre": "Gibraltar",
+      "categorie": "Fleuves et mers",
+      "difficulte": "moyenne",
+      "question": "Quel détroit sépare l’Europe de l’Afrique ?",
+      "indices": [
+        "Il relie la Méditerranée à l’océan Atlantique.",
+        "Il ne mesure qu’environ 14 km de large à son point le plus étroit."
+      ],
+      "reponse": "Le détroit de Gibraltar.",
+      "reponse_courte": "Le détroit de Gibraltar",
+      "distracteurs": [
+        "Le Bosphore",
+        "Le pas de Calais",
+        "Le détroit de Messine"
+      ],
+      "variantes_acceptees": [
+        "gibraltar",
+        "détroit de gibraltar"
+      ],
+      "explication": "Le détroit de Gibraltar sépare l’Espagne du Maroc. C’est l’un des passages maritimes les plus fréquentés du monde. À travers lui, l’eau de l’Atlantique entre en surface dans la Méditerranée, tandis qu’une eau plus salée en sort en profondeur.",
+      "anecdote": "Dans l’Antiquité, on y plaçait les « colonnes d’Hercule », qui marquaient la limite du monde connu.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "le détroit de Gibraltar vu depuis le rocher",
+        "fichier": "geographie01-q10.jpg",
+        "auteur": "MODIS Land Rapid Response Team, NASA GSFC",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Strait_of_Gibraltar_(MODIS_2019-03-14).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Strait_of_Gibraltar_%28MODIS_2019-03-14%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "geographie01-q11",
+      "titre": "Les Pyrénées",
+      "categorie": "Reliefs et paysages",
+      "difficulte": "facile",
+      "question": "Quelle chaîne de montagnes sépare la France de l’Espagne ?",
+      "indices": [
+        "Elle s’étend de l’Atlantique à la Méditerranée.",
+        "Un petit pays s’y niche, entre les deux : l’Andorre."
+      ],
+      "reponse": "Les Pyrénées.",
+      "reponse_courte": "Les Pyrénées",
+      "distracteurs": [
+        "Les Alpes",
+        "Le Jura",
+        "Les Vosges"
+      ],
+      "variantes_acceptees": [
+        "pyrénées",
+        "les pyrénées"
+      ],
+      "explication": "Les Pyrénées s’étirent sur environ 430 km, du golfe de Gascogne au cap de Creus. Elles sont nées de la collision entre la plaque ibérique et le reste de l’Europe. Leur relief a longtemps fait des cols et des vallées des lieux de passage, de commerce et de contrebande.",
+      "anecdote": "Leur point culminant, l’Aneto (3 404 m), se trouve du côté espagnol.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "cirque de Gavarnie dans les Pyrénées",
+        "fichier": "geographie01-q11.jpg",
+        "auteur": "Moahim",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:2019_-_Parc_national_des_Pyrenees_-_Grande_cascade_de_Gavarnie.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/ed/2019_-_Parc_national_des_Pyrenees_-_Grande_cascade_de_Gavarnie.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "geographie01-q12",
+      "titre": "Les saisons",
+      "categorie": "Climats et repères",
+      "difficulte": "difficile",
+      "question": "Pourquoi fait-il plus chaud en été qu’en hiver, en France ?",
+      "indices": [
+        "En janvier, la Terre est pourtant au plus près du Soleil.",
+        "En été, les rayons du Soleil arrivent plus droit et les jours sont plus longs."
+      ],
+      "reponse": "Parce que l’axe de rotation de la Terre est incliné.",
+      "reponse_courte": "L’axe de la Terre est incliné",
+      "distracteurs": [
+        "La Terre est plus proche du Soleil",
+        "Le Soleil brille plus fort",
+        "Les nuages sont moins nombreux"
+      ],
+      "variantes_acceptees": [
+        "inclinaison de la terre",
+        "l'inclinaison de l'axe de la terre"
+      ],
+      "explication": "L’axe de rotation de la Terre est incliné d’environ 23,4° par rapport à son orbite. De juin à septembre, l’hémisphère nord penche vers le Soleil : ses rayons y arrivent plus verticalement et les journées sont plus longues, si bien que le sol reçoit plus d’énergie. La distance au Soleil, elle, varie peu.",
+      "anecdote": "Dans l’hémisphère sud, les saisons sont inversées : en Australie, Noël tombe en plein été.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "schéma de l’inclinaison de la Terre et des saisons",
+        "fichier": "geographie01-q12.png",
+        "auteur": "Dna-webmaster",
+        "licence": "CC BY 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:AxialTiltObliquity.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/61/AxialTiltObliquity.png",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "CC BY 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by/3.0"
+      }
+    },
+    {
+      "id": "geographie01-q13",
+      "titre": "L’Italie",
+      "categorie": "Pays et capitales",
+      "difficulte": "facile",
+      "question": "Quel pays d’Europe a la forme d’une botte ?",
+      "indices": [
+        "Il est presque entièrement entouré par la Méditerranée.",
+        "Il entoure deux petits États : le Vatican et Saint-Marin."
+      ],
+      "reponse": "L’Italie.",
+      "reponse_courte": "L’Italie",
+      "distracteurs": [
+        "La Grèce",
+        "Le Portugal",
+        "La Croatie"
+      ],
+      "variantes_acceptees": [
+        "italie",
+        "l'italie"
+      ],
+      "explication": "La péninsule italienne s’avance dans la Méditerranée sur plus de 1 000 km, des Alpes jusqu’à la Calabre, la « pointe » de la botte ; la Sicile semble être le ballon qu’elle frappe. La chaîne des Apennins la parcourt du nord au sud.",
+      "anecdote": "Le Vatican, enclavé dans Rome, est le plus petit État du monde : moins d’un demi-kilomètre carré.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "image satellite de la péninsule italienne",
+        "fichier": "geographie01-q13.jpg",
+        "auteur": "Jacques Descloitres, MODIS Rapid Response Team, NASA/GSFC",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Satellite_image_of_Italy_in_March_2003.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Satellite_image_of_Italy_in_March_2003.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "geographie01-q14",
+      "titre": "L’Amazonie",
+      "categorie": "Reliefs et paysages",
+      "difficulte": "moyenne",
+      "question": "Quelle est la plus grande forêt tropicale du monde ?",
+      "indices": [
+        "Elle s’étend sur neuf pays et territoires, surtout au Brésil.",
+        "Le fleuve qui la traverse est le plus puissant du monde par son débit."
+      ],
+      "reponse": "La forêt amazonienne.",
+      "reponse_courte": "La forêt amazonienne",
+      "distracteurs": [
+        "La forêt du bassin du Congo",
+        "La forêt de Bornéo",
+        "La taïga sibérienne"
+      ],
+      "variantes_acceptees": [
+        "amazonie",
+        "forêt amazonienne",
+        "l'amazonie"
+      ],
+      "explication": "La forêt amazonienne couvre plus de 5 millions de km² autour du bassin de l’Amazone. Elle abrite une part considérable des espèces vivantes connues et joue un grand rôle dans le cycle de l’eau et du carbone. La déforestation menace une partie de son étendue.",
+      "anecdote": "Une petite partie de cette forêt est française : elle couvre la plus grande partie de la Guyane.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "forêt amazonienne vue d’avion",
+        "fichier": "geographie01-q14.jpg",
+        "auteur": "lubasi",
+        "licence": "CC BY-SA 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_Amazon_Rainforest.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Aerial_view_of_the_Amazon_Rainforest.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "geographie01-q15",
+      "titre": "Le méridien de Greenwich",
+      "categorie": "Climats et repères",
+      "difficulte": "moyenne",
+      "question": "Quelle ligne imaginaire sert de point de départ pour mesurer les longitudes ?",
+      "indices": [
+        "Elle relie le pôle Nord au pôle Sud.",
+        "Elle a été choisie lors d’une conférence internationale à Washington, en 1884."
+      ],
+      "reponse": "Le méridien de Greenwich.",
+      "reponse_courte": "Le méridien de Greenwich",
+      "distracteurs": [
+        "L’équateur",
+        "Le tropique du Cancer",
+        "Le méridien de Paris"
+      ],
+      "variantes_acceptees": [
+        "greenwich",
+        "méridien de greenwich",
+        "méridien d'origine"
+      ],
+      "explication": "Le méridien de Greenwich passe par l’observatoire royal de Greenwich, près de Londres. En 1884, une conférence internationale le choisit comme méridien d’origine, la longitude 0°, et comme référence pour l’heure. L’équateur, lui, sert d’origine aux latitudes.",
+      "anecdote": "À Paris, des médaillons de bronze au nom d’Arago jalonnent encore le tracé de l’ancien méridien de Paris.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "ligne du méridien à l’observatoire de Greenwich",
+        "fichier": "geographie01-q15.jpg",
+        "auteur": "Christine Matthews",
+        "licence": "CC BY-SA 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Meridian_Line,_Greenwich_-_geograph.org.uk_-_1698848.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/46/Meridian_Line%2C_Greenwich_-_geograph.org.uk_-_1698848.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "CC BY-SA 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    }
+  ]
+}

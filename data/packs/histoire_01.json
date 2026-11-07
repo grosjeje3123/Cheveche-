@@ -1,0 +1,569 @@
+{
+  "pack": {
+    "id": "histoire_01",
+    "titre": "Pack Histoire n° 1",
+    "premier_numero": 301,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Antiquité": "Histoire",
+      "Moyen Âge": "Histoire",
+      "Temps modernes": "Histoire",
+      "Époque contemporaine": "Histoire"
+    }
+  },
+  "questions": [
+    {
+      "id": "histoire01-q01",
+      "titre": "Pyramides de Gizeh",
+      "categorie": "Antiquité",
+      "difficulte": "facile",
+      "question": "Quel peuple de l’Antiquité a construit les pyramides de Gizeh ?",
+      "indices": [
+        "Elles servaient de tombeaux à des souverains.",
+        "Ces souverains portaient le titre de pharaon."
+      ],
+      "reponse": "Les Égyptiens de l’Antiquité.",
+      "reponse_courte": "Les Égyptiens",
+      "distracteurs": [
+        "Les Mayas",
+        "Les Romains",
+        "Les Perses"
+      ],
+      "variantes_acceptees": [
+        "égyptiens",
+        "les égyptiens",
+        "égypte ancienne",
+        "l'égypte"
+      ],
+      "explication": "Les trois grandes pyramides de Gizeh ont été bâties vers 2600-2500 av. J.-C. pour les pharaons Khéops, Khéphren et Mykérinos. Ce sont des tombeaux monumentaux, entourés de temples et de pyramides plus petites.",
+      "anecdote": "La pyramide de Khéops est restée la plus haute construction humaine pendant plus de 3 700 ans.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "pyramides de Gizeh dans le désert",
+        "fichier": "histoire01-q01.jpg",
+        "auteur": "Ricardo Liberato",
+        "licence": "CC BY-SA 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/af/All_Gizah_Pyramids.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "histoire01-q02",
+      "titre": "Pompéi",
+      "categorie": "Antiquité",
+      "difficulte": "moyenne",
+      "question": "Quelle ville romaine a été ensevelie par l’éruption du Vésuve, en 79 ?",
+      "indices": [
+        "Elle se trouve près de l’actuelle Naples.",
+        "Ses fouilles ont commencé au XVIIIe siècle."
+      ],
+      "reponse": "Pompéi.",
+      "reponse_courte": "Pompéi",
+      "distracteurs": [
+        "Ostie",
+        "Carthage",
+        "Alexandrie"
+      ],
+      "variantes_acceptees": [
+        "pompéi",
+        "pompei"
+      ],
+      "explication": "En 79, l’éruption du Vésuve recouvre Pompéi de cendres et de pierres ponces, ainsi que la ville voisine d’Herculanum. Figée sous plusieurs mètres de dépôts, la ville offre aux archéologues une image exceptionnelle de la vie quotidienne romaine. Pline le Jeune a décrit l’éruption dans deux lettres.",
+      "anecdote": "Au XIXe siècle, les archéologues ont coulé du plâtre dans les vides laissés par les corps dans la cendre durcie, obtenant des moulages saisissants des victimes.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "ruines de Pompéi avec le Vésuve à l’arrière-plan",
+        "fichier": "histoire01-q02.jpg",
+        "auteur": "Silar",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:02004_Ruins_of_Pompeii,_Vesuvius.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/e6/02004_Ruins_of_Pompeii%2C_Vesuvius.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "histoire01-q03",
+      "titre": "Vercingétorix",
+      "categorie": "Antiquité",
+      "difficulte": "facile",
+      "question": "Quel chef gaulois a affronté Jules César à Alésia, en 52 av. J.-C. ?",
+      "indices": [
+        "Il était le chef des Arvernes, un peuple de l’actuelle Auvergne.",
+        "Assiégé, il finit par se rendre à César."
+      ],
+      "reponse": "Vercingétorix.",
+      "reponse_courte": "Vercingétorix",
+      "distracteurs": [
+        "Ambiorix",
+        "Brennus",
+        "Clovis"
+      ],
+      "variantes_acceptees": [
+        "vercingétorix"
+      ],
+      "explication": "Vercingétorix fédère de nombreux peuples gaulois contre Rome et bat César à Gergovie. Assiégé dans l’oppidum d’Alésia, généralement situé à Alise-Sainte-Reine, en Côte-d’Or, il se rend après l’échec de l’armée gauloise venue le secourir.",
+      "anecdote": "Emmené à Rome, il est exécuté vers 46 av. J.-C., après le triomphe de César.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "statue de Vercingétorix à Alise-Sainte-Reine",
+        "fichier": "histoire01-q03.jpg",
+        "auteur": "Lionel Royer",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Lionel_Royer_-_Vercingetorix_Throwing_down_His_Weapons_at_the_feet_of_Julius_Caesar.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Lionel_Royer_-_Vercingetorix_Throwing_down_His_Weapons_at_the_feet_of_Julius_Caesar.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire01-q04",
+      "titre": "Charlemagne",
+      "categorie": "Moyen Âge",
+      "difficulte": "facile",
+      "question": "Quel roi des Francs a été couronné empereur à Rome, le jour de Noël de l’an 800 ?",
+      "indices": [
+        "Il était le fils de Pépin le Bref.",
+        "Une chanson populaire en fait l’inventeur de l’école."
+      ],
+      "reponse": "Charlemagne.",
+      "reponse_courte": "Charlemagne",
+      "distracteurs": [
+        "Clovis",
+        "Hugues Capet",
+        "Louis IX"
+      ],
+      "variantes_acceptees": [
+        "charlemagne",
+        "charles le grand",
+        "charles ier"
+      ],
+      "explication": "Roi des Francs à partir de 768, Charlemagne étend son royaume sur une grande partie de l’Europe de l’Ouest. Le 25 décembre 800, le pape Léon III le couronne empereur à Rome. Il gouverne depuis Aix-la-Chapelle et encourage la copie des manuscrits et l’enseignement.",
+      "anecdote": "Il savait lire. Son biographe Éginhard raconte qu’il s’exerça tard à écrire, sans grand succès ; les historiens se demandent s’il parlait d’écriture ou de belle calligraphie.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "statue équestre de Charlemagne devant Notre-Dame de Paris",
+        "fichier": "histoire01-q04.jpg",
+        "auteur": "Remi Jouan",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Charlemagne_et_ses_Leudes_(1).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/37/Charlemagne_et_ses_Leudes_%281%29.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "id": "histoire01-q05",
+      "titre": "Bataille d’Hastings",
+      "categorie": "Moyen Âge",
+      "difficulte": "difficile",
+      "question": "Quelle bataille de 1066 ouvre à Guillaume de Normandie la conquête de l’Angleterre ?",
+      "indices": [
+        "Le roi anglais Harold y fut tué.",
+        "Une longue broderie conservée à Bayeux la raconte."
+      ],
+      "reponse": "La bataille d’Hastings.",
+      "reponse_courte": "La bataille d’Hastings",
+      "distracteurs": [
+        "La bataille d’Azincourt",
+        "La bataille de Bouvines",
+        "La bataille de Crécy"
+      ],
+      "variantes_acceptees": [
+        "hastings",
+        "bataille d'hastings"
+      ],
+      "explication": "Le 14 octobre 1066, l’armée du duc de Normandie bat celle du roi Harold près d’Hastings, dans le sud de l’Angleterre. Guillaume, désormais « le Conquérant », est couronné roi d’Angleterre à Noël, à Westminster.",
+      "anecdote": "La « tapisserie » de Bayeux est en réalité une broderie de laine sur toile de lin, longue d’environ 70 mètres.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "détail de la tapisserie de Bayeux",
+        "fichier": "histoire01-q05.jpg",
+        "auteur": "Myrabella",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Bayeux_Tapestry_scene57_Harold_death.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Bayeux_Tapestry_scene57_Harold_death.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire01-q06",
+      "titre": "Jeanne d’Arc",
+      "categorie": "Moyen Âge",
+      "difficulte": "facile",
+      "question": "Quelle jeune paysanne a conduit les troupes françaises qui délivrent Orléans, en 1429 ?",
+      "indices": [
+        "Elle disait entendre des voix célestes.",
+        "Elle fut brûlée à Rouen en 1431."
+      ],
+      "reponse": "Jeanne d’Arc.",
+      "reponse_courte": "Jeanne d’Arc",
+      "distracteurs": [
+        "Aliénor d’Aquitaine",
+        "Christine de Pizan",
+        "Blanche de Castille"
+      ],
+      "variantes_acceptees": [
+        "jeanne d'arc",
+        "la pucelle",
+        "la pucelle d'orléans"
+      ],
+      "explication": "En pleine guerre de Cent Ans, Jeanne d’Arc obtient du dauphin Charles de rejoindre l’armée et contribue à lever le siège d’Orléans. Elle le fait ensuite sacrer roi à Reims. Capturée, elle est jugée et brûlée à Rouen en 1431, puis réhabilitée en 1456.",
+      "anecdote": "Elle est née à Domrémy, un village des Vosges aujourd’hui appelé Domrémy-la-Pucelle.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "statue équestre de Jeanne d’Arc à Paris",
+        "fichier": "histoire01-q06.jpg",
+        "auteur": "Jastrow",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Joan_of_Arc_Emmanuel_Fremiet.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/7/79/Joan_of_Arc_Emmanuel_Fremiet.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire01-q07",
+      "titre": "Christophe Colomb",
+      "categorie": "Temps modernes",
+      "difficulte": "facile",
+      "question": "En quelle année Christophe Colomb atteint-il l’Amérique ?",
+      "indices": [
+        "Il cherchait une route vers l’Asie en naviguant vers l’ouest.",
+        "Il naviguait pour le compte des souverains d’Espagne."
+      ],
+      "reponse": "En 1492.",
+      "reponse_courte": "1492",
+      "distracteurs": [
+        "1453",
+        "1515",
+        "1610"
+      ],
+      "variantes_acceptees": [
+        "1492",
+        "en 1492"
+      ],
+      "explication": "Parti d’Espagne en août 1492 avec trois navires, Christophe Colomb aborde une île des Bahamas le 12 octobre. Il croit être arrivé en Asie, aux « Indes », d’où le nom d’Indiens donné aux habitants du continent.",
+      "anecdote": "Le continent porte le nom d’un autre navigateur, Amerigo Vespucci, qui comprit qu’il s’agissait d’un « Nouveau Monde ».",
+      "image": {
+        "statut": "verifie",
+        "recherche": "réplique de la caravelle Santa María",
+        "fichier": "histoire01-q07.jpg",
+        "auteur": "Carlos Alustiza Martínez",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:R%C3%A9plica_de_la_carabela_Santa_Mar%C3%ADa_en_San_Sebasti%C3%A1n..jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/fe/R%C3%A9plica_de_la_carabela_Santa_Mar%C3%ADa_en_San_Sebasti%C3%A1n..jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "histoire01-q08",
+      "titre": "Louis XIV à Versailles",
+      "categorie": "Temps modernes",
+      "difficulte": "moyenne",
+      "question": "Quel roi installe la cour et le gouvernement à Versailles, en 1682 ?",
+      "indices": [
+        "On le surnommait le Roi-Soleil.",
+        "Son règne a duré plus de 72 ans."
+      ],
+      "reponse": "Louis XIV.",
+      "reponse_courte": "Louis XIV",
+      "distracteurs": [
+        "Louis XIII",
+        "Henri IV",
+        "François Ier"
+      ],
+      "variantes_acceptees": [
+        "louis xiv",
+        "louis 14",
+        "le roi-soleil"
+      ],
+      "explication": "Louis XIV transforme le pavillon de chasse de son père, Louis XIII, en un immense palais où il s’installe en 1682 avec la cour et le gouvernement. Versailles devient la vitrine de la monarchie absolue.",
+      "anecdote": "Son règne, de 1643 à 1715, est le plus long de l’histoire de France : il était devenu roi à l’âge de quatre ans.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "galerie des Glaces du château de Versailles",
+        "fichier": "histoire01-q08.png",
+        "auteur": "Charles Le Brun",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Louis-XIV-of-France.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Louis-XIV-of-France.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire01-q09",
+      "titre": "Gutenberg",
+      "categorie": "Temps modernes",
+      "difficulte": "moyenne",
+      "question": "Qui a mis au point en Europe l’imprimerie à caractères mobiles, vers 1450 ?",
+      "indices": [
+        "Il travaillait à Mayence, en Allemagne.",
+        "Son ouvrage le plus célèbre est une Bible."
+      ],
+      "reponse": "Johannes Gutenberg.",
+      "reponse_courte": "Johannes Gutenberg",
+      "distracteurs": [
+        "Léonard de Vinci",
+        "Galilée",
+        "Martin Luther"
+      ],
+      "variantes_acceptees": [
+        "gutenberg",
+        "johannes gutenberg"
+      ],
+      "explication": "Gutenberg associe des caractères métalliques mobiles, une encre grasse et une presse inspirée de celles des vignerons. Les livres peuvent dès lors être reproduits bien plus vite qu’à la main, ce qui accélère la diffusion des idées en Europe.",
+      "anecdote": "Des caractères mobiles existaient déjà en Chine et en Corée plusieurs siècles plus tôt.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "page de la Bible de Gutenberg",
+        "fichier": "histoire01-q09.jpg",
+        "auteur": "Krugerr",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Gutenberg_Bible_in_Pelplin,_Poland_02.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/45/Gutenberg_Bible_in_Pelplin%2C_Poland_02.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "histoire01-q10",
+      "titre": "Prise de la Bastille",
+      "categorie": "Époque contemporaine",
+      "difficulte": "facile",
+      "question": "Quel événement du 14 juillet 1789 est devenu le symbole de la Révolution française ?",
+      "indices": [
+        "Une foule parisienne s’empare d’une forteresse servant de prison.",
+        "Ce jour est devenu la fête nationale française."
+      ],
+      "reponse": "La prise de la Bastille.",
+      "reponse_courte": "La prise de la Bastille",
+      "distracteurs": [
+        "Le sacre de Napoléon",
+        "La fuite à Varennes",
+        "Le serment du Jeu de paume"
+      ],
+      "variantes_acceptees": [
+        "prise de la bastille",
+        "la bastille"
+      ],
+      "explication": "Le 14 juillet 1789, des Parisiens à la recherche d’armes et de poudre prennent d’assaut la Bastille, forteresse royale et symbole de l’arbitraire. La fête nationale, fixée au 14 juillet en 1880, rappelle aussi la fête de la Fédération du 14 juillet 1790.",
+      "anecdote": "Ce jour-là, la Bastille ne comptait que sept prisonniers.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "tableau ancien de la prise de la Bastille",
+        "fichier": "histoire01-q10.jpg",
+        "auteur": "Jean-Pierre Houël",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Prise_de_la_Bastille_clean.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Prise_de_la_Bastille_clean.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire01-q11",
+      "titre": "Sainte-Hélène",
+      "categorie": "Époque contemporaine",
+      "difficulte": "moyenne",
+      "question": "Sur quelle île Napoléon Ier est-il mort en exil, en 1821 ?",
+      "indices": [
+        "Elle est isolée au milieu de l’Atlantique Sud.",
+        "Les Britanniques l’y envoyèrent après Waterloo."
+      ],
+      "reponse": "Sainte-Hélène.",
+      "reponse_courte": "Sainte-Hélène",
+      "distracteurs": [
+        "L’île d’Elbe",
+        "La Corse",
+        "Malte"
+      ],
+      "variantes_acceptees": [
+        "sainte-hélène",
+        "sainte hélène"
+      ],
+      "explication": "Après sa défaite à Waterloo, en juin 1815, Napoléon se rend aux Britanniques, qui l’exilent à Sainte-Hélène, à quelque 1 900 km des côtes africaines. Il y meurt le 5 mai 1821. Son premier exil, en 1814, l’avait conduit sur l’île d’Elbe, d’où il s’était échappé.",
+      "anecdote": "Ses cendres ont été rapatriées en France en 1840 ; elles reposent aux Invalides, à Paris.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "maison de Longwood à Sainte-Hélène",
+        "fichier": "histoire01-q11.jpg",
+        "auteur": "Auteur inconnu",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Jo%C3%A3o_da_Nova_discovers_island_of_Saint_Helena,_21_May_1502.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Jo%C3%A3o_da_Nova_discovers_island_of_Saint_Helena%2C_21_May_1502.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire01-q12",
+      "titre": "Armistice de 1918",
+      "categorie": "Époque contemporaine",
+      "difficulte": "facile",
+      "question": "En quelle année la Première Guerre mondiale s’est-elle terminée ?",
+      "indices": [
+        "L’armistice fut signé dans un wagon, en forêt de Compiègne.",
+        "On le commémore chaque 11 novembre."
+      ],
+      "reponse": "En 1918.",
+      "reponse_courte": "1918",
+      "distracteurs": [
+        "1914",
+        "1916",
+        "1945"
+      ],
+      "variantes_acceptees": [
+        "1918",
+        "en 1918"
+      ],
+      "explication": "L’armistice signé le 11 novembre 1918 à Rethondes, en forêt de Compiègne, met fin aux combats sur le front de l’Ouest. La guerre a fait environ 10 millions de morts parmi les soldats.",
+      "anecdote": "La paix avec l’Allemagne n’a été signée qu’en juin 1919, par le traité de Versailles.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "monument de la clairière de l’Armistice à Compiègne",
+        "fichier": "histoire01-q12.jpg",
+        "auteur": "Claude Pupier (1877-1938)",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Signature_de_l%27armistice_%C3%A0_Rethondes,_le_11_novembre_1918.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/14/Signature_de_l%27armistice_%C3%A0_Rethondes%2C_le_11_novembre_1918.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "histoire01-q13",
+      "titre": "Débarquement de Normandie",
+      "categorie": "Époque contemporaine",
+      "difficulte": "moyenne",
+      "question": "Quel jour a eu lieu le débarquement allié en Normandie ?",
+      "indices": [
+        "L’opération portait le nom de code « Overlord ».",
+        "On l’appelle aussi le « Jour J », ou D-Day."
+      ],
+      "reponse": "Le 6 juin 1944.",
+      "reponse_courte": "Le 6 juin 1944",
+      "distracteurs": [
+        "Le 8 mai 1945",
+        "Le 18 juin 1940",
+        "Le 25 août 1944"
+      ],
+      "variantes_acceptees": [
+        "6 juin 1944",
+        "le 6 juin 1944"
+      ],
+      "explication": "Le 6 juin 1944, les troupes alliées débarquent sur cinq plages normandes, Utah, Omaha, Gold, Juno et Sword, pour ouvrir un front à l’ouest contre l’Allemagne nazie. Paris est libéré le 25 août suivant ; l’Allemagne capitule le 8 mai 1945.",
+      "anecdote": "C’est la plus grande opération amphibie de l’histoire : environ 156 000 soldats ont débarqué le premier jour.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "photographie du débarquement sur Omaha Beach en 1944",
+        "fichier": "histoire01-q13.png",
+        "auteur": "Robert Capa",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Normandy-June-6th-1944-US-troops-assault-Omaha-Beach-during-the-D-Day-landings-3.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Normandy-June-6th-1944-US-troops-assault-Omaha-Beach-during-the-D-Day-landings-3.png",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire01-q14",
+      "titre": "Chute du mur de Berlin",
+      "categorie": "Époque contemporaine",
+      "difficulte": "moyenne",
+      "question": "En quelle année le mur de Berlin est-il tombé ?",
+      "indices": [
+        "Il coupait la ville en deux depuis 1961.",
+        "Sa chute précède d’un an la réunification de l’Allemagne."
+      ],
+      "reponse": "En 1989.",
+      "reponse_courte": "1989",
+      "distracteurs": [
+        "1961",
+        "1975",
+        "1991"
+      ],
+      "variantes_acceptees": [
+        "1989",
+        "en 1989"
+      ],
+      "explication": "Le soir du 9 novembre 1989, les autorités est-allemandes ouvrent les points de passage sous la pression de la foule, et les Berlinois commencent à abattre le mur. L’Allemagne est réunifiée le 3 octobre 1990.",
+      "anecdote": "Tout est parti en partie d’une erreur : lors d’une conférence de presse, un porte-parole annonça par mégarde que l’ouverture des frontières prenait effet immédiatement.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "vestige du mur de Berlin couvert de peintures",
+        "fichier": "histoire01-q14.jpg",
+        "auteur": "Ank Kumar",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:East_side_gallery,_Berlin_Wall_(Ank_Kumar,_Infosys_Limited_)_01.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/b/bc/East_side_gallery%2C_Berlin_Wall_%28Ank_Kumar%2C_Infosys_Limited_%29_01.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "histoire01-q15",
+      "titre": "Alexandre le Grand",
+      "categorie": "Antiquité",
+      "difficulte": "moyenne",
+      "question": "Quel roi de Macédoine a conquis un empire allant de la Grèce jusqu’à l’Inde ?",
+      "indices": [
+        "Il eut pour précepteur le philosophe Aristote.",
+        "Il fonda en Égypte une ville qui porte encore son nom."
+      ],
+      "reponse": "Alexandre le Grand.",
+      "reponse_courte": "Alexandre le Grand",
+      "distracteurs": [
+        "Jules César",
+        "Hannibal",
+        "Darius III"
+      ],
+      "variantes_acceptees": [
+        "alexandre",
+        "alexandre le grand",
+        "alexandre iii"
+      ],
+      "explication": "Devenu roi à 20 ans, en 336 av. J.-C., Alexandre bat l’Empire perse de Darius III, conquiert l’Égypte, la Mésopotamie et pousse jusqu’à l’Indus. Il meurt à Babylone en 323 av. J.-C., à 32 ans, et son empire est partagé entre ses généraux.",
+      "anecdote": "Son cheval, Bucéphale, a lui aussi donné son nom à une ville, fondée dans l’actuel Pakistan.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "mosaïque d’Alexandre retrouvée à Pompéi",
+        "fichier": "histoire01-q15.jpg",
+        "auteur": "Auteur inconnu",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Alexander_the_Great_mosaic.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Alexander_the_Great_mosaic.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    }
+  ]
+}

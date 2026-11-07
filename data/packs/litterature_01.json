@@ -1,0 +1,565 @@
+{
+  "pack": {
+    "id": "litterature_01",
+    "titre": "Pack Littérature n° 1",
+    "premier_numero": 601,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Romans": "Littérature",
+      "Poésie": "Littérature",
+      "Théâtre": "Littérature",
+      "Contes et fables": "Littérature",
+      "Vie littéraire": "Littérature"
+    }
+  },
+  "questions": [
+    {
+      "id": "litterature01-q01",
+      "titre": "Les Misérables",
+      "categorie": "Romans",
+      "difficulte": "facile",
+      "question": "Qui a écrit Les Misérables ?",
+      "indices": [
+        "Il a aussi écrit Notre-Dame de Paris.",
+        "Opposé à Napoléon III, il a vécu près de vingt ans en exil, à Jersey puis à Guernesey."
+      ],
+      "reponse": "Victor Hugo.",
+      "reponse_courte": "Victor Hugo",
+      "distracteurs": [
+        "Émile Zola",
+        "Honoré de Balzac",
+        "Alexandre Dumas"
+      ],
+      "variantes_acceptees": [
+        "hugo",
+        "victor hugo"
+      ],
+      "explication": "Publié en 1862, pendant l’exil de Victor Hugo, Les Misérables suit l’ancien forçat Jean Valjean, poursuivi par l’inspecteur Javert, et fait vivre Cosette, Fantine ou Gavroche. Le roman dénonce la misère et l’injustice sociale.",
+      "anecdote": "Selon une anecdote célèbre, il aurait demandé à son éditeur comment se vendait le livre par un simple « ? », et reçu pour réponse « ! ».",
+      "image": {
+        "statut": "verifie",
+        "recherche": "illustration ancienne de Cosette par Émile Bayard",
+        "fichier": "litterature01-q01.jpg",
+        "auteur": "Émile Bayard",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Cosette-sweeping-les-miserables-emile-bayard-1862.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/40/Cosette-sweeping-les-miserables-emile-bayard-1862.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature01-q02",
+      "titre": "Don Quichotte",
+      "categorie": "Romans",
+      "difficulte": "facile",
+      "question": "Quel personnage de Cervantès se bat contre des moulins à vent ?",
+      "indices": [
+        "Il se prend pour un chevalier errant.",
+        "Il parcourt l’Espagne sur un vieux cheval, Rossinante."
+      ],
+      "reponse": "Don Quichotte.",
+      "reponse_courte": "Don Quichotte",
+      "distracteurs": [
+        "Sancho Panza",
+        "Gargantua",
+        "Robinson Crusoé"
+      ],
+      "variantes_acceptees": [
+        "don quichotte",
+        "don quijote"
+      ],
+      "explication": "Publié en deux parties, en 1605 et 1615, le roman de Miguel de Cervantès raconte les aventures d’un gentilhomme qui, à force de lire des romans de chevalerie, se croit chevalier. Accompagné de son écuyer Sancho Panza, il prend des moulins pour des géants.",
+      "anecdote": "Cervantès avait perdu l’usage de la main gauche à la bataille de Lépante, en 1571.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "gravure de Gustave Doré représentant Don Quichotte",
+        "fichier": "litterature01-q02.jpg",
+        "auteur": "Gustave Doré",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Gustave_Dor%C3%A9_(1863)_Don_Quixote_c18a.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/44/Gustave_Dor%C3%A9_%281863%29_Don_Quixote_c18a.jpg",
+        "modifications": "Réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature01-q03",
+      "titre": "Le Petit Prince",
+      "categorie": "Romans",
+      "difficulte": "facile",
+      "question": "Qui a écrit Le Petit Prince ?",
+      "indices": [
+        "L’auteur était aussi aviateur.",
+        "Il a disparu en mer en 1944, au cours d’une mission."
+      ],
+      "reponse": "Antoine de Saint-Exupéry.",
+      "reponse_courte": "Antoine de Saint-Exupéry",
+      "distracteurs": [
+        "Jules Verne",
+        "Albert Camus",
+        "Marcel Pagnol"
+      ],
+      "variantes_acceptees": [
+        "saint-exupéry",
+        "antoine de saint-exupéry",
+        "saint exupéry"
+      ],
+      "explication": "Antoine de Saint-Exupéry publie Le Petit Prince en 1943 à New York, où il s’est exilé. Il en a dessiné lui-même les illustrations. Pilote de l’Aéropostale, il avait déjà raconté l’aviation dans Vol de nuit et Terre des hommes.",
+      "anecdote": "C’est l’un des livres les plus traduits au monde, dans plusieurs centaines de langues.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Un Caudron Simoun, l’avion de Saint-Exupéry (le Petit Prince est encore protégé en France)",
+        "fichier": "litterature01-q03.jpg",
+        "auteur": "Shuvaev",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Rosa_%27Le_Petit_Prince%27,_Morris_Arboretum_05.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Rosa_%27Le_Petit_Prince%27%2C_Morris_Arboretum_05.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "litterature01-q04",
+      "titre": "Vingt mille lieues sous les mers",
+      "categorie": "Romans",
+      "difficulte": "moyenne",
+      "question": "Quel écrivain a imaginé le capitaine Nemo et son sous-marin, le Nautilus ?",
+      "indices": [
+        "Il est né à Nantes en 1828.",
+        "Il a aussi écrit Le Tour du monde en quatre-vingts jours."
+      ],
+      "reponse": "Jules Verne.",
+      "reponse_courte": "Jules Verne",
+      "distracteurs": [
+        "H. G. Wells",
+        "Alexandre Dumas",
+        "Victor Hugo"
+      ],
+      "variantes_acceptees": [
+        "verne",
+        "jules verne"
+      ],
+      "explication": "Vingt mille lieues sous les mers paraît en 1869-1870 chez l’éditeur Hetzel, dans la série des Voyages extraordinaires. Jules Verne y mêle aventure et connaissances scientifiques de son temps, et imagine un sous-marin bien plus perfectionné que ceux qui existaient alors.",
+      "anecdote": "Le premier sous-marin nucléaire de l’histoire, américain, a été baptisé Nautilus, en 1954.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "gravure originale de Vingt mille lieues sous les mers",
+        "fichier": "litterature01-q04.jpg",
+        "auteur": "Henri Théophile Hildibrand",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:%27Twenty_Thousand_Leagues_Under_the_Sea%27_by_Neuville_and_Riou_109.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/0a/%27Twenty_Thousand_Leagues_Under_the_Sea%27_by_Neuville_and_Riou_109.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature01-q05",
+      "titre": "Le Corbeau et le Renard",
+      "categorie": "Contes et fables",
+      "difficulte": "facile",
+      "question": "Qui a écrit la fable « Le Corbeau et le Renard » ?",
+      "indices": [
+        "Il vivait au XVIIe siècle, sous Louis XIV.",
+        "Ses récits en vers mettent en scène des animaux et se terminent par une morale."
+      ],
+      "reponse": "Jean de La Fontaine.",
+      "reponse_courte": "Jean de La Fontaine",
+      "distracteurs": [
+        "Charles Perrault",
+        "Molière",
+        "Ésope"
+      ],
+      "variantes_acceptees": [
+        "la fontaine",
+        "jean de la fontaine"
+      ],
+      "explication": "Jean de La Fontaine publie son premier recueil de Fables en 1668 ; « Le Corbeau et le Renard » en est la deuxième. Il s’inspire souvent d’auteurs anciens, comme le Grec Ésope, mais en fait de petits récits en vers vifs et ironiques, qui peignent la société de son temps.",
+      "anecdote": "Il est né à Château-Thierry, où sa maison natale est devenue un musée.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "illustration ancienne du Corbeau et du Renard",
+        "fichier": "litterature01-q05.jpg",
+        "auteur": "Jean de La Fontaine",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Fables_de_La_Fontaine_-_Auguste_Delierre_-_Le_corbeau_et_le_renard.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/69/Fables_de_La_Fontaine_-_Auguste_Delierre_-_Le_corbeau_et_le_renard.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature01-q06",
+      "titre": "Molière",
+      "categorie": "Théâtre",
+      "difficulte": "facile",
+      "question": "Quel auteur de théâtre a écrit L’Avare et Le Malade imaginaire ?",
+      "indices": [
+        "Il était aussi comédien et dirigeait sa troupe.",
+        "Son vrai nom était Jean-Baptiste Poquelin."
+      ],
+      "reponse": "Molière.",
+      "reponse_courte": "Molière",
+      "distracteurs": [
+        "Jean Racine",
+        "Pierre Corneille",
+        "Beaumarchais"
+      ],
+      "variantes_acceptees": [
+        "molière",
+        "jean-baptiste poquelin"
+      ],
+      "explication": "Molière est le grand auteur de comédies du XVIIe siècle. Dans L’Avare, Le Misanthrope ou Le Tartuffe, il se moque des travers de ses contemporains. Le français est d’ailleurs souvent appelé « la langue de Molière ».",
+      "anecdote": "Pris d’un malaise sur scène lors de la quatrième représentation du Malade imaginaire, en 1673, il est mort quelques heures plus tard.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "portrait de Molière par Pierre Mignard",
+        "fichier": "litterature01-q06.jpg",
+        "auteur": "Pierre Mignard",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Moli%C3%A8re_Mignard_Chantilly.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/28/Moli%C3%A8re_Mignard_Chantilly.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature01-q07",
+      "titre": "Les Fleurs du mal",
+      "categorie": "Poésie",
+      "difficulte": "moyenne",
+      "question": "Quel poète a publié Les Fleurs du mal, en 1857 ?",
+      "indices": [
+        "Le recueil lui valut un procès pour outrage à la morale publique.",
+        "Il a traduit en français les nouvelles d’Edgar Allan Poe."
+      ],
+      "reponse": "Charles Baudelaire.",
+      "reponse_courte": "Charles Baudelaire",
+      "distracteurs": [
+        "Arthur Rimbaud",
+        "Paul Verlaine",
+        "Alfred de Musset"
+      ],
+      "variantes_acceptees": [
+        "baudelaire",
+        "charles baudelaire"
+      ],
+      "explication": "Dans Les Fleurs du mal, Baudelaire cherche la beauté jusque dans la laideur, l’ennui et la ville moderne. Condamné en 1857, il doit retirer six poèmes du recueil. Il a ouvert la voie à la poésie moderne.",
+      "anecdote": "La condamnation n’a été annulée qu’en 1949, près d’un siècle plus tard.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "photographie de Charles Baudelaire par Étienne Carjat",
+        "fichier": "litterature01-q07.jpg",
+        "auteur": "Étienne Carjat",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:%C3%89tienne_Carjat,_Portrait_of_Charles_Baudelaire,_circa_1862.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/16/%C3%89tienne_Carjat%2C_Portrait_of_Charles_Baudelaire%2C_circa_1862.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature01-q08",
+      "titre": "Cendrillon",
+      "categorie": "Contes et fables",
+      "difficulte": "facile",
+      "question": "Dans quel conte de Perrault une jeune fille perd-elle une pantoufle de verre ?",
+      "indices": [
+        "Ses deux demi-sœurs la traitent comme une servante.",
+        "Une marraine fée transforme une citrouille en carrosse."
+      ],
+      "reponse": "Cendrillon.",
+      "reponse_courte": "Cendrillon",
+      "distracteurs": [
+        "La Belle au bois dormant",
+        "Le Petit Chaperon rouge",
+        "Peau d’Âne"
+      ],
+      "variantes_acceptees": [
+        "cendrillon"
+      ],
+      "explication": "Charles Perrault publie Cendrillon en 1697, dans Histoires ou contes du temps passé, avec Le Petit Chaperon rouge et La Belle au bois dormant. Il reprend des récits transmis oralement, que l’on retrouve sous d’autres formes dans de nombreux pays.",
+      "anecdote": "On a longtemps débattu d’une confusion entre « verre » et « vair », une fourrure ; mais Perrault a bien écrit « verre ».",
+      "image": {
+        "statut": "verifie",
+        "recherche": "gravure de Gustave Doré pour Cendrillon",
+        "fichier": "litterature01-q08.jpg",
+        "auteur": "Perrault",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Perrault_-_Histoires_ou_contes_du_temps_pass%C3%A9,_avec_des_moralitez,_1697-127.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/21/Perrault_-_Histoires_ou_contes_du_temps_pass%C3%A9%2C_avec_des_moralitez%2C_1697-127.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature01-q09",
+      "titre": "Roméo et Juliette",
+      "categorie": "Théâtre",
+      "difficulte": "facile",
+      "question": "Qui a écrit Roméo et Juliette ?",
+      "indices": [
+        "L’histoire se déroule à Vérone.",
+        "Il est aussi l’auteur d’Hamlet et de Macbeth."
+      ],
+      "reponse": "William Shakespeare.",
+      "reponse_courte": "William Shakespeare",
+      "distracteurs": [
+        "Christopher Marlowe",
+        "Pierre Corneille",
+        "Oscar Wilde"
+      ],
+      "variantes_acceptees": [
+        "shakespeare",
+        "william shakespeare"
+      ],
+      "explication": "Écrite vers 1595, la tragédie de Shakespeare raconte l’amour impossible de deux jeunes gens dont les familles, les Montaigu et les Capulet, se haïssent. Shakespeare a repris une histoire déjà racontée par des auteurs italiens.",
+      "anecdote": "À Vérone, une maison présentée comme celle de Juliette, avec son balcon, attire des foules de visiteurs, bien que le lien soit légendaire.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "balcon de la maison dite de Juliette, à Vérone",
+        "fichier": "litterature01-q09.jpg",
+        "auteur": "Iain Cameron",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Juliet%27s_house_balcony_-_Verona_(15280188788).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/51/Juliet%27s_house_balcony_-_Verona_%2815280188788%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "litterature01-q10",
+      "titre": "Sherlock Holmes",
+      "categorie": "Romans",
+      "difficulte": "moyenne",
+      "question": "Quel écrivain a créé le détective Sherlock Holmes ?",
+      "indices": [
+        "Il était médecin, et écossais.",
+        "Son héros habite au 221B Baker Street, à Londres."
+      ],
+      "reponse": "Arthur Conan Doyle.",
+      "reponse_courte": "Arthur Conan Doyle",
+      "distracteurs": [
+        "Agatha Christie",
+        "Edgar Allan Poe",
+        "Georges Simenon"
+      ],
+      "variantes_acceptees": [
+        "conan doyle",
+        "arthur conan doyle"
+      ],
+      "explication": "Sherlock Holmes apparaît en 1887 dans Une étude en rouge, accompagné de son ami le docteur Watson, qui raconte ses enquêtes. Conan Doyle s’est inspiré d’un de ses professeurs de médecine, réputé pour ses déductions à partir de simples détails.",
+      "anecdote": "Lassé de son héros, il le fit mourir en 1893, mais dut le ressusciter quelques années plus tard, devant la colère des lecteurs.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "illustration de Sidney Paget pour Sherlock Holmes",
+        "fichier": "litterature01-q10.jpg",
+        "auteur": "Sidney Paget 1860-1908",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Portrait_of_Sherlock_Holmes_by_Sidney_Paget-Cropped.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/03/Portrait_of_Sherlock_Holmes_by_Sidney_Paget-Cropped.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature01-q11",
+      "titre": "L’Odyssée",
+      "categorie": "Poésie",
+      "difficulte": "moyenne",
+      "question": "Quelle œuvre de l’Antiquité raconte le long retour d’Ulysse vers Ithaque ?",
+      "indices": [
+        "On l’attribue au poète grec Homère.",
+        "Le héros y affronte le cyclope Polyphème et les sirènes."
+      ],
+      "reponse": "L’Odyssée.",
+      "reponse_courte": "L’Odyssée",
+      "distracteurs": [
+        "L’Iliade",
+        "L’Énéide",
+        "Les Métamorphoses"
+      ],
+      "variantes_acceptees": [
+        "odyssée",
+        "l'odyssée"
+      ],
+      "explication": "Longue épopée en vers, L’Odyssée raconte les dix années d’errance d’Ulysse après la guerre de Troie, qui est, elle, le sujet de L’Iliade. Le mot « odyssée » désigne depuis un long voyage plein d’aventures.",
+      "anecdote": "Pendant vingt ans d’absence, son épouse Pénélope l’attend en défaisant chaque nuit la toile qu’elle tisse le jour, pour éloigner ses prétendants.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "vase grec représentant Ulysse et les sirènes",
+        "fichier": "litterature01-q11.jpg",
+        "auteur": "ArchaiOptix",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Siren_Painter_ARV_289_1_Odysseus_and_the_Sirens_-_three_erotes_(02).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Siren_Painter_ARV_289_1_Odysseus_and_the_Sirens_-_three_erotes_%2802%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "litterature01-q12",
+      "titre": "Les Trois Mousquetaires",
+      "categorie": "Romans",
+      "difficulte": "moyenne",
+      "question": "Quel romancier a écrit Les Trois Mousquetaires ?",
+      "indices": [
+        "Le héros, d’Artagnan, est un jeune Gascon monté à Paris.",
+        "Il a aussi écrit Le Comte de Monte-Cristo."
+      ],
+      "reponse": "Alexandre Dumas.",
+      "reponse_courte": "Alexandre Dumas",
+      "distracteurs": [
+        "Victor Hugo",
+        "Jules Verne",
+        "Eugène Sue"
+      ],
+      "variantes_acceptees": [
+        "dumas",
+        "alexandre dumas"
+      ],
+      "explication": "Publié en feuilleton en 1844, le roman suit d’Artagnan et ses amis Athos, Porthos et Aramis au service du roi Louis XIII, face au cardinal de Richelieu et à Milady. Dumas écrivait avec des collaborateurs, dont Auguste Maquet.",
+      "anecdote": "Ses cendres ont été transférées au Panthéon en 2002.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "illustration ancienne des Trois Mousquetaires",
+        "fichier": "litterature01-q12.jpg",
+        "auteur": "Maurice Leloir (1853–1940)",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Les_Trois_Mousquetaires,_Leloir_-_Athos_trapped_at_the_inn%E2%81%A0.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/24/Les_Trois_Mousquetaires%2C_Leloir_-_Athos_trapped_at_the_inn%E2%81%A0.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature01-q13",
+      "titre": "Alice au pays des merveilles",
+      "categorie": "Romans",
+      "difficulte": "moyenne",
+      "question": "Qui a écrit Alice au pays des merveilles ?",
+      "indices": [
+        "C’est le pseudonyme d’un professeur de mathématiques d’Oxford.",
+        "Il a imaginé l’histoire pour une petite fille, Alice Liddell."
+      ],
+      "reponse": "Lewis Carroll.",
+      "reponse_courte": "Lewis Carroll",
+      "distracteurs": [
+        "Charles Dickens",
+        "J. M. Barrie",
+        "Roald Dahl"
+      ],
+      "variantes_acceptees": [
+        "lewis carroll",
+        "carroll"
+      ],
+      "explication": "Paru en 1865, illustré par John Tenniel, le livre suit Alice dans un monde absurde où l’on croise le Lapin blanc, le Chapelier fou et la Reine de cœur. Il joue avec la logique et les mots, ce qui en fait un défi pour les traducteurs.",
+      "anecdote": "Son vrai nom était Charles Lutwidge Dodgson.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "illustration de John Tenniel pour Alice",
+        "fichier": "litterature01-q13.jpg",
+        "auteur": "John Tenniel",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Alice_par_John_Tenniel_25.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/69/Alice_par_John_Tenniel_25.png",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature01-q14",
+      "titre": "Le prix Goncourt",
+      "categorie": "Vie littéraire",
+      "difficulte": "difficile",
+      "question": "Quel prix littéraire français est remis chaque automne au restaurant Drouant, à Paris ?",
+      "indices": [
+        "Il porte le nom de deux frères écrivains du XIXe siècle.",
+        "Le lauréat ne reçoit qu’un chèque symbolique de 10 euros."
+      ],
+      "reponse": "Le prix Goncourt.",
+      "reponse_courte": "Le prix Goncourt",
+      "distracteurs": [
+        "Le prix Nobel de littérature",
+        "Le prix Pulitzer",
+        "Le prix Femina"
+      ],
+      "variantes_acceptees": [
+        "goncourt",
+        "prix goncourt"
+      ],
+      "explication": "Le prix Goncourt est créé par le testament d’Edmond de Goncourt et décerné pour la première fois en 1903. Les dix membres de l’Académie Goncourt couronnent chaque année un ouvrage en prose ; le prix fait souvent bondir les ventes du livre.",
+      "anecdote": "Romain Gary est le seul à l’avoir reçu deux fois, la seconde sous le pseudonyme d’Émile Ajar, en 1975.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "façade du restaurant Drouant à Paris",
+        "fichier": "litterature01-q14.jpg",
+        "auteur": "Maison Weshoot",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Fa%C3%A7ade_-_Restaurant_Drouant_-_Paris.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Fa%C3%A7ade_-_Restaurant_Drouant_-_Paris.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "litterature01-q15",
+      "titre": "Le Bateau ivre",
+      "categorie": "Poésie",
+      "difficulte": "difficile",
+      "question": "Quel poète, adolescent prodige, a écrit Le Bateau ivre ?",
+      "indices": [
+        "Il est né à Charleville en 1854.",
+        "Il a cessé d’écrire vers vingt ans et voyagé jusqu’en Afrique."
+      ],
+      "reponse": "Arthur Rimbaud.",
+      "reponse_courte": "Arthur Rimbaud",
+      "distracteurs": [
+        "Paul Verlaine",
+        "Charles Baudelaire",
+        "Stéphane Mallarmé"
+      ],
+      "variantes_acceptees": [
+        "rimbaud",
+        "arthur rimbaud"
+      ],
+      "explication": "Rimbaud écrit Le Bateau ivre en 1871, à 16 ou 17 ans, avant de rejoindre Paris et Paul Verlaine. Après Une saison en enfer et les Illuminations, il abandonne la poésie et devient commerçant en Arabie et en Éthiopie. Il meurt à Marseille en 1891, à 37 ans.",
+      "anecdote": "Sa ville natale, Charleville-Mézières, lui consacre un musée installé dans un ancien moulin au bord de la Meuse.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "photographie d’Arthur Rimbaud par Étienne Carjat",
+        "fichier": "litterature01-q15.jpg",
+        "auteur": "Étienne Carjat",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Arthur_Rimbaud_by_Carjat_-_Mus%C3%A9e_Arthur_Rimbaud.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/56/Arthur_Rimbaud_by_Carjat_-_Mus%C3%A9e_Arthur_Rimbaud.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    }
+  ]
+}

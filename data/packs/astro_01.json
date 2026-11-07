@@ -1,0 +1,576 @@
+{
+  "pack": {
+    "id": "astro_01",
+    "titre": "Pack Astronomie n° 1",
+    "premier_numero": 101,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Système solaire": "Astronomie",
+      "Phénomènes célestes": "Astronomie",
+      "Étoiles": "Astronomie",
+      "Galaxies et Univers": "Astronomie",
+      "Exploration spatiale": "Astronomie"
+    }
+  },
+  "questions": [
+    {
+      "id": "astro01-q01",
+      "titre": "Mercure",
+      "categorie": "Système solaire",
+      "difficulte": "facile",
+      "question": "Quelle est la planète la plus proche du Soleil ?",
+      "indices": [
+        "C’est aussi la plus petite planète du Système solaire.",
+        "Elle porte le nom du messager des dieux romains."
+      ],
+      "reponse": "Mercure.",
+      "reponse_courte": "Mercure",
+      "distracteurs": [
+        "Vénus",
+        "Mars",
+        "La Terre"
+      ],
+      "variantes_acceptees": [
+        "mercure",
+        "la planète mercure"
+      ],
+      "explication": "Mercure tourne autour du Soleil à environ 58 millions de kilomètres en moyenne et en fait le tour en 88 jours. Presque sans atmosphère, elle ne garde pas la chaleur : plus de 400 °C le jour, environ −180 °C la nuit.",
+      "anecdote": "Ce n’est pourtant pas la planète la plus chaude : c’est Vénus, dont l’épaisse atmosphère de dioxyde de carbone retient la chaleur.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "planète Mercure photographiée par la sonde MESSENGER",
+        "fichier": "astro01-q01.jpg",
+        "auteur": "NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie Institution of Washington.",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Mercury_in_color_-_Prockter07_centered.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mercury_in_color_-_Prockter07_centered.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro01-q02",
+      "titre": "Mars",
+      "categorie": "Système solaire",
+      "difficulte": "facile",
+      "question": "Quelle planète est surnommée la « planète rouge » ?",
+      "indices": [
+        "Sa couleur vient d’une poussière riche en oxyde de fer qui couvre son sol.",
+        "Elle possède deux petites lunes, Phobos et Déimos."
+      ],
+      "reponse": "Mars.",
+      "reponse_courte": "Mars",
+      "distracteurs": [
+        "Jupiter",
+        "Vénus",
+        "Saturne"
+      ],
+      "variantes_acceptees": [
+        "mars",
+        "la planète mars"
+      ],
+      "explication": "La surface de Mars est couverte de poussières et de roches riches en oxydes de fer, une sorte de rouille, qui lui donnent sa teinte. Plus petite que la Terre, elle a une atmosphère très ténue, surtout faite de dioxyde de carbone.",
+      "anecdote": "Olympus Mons, sur Mars, est le plus haut volcan connu du Système solaire : il culmine à plus de 20 km au-dessus des plaines voisines.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "planète Mars vue depuis l’espace",
+        "fichier": "astro01-q02.jpg",
+        "auteur": "ESA/DLR/FU Berlin/G. Michael",
+        "licence": "CC BY-SA 3.0 igo",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Global_Mars_in_colour_ESA24894473_(cropped).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/af/Global_Mars_in_colour_ESA24894473_%28cropped%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0 igo",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en"
+      }
+    },
+    {
+      "id": "astro01-q03",
+      "titre": "Jupiter",
+      "categorie": "Système solaire",
+      "difficulte": "facile",
+      "question": "Quelle est la plus grande planète du Système solaire ?",
+      "indices": [
+        "C’est une géante gazeuse, faite surtout d’hydrogène et d’hélium.",
+        "Une tempête géante, la Grande Tache rouge, y est observée depuis le XIXe siècle."
+      ],
+      "reponse": "Jupiter.",
+      "reponse_courte": "Jupiter",
+      "distracteurs": [
+        "Saturne",
+        "Neptune",
+        "Uranus"
+      ],
+      "variantes_acceptees": [
+        "jupiter",
+        "la planète jupiter"
+      ],
+      "explication": "Le diamètre de Jupiter vaut environ onze fois celui de la Terre, et sa masse plus de deux fois celle de toutes les autres planètes réunies. Elle n’a pas de surface solide : on n’y voit que le sommet de ses nuages.",
+      "anecdote": "En 1610, Galilée découvre avec sa lunette les quatre plus grandes lunes de Jupiter : Io, Europe, Ganymède et Callisto.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "planète Jupiter et sa Grande Tache rouge",
+        "fichier": "astro01-q03.jpg",
+        "auteur": "NASA, ESA, and A. Simon (Goddard Space Flight Center)",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Jupiter_and_its_shrunken_Great_Red_Spot_(cropped).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Jupiter_and_its_shrunken_Great_Red_Spot_%28cropped%29.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro01-q04",
+      "titre": "Face cachée de la Lune",
+      "categorie": "Phénomènes célestes",
+      "difficulte": "moyenne",
+      "question": "Pourquoi la Lune nous montre-t-elle toujours la même face ?",
+      "indices": [
+        "Les marées exercées par la Terre l’ont peu à peu freinée.",
+        "Elle fait un tour sur elle-même pendant qu’elle fait le tour de la Terre."
+      ],
+      "reponse": "Sa rotation dure autant que son orbite (rotation synchrone).",
+      "reponse_courte": "Sa rotation dure autant que son orbite",
+      "distracteurs": [
+        "Elle ne tourne pas sur elle-même",
+        "Sa face cachée est toujours dans la nuit",
+        "Elle est immobile dans l’espace"
+      ],
+      "variantes_acceptees": [
+        "rotation synchrone",
+        "la rotation synchrone",
+        "elle tourne sur elle-même en même temps qu'autour de la terre"
+      ],
+      "explication": "La Lune tourne sur elle-même en environ 27 jours, exactement le temps qu’elle met à faire le tour de la Terre : on parle de rotation synchrone. Ce n’est pas un hasard : les forces de marée de la Terre ont ralenti sa rotation jusqu’à ce que les deux durées s’accordent.",
+      "anecdote": "La face cachée n’est pas plus sombre que l’autre : le Soleil l’éclaire tout autant. Elle a été photographiée pour la première fois en 1959 par la sonde soviétique Luna 3.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "pleine Lune vue depuis la Terre",
+        "fichier": "astro01-q04.jpg",
+        "auteur": "Gregory H. Revera",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:FullMoon2010.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "astro01-q05",
+      "titre": "Le Soleil",
+      "categorie": "Étoiles",
+      "difficulte": "moyenne",
+      "question": "Quel type d’étoile est le Soleil ?",
+      "indices": [
+        "Il est dans la phase la plus longue de sa vie, où il fusionne de l’hydrogène.",
+        "Son nom tient à sa couleur et à sa taille modeste, même si sa lumière est blanche vue de l’espace."
+      ],
+      "reponse": "Une naine jaune.",
+      "reponse_courte": "Une naine jaune",
+      "distracteurs": [
+        "Une géante rouge",
+        "Une naine blanche",
+        "Une étoile à neutrons"
+      ],
+      "variantes_acceptees": [
+        "naine jaune",
+        "une étoile naine jaune",
+        "étoile de la séquence principale"
+      ],
+      "explication": "Le Soleil est une étoile ordinaire, de type spectral G, qui transforme de l’hydrogène en hélium dans son cœur. Âgé d’environ 4,6 milliards d’années, il restera ainsi encore quelque 5 milliards d’années, avant de devenir une géante rouge, puis une naine blanche.",
+      "anecdote": "La lumière du Soleil met environ 8 minutes et 20 secondes à nous parvenir.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "le Soleil photographié par l’observatoire spatial SDO",
+        "fichier": "astro01-q05.jpg",
+        "auteur": "NASA/SDO (AIA)",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro01-q06",
+      "titre": "Proxima du Centaure",
+      "categorie": "Étoiles",
+      "difficulte": "difficile",
+      "question": "Après le Soleil, quelle est l’étoile la plus proche de la Terre ?",
+      "indices": [
+        "Elle se trouve à un peu plus de 4 années-lumière.",
+        "C’est une petite naine rouge, invisible à l’œil nu, dans le ciel de l’hémisphère sud."
+      ],
+      "reponse": "Proxima du Centaure.",
+      "reponse_courte": "Proxima du Centaure",
+      "distracteurs": [
+        "Sirius",
+        "L’étoile Polaire",
+        "Bételgeuse"
+      ],
+      "variantes_acceptees": [
+        "proxima",
+        "proxima centauri",
+        "proxima du centaure"
+      ],
+      "explication": "Proxima du Centaure, à environ 4,2 années-lumière, appartient au système d’Alpha du Centaure, qui compte deux autres étoiles un peu plus lointaines. Au moins une planète, Proxima b, découverte en 2016, tourne autour d’elle dans sa zone habitable.",
+      "anecdote": "À la vitesse de la sonde Voyager 1, il faudrait plus de 70 000 ans pour l’atteindre.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "étoiles Alpha et Proxima du Centaure dans le ciel austral",
+        "fichier": "astro01-q06.jpg",
+        "auteur": "Skatebiker",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Alpha,_Beta_and_Proxima_Centauri_(1).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/61/Alpha%2C_Beta_and_Proxima_Centauri_%281%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "astro01-q07",
+      "titre": "Voie lactée",
+      "categorie": "Galaxies et Univers",
+      "difficulte": "facile",
+      "question": "Comment s’appelle la galaxie où se trouve le Système solaire ?",
+      "indices": [
+        "Par une nuit sans lune, loin des villes, elle forme une bande blanchâtre dans le ciel.",
+        "Son nom rappelle un mythe grec de lait répandu dans le ciel."
+      ],
+      "reponse": "La Voie lactée.",
+      "reponse_courte": "La Voie lactée",
+      "distracteurs": [
+        "La galaxie d’Andromède",
+        "Le Grand Nuage de Magellan",
+        "La galaxie du Tourbillon"
+      ],
+      "variantes_acceptees": [
+        "voie lactée",
+        "la voie lactée",
+        "notre galaxie"
+      ],
+      "explication": "La Voie lactée est une galaxie spirale barrée de près de 100 000 années-lumière de diamètre, qui compte plusieurs centaines de milliards d’étoiles. Le Soleil se trouve à environ 27 000 années-lumière de son centre, où se cache un trou noir supermassif, Sagittarius A*.",
+      "anecdote": "Le mot « galaxie » vient du grec gala, qui signifie « lait ».",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Voie lactée dans un ciel nocturne",
+        "fichier": "astro01-q07.jpg",
+        "auteur": "ESO/Yuri Beletsky (ybialets at eso.org)",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Laser_Towards_Milky_Ways_Centre.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Laser_Towards_Milky_Ways_Centre.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "astro01-q08",
+      "titre": "Andromède",
+      "categorie": "Galaxies et Univers",
+      "difficulte": "moyenne",
+      "question": "Quelle grande galaxie spirale, visible à l’œil nu, pourrait un jour entrer en collision avec la Voie lactée ?",
+      "indices": [
+        "Elle se trouve à environ 2,5 millions d’années-lumière.",
+        "C’est l’un des objets les plus lointains que l’on puisse voir à l’œil nu."
+      ],
+      "reponse": "La galaxie d’Andromède.",
+      "reponse_courte": "La galaxie d’Andromède",
+      "distracteurs": [
+        "La galaxie du Sombrero",
+        "La galaxie du Tourbillon",
+        "La galaxie du Cigare"
+      ],
+      "variantes_acceptees": [
+        "andromède",
+        "la galaxie d'andromède",
+        "m31"
+      ],
+      "explication": "Andromède, ou M31, est la grande galaxie la plus proche de la nôtre ; elle s’en rapproche à plus de 100 km/s. Les études récentes jugent une collision possible mais incertaine, dans plusieurs milliards d’années. Même alors, les étoiles elles-mêmes ne se heurteraient presque jamais, tant elles sont éloignées les unes des autres.",
+      "anecdote": "C’est Edwin Hubble qui, au milieu des années 1920, a montré que cette « nébuleuse » était une galaxie à part entière, bien au-delà de la Voie lactée.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "galaxie d’Andromède",
+        "fichier": "astro01-q08.jpg",
+        "auteur": "Adam Evans",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Andromeda_Galaxy_(with_h-alpha).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "astro01-q09",
+      "titre": "Éclipse de Soleil",
+      "categorie": "Phénomènes célestes",
+      "difficulte": "facile",
+      "question": "Lors d’une éclipse totale de Soleil, quel astre cache le Soleil ?",
+      "indices": [
+        "Vu de la Terre, il paraît presque de la même taille que le Soleil.",
+        "Il est environ 400 fois plus petit que le Soleil, mais aussi environ 400 fois plus proche."
+      ],
+      "reponse": "La Lune.",
+      "reponse_courte": "La Lune",
+      "distracteurs": [
+        "La Terre",
+        "Vénus",
+        "Mercure"
+      ],
+      "variantes_acceptees": [
+        "la lune",
+        "lune"
+      ],
+      "explication": "Une éclipse totale de Soleil se produit quand la Lune passe exactement entre le Soleil et la Terre. Parce qu’elle paraît à peu près aussi grande que lui, elle peut le masquer entièrement pendant quelques minutes, sur une étroite bande de la surface terrestre : on aperçoit alors la couronne solaire.",
+      "anecdote": "La Lune s’éloigne de la Terre d’environ 3,8 cm par an : dans un avenir très lointain, elle paraîtra trop petite pour cacher tout le Soleil.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "éclipse totale de Soleil avec la couronne solaire",
+        "fichier": "astro01-q09.jpg",
+        "auteur": "Lviatour",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Eclipse-totale-2026-couronne-Luc-Viatour.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/13/Eclipse-totale-2026-couronne-Luc-Viatour.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "astro01-q10",
+      "titre": "Premiers pas sur la Lune",
+      "categorie": "Exploration spatiale",
+      "difficulte": "facile",
+      "question": "Qui a été le premier être humain à marcher sur la Lune ?",
+      "indices": [
+        "Il commandait la mission Apollo 11, en juillet 1969.",
+        "On lui doit la phrase : « C’est un petit pas pour l’homme… »."
+      ],
+      "reponse": "Neil Armstrong.",
+      "reponse_courte": "Neil Armstrong",
+      "distracteurs": [
+        "Buzz Aldrin",
+        "Youri Gagarine",
+        "John Glenn"
+      ],
+      "variantes_acceptees": [
+        "armstrong",
+        "neil armstrong"
+      ],
+      "explication": "Le module lunaire d’Apollo 11 s’est posé le 20 juillet 1969 ; Neil Armstrong a posé le pied sur la Lune quelques heures plus tard, le 21 juillet en temps universel. Buzz Aldrin l’a rejoint une vingtaine de minutes après, tandis que Michael Collins restait en orbite.",
+      "anecdote": "Douze astronautes, tous américains, ont marché sur la Lune, entre 1969 et 1972.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "empreinte de botte d’astronaute dans le sol lunaire (Apollo 11)",
+        "fichier": "astro01-q10.jpg",
+        "auteur": "NASA / Buzz Aldrin",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Apollo_11_bootprint.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/8/89/Apollo_11_bootprint.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro01-q11",
+      "titre": "Youri Gagarine",
+      "categorie": "Exploration spatiale",
+      "difficulte": "moyenne",
+      "question": "Qui a été le premier être humain à voyager dans l’espace, en 1961 ?",
+      "indices": [
+        "Il a fait le tour de la Terre en un peu moins de deux heures.",
+        "Il était soviétique, à bord du vaisseau Vostok 1."
+      ],
+      "reponse": "Youri Gagarine.",
+      "reponse_courte": "Youri Gagarine",
+      "distracteurs": [
+        "Neil Armstrong",
+        "Alan Shepard",
+        "Valentina Terechkova"
+      ],
+      "variantes_acceptees": [
+        "gagarine",
+        "youri gagarine",
+        "iouri gagarine"
+      ],
+      "explication": "Le 12 avril 1961, Youri Gagarine décolle de Baïkonour à bord de Vostok 1 et accomplit un tour complet de la Terre en 108 minutes environ. Moins d’un mois plus tard, l’Américain Alan Shepard fait un vol plus court, sans faire le tour de la Terre.",
+      "anecdote": "En 1963, la Soviétique Valentina Terechkova devient la première femme à voyager dans l’espace.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "capsule Vostok exposée dans un musée",
+        "fichier": "astro01-q11.jpg",
+        "auteur": "Stolbovsky",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Vostok_5_reentry_capsule_02.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/06/Vostok_5_reentry_capsule_02.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "astro01-q12",
+      "titre": "Pluton",
+      "categorie": "Système solaire",
+      "difficulte": "difficile",
+      "question": "Pourquoi Pluton n’est-elle plus considérée comme une planète depuis 2006 ?",
+      "indices": [
+        "L’Union astronomique internationale a alors fixé trois critères pour être une planète.",
+        "Elle partage sa région du Système solaire avec de nombreux autres corps glacés."
+      ],
+      "reponse": "Elle n’a pas « fait le ménage » autour de son orbite.",
+      "reponse_courte": "Elle n’a pas dégagé son orbite",
+      "distracteurs": [
+        "Elle est trop éloignée du Soleil",
+        "Elle n’est pas ronde",
+        "Elle n’a pas de lune"
+      ],
+      "variantes_acceptees": [
+        "elle n'a pas fait le vide sur son orbite",
+        "planète naine",
+        "c'est une planète naine"
+      ],
+      "explication": "En 2006, l’Union astronomique internationale définit une planète comme un corps qui tourne autour du Soleil, assez massif pour être presque rond, et qui a fait place nette sur son orbite. Pluton remplit les deux premiers critères, pas le troisième : elle circule parmi les objets de la ceinture de Kuiper. Elle est donc classée planète naine.",
+      "anecdote": "En juillet 2015, la sonde New Horizons a survolé Pluton et révélé une vaste région claire en forme de cœur, dont la moitié ouest est une immense plaine de glace.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Pluton photographiée par la sonde New Horizons",
+        "fichier": "astro01-q12.jpg",
+        "auteur": "NASA / Johns Hopkins University Applied Physics Laboratory / Southwest Research Institute",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Pluto-01_Stern_03_Pluto_Color_TXT.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Pluto-01_Stern_03_Pluto_Color_TXT.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro01-q13",
+      "titre": "Après une supernova",
+      "categorie": "Étoiles",
+      "difficulte": "difficile",
+      "question": "Que devient le cœur d’une étoile très massive après son explosion en supernova ?",
+      "indices": [
+        "Son cœur s’effondre sur lui-même sous l’effet de sa propre gravité.",
+        "L’objet restant est si dense qu’il peut même empêcher la lumière de s’échapper."
+      ],
+      "reponse": "Une étoile à neutrons ou un trou noir.",
+      "reponse_courte": "Une étoile à neutrons ou un trou noir",
+      "distracteurs": [
+        "Une naine blanche",
+        "Une géante rouge",
+        "Une nébuleuse planétaire"
+      ],
+      "variantes_acceptees": [
+        "trou noir",
+        "étoile à neutrons",
+        "pulsar"
+      ],
+      "explication": "Quand une étoile de plus de huit fois la masse du Soleil épuise son combustible, son cœur s’effondre et ses couches externes sont projetées dans l’espace : c’est une supernova. Selon la masse restante, le cœur devient une étoile à neutrons, une boule de quelques dizaines de kilomètres plus massive que le Soleil, ou un trou noir. Les naines blanches, elles, sont le destin d’étoiles plus légères, comme le Soleil.",
+      "anecdote": "La nébuleuse du Crabe est le reste d’une supernova observée par des astronomes chinois en 1054 ; elle abrite en son centre une étoile à neutrons, un pulsar.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "nébuleuse du Crabe photographiée par le télescope Hubble",
+        "fichier": "astro01-q13.jpg",
+        "auteur": "NASA, ESA, J. Hester and A. Loll (Arizona State University)",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Crab_Nebula.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/00/Crab_Nebula.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro01-q14",
+      "titre": "Étoiles filantes",
+      "categorie": "Phénomènes célestes",
+      "difficulte": "moyenne",
+      "question": "Qu’est-ce qu’une « étoile filante » ?",
+      "indices": [
+        "Le phénomène se produit à une centaine de kilomètres d’altitude.",
+        "Il est fréquent à la mi-août, quand la Terre croise les débris laissés par une comète."
+      ],
+      "reponse": "Une poussière venue de l’espace qui se consume dans l’atmosphère.",
+      "reponse_courte": "Une poussière brûlant dans l’atmosphère",
+      "distracteurs": [
+        "Une étoile qui tombe",
+        "Une étoile en train de mourir",
+        "Une comète très proche de la Terre"
+      ],
+      "variantes_acceptees": [
+        "un météore",
+        "météore",
+        "une météorite qui brûle",
+        "une poussière qui brûle dans l'atmosphère"
+      ],
+      "explication": "Une étoile filante, ou météore, est la trace lumineuse d’un météoroïde, souvent pas plus gros qu’un grain de sable, qui entre dans l’atmosphère à plusieurs dizaines de kilomètres par seconde. Freiné par l’air, il s’échauffe et fait briller l’air autour de lui avant de se consumer.",
+      "anecdote": "Les Perséides proviennent de la comète Swift-Tuttle ; on les surnomme aussi les « larmes de saint Laurent », fêté le 10 août.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "étoile filante pendant la pluie des Perséides",
+        "fichier": "astro01-q14.jpg",
+        "auteur": "Aneta p",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Zorza_polarna_i_perseid.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/21/Zorza_polarna_i_perseid.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "astro01-q15",
+      "titre": "Âge de l’Univers",
+      "categorie": "Galaxies et Univers",
+      "difficulte": "difficile",
+      "question": "Selon les mesures actuelles, quel âge a l’Univers ?",
+      "indices": [
+        "On l’estime notamment grâce au rayonnement fossile, la plus ancienne lumière observable.",
+        "C’est environ trois fois l’âge de la Terre."
+      ],
+      "reponse": "Environ 13,8 milliards d’années.",
+      "reponse_courte": "13,8 milliards d’années",
+      "distracteurs": [
+        "4,6 milliards d’années",
+        "1 milliard d’années",
+        "100 milliards d’années"
+      ],
+      "variantes_acceptees": [
+        "13,8 milliards d'années",
+        "13 milliards d'années",
+        "14 milliards d'années"
+      ],
+      "explication": "D’après le modèle du Big Bang et les mesures du satellite Planck, l’Univers a environ 13,8 milliards d’années. Le rayonnement fossile, émis environ 380 000 ans après le Big Bang, quand l’Univers est devenu transparent, permet de remonter à cet âge.",
+      "anecdote": "Le rayonnement fossile a été découvert par hasard en 1964-1965 par Arno Penzias et Robert Wilson, qui ont d’abord soupçonné des fientes de pigeon dans leur antenne.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "carte du rayonnement fossile mesurée par un satellite",
+        "fichier": "astro01-q15.jpg",
+        "auteur": "ESA and the Planck Collaboration",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Cosmic_Microwave_Background_(CMB).jpeg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/04/Cosmic_Microwave_Background_%28CMB%29.jpeg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    }
+  ]
+}

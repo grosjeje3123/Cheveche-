@@ -1,0 +1,576 @@
+{
+  "pack": {
+    "id": "animaux_02",
+    "titre": "Pack Animaux n° 2",
+    "premier_numero": 216,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Mammifères": "Animaux",
+      "Oiseaux": "Animaux",
+      "Animaux marins": "Animaux",
+      "Insectes": "Animaux",
+      "Invertébrés": "Animaux",
+      "Poissons": "Animaux",
+      "Reptiles et amphibiens": "Animaux"
+    }
+  },
+  "questions": [
+    {
+      "id": "animaux02-q01",
+      "titre": "Le cou de la girafe",
+      "categorie": "Mammifères",
+      "difficulte": "difficile",
+      "question": "Combien de vertèbres compte le cou d’une girafe ?",
+      "indices": [
+        "C’est le même nombre que chez l’être humain.",
+        "Chacune peut mesurer plus de 25 centimètres."
+      ],
+      "reponse": "Sept.",
+      "reponse_courte": "Sept",
+      "distracteurs": [
+        "Vingt",
+        "Douze",
+        "Trois"
+      ],
+      "variantes_acceptees": [
+        "7",
+        "sept"
+      ],
+      "explication": "Presque tous les mammifères, de la souris à la girafe, ont sept vertèbres dans le cou. Chez la girafe, elles sont simplement très allongées. Quelques exceptions existent, comme les paresseux et les lamantins.",
+      "anecdote": "Son cœur, très puissant, doit pousser le sang à près de deux mètres de haut pour irriguer le cerveau.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "girafe broutant dans un acacia",
+        "fichier": "animaux02-q01.jpg",
+        "auteur": "Gregory Moine",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Masai_Giraffe_(giraffa_camelopardalis_tippelskirchi).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Masai_Giraffe_%28giraffa_camelopardalis_tippelskirchi%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "animaux02-q02",
+      "titre": "Les oreilles de l’éléphant",
+      "categorie": "Mammifères",
+      "difficulte": "moyenne",
+      "question": "À quoi servent surtout les grandes oreilles de l’éléphant d’Afrique ?",
+      "indices": [
+        "Elles sont parcourues d’un réseau de vaisseaux sanguins très dense.",
+        "L’animal les agite quand il fait très chaud."
+      ],
+      "reponse": "À se rafraîchir.",
+      "reponse_courte": "À se rafraîchir",
+      "distracteurs": [
+        "À stocker de l’eau",
+        "À sentir les odeurs",
+        "À se repérer comme un sonar"
+      ],
+      "variantes_acceptees": [
+        "se rafraîchir",
+        "réguler sa température",
+        "à se rafraîchir"
+      ],
+      "explication": "Les oreilles de l’éléphant fonctionnent comme des radiateurs : le sang qui les traverse se refroidit, surtout quand l’animal les agite, puis repart dans le corps. L’éléphant d’Afrique, qui vit dans des régions chaudes, a des oreilles bien plus grandes que celui d’Asie.",
+      "anecdote": "Les éléphants communiquent aussi par des sons très graves, inaudibles pour nous, qui portent à plusieurs kilomètres.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "éléphant d’Afrique oreilles déployées",
+        "fichier": "animaux02-q02.jpg",
+        "auteur": "Timothy Akolamazima",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:African_Elephant_Closeup.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/9/95/African_Elephant_Closeup.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "animaux02-q03",
+      "titre": "La tête de la chouette",
+      "categorie": "Oiseaux",
+      "difficulte": "difficile",
+      "question": "Jusqu’à quel angle environ une chouette peut-elle tourner la tête ?",
+      "indices": [
+        "Ses yeux sont fixes dans leurs orbites.",
+        "Son cou compte deux fois plus de vertèbres que le nôtre."
+      ],
+      "reponse": "Environ 270 degrés.",
+      "reponse_courte": "Environ 270 degrés",
+      "distracteurs": [
+        "Environ 90 degrés",
+        "Environ 360 degrés",
+        "Environ 180 degrés"
+      ],
+      "variantes_acceptees": [
+        "270",
+        "270 degrés",
+        "trois quarts de tour"
+      ],
+      "explication": "Comme ses yeux ne bougent pas, la chouette tourne la tête pour regarder autour d’elle : jusqu’aux trois quarts d’un tour. Son cou compte quatorze vertèbres, et des vaisseaux sanguins adaptés évitent de couper l’irrigation du cerveau.",
+      "anecdote": "Ses plumes aux bords frangés lui permettent de voler presque sans bruit.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "chouette effraie tournant la tête",
+        "fichier": "animaux02-q03.jpg",
+        "auteur": "Michael Gäbler",
+        "licence": "CC BY 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Tyto_alba_(Scopoli,_1769).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Tyto_alba_%28Scopoli%2C_1769%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by/3.0"
+      }
+    },
+    {
+      "id": "animaux02-q04",
+      "titre": "La respiration du dauphin",
+      "categorie": "Animaux marins",
+      "difficulte": "facile",
+      "question": "Par où le dauphin respire-t-il ?",
+      "indices": [
+        "C’est un mammifère : il doit remonter à la surface.",
+        "Cet orifice correspond à ses narines."
+      ],
+      "reponse": "Par un évent, sur le dessus de la tête.",
+      "reponse_courte": "Par un évent sur la tête",
+      "distracteurs": [
+        "Par des branchies",
+        "Par la bouche, sous l’eau",
+        "Par la peau"
+      ],
+      "variantes_acceptees": [
+        "évent",
+        "par l'évent",
+        "par un évent"
+      ],
+      "explication": "Les dauphins respirent l’air, comme nous, par un orifice situé sur le haut de la tête, l’évent, qui se ferme sous l’eau. Ils remontent régulièrement à la surface pour souffler et inspirer.",
+      "anecdote": "Pendant son sommeil, une moitié de son cerveau reste éveillée, ce qui lui permet de continuer à respirer et à surveiller les alentours.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "dauphin soufflant par son évent",
+        "fichier": "animaux02-q04.jpg",
+        "auteur": "NASA",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/10/Tursiops_truncatus_01.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "animaux02-q05",
+      "titre": "La reine des abeilles",
+      "categorie": "Insectes",
+      "difficulte": "facile",
+      "question": "Dans une ruche, quelle abeille pond les œufs ?",
+      "indices": [
+        "Elle est nourrie de gelée royale.",
+        "Il n’y en a normalement qu’une par colonie."
+      ],
+      "reponse": "La reine.",
+      "reponse_courte": "La reine",
+      "distracteurs": [
+        "Les ouvrières",
+        "Les faux bourdons",
+        "Toutes les abeilles"
+      ],
+      "variantes_acceptees": [
+        "reine",
+        "la reine"
+      ],
+      "explication": "La reine est la seule femelle fertile de la colonie ; les ouvrières, aussi des femelles, s’occupent de tout le reste : butinage, soins aux larves, construction des rayons, défense. Les mâles, les faux bourdons, servent à la reproduction.",
+      "anecdote": "Au printemps, une reine peut pondre environ 1 500 œufs par jour, plus que son propre poids.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "cadre de ruche avec la reine entourée d’ouvrières",
+        "fichier": "animaux02-q05.jpg",
+        "auteur": "Scott Bauer, USDA Agricultural Research Service",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Apis_mellifera_scutellata_1355021.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Apis_mellifera_scutellata_1355021.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "animaux02-q06",
+      "titre": "Le chemin des fourmis",
+      "categorie": "Insectes",
+      "difficulte": "moyenne",
+      "question": "Comment les fourmis guident-elles les autres vers la nourriture ?",
+      "indices": [
+        "Une fourmi qui a trouvé de quoi manger marque le trajet du retour.",
+        "Plus il y a de fourmis sur un chemin, plus le signal devient fort."
+      ],
+      "reponse": "En laissant des traces odorantes.",
+      "reponse_courte": "En laissant des traces odorantes",
+      "distracteurs": [
+        "Grâce au champ magnétique",
+        "En dansant devant le nid",
+        "En mémorisant les couleurs du sol"
+      ],
+      "variantes_acceptees": [
+        "traces odorantes",
+        "phéromones",
+        "pistes chimiques"
+      ],
+      "explication": "Les fourmis déposent sur le sol des substances chimiques, des phéromones, que les autres suivent avec leurs antennes. Les chemins les plus courts se renforcent vite, car davantage de fourmis y passent en moins de temps.",
+      "anecdote": "On estime qu’il vit sur Terre environ 20 millions de milliards de fourmis.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "file de fourmis transportant de la nourriture",
+        "fichier": "animaux02-q06.jpg",
+        "auteur": "Basile Morin",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Nest_of_oecophylla_smaragdina_(weaver_ants).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nest_of_oecophylla_smaragdina_%28weaver_ants%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "animaux02-q07",
+      "titre": "Le père hippocampe",
+      "categorie": "Animaux marins",
+      "difficulte": "moyenne",
+      "question": "Chez l’hippocampe, qui porte les petits jusqu’à leur naissance ?",
+      "indices": [
+        "C’est un poisson, malgré son allure de petit cheval.",
+        "La femelle dépose ses œufs dans une poche sur le ventre de son partenaire."
+      ],
+      "reponse": "Le mâle.",
+      "reponse_courte": "Le mâle",
+      "distracteurs": [
+        "La femelle",
+        "Les deux à tour de rôle",
+        "Personne, les œufs flottent"
+      ],
+      "variantes_acceptees": [
+        "le mâle",
+        "mâle",
+        "le père"
+      ],
+      "explication": "Chez les hippocampes, c’est le mâle qui porte les œufs dans une poche ventrale, où ils sont fécondés et se développent. Au bout de quelques semaines, il expulse des dizaines, parfois des centaines de petits.",
+      "anecdote": "L’hippocampe nage en position verticale et s’accroche aux algues avec sa queue préhensile.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "hippocampe accroché à une algue",
+        "fichier": "animaux02-q07.jpg",
+        "auteur": "Betty Wills (Atsme)",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Orange_seahorse_IMG_0380.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/8/81/Orange_seahorse_IMG_0380.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "animaux02-q08",
+      "titre": "Le paresseux",
+      "categorie": "Mammifères",
+      "difficulte": "moyenne",
+      "question": "Quel mammifère d’Amérique tropicale passe presque toute sa vie suspendu aux branches, la tête en bas ?",
+      "indices": [
+        "Il est si lent que des algues poussent dans son pelage.",
+        "Il ne descend de son arbre qu’environ une fois par semaine."
+      ],
+      "reponse": "Le paresseux.",
+      "reponse_courte": "Le paresseux",
+      "distracteurs": [
+        "Le tatou",
+        "Le tamanoir",
+        "Le kinkajou"
+      ],
+      "variantes_acceptees": [
+        "paresseux",
+        "le paresseux",
+        "aï"
+      ],
+      "explication": "Le paresseux se nourrit de feuilles, peu nourrissantes : il économise son énergie en bougeant très peu. Ses longues griffes en crochet lui permettent de rester suspendu sans effort, même en dormant.",
+      "anecdote": "Il nage plutôt bien, et peut retenir sa respiration pendant de longues minutes.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "paresseux suspendu à une branche",
+        "fichier": "animaux02-q08.jpg",
+        "auteur": "Marissa Strniste from Upala, Costa Rica",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Up-Close_Sloth_(6854263759).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Up-Close_Sloth_%286854263759%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "animaux02-q09",
+      "titre": "L’autruche",
+      "categorie": "Oiseaux",
+      "difficulte": "facile",
+      "question": "Quel est le plus grand oiseau vivant ?",
+      "indices": [
+        "Il ne vole pas, mais court à plus de 60 km/h.",
+        "Il pond les plus gros œufs du monde actuel."
+      ],
+      "reponse": "L’autruche.",
+      "reponse_courte": "L’autruche",
+      "distracteurs": [
+        "L’émeu",
+        "Le condor des Andes",
+        "L’albatros hurleur"
+      ],
+      "variantes_acceptees": [
+        "autruche",
+        "l'autruche"
+      ],
+      "explication": "L’autruche d’Afrique peut dépasser 2,5 mètres et 100 kg. Ses longues pattes puissantes, à deux doigts seulement, en font le plus rapide des oiseaux coureurs. Son œuf pèse plus d’un kilo.",
+      "anecdote": "Contrairement à la légende, elle ne cache pas sa tête dans le sable : elle se couche au sol pour se faire discrète.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "autruche courant dans la savane",
+        "fichier": "animaux02-q09.jpg",
+        "auteur": "Jorge Láscar from Australia",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Struthio_camelus_massaicus,_ostriches_running_at_Nairobi_National_Park.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Struthio_camelus_massaicus%2C_ostriches_running_at_Nairobi_National_Park.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "animaux02-q10",
+      "titre": "La peau de l’ours polaire",
+      "categorie": "Mammifères",
+      "difficulte": "difficile",
+      "question": "De quelle couleur est la peau de l’ours polaire, sous sa fourrure ?",
+      "indices": [
+        "Ses poils ne sont pas vraiment blancs : ils sont transparents.",
+        "Cette couleur sombre aide à absorber la chaleur du Soleil."
+      ],
+      "reponse": "Noire.",
+      "reponse_courte": "Noire",
+      "distracteurs": [
+        "Blanche",
+        "Rose",
+        "Jaune"
+      ],
+      "variantes_acceptees": [
+        "noire",
+        "noir"
+      ],
+      "explication": "Les poils de l’ours polaire sont creux et transparents ; ils paraissent blancs parce qu’ils diffusent la lumière. Dessous, sa peau noire et une épaisse couche de graisse l’aident à garder sa chaleur.",
+      "anecdote": "C’est l’un des plus grands carnivores terrestres ; il chasse surtout les phoques sur la banquise.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "ours polaire sur la banquise",
+        "fichier": "animaux02-q10.jpg",
+        "auteur": "Lysogeny",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Polar_bear_with_dead_harp_seal_on_ice_floe.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Polar_bear_with_dead_harp_seal_on_ice_floe.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "animaux02-q11",
+      "titre": "Les yeux de l’escargot",
+      "categorie": "Invertébrés",
+      "difficulte": "difficile",
+      "question": "Où se trouvent les yeux de l’escargot ?",
+      "indices": [
+        "Il possède deux paires de tentacules sur la tête.",
+        "Il peut les rentrer dans son corps, comme un doigt de gant."
+      ],
+      "reponse": "Au bout des grands tentacules.",
+      "reponse_courte": "Au bout des grands tentacules",
+      "distracteurs": [
+        "Sous la coquille",
+        "Au bout des petits tentacules",
+        "Il n’a pas d’yeux"
+      ],
+      "variantes_acceptees": [
+        "au bout des grands tentacules",
+        "au bout des grandes cornes",
+        "sur les grands tentacules"
+      ],
+      "explication": "Les grands tentacules de l’escargot portent à leur extrémité de petits yeux, qui distinguent surtout la lumière et l’ombre. Les petits tentacules, plus bas, lui servent à toucher et à sentir.",
+      "anecdote": "La plupart des escargots terrestres sont hermaphrodites : chacun est à la fois mâle et femelle.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "escargot de Bourgogne tentacules sortis",
+        "fichier": "animaux02-q11.jpg",
+        "auteur": "Natalka Ukraine",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Snails_and_slugs_at_night_in_Dnipro_by_baby-bear.org_Natalka-Ukraine.jpg_02.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/00/Snails_and_slugs_at_night_in_Dnipro_by_baby-bear.org_Natalka-Ukraine.jpg_02.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "animaux02-q12",
+      "titre": "Le retour du saumon",
+      "categorie": "Poissons",
+      "difficulte": "moyenne",
+      "question": "Pourquoi le saumon remonte-t-il les rivières ?",
+      "indices": [
+        "Il a passé plusieurs années en mer avant ce voyage.",
+        "Il retrouve son cours d’eau natal, en partie grâce à l’odorat."
+      ],
+      "reponse": "Pour pondre là où il est né.",
+      "reponse_courte": "Pour pondre là où il est né",
+      "distracteurs": [
+        "Pour fuir les requins",
+        "Pour trouver une eau plus chaude",
+        "Pour passer l’hiver"
+      ],
+      "variantes_acceptees": [
+        "pour se reproduire",
+        "pour pondre",
+        "pour frayer"
+      ],
+      "explication": "Le saumon naît en rivière, grandit en mer, puis revient frayer sur les lieux de sa naissance, en remontant le courant sur des centaines, parfois des milliers de kilomètres. Beaucoup meurent après la ponte.",
+      "anecdote": "Il peut franchir des chutes d’eau en bondissant de plus de deux mètres.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "saumon sautant une chute d’eau",
+        "fichier": "animaux02-q12.jpg",
+        "auteur": "Auteur inconnu",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Post_card._Salmon_leaping_falls,_Ketchikan,_Alaska._-_NARA_-_297786.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Post_card._Salmon_leaping_falls%2C_Ketchikan%2C_Alaska._-_NARA_-_297786.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "animaux02-q13",
+      "titre": "Les marsupiaux",
+      "categorie": "Mammifères",
+      "difficulte": "facile",
+      "question": "À quel groupe de mammifères appartient le kangourou, dont le petit grandit dans une poche ?",
+      "indices": [
+        "Le koala et le wombat en font aussi partie.",
+        "À la naissance, le petit ne mesure que quelques centimètres."
+      ],
+      "reponse": "Aux marsupiaux.",
+      "reponse_courte": "Les marsupiaux",
+      "distracteurs": [
+        "Les rongeurs",
+        "Les monotrèmes",
+        "Les primates"
+      ],
+      "variantes_acceptees": [
+        "marsupiaux",
+        "les marsupiaux"
+      ],
+      "explication": "Chez les marsupiaux, le petit naît très tôt, à peine formé. Il rampe jusqu’à la poche de sa mère, s’accroche à une tétine et y poursuit son développement pendant des mois.",
+      "anecdote": "Le petit kangourou s’appelle un joey ; il reste plusieurs mois dans la poche avant d’en sortir pour de bon.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "kangourou femelle et son petit dans la poche",
+        "fichier": "animaux02-q13.jpg",
+        "auteur": "Steven Higginbotham",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Kangaroo_with_Joey_at_Woodgate_Queensland.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/7/78/Kangaroo_with_Joey_at_Woodgate_Queensland.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "animaux02-q14",
+      "titre": "La coccinelle",
+      "categorie": "Insectes",
+      "difficulte": "facile",
+      "question": "De quoi se nourrissent surtout les coccinelles, au grand bonheur des jardiniers ?",
+      "indices": [
+        "Une seule larve peut en dévorer des centaines avant de devenir adulte.",
+        "Ces petits insectes suceurs de sève abîment les plantes."
+      ],
+      "reponse": "De pucerons.",
+      "reponse_courte": "De pucerons",
+      "distracteurs": [
+        "De feuilles de rosier",
+        "De nectar",
+        "De fourmis"
+      ],
+      "variantes_acceptees": [
+        "pucerons",
+        "de pucerons"
+      ],
+      "explication": "Larves et adultes de nombreuses coccinelles mangent des pucerons en grande quantité. On les utilise donc pour protéger les cultures sans insecticide : c’est la lutte biologique.",
+      "anecdote": "Le nombre de points d’une coccinelle n’indique pas son âge : il dépend de l’espèce.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "coccinelle à sept points sur une feuille",
+        "fichier": "animaux02-q14.jpg",
+        "auteur": "hedera.baltica from Wrocław, Poland",
+        "licence": "CC BY-SA 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Seven-spot_ladybird_(32605471917).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/57/Seven-spot_ladybird_%2832605471917%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "animaux02-q15",
+      "titre": "Les pattes du gecko",
+      "categorie": "Reptiles et amphibiens",
+      "difficulte": "difficile",
+      "question": "Comment le gecko arrive-t-il à marcher au plafond ?",
+      "indices": [
+        "Ses doigts sont couverts de lamelles très fines.",
+        "Les forces en jeu agissent entre molécules, à toute petite distance."
+      ],
+      "reponse": "Grâce à des poils microscopiques sous ses doigts.",
+      "reponse_courte": "Grâce à des poils microscopiques",
+      "distracteurs": [
+        "Grâce à une colle qu’il sécrète",
+        "Grâce à des ventouses",
+        "Grâce à des griffes très fines"
+      ],
+      "variantes_acceptees": [
+        "poils microscopiques",
+        "soies",
+        "forces de van der waals"
+      ],
+      "explication": "Sous les doigts du gecko, des millions de poils microscopiques se ramifient en pointes encore plus fines. Leur contact intime avec la surface crée de faibles attractions entre molécules, qui, additionnées, suffisent à porter l’animal, sans aucune colle.",
+      "anecdote": "Ce principe inspire des adhésifs secs, qui collent et se décollent sans laisser de trace.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "gecko sur une vitre vu de dessous",
+        "fichier": "animaux02-q15.jpg",
+        "auteur": "Hian-Kun Tenn",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Gecko_Palm.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/23/Gecko_Palm.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ]
+}

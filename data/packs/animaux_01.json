@@ -1,0 +1,579 @@
+{
+  "pack": {
+    "id": "animaux_01",
+    "titre": "Pack Animaux n° 1",
+    "premier_numero": 201,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Mammifères": "Animaux",
+      "Oiseaux": "Animaux",
+      "Insectes": "Animaux",
+      "Animaux marins": "Animaux",
+      "Reptiles et amphibiens": "Animaux"
+    }
+  },
+  "questions": [
+    {
+      "id": "animaux01-q01",
+      "titre": "Baleine bleue",
+      "categorie": "Mammifères",
+      "difficulte": "facile",
+      "question": "Quel est le plus grand animal connu, toutes époques confondues ?",
+      "indices": [
+        "C’est un mammifère marin.",
+        "Il peut dépasser 30 mètres de long."
+      ],
+      "reponse": "La baleine bleue (rorqual bleu).",
+      "reponse_courte": "La baleine bleue",
+      "distracteurs": [
+        "Le diplodocus",
+        "Le mammouth laineux",
+        "Le requin-baleine"
+      ],
+      "variantes_acceptees": [
+        "baleine bleue",
+        "rorqual bleu",
+        "la baleine bleue"
+      ],
+      "explication": "La baleine bleue peut dépasser 30 mètres et peser plus de 150 tonnes, davantage que les plus grands dinosaures connus. Ce géant se nourrit pourtant de krill, de minuscules crustacés qu’il filtre à travers ses fanons.",
+      "anecdote": "Le cœur d’une baleine bleue échouée à Terre-Neuve, au Canada, en 2014 pesait environ 180 kilos : le plus gros connu.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "baleine bleue à la surface de l’océan",
+        "fichier": "animaux01-q01.jpg",
+        "auteur": "NOAA Fisheries/Lisa Conger",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Blue-whale.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/16/Blue-whale.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "animaux01-q02",
+      "titre": "Chauve-souris",
+      "categorie": "Mammifères",
+      "difficulte": "facile",
+      "question": "Quel mammifère est capable de voler activement, comme un oiseau ?",
+      "indices": [
+        "Ses ailes sont des membranes de peau tendues entre des doigts très allongés.",
+        "Beaucoup d’espèces s’orientent dans le noir grâce à l’écholocation."
+      ],
+      "reponse": "La chauve-souris.",
+      "reponse_courte": "La chauve-souris",
+      "distracteurs": [
+        "L’écureuil volant",
+        "Le colugo",
+        "Le phalanger volant"
+      ],
+      "variantes_acceptees": [
+        "chauve-souris",
+        "les chauves-souris",
+        "chiroptère"
+      ],
+      "explication": "Les chauves-souris (chiroptères) sont les seuls mammifères capables d’un vrai vol battu ; l’écureuil volant, le colugo ou le phalanger volant ne font que planer. On en compte plus de 1 500 espèces, environ un cinquième de tous les mammifères.",
+      "anecdote": "En France, toutes les espèces de chauves-souris sont protégées.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "chauve-souris en vol",
+        "fichier": "animaux01-q02.jpg",
+        "auteur": "Paramanu Sarkar",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Bat_01.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/60/Bat_01.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "animaux01-q03",
+      "titre": "Colibri",
+      "categorie": "Oiseaux",
+      "difficulte": "moyenne",
+      "question": "Quel oiseau est capable de voler en arrière ?",
+      "indices": [
+        "Il bat des ailes plusieurs dizaines de fois par seconde.",
+        "Il se nourrit surtout de nectar, en vol stationnaire devant les fleurs."
+      ],
+      "reponse": "Le colibri (oiseau-mouche).",
+      "reponse_courte": "Le colibri",
+      "distracteurs": [
+        "Le martinet noir",
+        "Le faucon pèlerin",
+        "Le martin-pêcheur"
+      ],
+      "variantes_acceptees": [
+        "colibri",
+        "oiseau-mouche",
+        "le colibri"
+      ],
+      "explication": "Les colibris, ou oiseaux-mouches, vivent sur le continent américain. Leurs ailes pivotent à l’épaule et décrivent un huit : elles portent l’oiseau à l’aller comme au retour, ce qui lui permet de rester immobile en l’air et même de reculer.",
+      "anecdote": "Le colibri d’Hélène, à Cuba, est le plus petit oiseau du monde : il mesure environ 5 à 6 cm.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "colibri en vol stationnaire devant une fleur",
+        "fichier": "animaux01-q03.jpg",
+        "auteur": "Jack Nevitt",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Ruby-Throated_hummingbird_on_red_flower.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Ruby-Throated_hummingbird_on_red_flower.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "animaux01-q04",
+      "titre": "Faucon pèlerin",
+      "categorie": "Oiseaux",
+      "difficulte": "moyenne",
+      "question": "Quel oiseau est l’animal le plus rapide du monde, lorsqu’il plonge en piqué ?",
+      "indices": [
+        "Il chasse d’autres oiseaux, qu’il frappe en plein vol.",
+        "On lui prête plus de 300 km/h quand il fond sur sa proie."
+      ],
+      "reponse": "Le faucon pèlerin.",
+      "reponse_courte": "Le faucon pèlerin",
+      "distracteurs": [
+        "Le martinet noir",
+        "L’albatros hurleur",
+        "Le goéland argenté"
+      ],
+      "variantes_acceptees": [
+        "faucon pèlerin",
+        "le faucon pèlerin",
+        "faucon"
+      ],
+      "explication": "En piqué, ailes repliées, le faucon pèlerin dépasserait 300 km/h ; un fauconnier dit avoir mesuré près de 390 km/h, mais ces records restent discutés. Il frappe ses proies avec ses serres, puis les rattrape en vol.",
+      "anecdote": "Presque disparu d’Europe de l’Ouest et d’Amérique du Nord dans les années 1960-1970 à cause des pesticides comme le DDT, il niche aujourd’hui jusque sur des immeubles et des cathédrales.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "faucon pèlerin perché",
+        "fichier": "animaux01-q04.jpg",
+        "auteur": "Andy Reago & Chrissy McClarren",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_(1_-_perched_and_called)_(32008128308).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Peregrine_Falcon_%281_-_perched_and_called%29_%2832008128308%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "animaux01-q05",
+      "titre": "Métamorphose",
+      "categorie": "Insectes",
+      "difficulte": "facile",
+      "question": "Comment s’appelle la transformation d’une chenille en papillon ?",
+      "indices": [
+        "Entre les deux, l’insecte passe par un stade immobile, la chrysalide.",
+        "Le même mot désigne le passage du têtard à la grenouille."
+      ],
+      "reponse": "La métamorphose.",
+      "reponse_courte": "La métamorphose",
+      "distracteurs": [
+        "La mue",
+        "La migration",
+        "L’hibernation"
+      ],
+      "variantes_acceptees": [
+        "métamorphose",
+        "la métamorphose"
+      ],
+      "explication": "Chez les papillons, la métamorphose est complète : l’œuf donne une larve, la chenille, qui grandit en muant, puis se transforme en chrysalide avant de devenir un papillon adulte. Les coléoptères, les mouches et les abeilles passent aussi par ces quatre stades.",
+      "anecdote": "Dans la chrysalide, une grande partie du corps de la chenille est dissoute, puis le corps du papillon se reconstruit à partir de groupes de cellules déjà présents chez la chenille.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "chrysalide de papillon suspendue à une branche",
+        "fichier": "animaux01-q05.jpg",
+        "auteur": "Aruna sur Wikipédia malayalam",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Butterfly%27s_chrysalis.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Butterfly%27s_chrysalis.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "id": "animaux01-q06",
+      "titre": "Six pattes",
+      "categorie": "Insectes",
+      "difficulte": "facile",
+      "question": "Combien de pattes possède un insecte adulte ?",
+      "indices": [
+        "Son corps est divisé en trois parties : tête, thorax et abdomen.",
+        "Les araignées, qui en ont davantage, ne sont pas des insectes."
+      ],
+      "reponse": "Six pattes.",
+      "reponse_courte": "Six",
+      "distracteurs": [
+        "Huit",
+        "Quatre",
+        "Dix"
+      ],
+      "variantes_acceptees": [
+        "6",
+        "six",
+        "six pattes"
+      ],
+      "explication": "Tous les insectes adultes ont six pattes, toutes attachées au thorax, et une paire d’antennes ; on les appelle aussi hexapodes. Les araignées, avec leurs huit pattes, appartiennent à un autre groupe : les arachnides.",
+      "anecdote": "Chez certains papillons, comme le monarque ou la belle-dame, la première paire de pattes est si réduite qu’ils semblent n’en avoir que quatre.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "insecte en gros plan montrant ses six pattes",
+        "fichier": "animaux01-q06.jpg",
+        "auteur": "Tiia Monto",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Insect_on_wall.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/40/Insect_on_wall.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "animaux01-q07",
+      "titre": "Les cœurs de la pieuvre",
+      "categorie": "Animaux marins",
+      "difficulte": "difficile",
+      "question": "Combien de cœurs possède une pieuvre ?",
+      "indices": [
+        "Son sang est bleu, car il contient un pigment à base de cuivre.",
+        "Deux d’entre eux servent seulement à pousser le sang dans les branchies."
+      ],
+      "reponse": "Trois.",
+      "reponse_courte": "Trois",
+      "distracteurs": [
+        "Un",
+        "Deux",
+        "Huit"
+      ],
+      "variantes_acceptees": [
+        "3",
+        "trois",
+        "trois cœurs"
+      ],
+      "explication": "La pieuvre possède un cœur principal, qui envoie le sang dans tout le corps, et deux cœurs branchiaux, qui le poussent à travers les branchies. Son sang transporte l’oxygène grâce à l’hémocyanine, une protéine contenant du cuivre, qui le colore en bleu.",
+      "anecdote": "Le cœur principal cesse de battre quand la pieuvre nage, ce qui explique en partie qu’elle préfère souvent ramper sur le fond.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "pieuvre sur un fond marin",
+        "fichier": "animaux01-q07.jpg",
+        "auteur": "Betty Wills (Atsme)",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Octopus_in_the_New_England_Aquarium.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Octopus_in_the_New_England_Aquarium.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "animaux01-q08",
+      "titre": "Le requin",
+      "categorie": "Animaux marins",
+      "difficulte": "moyenne",
+      "question": "À quel groupe d’animaux appartient le requin ?",
+      "indices": [
+        "Il respire grâce à des branchies.",
+        "Son squelette n’est pas fait d’os."
+      ],
+      "reponse": "Aux poissons cartilagineux.",
+      "reponse_courte": "Les poissons cartilagineux",
+      "distracteurs": [
+        "Les mammifères marins",
+        "Les poissons osseux",
+        "Les reptiles marins"
+      ],
+      "variantes_acceptees": [
+        "poissons cartilagineux",
+        "chondrichtyens",
+        "poisson"
+      ],
+      "explication": "Les requins sont des poissons dont le squelette est fait de cartilage, comme celui des raies et des chimères : ce sont les poissons cartilagineux, ou chondrichtyens. Contrairement aux dauphins et aux baleines, qui sont des mammifères, ils respirent l’oxygène de l’eau par leurs branchies.",
+      "anecdote": "On estime que le requin du Groenland peut vivre plusieurs siècles, peut-être près de 400 ans : c’est le vertébré connu le plus longévif.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "requin nageant en pleine eau",
+        "fichier": "animaux01-q08.jpg",
+        "auteur": "出羽雀台",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:A_shortfin_mako_shark_swimming_in_an_aquarium.(1).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/6b/A_shortfin_mako_shark_swimming_in_an_aquarium.%281%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "animaux01-q09",
+      "titre": "Queue de lézard",
+      "categorie": "Reptiles et amphibiens",
+      "difficulte": "facile",
+      "question": "Quel animal peut abandonner sa queue pour échapper à un prédateur, puis la faire repousser ?",
+      "indices": [
+        "On appelle ce réflexe l’autotomie.",
+        "La queue détachée continue de s’agiter quelques instants pour distraire le prédateur."
+      ],
+      "reponse": "Le lézard.",
+      "reponse_courte": "Le lézard",
+      "distracteurs": [
+        "Le serpent",
+        "La tortue",
+        "Le crocodile"
+      ],
+      "variantes_acceptees": [
+        "lézard",
+        "le lézard",
+        "gecko"
+      ],
+      "explication": "Beaucoup de lézards peuvent rompre leur queue à un endroit précis, prévu pour cela. Elle repousse ensuite, mais elle est alors soutenue par un tube de cartilage plutôt que par des vertèbres, et elle est souvent plus courte ou d’une autre couleur.",
+      "anecdote": "L’axolotl, un amphibien mexicain, va plus loin : il peut régénérer des membres entiers et même une partie de son cœur.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "lézard des murailles sur une pierre",
+        "fichier": "animaux01-q09.jpg",
+        "auteur": "Gzen92",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:L%C3%A9zard_des_murailles_(Podarcis_muralis)_(8).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/58/L%C3%A9zard_des_murailles_%28Podarcis_muralis%29_%288%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "animaux01-q10",
+      "titre": "Respiration des grenouilles",
+      "categorie": "Reptiles et amphibiens",
+      "difficulte": "moyenne",
+      "question": "En plus de ses poumons, par où une grenouille adulte respire-t-elle ?",
+      "indices": [
+        "Elle doit rester humide pour que cela fonctionne.",
+        "Les gaz traversent directement une fine surface riche en vaisseaux sanguins."
+      ],
+      "reponse": "Par la peau.",
+      "reponse_courte": "Par la peau",
+      "distracteurs": [
+        "Par des branchies",
+        "Par l’estomac",
+        "Par la queue"
+      ],
+      "variantes_acceptees": [
+        "la peau",
+        "par la peau",
+        "respiration cutanée"
+      ],
+      "explication": "La peau des grenouilles est fine, humide et parcourue de nombreux vaisseaux sanguins : le dioxygène la traverse et passe dans le sang, tandis que le dioxyde de carbone en sort. C’est la respiration cutanée. Les branchies, elles, appartiennent au têtard.",
+      "anecdote": "En hiver, au fond des mares, certaines grenouilles respirent presque uniquement par la peau.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "grenouille verte au bord d’une mare",
+        "fichier": "animaux01-q10.jpg",
+        "auteur": "Bernard Spragg. NZ",
+        "licence": "CC0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:The_Green_and_Golden_Bell_Frog.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/c/cb/The_Green_and_Golden_Bell_Frog.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "animaux01-q11",
+      "titre": "Ornithorynque",
+      "categorie": "Mammifères",
+      "difficulte": "moyenne",
+      "question": "Quel mammifère australien pond des œufs ?",
+      "indices": [
+        "Il a un bec qui ressemble à celui d’un canard et des pattes palmées.",
+        "Le mâle possède un ergot venimeux sur les pattes arrière."
+      ],
+      "reponse": "L’ornithorynque.",
+      "reponse_courte": "L’ornithorynque",
+      "distracteurs": [
+        "Le kangourou",
+        "Le koala",
+        "Le wombat"
+      ],
+      "variantes_acceptees": [
+        "ornithorynque",
+        "l'ornithorynque",
+        "échidné"
+      ],
+      "explication": "L’ornithorynque appartient, avec les échidnés, aux monotrèmes, les seuls mammifères qui pondent des œufs. Comme tous les mammifères, la femelle allaite ses petits, mais elle n’a pas de mamelles : le lait suinte à travers sa peau.",
+      "anecdote": "Quand les premiers spécimens sont arrivés en Europe, vers 1800, certains naturalistes ont cru à une supercherie, un assemblage de plusieurs animaux cousus ensemble.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "ornithorynque nageant",
+        "fichier": "animaux01-q11.jpg",
+        "auteur": "Steven Penton from Bakers Beach, Tasmania Australia",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Platypus._Broken_River,_Queensland._(51190230662).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Platypus._Broken_River%2C_Queensland._%2851190230662%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "animaux01-q12",
+      "titre": "Le tigre",
+      "categorie": "Mammifères",
+      "difficulte": "moyenne",
+      "question": "Quel est le plus grand félin du monde ?",
+      "indices": [
+        "Il vit en Asie, des forêts tropicales jusqu’à la taïga de Sibérie.",
+        "Contrairement à beaucoup de félins, il aime l’eau et nage très bien."
+      ],
+      "reponse": "Le tigre.",
+      "reponse_courte": "Le tigre",
+      "distracteurs": [
+        "Le lion",
+        "Le jaguar",
+        "La panthère des neiges"
+      ],
+      "variantes_acceptees": [
+        "tigre",
+        "le tigre",
+        "tigre de sibérie"
+      ],
+      "explication": "Le tigre est le plus grand des félins : les plus gros mâles, notamment ceux de l’Extrême-Orient russe, peuvent dépasser 250 kilos et mesurer plus de 3 mètres de la tête au bout de la queue. Le lion vient juste après. L’espèce est aujourd’hui menacée.",
+      "anecdote": "Les rayures d’un tigre sont propres à chaque individu : elles lui servent en quelque sorte de carte d’identité.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "tigre dans la végétation",
+        "fichier": "animaux01-q12.jpg",
+        "auteur": "Photo (c)2007 Derek and Julie Ramsey (Ram-Man) edit by Chris_huh.",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Amur_Tiger_Panthera_tigris_altaica_Eye_2112px_edit.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/25/Amur_Tiger_Panthera_tigris_altaica_Eye_2112px_edit.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "animaux01-q13",
+      "titre": "Le manchot",
+      "categorie": "Oiseaux",
+      "difficulte": "moyenne",
+      "question": "Quel oiseau de l’hémisphère sud ne vole pas dans les airs mais « vole » sous l’eau ?",
+      "indices": [
+        "Ses ailes sont devenues des nageoires rigides.",
+        "On le confond souvent avec un oiseau de l’Atlantique Nord qui, lui, sait voler."
+      ],
+      "reponse": "Le manchot.",
+      "reponse_courte": "Le manchot",
+      "distracteurs": [
+        "Le pingouin",
+        "L’autruche",
+        "Le cormoran"
+      ],
+      "variantes_acceptees": [
+        "manchot",
+        "le manchot",
+        "manchot empereur"
+      ],
+      "explication": "Les manchots vivent presque tous dans l’hémisphère sud, de l’Antarctique aux côtes d’Afrique australe ou des Galápagos. Ils ont perdu l’usage du vol, mais leurs ailes en forme de rames les propulsent sous l’eau. Le pingouin, oiseau de l’Atlantique Nord, vole, lui, très bien.",
+      "anecdote": "Le manchot empereur peut plonger à plus de 500 mètres de profondeur.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "manchots sur la banquise",
+        "fichier": "animaux01-q13.jpg",
+        "auteur": "Auteur inconnu",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Drawing,_Penguins_on_an_ice_floe,_1884_(CH_18426009).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/9/94/Drawing%2C_Penguins_on_an_ice_floe%2C_1884_%28CH_18426009%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "animaux01-q14",
+      "titre": "Ver à soie",
+      "categorie": "Insectes",
+      "difficulte": "moyenne",
+      "question": "Quel insecte produit la soie utilisée pour fabriquer des tissus ?",
+      "indices": [
+        "Sa chenille se nourrit presque uniquement des feuilles d’un arbre.",
+        "Elle tisse un cocon fait d’un seul fil de plusieurs centaines de mètres."
+      ],
+      "reponse": "Le bombyx du mûrier (ver à soie).",
+      "reponse_courte": "Le bombyx du mûrier",
+      "distracteurs": [
+        "Le papillon monarque",
+        "La mante religieuse",
+        "Le grillon"
+      ],
+      "variantes_acceptees": [
+        "ver à soie",
+        "bombyx",
+        "bombyx du mûrier"
+      ],
+      "explication": "Le « ver à soie » est la chenille d’un papillon, le bombyx du mûrier. Pour se transformer, elle s’enferme dans un cocon fait d’un fil de soie continu, que l’on dévide pour le tisser. Il est élevé en Chine depuis des milliers d’années.",
+      "anecdote": "Domestiqué depuis si longtemps, le papillon adulte ne sait plus voler et n’existe plus à l’état sauvage.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "cocons de vers à soie",
+        "fichier": "animaux01-q14.jpg",
+        "auteur": "USGS Bee Inventory and Monitoring Lab from Beltsville, Maryland, USA",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Black_cutworm_pupae.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Black_cutworm_pupae.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "animaux01-q15",
+      "titre": "Galère portugaise",
+      "categorie": "Animaux marins",
+      "difficulte": "difficile",
+      "question": "Quelle fausse « méduse » est en réalité une colonie de nombreux organismes ?",
+      "indices": [
+        "Elle flotte grâce à une poche de gaz violacée, dressée comme une voile.",
+        "Ses longs filaments, qui mesurent plusieurs mètres, sont très urticants."
+      ],
+      "reponse": "La galère portugaise (physalie).",
+      "reponse_courte": "La galère portugaise",
+      "distracteurs": [
+        "La méduse lune",
+        "La méduse à crinière de lion",
+        "La guêpe de mer"
+      ],
+      "variantes_acceptees": [
+        "galère portugaise",
+        "physalie",
+        "la physalie"
+      ],
+      "explication": "La galère portugaise, ou physalie, n’est pas une méduse : c’est un siphonophore, une colonie d’individus spécialisés, les uns pour flotter, d’autres pour capturer les proies, les digérer ou se reproduire. Ses filaments pêcheurs peuvent mesurer plus de dix mètres.",
+      "anecdote": "Elle s’échoue parfois par centaines sur les plages atlantiques françaises ; même échouée, elle reste urticante.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "galère portugaise échouée sur une plage",
+        "fichier": "animaux01-q15.jpg",
+        "auteur": "Jules Verne Times Two",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Dead_Portuguese_man_o%27_war_at_Mosteiros_Beach,_S%C3%A3o_Miguel_Island,_Azores,_Portugal_(PPL1-Corrected).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/54/Dead_Portuguese_man_o%27_war_at_Mosteiros_Beach%2C_S%C3%A3o_Miguel_Island%2C_Azores%2C_Portugal_%28PPL1-Corrected%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ]
+}

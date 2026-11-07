@@ -1,0 +1,567 @@
+{
+  "pack": {
+    "id": "histoire_02",
+    "titre": "Pack Histoire n° 2",
+    "premier_numero": 316,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Époque contemporaine": "Histoire",
+      "Antiquité": "Histoire",
+      "Archéologie": "Histoire",
+      "Préhistoire": "Histoire",
+      "Moyen Âge": "Histoire",
+      "Temps modernes": "Histoire"
+    }
+  },
+  "questions": [
+    {
+      "id": "histoire02-q01",
+      "titre": "Louis XVI",
+      "categorie": "Époque contemporaine",
+      "difficulte": "facile",
+      "question": "Quel roi de France a été guillotiné en 1793 ?",
+      "indices": [
+        "Il était l’époux de Marie-Antoinette.",
+        "Il avait tenté de fuir en 1791 et avait été arrêté à Varennes."
+      ],
+      "reponse": "Louis XVI.",
+      "reponse_courte": "Louis XVI",
+      "distracteurs": [
+        "Louis XV",
+        "Louis XVIII",
+        "Charles X"
+      ],
+      "variantes_acceptees": [
+        "louis xvi",
+        "louis 16",
+        "louis capet"
+      ],
+      "explication": "Après la chute de la monarchie en août 1792, Louis XVI est jugé par la Convention pour trahison. Il est guillotiné le 21 janvier 1793, place de la Révolution, l’actuelle place de la Concorde à Paris.",
+      "anecdote": "Marie-Antoinette est guillotinée à son tour en octobre 1793.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "portrait de Louis XVI par Antoine-François Callet",
+        "fichier": "histoire02-q01.jpg",
+        "auteur": "APK",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Portrait_of_Louis_XVI_(Antoine-Fran%C3%A7ois_Callet,_Versailles).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/55/Portrait_of_Louis_XVI_%28Antoine-Fran%C3%A7ois_Callet%2C_Versailles%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "histoire02-q02",
+      "titre": "Le sacre de Napoléon",
+      "categorie": "Époque contemporaine",
+      "difficulte": "difficile",
+      "question": "En quelle année Napoléon Bonaparte est-il sacré empereur, à Notre-Dame de Paris ?",
+      "indices": [
+        "Le pape Pie VII assiste à la cérémonie.",
+        "Jacques-Louis David a peint la scène dans un immense tableau du Louvre."
+      ],
+      "reponse": "En 1804.",
+      "reponse_courte": "1804",
+      "distracteurs": [
+        "1799",
+        "1815",
+        "1789"
+      ],
+      "variantes_acceptees": [
+        "1804",
+        "en 1804"
+      ],
+      "explication": "Le 2 décembre 1804, Napoléon se couronne lui-même, puis couronne Joséphine, sous les yeux du pape. Il avait pris le pouvoir en 1799 par le coup d’État du 18 Brumaire ; son règne s’achève en 1815, après Waterloo.",
+      "anecdote": "Sa mère, Letizia, absente ce jour-là, figure pourtant sur le tableau de David.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Le Sacre de Napoléon de Jacques-Louis David",
+        "fichier": "histoire02-q02.jpg",
+        "auteur": "Jacques-Louis David / Georges Rouget",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Coronation_of_Napoleon_(1805-1807).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Jacques-Louis_David_-_The_Coronation_of_Napoleon_%281805-1807%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire02-q03",
+      "titre": "Romulus et Rémus",
+      "categorie": "Antiquité",
+      "difficulte": "facile",
+      "question": "Selon la légende, quels jumeaux auraient fondé Rome ?",
+      "indices": [
+        "Ils auraient été allaités par une louve.",
+        "La tradition fixe cette fondation à 753 av. J.-C."
+      ],
+      "reponse": "Romulus et Rémus.",
+      "reponse_courte": "Romulus et Rémus",
+      "distracteurs": [
+        "Castor et Pollux",
+        "Énée et Ascagne",
+        "Caïn et Abel"
+      ],
+      "variantes_acceptees": [
+        "romulus et rémus",
+        "romulus"
+      ],
+      "explication": "Selon la légende, les jumeaux, abandonnés sur le Tibre, sont recueillis et nourris par une louve, puis élevés par un berger. Devenus adultes, ils fondent une ville sur le Palatin ; Romulus lui donne son nom.",
+      "anecdote": "Selon l’une des versions du récit, Romulus tua son frère, qui avait franchi par moquerie le sillon sacré tracé autour de la nouvelle ville.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "statue de la Louve capitoline",
+        "fichier": "histoire02-q03.jpg",
+        "auteur": "Carole Raddato from FRANKFURT, Germany",
+        "licence": "CC BY-SA 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:The_Capitoline_Wolf,_Musei_Capitolini,_Rome_(13840968834).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/ac/The_Capitoline_Wolf%2C_Musei_Capitolini%2C_Rome_%2813840968834%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "histoire02-q04",
+      "titre": "La Grande Muraille",
+      "categorie": "Antiquité",
+      "difficulte": "moyenne",
+      "question": "Pourquoi la Grande Muraille de Chine a-t-elle été construite ?",
+      "indices": [
+        "Ses portions les plus connues datent de la dynastie Ming.",
+        "Avec tous ses tronçons, elle s’étend sur des milliers de kilomètres."
+      ],
+      "reponse": "Pour se protéger des peuples nomades du nord.",
+      "reponse_courte": "Pour se protéger des peuples du nord",
+      "distracteurs": [
+        "Pour retenir les crues des fleuves",
+        "Pour marquer la frontière avec l’Inde",
+        "Pour relier les grandes villes"
+      ],
+      "variantes_acceptees": [
+        "défense",
+        "se protéger des nomades",
+        "protection contre les invasions"
+      ],
+      "explication": "Dès le IIIe siècle av. J.-C., le premier empereur, Qin Shi Huang, relie des murailles plus anciennes pour se protéger des cavaliers nomades des steppes. Elle a été reconstruite et prolongée à plusieurs reprises, surtout sous les Ming, du XIVe au XVIIe siècle.",
+      "anecdote": "Contrairement à une idée reçue, on ne la distingue pas à l’œil nu depuis la Lune.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Grande Muraille de Chine serpentant sur les collines",
+        "fichier": "histoire02-q04.jpg",
+        "auteur": "Jakub Hałun",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:20090529_Great_Wall_8185.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/10/20090529_Great_Wall_8185.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "histoire02-q05",
+      "titre": "Toutânkhamon",
+      "categorie": "Archéologie",
+      "difficulte": "difficile",
+      "question": "Quel archéologue a découvert la tombe de Toutânkhamon, en 1922 ?",
+      "indices": [
+        "Il était britannique et travaillait pour lord Carnarvon.",
+        "La tombe se trouvait dans la Vallée des Rois, près de Louxor."
+      ],
+      "reponse": "Howard Carter.",
+      "reponse_courte": "Howard Carter",
+      "distracteurs": [
+        "Jean-François Champollion",
+        "Auguste Mariette",
+        "Heinrich Schliemann"
+      ],
+      "variantes_acceptees": [
+        "carter",
+        "howard carter"
+      ],
+      "explication": "Après des années de fouilles, Howard Carter met au jour en novembre 1922 une tombe presque intacte, remplie de milliers d’objets. Le pharaon Toutânkhamon, mort jeune vers 1323 av. J.-C., est devenu célèbre grâce à cette découverte.",
+      "anecdote": "Le masque funéraire en or du jeune pharaon pèse environ 10 kg.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "photographie de 1922 de l’ouverture de la tombe de Toutânkhamon",
+        "fichier": "histoire02-q05.jpg",
+        "auteur": "Harry Burton",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Howard_Carter_in_the_King_Tutankhamen%27s_tomb.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Howard_Carter_in_the_King_Tutankhamen%27s_tomb.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire02-q06",
+      "titre": "La pierre de Rosette",
+      "categorie": "Archéologie",
+      "difficulte": "moyenne",
+      "question": "Quel objet a permis à Champollion de déchiffrer les hiéroglyphes ?",
+      "indices": [
+        "Il porte un même texte en trois écritures.",
+        "Il est exposé au British Museum, à Londres."
+      ],
+      "reponse": "La pierre de Rosette.",
+      "reponse_courte": "La pierre de Rosette",
+      "distracteurs": [
+        "Le papyrus d’Ani",
+        "L’obélisque de la Concorde",
+        "La palette de Narmer"
+      ],
+      "variantes_acceptees": [
+        "pierre de rosette",
+        "rosette"
+      ],
+      "explication": "Découverte en 1799 par des soldats de l’expédition de Bonaparte en Égypte, la pierre porte un décret en hiéroglyphes, en démotique et en grec. En comparant les versions, Champollion annonce en 1822 avoir compris le système des hiéroglyphes.",
+      "anecdote": "Selon une légende familiale, Champollion aurait couru dire à son frère « Je tiens mon affaire ! » avant de tomber dans une sorte de torpeur.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "pierre de Rosette au British Museum",
+        "fichier": "histoire02-q06.jpg",
+        "auteur": "Hans Hillewaert",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Rosetta_Stone.JPG",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/23/Rosetta_Stone.JPG",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "histoire02-q07",
+      "titre": "La grotte de Lascaux",
+      "categorie": "Préhistoire",
+      "difficulte": "moyenne",
+      "question": "Quelle grotte de Dordogne, découverte en 1940, est célèbre pour ses peintures préhistoriques ?",
+      "indices": [
+        "Quatre adolescents l’ont découverte, selon le récit en suivant leur chien.",
+        "Fermée au public depuis 1963, elle a été reproduite à l’identique."
+      ],
+      "reponse": "La grotte de Lascaux.",
+      "reponse_courte": "Lascaux",
+      "distracteurs": [
+        "Chauvet",
+        "Altamira",
+        "Cosquer"
+      ],
+      "variantes_acceptees": [
+        "lascaux",
+        "grotte de lascaux"
+      ],
+      "explication": "Les parois de Lascaux, ornées il y a environ 18 000 ans, montrent des chevaux, des aurochs, des cerfs et des signes. La respiration des visiteurs abîmait les peintures : la grotte a été fermée, et plusieurs copies permettent de la découvrir.",
+      "anecdote": "Dans la salle des Taureaux, certains aurochs peints dépassent cinq mètres de long.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "fac-similé de peintures de la grotte de Lascaux",
+        "fichier": "histoire02-q07.jpg",
+        "auteur": "EU",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Lascaux_painting.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Lascaux_painting.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire02-q08",
+      "titre": "La peste noire",
+      "categorie": "Moyen Âge",
+      "difficulte": "moyenne",
+      "question": "Quelle épidémie a tué une grande partie de la population européenne entre 1347 et 1352 ?",
+      "indices": [
+        "Elle est arrivée d’Asie par les ports de la Méditerranée.",
+        "Elle se transmettait notamment par les puces des rats."
+      ],
+      "reponse": "La peste noire.",
+      "reponse_courte": "La peste noire",
+      "distracteurs": [
+        "Le choléra",
+        "La variole",
+        "La grippe espagnole"
+      ],
+      "variantes_acceptees": [
+        "peste",
+        "peste noire",
+        "la peste"
+      ],
+      "explication": "Causée par une bactérie, la peste noire a fait mourir, selon les estimations, entre un tiers et la moitié de la population de l’Europe en quelques années. Elle est revenue régulièrement pendant des siècles.",
+      "anecdote": "Le mot « quarantaine » vient de l’isolement imposé aux voyageurs venus des régions touchées : à Raguse, l’actuelle Dubrovnik, il passa de trente à quarante jours.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "gravure ancienne de la peste au Moyen Âge",
+        "fichier": "histoire02-q08.jpg",
+        "auteur": "Giuseppe Maria Crespi",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Crespi_Tolome%C3%AF-pest-noire-Sienne.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Crespi_Tolome%C3%AF-pest-noire-Sienne.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire02-q09",
+      "titre": "La première croisade",
+      "categorie": "Moyen Âge",
+      "difficulte": "difficile",
+      "question": "Quelle ville les croisés ont-ils prise en 1099, au terme de la première croisade ?",
+      "indices": [
+        "C’est une ville sainte pour les juifs, les chrétiens et les musulmans.",
+        "Le pape Urbain II avait appelé à cette expédition en 1095, à Clermont."
+      ],
+      "reponse": "Jérusalem.",
+      "reponse_courte": "Jérusalem",
+      "distracteurs": [
+        "Constantinople",
+        "Rome",
+        "Le Caire"
+      ],
+      "variantes_acceptees": [
+        "jérusalem"
+      ],
+      "explication": "Partis d’Europe en 1096, les croisés prennent Jérusalem en juillet 1099, au prix d’un massacre de ses habitants. Ils y fondent un royaume chrétien, repris par Saladin en 1187.",
+      "anecdote": "Constantinople, elle, a été prise et pillée par les croisés en 1204, lors de la quatrième croisade.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "miniature médiévale de la prise de Jérusalem",
+        "fichier": "histoire02-q09.jpg",
+        "auteur": "Auteur inconnu",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Godefroi1099.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Godefroi1099.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire02-q10",
+      "titre": "Marco Polo",
+      "categorie": "Moyen Âge",
+      "difficulte": "moyenne",
+      "question": "Quel marchand vénitien a raconté son voyage en Chine, à la fin du XIIIe siècle ?",
+      "indices": [
+        "Il a séjourné à la cour de l’empereur mongol Kubilai Khan.",
+        "Son récit est connu sous le titre Le Devisement du monde, ou Le Livre des merveilles."
+      ],
+      "reponse": "Marco Polo.",
+      "reponse_courte": "Marco Polo",
+      "distracteurs": [
+        "Christophe Colomb",
+        "Vasco de Gama",
+        "Ibn Battuta"
+      ],
+      "variantes_acceptees": [
+        "marco polo"
+      ],
+      "explication": "Parti en 1271 avec son père et son oncle, Marco Polo passe environ vingt ans en Asie. Prisonnier à Gênes à son retour, il dicte ses souvenirs à Rusticien de Pise ; le livre fait découvrir la Chine aux Européens.",
+      "anecdote": "Christophe Colomb possédait un exemplaire du livre, qu’il avait annoté.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "miniature médiévale du Livre des merveilles",
+        "fichier": "histoire02-q10.jpg",
+        "auteur": "Salviati",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Marco_Polo_Mosaic_from_Palazzo_Tursi.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Marco_Polo_Mosaic_from_Palazzo_Tursi.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire02-q11",
+      "titre": "Marignan",
+      "categorie": "Temps modernes",
+      "difficulte": "facile",
+      "question": "Quelle bataille de 1515 a rendu célèbre le roi François Ier ?",
+      "indices": [
+        "Elle l’opposait aux mercenaires suisses, en Italie.",
+        "Sa date est l’une des plus connues des écoliers français."
+      ],
+      "reponse": "La bataille de Marignan.",
+      "reponse_courte": "La bataille de Marignan",
+      "distracteurs": [
+        "La bataille de Pavie",
+        "La bataille de Bouvines",
+        "La bataille de Waterloo"
+      ],
+      "variantes_acceptees": [
+        "marignan",
+        "bataille de marignan"
+      ],
+      "explication": "Les 13 et 14 septembre 1515, près de Milan, François Ier, roi depuis quelques mois, bat les Suisses qui défendent le duché de Milan. Cette victoire lui ouvre l’Italie et le rend célèbre dans toute l’Europe.",
+      "anecdote": "Dix ans plus tard, à Pavie, François Ier est battu et fait prisonnier par les troupes de Charles Quint.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "tableau ancien de la bataille de Marignan",
+        "fichier": "histoire02-q11.jpg",
+        "auteur": "Alexandre-Évariste Fragonard",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Marignan-1515-francois1er.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/54/Marignan-1515-francois1er.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire02-q12",
+      "titre": "L’édit de Nantes",
+      "categorie": "Temps modernes",
+      "difficulte": "difficile",
+      "question": "Quel roi a signé l’édit de Nantes, en 1598 ?",
+      "indices": [
+        "Ce texte accordait des droits aux protestants et mettait fin aux guerres de Religion.",
+        "Ce roi a été assassiné par Ravaillac en 1610."
+      ],
+      "reponse": "Henri IV.",
+      "reponse_courte": "Henri IV",
+      "distracteurs": [
+        "Louis XIV",
+        "François Ier",
+        "Charles IX"
+      ],
+      "variantes_acceptees": [
+        "henri iv",
+        "henri 4"
+      ],
+      "explication": "Protestant converti au catholicisme pour monter sur le trône, Henri IV accorde aux protestants la liberté de culte dans certains lieux, des droits civils et des places fortes. L’édit met fin à plus de trente ans de guerres de Religion.",
+      "anecdote": "L’édit a été révoqué en 1685 par Louis XIV, son petit-fils.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "portrait d’Henri IV",
+        "fichier": "histoire02-q12.jpg",
+        "auteur": "Auteur inconnu",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Portrait_de_Henri_IV_-_btv1b10569038t.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Portrait_de_Henri_IV_-_btv1b10569038t.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "histoire02-q13",
+      "titre": "La machine à vapeur",
+      "categorie": "Temps modernes",
+      "difficulte": "moyenne",
+      "question": "Quelle machine, perfectionnée par James Watt, a lancé la révolution industrielle ?",
+      "indices": [
+        "Elle tirait sa force de l’eau chauffée par le charbon.",
+        "Elle a d’abord servi à pomper l’eau des mines."
+      ],
+      "reponse": "La machine à vapeur.",
+      "reponse_courte": "La machine à vapeur",
+      "distracteurs": [
+        "Le moteur électrique",
+        "Le moteur à explosion",
+        "La dynamo"
+      ],
+      "variantes_acceptees": [
+        "machine à vapeur",
+        "la vapeur"
+      ],
+      "explication": "Les premières machines à vapeur, comme celle de Newcomen en 1712, pompaient l’eau des mines. Les améliorations de James Watt, à partir de 1769, les rendent bien plus efficaces : elles font bientôt tourner les usines, puis les locomotives et les bateaux.",
+      "anecdote": "L’unité de puissance, le watt, porte son nom.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "machine à vapeur ancienne dans un musée",
+        "fichier": "histoire02-q13.jpg",
+        "auteur": "Chris Allen",
+        "licence": "CC BY-SA 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Anson_Museum_-_steam_engine_-_geograph.org.uk_-_4374730.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Anson_Museum_-_steam_engine_-_geograph.org.uk_-_4374730.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "CC BY-SA 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "histoire02-q14",
+      "titre": "Le vote des femmes",
+      "categorie": "Époque contemporaine",
+      "difficulte": "difficile",
+      "question": "En quelle année les Françaises ont-elles voté pour la première fois ?",
+      "indices": [
+        "Le droit de vote leur avait été accordé l’année précédente, par une ordonnance prise à Alger.",
+        "Il s’agissait d’élections municipales, au printemps."
+      ],
+      "reponse": "En 1945.",
+      "reponse_courte": "1945",
+      "distracteurs": [
+        "1918",
+        "1936",
+        "1968"
+      ],
+      "variantes_acceptees": [
+        "1945",
+        "en 1945"
+      ],
+      "explication": "Le droit de vote et d’éligibilité des femmes est accordé par l’ordonnance du 21 avril 1944. Les Françaises votent pour la première fois aux élections municipales d’avril-mai 1945, bien après d’autres pays européens.",
+      "anecdote": "En 1936, trois femmes étaient entrées au gouvernement de Léon Blum, alors qu’elles ne pouvaient pas encore voter.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "affiche ancienne appelant les femmes à voter",
+        "fichier": "histoire02-q14.jpg",
+        "auteur": "RF-Ministère de l'intérieur, Pinpin (scan)",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Carte_electeur_septembre_1945.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Carte_electeur_septembre_1945.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "histoire02-q15",
+      "titre": "Abraham Lincoln",
+      "categorie": "Époque contemporaine",
+      "difficulte": "moyenne",
+      "question": "Quel président des États-Unis a dirigé le Nord pendant la guerre de Sécession et aboli l’esclavage ?",
+      "indices": [
+        "Il a été assassiné dans un théâtre, en 1865.",
+        "Son discours de Gettysburg, en 1863, est resté célèbre."
+      ],
+      "reponse": "Abraham Lincoln.",
+      "reponse_courte": "Abraham Lincoln",
+      "distracteurs": [
+        "George Washington",
+        "Thomas Jefferson",
+        "Theodore Roosevelt"
+      ],
+      "variantes_acceptees": [
+        "lincoln",
+        "abraham lincoln"
+      ],
+      "explication": "Élu en 1860, Lincoln mène l’Union contre les États confédérés du Sud. Il proclame en 1863 l’émancipation des esclaves des États rebelles, puis fait adopter le 13e amendement, qui abolit l’esclavage dans tout le pays en 1865.",
+      "anecdote": "C’était un excellent lutteur dans sa jeunesse : il figure même au temple de la renommée de la lutte américaine.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "photographie d’Abraham Lincoln",
+        "fichier": "histoire02-q15.jpg",
+        "auteur": "Alexander Gardner",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/44/Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    }
+  ]
+}

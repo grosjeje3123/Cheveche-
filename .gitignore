@@ -1,0 +1,18 @@
+# Godot
+.godot/
+/android/
+*.tmp
+
+# Builds et clés : jamais dans le dépôt
+*.apk
+*.aab
+*.idsig
+*.jks
+*.keystore
+export_credentials.cfg
+
+# Photos originales téléchargées depuis Commons (retrouvables avec tools/commons_image.py)
+images_sources/
+
+# Fichiers de test
+assets/images/svt_01/_test_photo.png*

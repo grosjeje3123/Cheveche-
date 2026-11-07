@@ -1,0 +1,568 @@
+{
+  "pack": {
+    "id": "geographie_02",
+    "titre": "Pack Géographie n° 2",
+    "premier_numero": 516,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Fleuves et mers": "Géographie",
+      "Pays et capitales": "Géographie",
+      "Reliefs et paysages": "Géographie",
+      "Climats et repères": "Géographie",
+      "Risques naturels": "Géographie"
+    }
+  },
+  "questions": [
+    {
+      "id": "geographie02-q01",
+      "titre": "La Volga",
+      "categorie": "Fleuves et mers",
+      "difficulte": "difficile",
+      "question": "Quel est le plus long fleuve d’Europe ?",
+      "indices": [
+        "Il coule entièrement en Russie.",
+        "Il mesure plus de 3 500 kilomètres."
+      ],
+      "reponse": "La Volga.",
+      "reponse_courte": "La Volga",
+      "distracteurs": [
+        "Le Danube",
+        "Le Rhin",
+        "Le Dniepr"
+      ],
+      "variantes_acceptees": [
+        "volga",
+        "la volga"
+      ],
+      "explication": "Née au nord-ouest de Moscou, la Volga traverse la Russie d’Europe et se jette dans la mer Caspienne par un vaste delta. Le Danube, deuxième d’Europe, traverse ou longe dix pays.",
+      "anecdote": "Les Russes la surnomment affectueusement « Mère Volga ».",
+      "image": {
+        "statut": "verifie",
+        "recherche": "la Volga au coucher du soleil",
+        "fichier": "geographie02-q01.jpg",
+        "auteur": "Fyodor Vasilyev (1850—1873)",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Fyodor_Vasilyev_Sunset_on_the_Volga.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Fyodor_Vasilyev_Sunset_on_the_Volga.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "geographie02-q02",
+      "titre": "Brasília",
+      "categorie": "Pays et capitales",
+      "difficulte": "moyenne",
+      "question": "Quelle est la capitale du Brésil ?",
+      "indices": [
+        "Elle a été inaugurée en 1960.",
+        "Son plan, dessiné par Lúcio Costa, évoque un avion ou un oiseau."
+      ],
+      "reponse": "Brasília.",
+      "reponse_courte": "Brasília",
+      "distracteurs": [
+        "Rio de Janeiro",
+        "São Paulo",
+        "Salvador"
+      ],
+      "variantes_acceptees": [
+        "brasília",
+        "brasilia"
+      ],
+      "explication": "Pour développer l’intérieur du pays, le Brésil a construit en quelques années une capitale nouvelle sur un plateau presque désert. L’architecte Oscar Niemeyer en a dessiné les principaux bâtiments.",
+      "anecdote": "Rio de Janeiro était la capitale depuis 1763 ; Salvador, au nord-est, l’avait été avant elle.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Congrès national du Brésil à Brasília",
+        "fichier": "geographie02-q02.jpg",
+        "auteur": "Donatas Dabravolskas",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Pal%C3%A1cio_Nereu_Ramos_-_Bras%C3%ADlia_-_20150603172521.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Pal%C3%A1cio_Nereu_Ramos_-_Bras%C3%ADlia_-_20150603172521.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "geographie02-q03",
+      "titre": "Les fuseaux horaires",
+      "categorie": "Pays et capitales",
+      "difficulte": "difficile",
+      "question": "Quel pays compte le plus de fuseaux horaires, en comptant ses territoires d’outre-mer ?",
+      "indices": [
+        "Ses territoires sont dispersés dans tous les océans.",
+        "La Polynésie et la Nouvelle-Calédonie en font partie."
+      ],
+      "reponse": "La France.",
+      "reponse_courte": "La France",
+      "distracteurs": [
+        "La Russie",
+        "Les États-Unis",
+        "La Chine"
+      ],
+      "variantes_acceptees": [
+        "france",
+        "la france"
+      ],
+      "explication": "Grâce à ses territoires d’outre-mer, des Antilles à la Polynésie en passant par La Réunion et la Nouvelle-Calédonie, la France s’étend sur douze fuseaux horaires (treize avec la Terre Adélie, en Antarctique), plus que la Russie, qui en compte onze.",
+      "anecdote": "La Chine, pourtant immense, n’utilise qu’une seule heure officielle.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "planisphère des fuseaux horaires",
+        "fichier": "geographie02-q03.png",
+        "auteur": "UnaitxuGV, Heitordp and others",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:World_Time_Zones_Map(1).png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/9/95/World_Time_Zones_Map%281%29.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "geographie02-q04",
+      "titre": "La Russie",
+      "categorie": "Pays et capitales",
+      "difficulte": "facile",
+      "question": "Quel est le plus grand pays du monde par sa superficie ?",
+      "indices": [
+        "Il s’étend sur deux continents.",
+        "On traverse le pays d’ouest en est par une célèbre ligne de chemin de fer, le Transsibérien."
+      ],
+      "reponse": "La Russie.",
+      "reponse_courte": "La Russie",
+      "distracteurs": [
+        "Le Canada",
+        "La Chine",
+        "Les États-Unis"
+      ],
+      "variantes_acceptees": [
+        "russie",
+        "la russie"
+      ],
+      "explication": "Avec plus de 17 millions de km², la Russie couvre plus d’un neuvième des terres émergées, de la mer Baltique au Pacifique. Le Canada est le deuxième pays le plus vaste.",
+      "anecdote": "Le lac Baïkal, en Sibérie, contient environ un cinquième de l’eau douce liquide de surface de la planète.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "train du Transsibérien dans la taïga",
+        "fichier": "geographie02-q04.jpg",
+        "auteur": "Pavel Kazachkov",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Kremlin_Moscow.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/18/Kremlin_Moscow.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "geographie02-q05",
+      "titre": "Le mont Blanc",
+      "categorie": "Reliefs et paysages",
+      "difficulte": "facile",
+      "question": "Quel est le point culminant de la France métropolitaine ?",
+      "indices": [
+        "Il se trouve dans les Alpes, à la frontière avec l’Italie.",
+        "Son altitude, qui varie avec l’épaisseur de la neige, dépasse 4 800 mètres."
+      ],
+      "reponse": "Le mont Blanc.",
+      "reponse_courte": "Le mont Blanc",
+      "distracteurs": [
+        "Le Vignemale",
+        "Le puy de Sancy",
+        "La Barre des Écrins"
+      ],
+      "variantes_acceptees": [
+        "mont blanc",
+        "le mont blanc"
+      ],
+      "explication": "Le mont Blanc domine les vallées de Chamonix et d’Aoste. Son sommet est une calotte de glace et de neige, dont l’épaisseur change : on le remesure régulièrement. C’est le plus haut sommet des Alpes.",
+      "anecdote": "Sa première ascension connue date de 1786, par Jacques Balmat et Michel Paccard.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "massif du Mont-Blanc vu de Chamonix",
+        "fichier": "geographie02-q05.jpg",
+        "auteur": "Christian David",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Panorama_of_Mont_Blanc_du_Tacul,_Mont_Maudit_and_Mont_Blanc_from_Aiguille_du_Midi,_Chamonix,_Haute-Savoie.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/31/Panorama_of_Mont_Blanc_du_Tacul%2C_Mont_Maudit_and_Mont_Blanc_from_Aiguille_du_Midi%2C_Chamonix%2C_Haute-Savoie.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la partie que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "geographie02-q06",
+      "titre": "Le désert d’Atacama",
+      "categorie": "Reliefs et paysages",
+      "difficulte": "moyenne",
+      "question": "Quel désert d’Amérique du Sud est l’un des plus secs du monde ?",
+      "indices": [
+        "Il longe la côte pacifique, au Chili.",
+        "De grands observatoires astronomiques y profitent d’un ciel presque toujours dégagé."
+      ],
+      "reponse": "Le désert d’Atacama.",
+      "reponse_courte": "Le désert d’Atacama",
+      "distracteurs": [
+        "La Patagonie",
+        "Le désert de Gobi",
+        "Le Kalahari"
+      ],
+      "variantes_acceptees": [
+        "atacama",
+        "désert d'atacama"
+      ],
+      "explication": "Coincé entre l’océan Pacifique, au courant froid, et la cordillère des Andes, qui arrête l’humidité venue de l’est, l’Atacama reçoit très peu de pluie. Certaines de ses zones comptent parmi les plus arides de la planète.",
+      "anecdote": "Certaines stations météorologiques n’y ont presque jamais enregistré de pluie.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "paysage du désert d’Atacama",
+        "fichier": "geographie02-q06.jpg",
+        "auteur": "L. Honnorat/ESO",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Atacama_Desert_Landscape_(iced_moment_870-CC).tiff",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Atacama_Desert_Landscape_%28iced_moment_870-CC%29.tiff",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "geographie02-q07",
+      "titre": "Le Gulf Stream",
+      "categorie": "Climats et repères",
+      "difficulte": "moyenne",
+      "question": "Quel courant marin chaud traverse l’Atlantique jusqu’aux côtes de l’Europe de l’Ouest ?",
+      "indices": [
+        "Il se forme au large de la Floride, en partie avec des eaux du golfe du Mexique.",
+        "Ses eaux chaudes remontent vers le nord-est."
+      ],
+      "reponse": "Le Gulf Stream.",
+      "reponse_courte": "Le Gulf Stream",
+      "distracteurs": [
+        "Le courant de Humboldt",
+        "Le Kuroshio",
+        "Le courant du Labrador"
+      ],
+      "variantes_acceptees": [
+        "gulf stream",
+        "le gulf stream",
+        "dérive nord-atlantique"
+      ],
+      "explication": "Le Gulf Stream emporte des eaux chaudes vers le nord de l’Atlantique, prolongé par la dérive nord-atlantique. On lui a longtemps attribué la douceur des hivers de l’Europe de l’Ouest ; les climatologues pensent aujourd’hui que les vents d’ouest, chargés de la chaleur de l’océan, y comptent davantage.",
+      "anecdote": "Grâce à cette douceur, des plantes subtropicales poussent en plein air dans certains jardins de Bretagne, d’Irlande ou de Cornouailles.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "carte des courants de l’océan Atlantique",
+        "fichier": "geographie02-q07.png",
+        "auteur": "Armée des États-Unis (US Army) ; modifiée par Jack et ultramatt1",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:South_Atlantic_Ocean_currents_1943_for_colorblind_users.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/0c/South_Atlantic_Ocean_currents_1943_for_colorblind_users.png",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "geographie02-q08",
+      "titre": "Le lac Victoria",
+      "categorie": "Fleuves et mers",
+      "difficulte": "difficile",
+      "question": "Quel est le plus grand lac d’Afrique ?",
+      "indices": [
+        "Il est partagé entre l’Ouganda, le Kenya et la Tanzanie.",
+        "Il porte le nom d’une reine britannique."
+      ],
+      "reponse": "Le lac Victoria.",
+      "reponse_courte": "Le lac Victoria",
+      "distracteurs": [
+        "Le lac Tanganyika",
+        "Le lac Tchad",
+        "Le lac Malawi"
+      ],
+      "variantes_acceptees": [
+        "victoria",
+        "lac victoria"
+      ],
+      "explication": "Avec près de 70 000 km², le lac Victoria est le plus grand lac d’Afrique et l’un des plus grands lacs d’eau douce du monde. Peu profond, il est entouré de régions très peuplées qui vivent de la pêche.",
+      "anecdote": "On considère qu’il donne naissance au Nil Blanc, qui en sort à Jinja, en Ouganda.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "rives du lac Victoria",
+        "fichier": "geographie02-q08.jpg",
+        "auteur": "Jiame Josh",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Shores_of_Lake_Victoria_at_Ssese_Islands.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Shores_of_Lake_Victoria_at_Ssese_Islands.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "geographie02-q09",
+      "titre": "La cordillère des Andes",
+      "categorie": "Reliefs et paysages",
+      "difficulte": "facile",
+      "question": "Quelle chaîne de montagnes longe l’Amérique du Sud du nord au sud ?",
+      "indices": [
+        "C’est la plus longue chaîne de montagnes continentale du monde.",
+        "Son point culminant, l’Aconcagua, dépasse 6 900 mètres."
+      ],
+      "reponse": "La cordillère des Andes.",
+      "reponse_courte": "La cordillère des Andes",
+      "distracteurs": [
+        "Les Rocheuses",
+        "L’Atlas",
+        "L’Himalaya"
+      ],
+      "variantes_acceptees": [
+        "andes",
+        "les andes",
+        "cordillère des andes"
+      ],
+      "explication": "Les Andes s’étirent sur environ 7 000 km, du Venezuela à la Terre de Feu, à travers sept pays. Elles sont nées de la plongée des plaques océaniques de Nazca et Antarctique sous le continent, et comptent de nombreux volcans.",
+      "anecdote": "Le lac Titicaca, à plus de 3 800 mètres d’altitude, se trouve dans les Andes, entre le Pérou et la Bolivie.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "sommets enneigés de la cordillère des Andes",
+        "fichier": "geographie02-q09.jpg",
+        "auteur": "International Gemini Observatory",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Gemini_South-Chilean_Andes_(gemini-20060131-gssnow).tiff",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/21/Gemini_South-Chilean_Andes_%28gemini-20060131-gssnow%29.tiff",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "geographie02-q10",
+      "titre": "Tokyo",
+      "categorie": "Pays et capitales",
+      "difficulte": "facile",
+      "question": "Quelle est la capitale du Japon ?",
+      "indices": [
+        "Avant 1868, la ville s’appelait Edo.",
+        "Son agglomération est l’une des plus peuplées du monde."
+      ],
+      "reponse": "Tokyo.",
+      "reponse_courte": "Tokyo",
+      "distracteurs": [
+        "Kyoto",
+        "Osaka",
+        "Séoul"
+      ],
+      "variantes_acceptees": [
+        "tokyo",
+        "tôkyô"
+      ],
+      "explication": "En 1868, l’empereur quitte Kyoto, capitale impériale depuis plus de mille ans, pour s’installer à Edo, rebaptisée Tokyo. Son agglomération compte aujourd’hui plusieurs dizaines de millions d’habitants.",
+      "anecdote": "Le nom Tokyo signifie « capitale de l’Est », par opposition à Kyoto, la capitale traditionnelle.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "vue de Tokyo avec le mont Fuji au loin",
+        "fichier": "geographie02-q10.jpg",
+        "auteur": "Morio",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Skyscrapers_of_Shinjuku_2009_January_(revised).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Skyscrapers_of_Shinjuku_2009_January_%28revised%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "geographie02-q11",
+      "titre": "La Gambie",
+      "categorie": "Pays et capitales",
+      "difficulte": "difficile",
+      "question": "Quel est le plus petit pays d’Afrique continentale ?",
+      "indices": [
+        "Il est presque entièrement entouré par le Sénégal.",
+        "Il s’étire en une bande étroite le long d’un fleuve qui porte son nom."
+      ],
+      "reponse": "La Gambie.",
+      "reponse_courte": "La Gambie",
+      "distracteurs": [
+        "Le Rwanda",
+        "Le Togo",
+        "Le Lesotho"
+      ],
+      "variantes_acceptees": [
+        "gambie",
+        "la gambie"
+      ],
+      "explication": "La Gambie, d’environ 11 000 km², suit les deux rives du fleuve Gambie sur plus de 300 km, avec seulement quelques dizaines de kilomètres de large. Son tracé remonte au partage colonial entre Britanniques et Français.",
+      "anecdote": "Sa capitale, Banjul, est bâtie sur une île à l’embouchure du fleuve.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "fleuve Gambie et ses rives",
+        "fichier": "geographie02-q11.png",
+        "auteur": "FRENCHRobloxYT",
+        "licence": "CC0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Flag_of_The_Gambia_(5-8_ratio).png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Flag_of_The_Gambia_%285-8_ratio%29.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "geographie02-q12",
+      "titre": "Les régions françaises",
+      "categorie": "Pays et capitales",
+      "difficulte": "moyenne",
+      "question": "Combien de régions compte la France métropolitaine depuis 2016 ?",
+      "indices": [
+        "La Corse en fait partie.",
+        "Les Hauts-de-France, qui réunissent le Nord-Pas-de-Calais et la Picardie, en sont une."
+      ],
+      "reponse": "Treize.",
+      "reponse_courte": "Treize",
+      "distracteurs": [
+        "Vingt-deux",
+        "Dix-huit",
+        "Douze"
+      ],
+      "variantes_acceptees": [
+        "13",
+        "treize"
+      ],
+      "explication": "La réforme de 2016 a fusionné plusieurs régions : la France métropolitaine est passée de 22 à 13 régions. Avec les cinq régions d’outre-mer, la France en compte 18 au total.",
+      "anecdote": "Le nom « Hauts-de-France » a été choisi en 2016, après une consultation des habitants de la région.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "carte des régions de France",
+        "fichier": "geographie02-q12.jpg",
+        "auteur": "Lady3mlnm",
+        "licence": "CC0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Life_expectancy_map_of_France_2022_-regions_-male.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Life_expectancy_map_of_France_2022_-regions_-male.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "geographie02-q13",
+      "titre": "Le Rhin",
+      "categorie": "Fleuves et mers",
+      "difficulte": "moyenne",
+      "question": "Quel fleuve forme une partie de la frontière entre la France et l’Allemagne ?",
+      "indices": [
+        "Il prend sa source dans les Alpes suisses.",
+        "Il se jette dans la mer du Nord, aux Pays-Bas."
+      ],
+      "reponse": "Le Rhin.",
+      "reponse_courte": "Le Rhin",
+      "distracteurs": [
+        "La Moselle",
+        "Le Danube",
+        "La Meuse"
+      ],
+      "variantes_acceptees": [
+        "rhin",
+        "le rhin"
+      ],
+      "explication": "Long d’environ 1 230 km, le Rhin traverse ou borde la Suisse, le Liechtenstein, l’Autriche, l’Allemagne, la France et les Pays-Bas. C’est l’une des voies fluviales les plus fréquentées du monde ; Strasbourg est son grand port français.",
+      "anecdote": "Le rocher de la Lorelei, sur ses rives allemandes, a inspiré une célèbre légende de sirène.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "le Rhin et ses vignobles en Allemagne",
+        "fichier": "geographie02-q13.jpg",
+        "auteur": "paddy (Patrick-Emil Zörner)",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Nierstein_Weinberge_2009-09-06_09.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/14/Nierstein_Weinberge_2009-09-06_09.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "geographie02-q14",
+      "titre": "L’échelle de Richter",
+      "categorie": "Risques naturels",
+      "difficulte": "moyenne",
+      "question": "Quel phénomène mesure-t-on avec l’échelle de Richter ?",
+      "indices": [
+        "Chaque degré correspond à une énergie environ trente fois plus grande.",
+        "Elle a été proposée en 1935 par un sismologue américain."
+      ],
+      "reponse": "La magnitude des séismes.",
+      "reponse_courte": "Les séismes",
+      "distracteurs": [
+        "Les cyclones",
+        "Les éruptions volcaniques",
+        "Les tsunamis"
+      ],
+      "variantes_acceptees": [
+        "séismes",
+        "tremblements de terre",
+        "les séismes"
+      ],
+      "explication": "L’échelle de Richter mesure la magnitude d’un séisme, c’est-à-dire l’énergie libérée. Les sismologues utilisent aujourd’hui surtout la magnitude de moment, qui en prolonge l’idée pour les très grands séismes.",
+      "anecdote": "Le plus puissant séisme jamais enregistré a frappé le Chili en 1960, avec une magnitude de 9,5.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "sismogramme sur un tambour de papier",
+        "fichier": "geographie02-q14.jpg",
+        "auteur": "Z22",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Seismogram_at_Weston_Observatory.JPG",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Seismogram_at_Weston_Observatory.JPG",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "geographie02-q15",
+      "titre": "Le Groenland",
+      "categorie": "Reliefs et paysages",
+      "difficulte": "facile",
+      "question": "Quelle est la plus grande île du monde ?",
+      "indices": [
+        "Elle est couverte à environ 80 % par une calotte de glace.",
+        "Elle appartient au royaume du Danemark, tout en étant largement autonome."
+      ],
+      "reponse": "Le Groenland.",
+      "reponse_courte": "Le Groenland",
+      "distracteurs": [
+        "Madagascar",
+        "Bornéo",
+        "La Nouvelle-Guinée"
+      ],
+      "variantes_acceptees": [
+        "groenland",
+        "le groenland"
+      ],
+      "explication": "Le Groenland couvre plus de deux millions de km². Sa calotte glaciaire, épaisse par endroits de plus de trois kilomètres, fond de plus en plus vite avec le réchauffement. L’Australie, plus grande, est considérée comme un continent.",
+      "anecdote": "Son nom, « terre verte », aurait été choisi par le Viking Erik le Rouge pour attirer des colons.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "icebergs au large du Groenland",
+        "fichier": "geographie02-q15.jpg",
+        "auteur": "NASA / Ames Research Center",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Greenland_42.74746W_71.57394N.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Greenland_42.74746W_71.57394N.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    }
+  ]
+}

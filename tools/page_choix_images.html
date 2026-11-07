@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chevêche, choisir les images</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--ivory:#F1EDE3;--card:#F8F5EC;--white:#FFFDF8;--ink:#292D2A;--ink-soft:rgba(41,45,42,.68);--ink-faint:rgba(41,45,42,.45);
+  --rule:rgba(41,45,42,.16);--sage:#687B70;--terra:#B66F55;--ochre:#C2A66D;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;--sans:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ivory);color:var(--ink);font:16px/1.5 var(--sans)}
+a{color:var(--sage)} a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+header.wrap{padding-top:36px;padding-bottom:8px}
+h1{font:500 40px/1.1 var(--serif);margin:0 0 12px}
+.intro{max-width:70ch;margin:0 0 12px;color:var(--ink-soft)}
+ol.steps{margin:0 0 16px;padding-left:22px;max-width:72ch} ol.steps li{margin:4px 0}
+.note{max-width:80ch;background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--terra);padding:12px 16px;margin:0 0 20px;font-size:15px}
+/* Barre de filtres */
+.filters{position:sticky;top:0;z-index:5;background:var(--ivory);border-bottom:1px solid var(--rule)}
+.filters .wrap{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding-top:12px;padding-bottom:12px}
+.chip{border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;font:500 14px var(--sans);cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.chip .dot{width:10px;height:10px;border-radius:50%;background:var(--c,var(--ink))}
+.chip .n{color:var(--ink-faint);font-weight:400}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--ivory);border-color:var(--ink)} .chip[aria-pressed="true"] .n{color:rgba(241,237,227,.7)}
+.toggle{margin-left:auto;display:inline-flex;gap:8px;align-items:center;font-size:14px;color:var(--ink-soft);cursor:pointer}
+/* Dossiers */
+main.wrap{padding-bottom:140px}
+section.dossier{padding:28px 0 24px;border-top:1px solid var(--rule);scroll-margin-top:80px}
+section.dossier.choisi{box-shadow:inset 4px 0 0 var(--sage);padding-left:16px}
+.meta{display:flex;gap:10px;align-items:baseline;font-size:14px;color:var(--ink-soft)}
+.disc{display:inline-flex;align-items:center;gap:6px;color:var(--c);font-weight:600}
+.disc::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--c)}
+h2{font:500 26px/1.2 var(--serif);margin:4px 0 6px}
+.question{font:italic 18px/1.45 var(--serif);margin:0 0 4px;max-width:75ch}
+.info{margin:2px 0;font-size:15px;color:var(--ink-soft);max-width:80ch} .info b{color:var(--ink);font-weight:500}
+.etat{margin:10px 0 0;font-size:15px;min-height:1.5em} .etat.ok{color:var(--sage);font-weight:500}
+.etat button{margin-left:10px}
+form.cherche{display:flex;gap:8px;margin:12px 0 4px;max-width:640px}
+form.cherche input{flex:1;min-width:0;font:15px var(--sans);padding:8px 10px;border:1px solid var(--rule);background:var(--white);color:var(--ink)}
+.btn{background:var(--ink);color:var(--ivory);border:0;padding:9px 16px;font:600 15px var(--sans);cursor:pointer}
+.btn:disabled{opacity:.45;cursor:default}
+.lien{background:none;border:0;padding:0;color:var(--sage);font:500 15px var(--sans);text-decoration:underline;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:12px}
+.card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--rule);cursor:pointer}
+.card input{position:absolute;opacity:0;pointer-events:none}
+.card:has(input:focus-visible){outline:3px solid var(--ochre);outline-offset:2px}
+.card:has(input:checked){outline:3px solid var(--sage);background:var(--white)}
+.card:has(input:checked) .pick{background:var(--sage);color:#fff;border-color:var(--sage)}
+.frame{position:relative;aspect-ratio:16/9;background:#E4DED0;overflow:hidden}
+.frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pick{position:absolute;top:8px;left:8px;background:rgba(255,253,248,.92);border:1px solid var(--rule);font:600 12px var(--sans);padding:2px 8px}
+.badge{position:absolute;top:8px;right:8px;background:var(--ochre);color:var(--ink);font:600 12px var(--sans);padding:2px 8px}
+.txt{padding:8px 10px 10px;display:flex;flex-direction:column;gap:2px;font-size:13px;line-height:1.35}
+.txt .t{font-weight:500;word-break:break-word;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.txt .a{color:var(--ink-soft);word-break:break-word;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.txt .l{color:var(--ink)} .txt a{position:relative;z-index:2;margin-top:2px}
+.card.refus{cursor:default;opacity:.72} .card.refus .frame img{filter:grayscale(1) opacity(.55)}
+.card.refus .l{color:var(--terra)}
+.card.actuel .pick{background:var(--ink);color:var(--ivory)}
+.msg{color:var(--ink-soft);font-size:15px;margin-top:12px} .msg.err{color:var(--terra)}
+[hidden]{display:none!important}
+.alerte{font-size:16px;border-left-width:6px;margin-top:8px} .alerte p{margin:0} .alerte .btn{margin-top:12px}
+.plus{margin-top:12px}
+/* Barre du bas */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--ink);color:var(--ivory)}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;padding-top:14px;padding-bottom:14px}
+.bar .compte{font:500 17px var(--serif)} .bar .compte span{color:rgba(241,237,227,.72);font:15px var(--sans)}
+.bar .btn{background:var(--ivory);color:var(--ink)} .bar .lien{color:#cfd8d1}
+.bar .statut{flex-basis:100%;font-size:14px;color:rgba(241,237,227,.8);min-height:0}
+.bar .statut:empty{display:none}
+@media (max-width:640px){h1{font-size:32px}.wrap{padding:0 16px}.toggle{margin-left:0}.grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style></head><body>
+<header class="wrap">
+<div class="note alerte" id="alerte" role="alert" hidden><p id="alerte-texte"></p><button class="btn" id="reessayer" type="button" hidden>Réessayer</button></div>
+<h1>Choisir les images</h1>
+<p class="intro">Une image par dossier. Chaque dossier lance sa recherche sur Wikimedia Commons quand vous arrivez dessus ; le cadre de chaque vignette montre comment l’image sera recadrée dans le jeu.</p>
+<ol class="steps">
+<li>Cliquez sur l’image qui montre le mieux la réponse. Vos choix restent enregistrés dans ce navigateur : vous pouvez fermer la page et revenir plus tard.</li>
+<li>Quand vous avez fini une série, touchez <b>Télécharger</b> en bas de la page : vous obtenez un fichier zip avec les images et leurs informations.</li>
+<li>Envoyez-moi ce zip dans la conversation : je l’intègre au jeu et je vous renvoie l’application.</li>
+</ol>
+<div class="note"><b>Licences.</b> Licence et auteur sont ceux que Commons déclare pour chaque fichier. Seules les images en domaine public, CC0, CC BY ou CC BY-SA, avec un auteur indiqué, peuvent être choisies ; les autres sont grisées, avec la raison. Je refais ces contrôles à l’intégration.
+Évitez les images où un texte ou une légende donne la réponse, et préférez celles dont le sujet se reconnaît quand on n’en voit qu’un tiers.</div>
+</header>
+<nav class="filters" aria-label="Disciplines"><div class="wrap" id="filtres"></div></nav>
+<main class="wrap" id="dossiers"></main>
+<div class="bar" role="region" aria-label="Téléchargement"><div class="wrap">
+<div class="compte" id="compte"></div>
+<button class="btn" id="dl" type="button"></button>
+<button class="lien" id="dl-tout" type="button">Tout retélécharger</button>
+<div class="statut" id="statut" aria-live="polite"></div>
+</div></div>
+<script>
+"use strict";
+const D = /*DONNEES*/null;
+const API = "https://commons.wikimedia.org/w/api.php";
+const PAR_PAGE = 12, LARGEUR_JEU = 1280, LARGEUR_MIN = 1000;
+const CLE = "cheveche.choixImages.v1";
+const ANCIENNE_CLE = "lindice.choixImages.v1";  // choix enregistrés avant le changement de nom
+// Mêmes règles que tools/commons_image.py (famille_licence, auteur absent, formats).
+const LICENCE_CC = /^CC BY(?:-SA)?(?: \d(?:\.\d)?(?: [A-Za-z]{2,3})?)?$|^CC0(?: \d(?:\.\d)?)?$/;
+const EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp"];
+const MIME_EXT = {"image/jpeg": ".jpg", "image/png": ".png", "image/webp": ".webp"};
+// Le format d'une image : d'après la fin de son adresse, sans ce que Commons ajoute après « ? »,
+// sinon d'après le type que Commons déclare. Le contenu réel est revérifié au téléchargement.
+function formatDe(info) {
+  const url = info.thumburl || info.url || "";
+  let chemin = url;
+  try { chemin = new URL(url, "https://upload.wikimedia.org/").pathname; } catch (e) {}
+  const ext = ((chemin.match(/\.[a-z0-9]+$/i) || [""])[0]).toLowerCase().replace(".jpeg", ".jpg");
+  if (EXTENSIONS.includes(ext)) return {ext};
+  const parType = MIME_EXT[info.thumbmime] || MIME_EXT[info.mime];
+  if (parType) return {ext: parType};
+  const type = info.thumbmime || info.mime || "";
+  return {ext: "", nom: type ? type.replace("image/", "").toUpperCase() : (ext || `adresse …${url.slice(-24)}`)};
+}
+
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+// Le texte visible : sans <style>, <script> ni ce qui est caché (la traduction anglaise après « Auteur inconnu »…).
+const texte = html => {
+  const d = new DOMParser().parseFromString(String(html ?? ""), "text/html");
+  d.querySelectorAll("style, script, .messagebox, [class^='mbox'], [class*=' mbox'], .noprint, .metadata").forEach(n => n.remove());
+  d.querySelectorAll("[style]").forEach(n => { if (/display\s*:\s*none/i.test(n.getAttribute("style"))) n.remove(); });
+  d.querySelectorAll("p, div, td, th, tr, li, br").forEach(n => n.after(" "));
+  return (d.body.textContent || "").replace(/[\u00ad\u200b-\u200f\u202a-\u202e\u2060-\u2064\ufeff]/g, "").replace(/\s+/g, " ").trim();
+};
+// Mêmes règles que auteur_de() dans tools/commons_image.py.
+const INCONNU_RE = /^(?:(?:auteur|artiste|photographe|author|artist)s?\s+(?:inconnu|unknown)|unknown|anonym|inconnu|not provided|n\/a)/i;
+// Signature de wiki collée au nom (« (talk) 17:52, 31 May 2009 (UTC) ») : ce n'est pas l'auteur.
+const SIGNATURE_RE = /\s*\((?:talk|discussion|disc\.)\)\s*(?:\d{1,2}:\d{2},?\s*\d{1,2}\s+\S+\s+\d{4}\s*\((?:UTC|CET|CEST)\))?\s*$/i;
+const PRESUME_RE = /(?:Il est supposé qu.il s.agit de\s*:\s*(.+?)\s*\(étant donné|No machine-readable author provided\.\s*(.+?)\s+assumed\s*\(based on)/i;
+const sansFichier = t => String(t).replace(/^File:/, "").replace(/\.[a-z0-9]+$/i, "");
+
+function charger() {
+  try {
+    const s = JSON.parse(localStorage.getItem(CLE) || localStorage.getItem(ANCIENNE_CLE) || "null");
+    if (s && typeof s.choix === "object") return {choix: s.choix, requetes: s.requetes || {}, telecharges: s.telecharges || {}};
+  } catch (e) {}
+  return {choix: {}, requetes: {}, telecharges: {}};
+}
+function enregistrer() { try { localStorage.setItem(CLE, JSON.stringify(S)); } catch (e) {} }
+const S = charger();
+const PAR_ID = Object.fromEntries(D.dossiers.map(d => [d.id, d]));
+const ETAT = {};          // par dossier : résultats affichés, suite de la recherche
+let filtre = "", masquerChoisis = false, occupe = false;
+
+// ------------------------------------------------------------------ licence et auteur
+function evaluer(page) {
+  const info = (page.imageinfo || [])[0];
+  if (!info) return {ok: false, raison: "fichier introuvable"};
+  const em = info.extmetadata || {};
+  const champ = n => texte((em[n] || {}).value);
+  const nom = champ("LicenseShortName"), bas = nom.toLowerCase();
+  const r = {info, titre: page.title, licence_source: nom, largeur: info.width, hauteur: info.height};
+  if (!nom) return {...r, ok: false, raison: "aucune licence indiquée"};
+  if (/(^|[\s-])(nc|nd)([\s-]|$)/.test(bas) || bas.includes("noncommercial") || bas.includes("noderiv"))
+    return {...r, ok: false, raison: `licence non autorisée (${nom})`};
+  if (LICENCE_CC.test(nom)) r.licence = nom;
+  else if (bas === "public domain" || bas === "pd" || bas.startsWith("public domain") || bas.startsWith("pd-") || bas.startsWith("pd ")) {
+    if (champ("Copyrighted").toLowerCase() === "true") return {...r, ok: false, raison: "domaine public contredit par Commons"};
+    r.licence = "Domaine public";
+  } else return {...r, ok: false, raison: `licence non reconnue (${nom})`};
+  let auteur = champ("Artist").replace(SIGNATURE_RE, "").trim();
+  const presume = auteur.match(PRESUME_RE);
+  if (presume) auteur = `${(presume[1] || presume[2]).trim()} (auteur présumé)`;
+  if (!auteur || INCONNU_RE.test(auteur)) {
+    // Domaine public et CC0 n'exigent pas d'attribution : « Auteur inconnu » est alors exact, et suffit.
+    if (r.licence !== "Domaine public" && !r.licence.startsWith("CC0")) return {...r, ok: false, raison: "auteur non indiqué"};
+    auteur = "Auteur inconnu";
+  }
+  r.auteur = auteur.length > 160 ? auteur.slice(0, 157).trimEnd() + "…" : auteur;
+  const f = formatDe(info);
+  if (!f.ext) return {...r, ok: false, raison: `format non pris en charge par le jeu (${f.nom})`};
+  r.ok = true;
+  return r;
+}
+
+// ------------------------------------------------------------------ Commons
+async function api(params) {
+  const p = new URLSearchParams({action: "query", format: "json", formatversion: "2", origin: "*", ...params});
+  for (let essai = 0; ; essai++) {
+    const rep = await fetch(`${API}?${p}`);
+    if ((rep.status === 429 || rep.status >= 500) && essai < 3) { await attendre(1500 * (essai + 1)); continue; }
+    if (!rep.ok) throw new Error(`Commons a répondu ${rep.status}`);
+    return rep.json();
+  }
+}
+const attendre = ms => new Promise(r => setTimeout(r, ms));
+
+// Un aperçu (appli Claude, visionneuse de fichiers) affiche la page dans un cadre qui bloque Internet.
+const DANS_APERCU = (() => { try { return window.self !== window.top; } catch (e) { return true; } })();
+const OUVRIR = "Enregistrez le fichier, puis ouvrez-le dans Chrome, Edge ou Firefox : sur ordinateur, double-cliquez dessus ; sur téléphone, ouvrez-le avec Chrome.";
+function alerter(texte, reessayer) {
+  $("#alerte-texte").textContent = texte;
+  $("#reessayer").hidden = !reessayer;
+  $("#alerte").hidden = false;
+}
+function alerteReseau() {
+  if (DANS_APERCU) return;
+  alerter("La page n’arrive pas à joindre Wikimedia Commons. Le plus souvent, c’est qu’elle est ouverte dans un aperçu " +
+    "(appli Claude, visionneuse de fichiers du téléphone), qui bloque Internet. " + OUVRIR +
+    " Si c’est déjà le cas, vérifiez la connexion, puis touchez « Réessayer ».", true);
+}
+const INFOS = {prop: "imageinfo", iiprop: "url|size|mime|extmetadata", iiextmetadatalanguage: "fr",
+  iiextmetadatafilter: "LicenseShortName|Artist|LicenseUrl|Copyrighted|ImageDescription"};
+
+async function chercher(d, suite) {
+  const e = ETAT[d.id];
+  if (e.charge) return;
+  e.charge = true;
+  const sec = document.getElementById(d.id), msg = $(".msg", sec);
+  msg.className = "msg"; msg.textContent = "Recherche sur Commons…";
+  try {
+    const q = (S.requetes[d.id] ?? d.requete).trim();
+    const data = await api({generator: "search", gsrsearch: `${q} filetype:bitmap`, gsrnamespace: "6",
+      gsrlimit: String(PAR_PAGE), gsroffset: String(suite ? e.suite : 0), ...INFOS, iiurlwidth: "640"});
+    const pages = ((data.query || {}).pages || []).slice().sort((a, b) => (a.index || 0) - (b.index || 0));
+    if (!suite) e.resultats = [];
+    e.resultats.push(...pages.map(evaluer));
+    e.suite = (data.continue || {}).gsroffset ?? null;
+    e.cherche = true;
+    e.erreur = false;
+    if (!DANS_APERCU && !D.dossiers.some(x => ETAT[x.id].erreur)) $("#alerte").hidden = true;
+    msg.textContent = e.resultats.length ? "" : "Aucun résultat : essayez d’autres mots, en anglais de préférence.";
+  } catch (err) {
+    msg.className = "msg err";
+    e.erreur = true;
+    // fetch lève une TypeError quand rien ne répond : « Failed to fetch », « Load failed », « NetworkError… ».
+    if (err instanceof TypeError) {
+      msg.textContent = "Wikimedia Commons ne répond pas à cette page : voir l’encadré en haut.";
+      alerteReseau();
+    } else {
+      msg.textContent = `La recherche n’a pas abouti (${err.message}). Touchez « Chercher » pour réessayer.`;
+    }
+  }
+  e.charge = false;
+  dessinerResultats(d);
+}
+
+// ------------------------------------------------------------------ affichage
+function carte(d, r, genre) {
+  const choisi = S.choix[d.id] && S.choix[d.id].titre === r.titre;
+  const info = r.info || {};
+  const vignette = r.miniature || info.thumburl || info.url || "";
+  const page = r.url_page || info.descriptionurl || `https://commons.wikimedia.org/wiki/${encodeURIComponent(r.titre)}`;
+  const petite = r.largeur && r.largeur < LARGEUR_MIN;
+  const etiquette = genre === "actuel" ? "Dans le jeu" : (choisi ? "Choisie" : "Choisir");
+  const ligneLicence = r.ok ? esc(r.licence) : `Non utilisable : ${esc(r.raison)}`;
+  const taille = r.largeur ? `${r.largeur} × ${r.hauteur} px` : "";
+  const dedans = `<span class="frame"><img src="${esc(vignette)}" alt="" loading="lazy" referrerpolicy="no-referrer">
+      ${r.ok ? `<span class="pick">${etiquette}</span>` : ""}${petite && r.ok ? `<span class="badge">Petite</span>` : ""}</span>
+    <span class="txt"><span class="t">${esc(sansFichier(r.titre))}</span>
+      ${r.auteur ? `<span class="a">${esc(r.auteur)}</span>` : ""}
+      <span class="l">${ligneLicence}</span><span class="a">${esc(taille)}</span>
+      <a href="${esc(page)}" target="_blank" rel="noopener">Ouvrir sur Commons</a></span>`;
+  if (!r.ok) return `<div class="card refus">${dedans}</div>`;
+  return `<label class="card${genre === "actuel" ? " actuel" : ""}"><input type="radio" name="${esc(d.id)}" value="${esc(r.titre)}"${choisi ? " checked" : ""}>${dedans}</label>`;
+}
+
+function resume(r) {
+  const info = r.info || {};
+  return {titre: r.titre, miniature: info.thumburl || info.url, url_page: info.descriptionurl, auteur: r.auteur,
+    licence: r.licence, largeur: r.largeur, hauteur: r.hauteur, ok: true};
+}
+
+function dessinerResultats(d) {
+  const sec = document.getElementById(d.id), grille = $(".grid", sec), e = ETAT[d.id];
+  const vus = new Set(), html = [];
+  if (d.actuel) { html.push(carte(d, {...d.actuel, ok: true}, "actuel")); vus.add(d.actuel.titre); }
+  const c = S.choix[d.id];
+  if (c && !vus.has(c.titre)) { html.push(carte(d, c, "choix")); vus.add(c.titre); }
+  for (const r of e.resultats || []) if (!vus.has(r.titre)) { html.push(carte(d, r, "")); vus.add(r.titre); }
+  grille.innerHTML = html.join("");
+  for (const r of e.resultats || []) if (r.ok) e.parTitre[r.titre] = r;
+  $(".plus", sec).hidden = !(e.cherche && e.suite != null);
+  majDossier(d);
+}
+
+function majDossier(d) {
+  const sec = document.getElementById(d.id), c = S.choix[d.id], etat = $(".etat", sec);
+  sec.classList.toggle("choisi", !!c);
+  if (c) {
+    const envoye = S.telecharges[d.id] === c.titre;
+    etat.className = "etat ok";
+    etat.innerHTML = `${d.actuel && d.actuel.titre !== c.titre ? "Nouvelle image choisie" : "Choisie"} : ${esc(sansFichier(c.titre))}${envoye ? " (déjà téléchargée)" : ""}<button class="lien" type="button" data-retirer>Retirer</button>`;
+  } else if (d.actuel) {
+    etat.className = "etat ok";
+    etat.textContent = `Dans le jeu : ${sansFichier(d.actuel.titre)}`;
+  } else { etat.className = "etat"; etat.textContent = ""; }
+}
+
+function construire() {
+  const comptes = {};
+  for (const d of D.dossiers) comptes[d.discipline] = (comptes[d.discipline] || 0) + 1;
+  $("#filtres").innerHTML = [`<button class="chip" type="button" data-f="" aria-pressed="true">Toutes <span class="n" data-n="">${D.dossiers.length}</span></button>`]
+    .concat(D.disciplines.map(x => `<button class="chip" type="button" data-f="${esc(x.nom)}" aria-pressed="false" style="--c:${x.couleur}"><span class="dot"></span>${esc(x.nom)} <span class="n" data-n="${esc(x.nom)}"></span></button>`))
+    .concat([`<label class="toggle"><input type="checkbox" id="masquer"> Masquer les dossiers déjà choisis</label>`]).join("");
+  $("#dossiers").innerHTML = D.dossiers.map(d => `
+    <section class="dossier" id="${esc(d.id)}" data-d="${esc(d.discipline)}" style="--c:${d.couleur}">
+      <div class="meta"><span class="disc">${esc(d.discipline)}</span><span>Dossier nº ${d.numero}</span></div>
+      <h2>${esc(d.titre)}</h2>
+      <p class="question">${esc(d.question)}</p>
+      <p class="info"><b>Réponse :</b> ${esc(d.reponse)}</p>
+      <p class="info"><b>Idée d’image :</b> ${esc(d.idee)}</p>
+      <form class="cherche" role="search"><input type="search" aria-label="Recherche Commons pour ${esc(d.titre)}" value="${esc(S.requetes[d.id] ?? d.requete)}"><button class="btn" type="submit">Chercher</button></form>
+      <p class="etat"></p>
+      <div class="grid"></div>
+      <p class="msg"></p>
+      <button class="lien plus" type="button" hidden>Plus de résultats</button>
+    </section>`).join("");
+  for (const d of D.dossiers) {
+    ETAT[d.id] = {resultats: [], suite: null, cherche: false, charge: false, parTitre: {}};
+    const sec = document.getElementById(d.id);
+    $("form", sec).addEventListener("submit", ev => {
+      ev.preventDefault();
+      const v = $("input", sec).value.trim();
+      if (v === d.requete || !v) delete S.requetes[d.id]; else S.requetes[d.id] = v;
+      enregistrer();
+      chercher(d, false);
+    });
+    $(".plus", sec).addEventListener("click", () => chercher(d, true));
+    sec.addEventListener("change", ev => {
+      if (ev.target.type !== "radio") return;
+      const titre = ev.target.value;
+      if (d.actuel && titre === d.actuel.titre) delete S.choix[d.id];
+      else {
+        const r = ETAT[d.id].parTitre[titre];
+        if (r) S.choix[d.id] = resume(r);
+      }
+      enregistrer();
+      dessinerResultats(d);
+      majTout();
+    });
+    sec.addEventListener("click", ev => {
+      if (!ev.target.matches("[data-retirer]")) return;
+      delete S.choix[d.id];
+      enregistrer();
+      dessinerResultats(d);
+      majTout();
+    });
+    dessinerResultats(d);
+  }
+  $("#filtres").addEventListener("click", ev => {
+    const b = ev.target.closest("[data-f]");
+    if (!b) return;
+    filtre = b.dataset.f;
+    for (const x of document.querySelectorAll("[data-f]")) x.setAttribute("aria-pressed", String(x === b));
+    appliquerFiltre();
+  });
+  $("#masquer").addEventListener("change", ev => { masquerChoisis = ev.target.checked; appliquerFiltre(); });
+  $("#dl").addEventListener("click", () => telecharger(false));
+  $("#dl-tout").addEventListener("click", () => telecharger(true));
+  // Chaque dossier cherche quand il approche de l'écran (et pas avant : Commons reste ménagé).
+  const obs = new IntersectionObserver(entrees => {
+    for (const en of entrees) {
+      if (!en.isIntersecting) continue;
+      const d = PAR_ID[en.target.id];
+      if (!ETAT[d.id].cherche && !ETAT[d.id].charge) chercher(d, false);
+    }
+  }, {rootMargin: "600px 0px"});
+  for (const d of D.dossiers) obs.observe(document.getElementById(d.id));
+  majTout();
+}
+
+function appliquerFiltre() {
+  for (const d of D.dossiers) {
+    const sec = document.getElementById(d.id);
+    sec.hidden = (filtre && d.discipline !== filtre) || (masquerChoisis && !!S.choix[d.id]);
+  }
+}
+
+const aEnvoyer = () => Object.keys(S.choix).filter(id => PAR_ID[id] && S.telecharges[id] !== S.choix[id].titre);
+
+function majTout() {
+  const n = Object.keys(S.choix).filter(id => PAR_ID[id]).length, nouveaux = aEnvoyer().length;
+  const dansJeu = D.dossiers.filter(d => d.actuel).length;
+  for (const x of D.disciplines) {
+    const liste = D.dossiers.filter(d => d.discipline === x.nom);
+    const faits = liste.filter(d => S.choix[d.id] || d.actuel).length;
+    const el = document.querySelector(`[data-n="${CSS.escape(x.nom)}"]`);
+    if (el) el.textContent = `${faits}/${liste.length}`;
+  }
+  $("#compte").innerHTML = `${n} image${n > 1 ? "s" : ""} choisie${n > 1 ? "s" : ""} <span>sur ${D.dossiers.length} dossiers${dansJeu ? `, ${dansJeu} déjà dans le jeu` : ""}</span>`;
+  const dl = $("#dl");
+  dl.textContent = nouveaux ? `Télécharger ${nouveaux > 1 ? `les ${nouveaux} nouvelles images` : "la nouvelle image"}` : "Rien de nouveau à télécharger";
+  dl.disabled = occupe || !nouveaux;
+  $("#dl-tout").hidden = !n || nouveaux === n;
+  $("#dl-tout").disabled = occupe;
+  if (masquerChoisis) appliquerFiltre();
+}
+
+// ------------------------------------------------------------------ téléchargement du zip
+async function telecharger(tout) {
+  const ids = tout ? Object.keys(S.choix).filter(id => PAR_ID[id]) : aEnvoyer();
+  if (!ids.length || occupe) return;
+  occupe = true; majTout();
+  const statut = $("#statut");
+  const erreurs = [], entrees = [], fichiers = [];
+  try {
+    statut.textContent = "Vérification des licences sur Commons…";
+    const pages = {};
+    for (let i = 0; i < ids.length; i += 40) {
+      const titres = ids.slice(i, i + 40).map(id => S.choix[id].titre);
+      const data = await api({titles: titres.join("|"), ...INFOS, iiurlwidth: String(LARGEUR_JEU)});
+      const q = data.query || {}, renomme = {};
+      for (const n of q.normalized || []) renomme[n.to] = n.from;
+      for (const p of q.pages || []) { pages[p.title] = p; if (renomme[p.title]) pages[renomme[p.title]] = p; }
+    }
+    let fait = 0;
+    const file = ids.slice();
+    async function ouvrier() {
+      while (file.length) {
+        const id = file.shift(), d = PAR_ID[id], titre = S.choix[id].titre, page = pages[titre];
+        try {
+          if (!page || page.missing) throw new Error("fichier introuvable sur Commons");
+          const r = evaluer(page);
+          if (!r.ok) throw new Error(r.raison);
+          const url = r.info.thumburl || r.info.url;
+          const {octets, ext} = await recupererImage(url);
+          const nom = `images/${d.pack}/${id}${ext}`;
+          fichiers.push({nom, data: octets});
+          entrees.push({id, pack: d.pack, fichier: nom, page});
+        } catch (err) { erreurs.push({id, titre, raison: err.message}); }
+        fait++;
+        statut.textContent = `Téléchargement des images : ${fait} sur ${ids.length}…`;
+      }
+    }
+    await Promise.all([ouvrier(), ouvrier(), ouvrier()]);
+    if (!entrees.length) throw new Error(erreurs.map(e => `${e.id} : ${e.raison}`).join(" ; "));
+    entrees.sort((a, b) => a.id.localeCompare(b.id));
+    const choix = {format: "cheveche-images", version: 1, cree: new Date().toISOString(), largeur: LARGEUR_JEU, images: entrees, erreurs};
+    fichiers.unshift({nom: "choix.json", data: new TextEncoder().encode(JSON.stringify(choix, null, 1))});
+    const blob = zip(fichiers);
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `cheveche_images_${new Date().toISOString().slice(0, 16).replace(/[-:T]/g, "")}.zip`;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+    for (const e of entrees) S.telecharges[e.id] = S.choix[e.id].titre;
+    enregistrer();
+    const poids = blob.size >= 1048576 ? `${(blob.size / 1048576).toFixed(1).replace(".", ",")} Mo` : `${Math.max(1, Math.round(blob.size / 1024))} Ko`;
+    statut.textContent = `Zip prêt (${entrees.length} image${entrees.length > 1 ? "s" : ""}, ${poids}) : envoyez-le-moi dans la conversation.` +
+      (erreurs.length ? ` ${erreurs.length} image(s) n’ont pas pu être prises : ${erreurs.map(e => `${e.id} (${e.raison})`).join(", ")}. Choisissez-en une autre ou réessayez.` : "");
+  } catch (err) {
+    statut.textContent = `Le téléchargement n’a pas abouti : ${err.message}`;
+  }
+  occupe = false;
+  for (const d of D.dossiers) majDossier(d);
+  majTout();
+}
+
+async function recupererImage(url) {
+  for (let essai = 0; ; essai++) {
+    let rep;
+    try { rep = await fetch(url); }
+    catch (e) { throw new Error("image injoignable (connexion, ou aperçu qui bloque Internet)"); }
+    if ((rep.status === 429 || rep.status >= 500) && essai < 3) { await attendre(2000 * (essai + 1)); continue; }
+    if (!rep.ok) throw new Error(`image refusée par Commons (${rep.status})`);
+    const b = new Uint8Array(await rep.arrayBuffer());
+    const jpg = b[0] === 0xFF && b[1] === 0xD8 && b[2] === 0xFF;
+    const png = b[0] === 0x89 && b[1] === 0x50 && b[2] === 0x4E && b[3] === 0x47;
+    const webp = b[0] === 0x52 && b[1] === 0x49 && b[8] === 0x57 && b[9] === 0x45;
+    if (!jpg && !png && !webp) throw new Error("le fichier reçu n’est pas une image jpg, png ou webp");
+    return {octets: b, ext: jpg ? ".jpg" : png ? ".png" : ".webp"};
+  }
+}
+
+// Zip sans compression (les jpg sont déjà compressés) : en-têtes locaux, répertoire central, fin.
+const CRC = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+function crc32(b) { let c = 0xFFFFFFFF; for (let i = 0; i < b.length; i++) c = CRC[(c ^ b[i]) & 0xFF] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+function zip(fichiers) {
+  const enc = new TextEncoder(), parts = [], central = [];
+  const now = new Date();
+  const heure = (now.getHours() << 11) | (now.getMinutes() << 5) | (now.getSeconds() >> 1);
+  const jour = ((now.getFullYear() - 1980) << 9) | ((now.getMonth() + 1) << 5) | now.getDate();
+  let decalage = 0;
+  for (const f of fichiers) {
+    const nom = enc.encode(f.nom), crc = crc32(f.data), n = f.data.length;
+    const h = new DataView(new ArrayBuffer(30));
+    h.setUint32(0, 0x04034b50, true); h.setUint16(4, 20, true); h.setUint16(6, 0x0800, true); h.setUint16(8, 0, true);
+    h.setUint16(10, heure, true); h.setUint16(12, jour, true); h.setUint32(14, crc, true); h.setUint32(18, n, true);
+    h.setUint32(22, n, true); h.setUint16(26, nom.length, true); h.setUint16(28, 0, true);
+    parts.push(h.buffer, nom, f.data);
+    const c = new DataView(new ArrayBuffer(46));
+    c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true); c.setUint16(8, 0x0800, true);
+    c.setUint16(10, 0, true); c.setUint16(12, heure, true); c.setUint16(14, jour, true); c.setUint32(16, crc, true);
+    c.setUint32(20, n, true); c.setUint32(24, n, true); c.setUint16(28, nom.length, true);
+    c.setUint32(42, decalage, true);
+    central.push(c.buffer, nom);
+    decalage += 30 + nom.length + n;
+  }
+  const taille = central.reduce((s, x) => s + (x.byteLength ?? x.length), 0);
+  const fin = new DataView(new ArrayBuffer(22));
+  fin.setUint32(0, 0x06054b50, true); fin.setUint16(8, fichiers.length, true); fin.setUint16(10, fichiers.length, true);
+  fin.setUint32(12, taille, true); fin.setUint32(16, decalage, true);
+  return new Blob([...parts, ...central, fin.buffer], {type: "application/zip"});
+}
+
+construire();
+$("#reessayer").addEventListener("click", () => {
+  $("#alerte").hidden = true;
+  for (const d of D.dossiers) if (ETAT[d.id].erreur && !ETAT[d.id].charge) chercher(d, false);
+});
+if (DANS_APERCU) alerter("Cette page est affichée dans un aperçu, qui bloque l’accès à Internet : la recherche d’images ne peut pas marcher ici. " + OUVRIR, false);
+</script>
+</body></html>

@@ -1,0 +1,569 @@
+{
+  "pack": {
+    "id": "arts_02",
+    "titre": "Pack Arts n° 2",
+    "premier_numero": 416,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Cinéma": "Arts",
+      "Photographie": "Arts",
+      "Danse": "Arts",
+      "Musique": "Arts",
+      "Bande dessinée": "Arts",
+      "Peinture": "Arts",
+      "Sculpture": "Arts",
+      "Architecture": "Arts",
+      "Art moderne": "Arts"
+    }
+  },
+  "questions": [
+    {
+      "id": "arts02-q01",
+      "titre": "Les frères Lumière",
+      "categorie": "Cinéma",
+      "difficulte": "facile",
+      "question": "Quels frères ont organisé à Paris, en 1895, l’une des premières projections publiques et payantes de cinéma ?",
+      "indices": [
+        "Ils étaient industriels à Lyon, dans la photographie.",
+        "Leur appareil servait à la fois de caméra et de projecteur."
+      ],
+      "reponse": "Les frères Lumière.",
+      "reponse_courte": "Les frères Lumière",
+      "distracteurs": [
+        "Les frères Pathé",
+        "Les frères Wright",
+        "Les frères Goncourt"
+      ],
+      "variantes_acceptees": [
+        "lumière",
+        "les frères lumière",
+        "auguste et louis lumière"
+      ],
+      "explication": "Le 28 décembre 1895, au Salon indien du Grand Café, à Paris, Auguste et Louis Lumière projettent une dizaine de courts films devant un public payant, dont La Sortie de l’usine Lumière à Lyon.",
+      "anecdote": "On raconte que des spectateurs auraient fui devant L’Arrivée d’un train en gare de La Ciotat ; l’anecdote est sans doute exagérée.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "cinématographe Lumière dans un musée",
+        "fichier": "arts02-q01.jpg",
+        "auteur": "Auteur inconnu",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Auguste_and_Louis_Lumi%C3%A8re.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Auguste_and_Louis_Lumi%C3%A8re.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts02-q02",
+      "titre": "Le Voyage dans la Lune",
+      "categorie": "Cinéma",
+      "difficulte": "difficile",
+      "question": "Quel pionnier du cinéma a réalisé Le Voyage dans la Lune, en 1902 ?",
+      "indices": [
+        "Ancien illusionniste, il a inventé de nombreux trucages.",
+        "Une image célèbre montre une fusée plantée dans l’œil de la Lune."
+      ],
+      "reponse": "Georges Méliès.",
+      "reponse_courte": "Georges Méliès",
+      "distracteurs": [
+        "Louis Lumière",
+        "Charlie Chaplin",
+        "Jean Renoir"
+      ],
+      "variantes_acceptees": [
+        "méliès",
+        "georges méliès"
+      ],
+      "explication": "Dans son studio vitré de Montreuil, Méliès invente des effets spéciaux : arrêts de caméra, surimpressions, décors peints. Le Voyage dans la Lune, d’après Jules Verne et H. G. Wells, connaît un succès mondial.",
+      "anecdote": "Une copie du film colorée à la main, retrouvée en Espagne, a été restaurée et présentée en 2011.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "image du Voyage dans la Lune de Méliès",
+        "fichier": "arts02-q02.jpg",
+        "auteur": "Georges Méliès",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:M%C3%A9li%C3%A8s_Trip_to_the_Moon_cannon_still.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d9/M%C3%A9li%C3%A8s_Trip_to_the_Moon_cannon_still.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts02-q03",
+      "titre": "La première photographie",
+      "categorie": "Photographie",
+      "difficulte": "difficile",
+      "question": "Qui a réalisé, vers 1826-1827, la plus ancienne photographie conservée ?",
+      "indices": [
+        "Il était français, originaire de Chalon-sur-Saône.",
+        "L’image montre la vue depuis une fenêtre de sa maison, après des heures de pose."
+      ],
+      "reponse": "Nicéphore Niépce.",
+      "reponse_courte": "Nicéphore Niépce",
+      "distracteurs": [
+        "Louis Daguerre",
+        "Nadar",
+        "Louis Lumière"
+      ],
+      "variantes_acceptees": [
+        "niépce",
+        "nicéphore niépce"
+      ],
+      "explication": "Niépce enregistre l’image sur une plaque d’étain recouverte de bitume de Judée, qui durcit à la lumière : c’est le Point de vue du Gras. Associé ensuite à Louis Daguerre, il ne verra pas le daguerréotype, présenté en 1839.",
+      "anecdote": "Cette plaque est conservée aux États-Unis, à l’université du Texas à Austin.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Point de vue du Gras de Nicéphore Niépce",
+        "fichier": "arts02-q03.jpg",
+        "auteur": "Joseph Nicéphore Niépce",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:View_from_the_Window_at_Le_Gras,_Joseph_Nic%C3%A9phore_Ni%C3%A9pce,_uncompressed_UMN_source.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/0e/View_from_the_Window_at_Le_Gras%2C_Joseph_Nic%C3%A9phore_Ni%C3%A9pce%2C_uncompressed_UMN_source.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts02-q04",
+      "titre": "Le flamenco",
+      "categorie": "Danse",
+      "difficulte": "facile",
+      "question": "De quel pays vient le flamenco ?",
+      "indices": [
+        "Il est né en Andalousie, notamment au sein des communautés gitanes.",
+        "Il associe chant, guitare, danse et claquements de mains."
+      ],
+      "reponse": "De l’Espagne.",
+      "reponse_courte": "L’Espagne",
+      "distracteurs": [
+        "Le Portugal",
+        "L’Argentine",
+        "Le Mexique"
+      ],
+      "variantes_acceptees": [
+        "espagne",
+        "l'espagne",
+        "andalousie"
+      ],
+      "explication": "Le flamenco mêle des influences gitanes, andalouses, arabes et juives. Il est inscrit depuis 2010 au patrimoine culturel immatériel de l’humanité par l’Unesco. Le tango, lui, vient d’Argentine et d’Uruguay.",
+      "anecdote": "Les claquements de mains rythmés du flamenco s’appellent les palmas.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "danseuse de flamenco en robe à volants",
+        "fichier": "arts02-q04.jpg",
+        "auteur": "Raymonst3",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Woman_Flamenco_dancer.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Woman_Flamenco_dancer.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "arts02-q05",
+      "titre": "Le Lac des cygnes",
+      "categorie": "Musique",
+      "difficulte": "moyenne",
+      "question": "Quel compositeur russe a écrit la musique du ballet Le Lac des cygnes ?",
+      "indices": [
+        "Il a vécu au XIXe siècle et a aussi écrit des symphonies et des concertos célèbres.",
+        "Il a aussi composé Casse-Noisette et La Belle au bois dormant."
+      ],
+      "reponse": "Piotr Ilitch Tchaïkovski.",
+      "reponse_courte": "Tchaïkovski",
+      "distracteurs": [
+        "Stravinsky",
+        "Rachmaninov",
+        "Prokofiev"
+      ],
+      "variantes_acceptees": [
+        "tchaïkovski",
+        "tchaikovski",
+        "piotr ilitch tchaïkovski"
+      ],
+      "explication": "Créé à Moscou en 1877, Le Lac des cygnes est d’abord mal accueilli. La nouvelle chorégraphie de Marius Petipa et Lev Ivanov, à Saint-Pétersbourg en 1895, après la mort du compositeur, en fait l’un des ballets les plus joués au monde.",
+      "anecdote": "Dans de nombreuses mises en scène, une même danseuse incarne le cygne blanc, Odette, et le cygne noir, Odile.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "ballerines en tutu dans Le Lac des cygnes",
+        "fichier": "arts02-q05.jpg",
+        "auteur": "Vladimir Zenzinov",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:SWAN_LAKE_2nd_Act_Photo_Vladimir_Zenzinov.tif",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/34/SWAN_LAKE_2nd_Act_Photo_Vladimir_Zenzinov.tif",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "arts02-q06",
+      "titre": "Tintin",
+      "categorie": "Bande dessinée",
+      "difficulte": "facile",
+      "question": "Quel reporter à la houppe, créé par Hergé, voyage avec son chien Milou ?",
+      "indices": [
+        "Son auteur était belge.",
+        "Le capitaine Haddock est son grand ami."
+      ],
+      "reponse": "Tintin.",
+      "reponse_courte": "Tintin",
+      "distracteurs": [
+        "Spirou",
+        "Astérix",
+        "Lucky Luke"
+      ],
+      "variantes_acceptees": [
+        "tintin"
+      ],
+      "explication": "Tintin apparaît en 1929 dans un supplément pour la jeunesse d’un journal de Bruxelles. Ses aventures, dessinées par Hergé dans un style clair et précis, la « ligne claire », comptent 24 albums traduits dans le monde entier.",
+      "anecdote": "Le premier album, Tintin au pays des Soviets, paraît en 1930.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Un portrait photographique d’Hergé (1965, domaine public) ; les personnages, eux, sont protégés",
+        "fichier": "arts02-q06.jpg",
+        "auteur": "Photographe inconnu, revue italienne Linus (1965)",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Herge-Italie-1965-Linus.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Herge-Italie-1965-Linus.png",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts02-q07",
+      "titre": "La Liberté guidant le peuple",
+      "categorie": "Peinture",
+      "difficulte": "moyenne",
+      "question": "Quel peintre a réalisé La Liberté guidant le peuple ?",
+      "indices": [
+        "Le tableau célèbre les Trois Glorieuses, la révolution de juillet 1830.",
+        "Il est l’un des grands peintres du romantisme français."
+      ],
+      "reponse": "Eugène Delacroix.",
+      "reponse_courte": "Eugène Delacroix",
+      "distracteurs": [
+        "Théodore Géricault",
+        "Jacques-Louis David",
+        "Gustave Courbet"
+      ],
+      "variantes_acceptees": [
+        "delacroix",
+        "eugène delacroix"
+      ],
+      "explication": "Delacroix peint en 1830 une femme du peuple, coiffée d’un bonnet phrygien et brandissant le drapeau tricolore, qui entraîne des insurgés sur une barricade. Le tableau est exposé au Louvre.",
+      "anecdote": "Cette figure de la Liberté a contribué à l’image de Marianne, symbole de la République.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "La Liberté guidant le peuple de Delacroix",
+        "fichier": "arts02-q07.jpg",
+        "auteur": "Eugène Delacroix",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Delacroix_-_La_libert%C3%A9_guidant_le_peuple.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Eug%C3%A8ne_Delacroix_-_La_libert%C3%A9_guidant_le_peuple.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts02-q08",
+      "titre": "La Jeune Fille à la perle",
+      "categorie": "Peinture",
+      "difficulte": "difficile",
+      "question": "Quel peintre hollandais a peint La Jeune Fille à la perle ?",
+      "indices": [
+        "Il vivait à Delft, au XVIIe siècle.",
+        "On ne lui attribue qu’une trentaine de tableaux."
+      ],
+      "reponse": "Johannes Vermeer.",
+      "reponse_courte": "Johannes Vermeer",
+      "distracteurs": [
+        "Rembrandt",
+        "Vincent van Gogh",
+        "Frans Hals"
+      ],
+      "variantes_acceptees": [
+        "vermeer",
+        "johannes vermeer"
+      ],
+      "explication": "Vermeer peint surtout des scènes d’intérieur baignées d’une lumière douce. La Jeune Fille à la perle, vers 1665, est un visage imaginaire plutôt qu’un portrait ; le tableau est conservé au Mauritshuis, à La Haye.",
+      "anecdote": "Son bleu outremer était tiré du lapis-lazuli, une pierre importée de très loin et très coûteuse.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "La Jeune Fille à la perle de Vermeer",
+        "fichier": "arts02-q08.jpg",
+        "auteur": "Johannes Vermeer",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:1665_Girl_with_a_Pearl_Earring.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/0f/1665_Girl_with_a_Pearl_Earring.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts02-q09",
+      "titre": "Le Cri",
+      "categorie": "Peinture",
+      "difficulte": "moyenne",
+      "question": "Quel peintre norvégien a peint Le Cri ?",
+      "indices": [
+        "Il en a réalisé plusieurs versions, en peinture et en gravure.",
+        "Le personnage se tient sur une passerelle, sous un ciel rouge, près d’Oslo."
+      ],
+      "reponse": "Edvard Munch.",
+      "reponse_courte": "Edvard Munch",
+      "distracteurs": [
+        "Gustav Klimt",
+        "Egon Schiele",
+        "Paul Gauguin"
+      ],
+      "variantes_acceptees": [
+        "munch",
+        "edvard munch"
+      ],
+      "explication": "Munch peint la première version du Cri en 1893 : une figure qui se tient la tête, comme saisie d’angoisse, sous un ciel embrasé. Cette œuvre a beaucoup inspiré l’expressionnisme.",
+      "anecdote": "Deux versions du Cri ont été volées à Oslo, en 1994 puis en 2004 ; toutes deux ont été retrouvées.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Le Cri d’Edvard Munch",
+        "fichier": "arts02-q09.jpg",
+        "auteur": "Edvard Munch",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Edvard_Munch_-_The_Scream_-_Google_Art_Project.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/8/86/Edvard_Munch_-_The_Scream_-_Google_Art_Project.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts02-q10",
+      "titre": "La Vénus de Milo",
+      "categorie": "Sculpture",
+      "difficulte": "facile",
+      "question": "Quelle célèbre statue grecque, privée de ses bras, est exposée au Louvre ?",
+      "indices": [
+        "Elle a été découverte en 1820 sur une île des Cyclades.",
+        "Elle représente sans doute Aphrodite."
+      ],
+      "reponse": "La Vénus de Milo.",
+      "reponse_courte": "La Vénus de Milo",
+      "distracteurs": [
+        "Le Discobole",
+        "L’Apollon du Belvédère",
+        "Le Laocoon"
+      ],
+      "variantes_acceptees": [
+        "vénus de milo"
+      ],
+      "explication": "Sculptée en marbre vers la fin du IIe siècle av. J.-C., la statue a été trouvée par un paysan sur l’île de Milo, puis achetée par la France et offerte à Louis XVIII.",
+      "anecdote": "On ignore toujours la position de ses bras ; un fragment de bras et une main tenant une pomme, trouvés près d’elle, lui auraient appartenu.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Vénus de Milo au musée du Louvre",
+        "fichier": "arts02-q10.jpg",
+        "auteur": "Livioandronico2013",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Foreground_of_the_Venus_de_Milo.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/20/Foreground_of_the_Venus_de_Milo.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "arts02-q11",
+      "titre": "Les touches du piano",
+      "categorie": "Musique",
+      "difficulte": "difficile",
+      "question": "Combien de touches compte un piano moderne standard ?",
+      "indices": [
+        "Il y a 52 touches blanches.",
+        "Il couvre un peu plus de sept octaves."
+      ],
+      "reponse": "88.",
+      "reponse_courte": "88",
+      "distracteurs": [
+        "64",
+        "100",
+        "76"
+      ],
+      "variantes_acceptees": [
+        "88",
+        "quatre-vingt-huit"
+      ],
+      "explication": "Un piano standard compte 52 touches blanches et 36 noires. Chaque touche actionne un marteau feutré qui frappe une ou plusieurs cordes tendues.",
+      "anecdote": "Le piano doit son nom au pianoforte, inventé vers 1700 par Bartolomeo Cristofori, capable de jouer doux (piano) comme fort (forte).",
+      "image": {
+        "statut": "verifie",
+        "recherche": "clavier de piano",
+        "fichier": "arts02-q11.jpg",
+        "auteur": "Original téléversé par AkiShinji sur Wikipédia anglais.",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Musical_Keyboard.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/63/Musical_Keyboard.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts02-q12",
+      "titre": "Carmen",
+      "categorie": "Musique",
+      "difficulte": "moyenne",
+      "question": "Quel compositeur français a écrit l’opéra Carmen ?",
+      "indices": [
+        "L’action se déroule à Séville.",
+        "Il est mort trois mois après la création de l’œuvre, en 1875."
+      ],
+      "reponse": "Georges Bizet.",
+      "reponse_courte": "Georges Bizet",
+      "distracteurs": [
+        "Giuseppe Verdi",
+        "Charles Gounod",
+        "Jacques Offenbach"
+      ],
+      "variantes_acceptees": [
+        "bizet",
+        "georges bizet"
+      ],
+      "explication": "Adapté d’une nouvelle de Prosper Mérimée, Carmen raconte la passion d’un soldat, Don José, pour une bohémienne libre et indomptable. D’abord mal reçu, l’opéra est devenu l’un des plus joués au monde.",
+      "anecdote": "L’air « L’amour est un oiseau rebelle » est une habanera, une danse d’origine cubaine.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "affiche ancienne de l’opéra Carmen",
+        "fichier": "arts02-q12.jpg",
+        "auteur": "Étienne Carjat",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Georges_bizet.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/9/96/Georges_bizet.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "arts02-q13",
+      "titre": "Le Taj Mahal",
+      "categorie": "Architecture",
+      "difficulte": "facile",
+      "question": "Quel mausolée de marbre blanc un empereur moghol a-t-il fait bâtir en Inde pour son épouse ?",
+      "indices": [
+        "Il se trouve à Agra, au bord de la rivière Yamuna.",
+        "L’empereur Shah Jahan l’a fait construire au XVIIe siècle."
+      ],
+      "reponse": "Le Taj Mahal.",
+      "reponse_courte": "Le Taj Mahal",
+      "distracteurs": [
+        "Le palais des Vents",
+        "Le Fort rouge",
+        "Angkor Vat"
+      ],
+      "variantes_acceptees": [
+        "taj mahal"
+      ],
+      "explication": "Shah Jahan fait élever le Taj Mahal à la mémoire de son épouse Mumtaz Mahal, morte en 1631. Des milliers d’artisans travaillent pendant une vingtaine d’années à ce mausolée, inscrit au patrimoine mondial de l’Unesco.",
+      "anecdote": "Selon une explication souvent avancée, ses minarets penchent légèrement vers l’extérieur pour tomber loin du tombeau s’ils venaient à s’effondrer.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Taj Mahal à Agra",
+        "fichier": "arts02-q13.jpg",
+        "auteur": "Yann; edited by King of Hearts",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Taj_Mahal,_Agra,_India_edit2.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/7/74/Taj_Mahal%2C_Agra%2C_India_edit2.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "arts02-q14",
+      "titre": "Notre-Dame de Paris",
+      "categorie": "Architecture",
+      "difficulte": "facile",
+      "question": "Quelle cathédrale a perdu sa flèche dans un incendie en avril 2019 ?",
+      "indices": [
+        "Elle a rouvert ses portes en décembre 2024.",
+        "Victor Hugo en a fait le décor d’un célèbre roman."
+      ],
+      "reponse": "Notre-Dame de Paris.",
+      "reponse_courte": "Notre-Dame de Paris",
+      "distracteurs": [
+        "La basilique du Sacré-Cœur",
+        "La Sainte-Chapelle",
+        "La basilique de Saint-Denis"
+      ],
+      "variantes_acceptees": [
+        "notre-dame",
+        "notre-dame de paris"
+      ],
+      "explication": "Le 15 avril 2019, un incendie détruit la charpente médiévale et la flèche de la cathédrale. Après cinq ans de chantier, mené par des centaines d’artisans, Notre-Dame rouvre en décembre 2024, avec une flèche reconstruite à l’identique.",
+      "anecdote": "La flèche détruite datait du XIXe siècle : elle avait été dessinée par l’architecte Eugène Viollet-le-Duc.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "façade de Notre-Dame de Paris",
+        "fichier": "arts02-q14.jpg",
+        "auteur": "Sanchezn",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:NotreDameDeParis.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/a4/NotreDameDeParis.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "arts02-q15",
+      "titre": "Andy Warhol",
+      "categorie": "Art moderne",
+      "difficulte": "moyenne",
+      "question": "Quel artiste américain a rendu célèbres les boîtes de soupe Campbell et les portraits de Marilyn Monroe ?",
+      "indices": [
+        "Il est une figure majeure du pop art.",
+        "Il travaillait dans un atelier new-yorkais surnommé la Factory."
+      ],
+      "reponse": "Andy Warhol.",
+      "reponse_courte": "Andy Warhol",
+      "distracteurs": [
+        "Roy Lichtenstein",
+        "Jackson Pollock",
+        "Keith Haring"
+      ],
+      "variantes_acceptees": [
+        "warhol",
+        "andy warhol"
+      ],
+      "explication": "Le pop art s’empare des images de la publicité, des produits de consommation et des vedettes. Warhol les reproduit en série, souvent par sérigraphie, comme sur une chaîne de fabrication.",
+      "anecdote": "On lui attribue l’idée qu’à l’avenir, chacun aura son quart d’heure de célébrité.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "musée Andy Warhol de Pittsburgh (bâtiment ; les œuvres de Warhol sont encore protégées)",
+        "fichier": "arts02-q15.jpg",
+        "auteur": "Walter Mori",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Andy_Warhol_1975.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/42/Andy_Warhol_1975.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    }
+  ]
+}

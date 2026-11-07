@@ -1,0 +1,930 @@
+{
+  "pack": {
+    "id": "sciences_01",
+    "titre": "Pack Sciences n° 1",
+    "premier_numero": 36,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Physique": "Sciences",
+      "Grands savants": "Sciences",
+      "Chimie": "Sciences",
+      "Médecine": "Sciences",
+      "Corps humain": "Sciences",
+      "Mathématiques": "Sciences",
+      "Inventions": "Sciences",
+      "Géologie": "Sciences"
+    }
+  },
+  "questions": [
+    {
+      "id": "sciences01-q01",
+      "titre": "L’eau qui bout",
+      "categorie": "Physique",
+      "difficulte": "facile",
+      "question": "À quelle température l’eau pure bout-elle au niveau de la mer ?",
+      "indices": [
+        "Cette valeur a servi de repère à l’échelle Celsius.",
+        "En montagne, l’eau bout à une température plus basse."
+      ],
+      "reponse": "À 100 °C.",
+      "reponse_courte": "100 °C",
+      "distracteurs": [
+        "90 °C",
+        "120 °C",
+        "80 °C"
+      ],
+      "variantes_acceptees": [
+        "100",
+        "100 °c",
+        "100 degrés"
+      ],
+      "explication": "La température d’ébullition dépend de la pression de l’air. Au niveau de la mer, l’eau pure bout à 100 °C ; au sommet de l’Everest, où la pression est bien plus faible, elle bout vers 70 °C.",
+      "anecdote": "Anders Celsius avait d’abord placé le 0 à l’ébullition et le 100 à la glace : l’échelle a été inversée après lui.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "casserole d’eau en ébullition",
+        "fichier": "sciences01-q01.jpg",
+        "auteur": "W.carter",
+        "licence": "CC0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Steam-boiling_green_asparagus.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Steam-boiling_green_asparagus.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "sciences01-q02",
+      "titre": "Vitesse de la lumière",
+      "categorie": "Physique",
+      "difficulte": "moyenne",
+      "question": "Quelle est, environ, la vitesse de la lumière dans le vide ?",
+      "indices": [
+        "Rien ne va plus vite dans l’Univers.",
+        "En une seconde, elle ferait plus de sept fois le tour de la Terre."
+      ],
+      "reponse": "Environ 300 000 km par seconde.",
+      "reponse_courte": "300 000 km/s",
+      "distracteurs": [
+        "300 km/s",
+        "30 000 km/s",
+        "3 millions de km/s"
+      ],
+      "variantes_acceptees": [
+        "300000 km/s",
+        "300 000 km par seconde"
+      ],
+      "explication": "La lumière parcourt exactement 299 792 458 mètres par seconde dans le vide. Elle est un peu ralentie dans l’eau ou le verre, ce qui explique qu’un bâton plongé dans l’eau paraisse brisé.",
+      "anecdote": "Depuis 1983, c’est le mètre qui est défini à partir de la vitesse de la lumière, et non l’inverse.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "faisceau laser dans l’obscurité",
+        "fichier": "sciences01-q02.jpg",
+        "auteur": "ESO/Yuri Beletsky (ybialets at eso.org)",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Laser_Towards_Milky_Ways_Centre.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Laser_Towards_Milky_Ways_Centre.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "sciences01-q03",
+      "titre": "Isaac Newton",
+      "categorie": "Grands savants",
+      "difficulte": "facile",
+      "question": "Quel savant anglais a formulé la loi de la gravitation universelle ?",
+      "indices": [
+        "Il a publié ses Principia en 1687.",
+        "Une anecdote célèbre l’associe à la chute d’une pomme."
+      ],
+      "reponse": "Isaac Newton.",
+      "reponse_courte": "Isaac Newton",
+      "distracteurs": [
+        "Albert Einstein",
+        "Galilée",
+        "Charles Darwin"
+      ],
+      "variantes_acceptees": [
+        "newton",
+        "isaac newton"
+      ],
+      "explication": "Newton a montré que la même force fait tomber les objets sur Terre et maintient la Lune sur son orbite : deux masses s’attirent d’autant plus qu’elles sont lourdes et proches. Il a aussi étudié la lumière et inventé un télescope à miroir.",
+      "anecdote": "Newton s’est aussi beaucoup intéressé à l’alchimie, à laquelle il a consacré de nombreux écrits.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "portrait ancien d’Isaac Newton",
+        "fichier": "sciences01-q03.jpg",
+        "auteur": "Godfrey Kneller",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Portrait_of_Sir_Isaac_Newton,_1689_(head_shot_crop).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/35/Portrait_of_Sir_Isaac_Newton%2C_1689_%28head_shot_crop%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "sciences01-q04",
+      "titre": "L’ampère",
+      "categorie": "Physique",
+      "difficulte": "difficile",
+      "question": "Quelle unité mesure l’intensité d’un courant électrique ?",
+      "indices": [
+        "Elle porte le nom d’un physicien français.",
+        "Ce savant lyonnais a étudié le lien entre électricité et magnétisme."
+      ],
+      "reponse": "L’ampère.",
+      "reponse_courte": "L’ampère",
+      "distracteurs": [
+        "Le volt",
+        "Le watt",
+        "L’ohm"
+      ],
+      "variantes_acceptees": [
+        "ampère",
+        "l'ampère",
+        "a"
+      ],
+      "explication": "L’ampère mesure la quantité d’électricité qui passe chaque seconde dans un fil. Le volt mesure la tension, le watt la puissance et l’ohm la résistance d’un conducteur.",
+      "anecdote": "André-Marie Ampère fait partie des 72 savants dont le nom est gravé sur la tour Eiffel.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "multimètre mesurant un courant électrique",
+        "fichier": "sciences01-q04.jpg",
+        "auteur": "wdwd",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Multimeter_Strommessung.JPG",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/44/Multimeter_Strommessung.JPG",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "sciences01-q05",
+      "titre": "Symbole de l’or",
+      "categorie": "Chimie",
+      "difficulte": "moyenne",
+      "question": "Quel est le symbole chimique de l’or ?",
+      "indices": [
+        "Celui de l’argent, Ag, vient lui aussi du latin.",
+        "Il vient du mot latin qui désignait ce métal."
+      ],
+      "reponse": "Au, du latin aurum.",
+      "reponse_courte": "Au",
+      "distracteurs": [
+        "Or",
+        "Ag",
+        "Go"
+      ],
+      "variantes_acceptees": [
+        "au"
+      ],
+      "explication": "Les symboles chimiques viennent souvent du nom latin de l’élément : Au pour aurum (or), Ag pour argentum (argent), Fe pour ferrum (fer), Pb pour plumbum (plomb).",
+      "anecdote": "Tout l’or extrait au cours de l’histoire tiendrait dans un cube d’un peu plus de 20 mètres de côté.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "pépite d’or",
+        "fichier": "sciences01-q05.jpg",
+        "auteur": "James St. John",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Gold_nugget_(placer_gold)_1_(17001285916).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Gold_nugget_%28placer_gold%29_1_%2817001285916%29.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "sciences01-q06",
+      "titre": "La molécule d’eau",
+      "categorie": "Chimie",
+      "difficulte": "facile",
+      "question": "Quelle est la formule chimique de l’eau ?",
+      "indices": [
+        "Sa molécule contient trois atomes.",
+        "Deux d’entre eux sont des atomes du gaz le plus léger."
+      ],
+      "reponse": "H2O : deux atomes d’hydrogène et un d’oxygène.",
+      "reponse_courte": "H2O",
+      "distracteurs": [
+        "CO2",
+        "O2",
+        "H2O2"
+      ],
+      "variantes_acceptees": [
+        "h2o"
+      ],
+      "explication": "Une molécule d’eau associe un atome d’oxygène à deux atomes d’hydrogène. H2O2, avec un atome d’oxygène de plus, est l’eau oxygénée ; CO2 est le dioxyde de carbone.",
+      "anecdote": "La glace flotte parce qu’elle est moins dense que l’eau liquide : c’est une exception parmi les substances courantes.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "gouttes d’eau sur une feuille",
+        "fichier": "sciences01-q06.jpg",
+        "auteur": "Andrew Curtis",
+        "licence": "CC BY-SA 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Water_drops_on_a_fallen_oak_leaf_-_geograph.org.uk_-_7662091.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/61/Water_drops_on_a_fallen_oak_leaf_-_geograph.org.uk_-_7662091.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "CC BY-SA 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "sciences01-q07",
+      "titre": "Mendeleïev",
+      "categorie": "Chimie",
+      "difficulte": "moyenne",
+      "question": "Quel chimiste russe a classé les éléments dans un célèbre tableau, en 1869 ?",
+      "indices": [
+        "Il a laissé des cases vides pour des éléments encore inconnus.",
+        "Un élément chimique, le mendélévium, porte son nom."
+      ],
+      "reponse": "Dmitri Mendeleïev.",
+      "reponse_courte": "Dmitri Mendeleïev",
+      "distracteurs": [
+        "Antoine Lavoisier",
+        "Marie Curie",
+        "Louis Pasteur"
+      ],
+      "variantes_acceptees": [
+        "mendeleïev",
+        "mendeleiev",
+        "dmitri mendeleïev"
+      ],
+      "explication": "Mendeleïev a rangé les éléments selon leur masse et leurs propriétés, qui reviennent de façon régulière, ou périodique. C’est l’ancêtre du tableau périodique actuel, qui compte 118 éléments.",
+      "anecdote": "Il a prédit les propriétés du gallium et du germanium avant leur découverte.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "tableau périodique des éléments",
+        "fichier": "sciences01-q07.jpg",
+        "auteur": "Meli thev",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Periodic_Table_White_Dwarfs.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/22/Periodic_Table_White_Dwarfs.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "sciences01-q08",
+      "titre": "Lavoisier",
+      "categorie": "Chimie",
+      "difficulte": "moyenne",
+      "question": "À quel chimiste français attribue-t-on l’idée « Rien ne se perd, rien ne se crée, tout se transforme » ?",
+      "indices": [
+        "Il a montré l’importance de peser avec précision avant et après une réaction.",
+        "Il a été guillotiné en 1794, sous la Terreur."
+      ],
+      "reponse": "Antoine Lavoisier.",
+      "reponse_courte": "Antoine Lavoisier",
+      "distracteurs": [
+        "Louis Pasteur",
+        "Marie Curie",
+        "Blaise Pascal"
+      ],
+      "variantes_acceptees": [
+        "lavoisier",
+        "antoine lavoisier"
+      ],
+      "explication": "Lavoisier a établi que la masse totale ne change pas au cours d’une réaction chimique : les atomes se réarrangent, sans disparaître. La formule célèbre est une reformulation de ses écrits. Il est considéré comme un père de la chimie moderne.",
+      "anecdote": "Il a aussi donné leurs noms à l’oxygène et à l’hydrogène.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "portrait de Lavoisier et de son épouse par David",
+        "fichier": "sciences01-q08.jpg",
+        "auteur": "Auteur inconnu",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Lavoisier_1873.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Lavoisier_1873.png",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "sciences01-q09",
+      "titre": "Marie Curie",
+      "categorie": "Grands savants",
+      "difficulte": "facile",
+      "question": "Quelle scientifique a reçu deux prix Nobel, en physique puis en chimie ?",
+      "indices": [
+        "Elle a découvert le polonium et le radium.",
+        "Née à Varsovie, elle a fait sa carrière en France."
+      ],
+      "reponse": "Marie Curie.",
+      "reponse_courte": "Marie Curie",
+      "distracteurs": [
+        "Irène Joliot-Curie",
+        "Rosalind Franklin",
+        "Lise Meitner"
+      ],
+      "variantes_acceptees": [
+        "marie curie",
+        "curie",
+        "maria skłodowska"
+      ],
+      "explication": "Marie Curie reçoit le prix Nobel de physique en 1903, avec Pierre Curie et Henri Becquerel, pour leurs travaux sur la radioactivité, puis celui de chimie en 1911. Elle reste la seule personne récompensée dans deux sciences différentes.",
+      "anecdote": "Ses carnets de laboratoire sont encore radioactifs : on les consulte avec des précautions.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "photographie ancienne de Marie Curie dans son laboratoire",
+        "fichier": "sciences01-q09.jpg",
+        "auteur": "Auteur inconnu",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Marie_Curie_in_her_laboratory.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Marie_Curie_in_her_laboratory.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "sciences01-q10",
+      "titre": "Pasteur et la rage",
+      "categorie": "Médecine",
+      "difficulte": "difficile",
+      "question": "Contre quelle maladie Louis Pasteur a-t-il mis au point un vaccin, essayé sur un enfant en 1885 ?",
+      "indices": [
+        "Le jeune Joseph Meister, mordu par un chien, a été le premier sauvé.",
+        "Elle se transmet surtout par la morsure d’animaux infectés."
+      ],
+      "reponse": "La rage.",
+      "reponse_courte": "La rage",
+      "distracteurs": [
+        "La variole",
+        "La tuberculose",
+        "La peste"
+      ],
+      "variantes_acceptees": [
+        "rage",
+        "la rage"
+      ],
+      "explication": "Pasteur avait affaibli le virus de la rage dans des moelles de lapins desséchées. Injecté à Joseph Meister après sa morsure, le vaccin lui a évité la maladie, toujours mortelle une fois déclarée.",
+      "anecdote": "Joseph Meister est devenu plus tard gardien de l’Institut Pasteur.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "photographie ancienne de Louis Pasteur",
+        "fichier": "sciences01-q10.jpg",
+        "auteur": "Albert Edelfelt",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Albert_Edelfelt_-_Louis_Pasteur_-_1885.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Albert_Edelfelt_-_Louis_Pasteur_-_1885.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "sciences01-q11",
+      "titre": "Le squelette",
+      "categorie": "Corps humain",
+      "difficulte": "difficile",
+      "question": "Combien d’os compte environ le squelette d’un adulte ?",
+      "indices": [
+        "Un bébé en a davantage, car certains se soudent en grandissant.",
+        "Plus de la moitié se trouvent dans les mains et les pieds."
+      ],
+      "reponse": "Environ 206.",
+      "reponse_courte": "206",
+      "distracteurs": [
+        "106",
+        "306",
+        "156"
+      ],
+      "variantes_acceptees": [
+        "206"
+      ],
+      "explication": "À la naissance, le squelette compte environ 300 pièces osseuses, dont beaucoup se soudent ensuite, par exemple au niveau du crâne. Chez l’adulte, on en dénombre généralement 206.",
+      "anecdote": "Le plus petit os, l’étrier, se trouve dans l’oreille et mesure environ 3 mm.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "squelette humain dans une salle de classe",
+        "fichier": "sciences01-q11.jpg",
+        "auteur": "Hans-Jürgen Neubert",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Skeleton_Model_5579_HaJN.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/03/Skeleton_Model_5579_HaJN.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "sciences01-q12",
+      "titre": "Le cœur au repos",
+      "categorie": "Corps humain",
+      "difficulte": "moyenne",
+      "question": "Combien de fois environ le cœur d’un adulte au repos bat-il par minute ?",
+      "indices": [
+        "On le mesure en prenant le pouls, au poignet par exemple.",
+        "Ce rythme augmente pendant l’effort."
+      ],
+      "reponse": "Environ 70 fois.",
+      "reponse_courte": "Environ 70 fois",
+      "distracteurs": [
+        "Environ 20 fois",
+        "Environ 150 fois",
+        "Environ 300 fois"
+      ],
+      "variantes_acceptees": [
+        "70",
+        "environ 70",
+        "70 fois"
+      ],
+      "explication": "Au repos, le cœur d’un adulte bat en général entre 60 et 100 fois par minute ; il est souvent plus lent chez les sportifs entraînés. À chaque battement, il propulse le sang dans les artères.",
+      "anecdote": "Au cours d’une vie, le cœur bat environ trois milliards de fois.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "planche anatomique ancienne du cœur",
+        "fichier": "sciences01-q12.jpg",
+        "auteur": "Ekko (auteur présumé)",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Heart_frontally_PDA.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/57/Heart_frontally_PDA.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "sciences01-q13",
+      "titre": "La peau",
+      "categorie": "Corps humain",
+      "difficulte": "moyenne",
+      "question": "Quel est le plus grand organe du corps humain ?",
+      "indices": [
+        "Il pèse plusieurs kilos chez un adulte.",
+        "Il se renouvelle sans cesse : ses cellules mortes tombent en fines particules."
+      ],
+      "reponse": "La peau.",
+      "reponse_courte": "La peau",
+      "distracteurs": [
+        "Le foie",
+        "Les poumons",
+        "Le cerveau"
+      ],
+      "variantes_acceptees": [
+        "peau",
+        "la peau"
+      ],
+      "explication": "La peau couvre environ 2 m² chez un adulte. Elle protège le corps des microbes, de la déshydratation et du soleil, aide à régler la température et nous permet de sentir le toucher, le chaud et le froid.",
+      "anecdote": "Le foie, lui, est le plus gros organe interne : il pèse environ 1,5 kg.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "planche anatomique ancienne de la peau",
+        "fichier": "sciences01-q13.jpg",
+        "auteur": "https://www.scientificanimations.com/",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:3D_medical_animation_skin_layers.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/f0/3D_medical_animation_skin_layers.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "sciences01-q14",
+      "titre": "Donneur universel",
+      "categorie": "Médecine",
+      "difficulte": "difficile",
+      "question": "Quel groupe sanguin est dit « donneur universel » pour les globules rouges ?",
+      "indices": [
+        "Ses globules rouges ne portent ni l’antigène A, ni l’antigène B.",
+        "Ils ne portent pas non plus l’antigène Rhésus."
+      ],
+      "reponse": "Le groupe O négatif.",
+      "reponse_courte": "O négatif",
+      "distracteurs": [
+        "AB positif",
+        "A positif",
+        "B négatif"
+      ],
+      "variantes_acceptees": [
+        "o négatif",
+        "o-",
+        "o moins"
+      ],
+      "explication": "Faute d’antigènes A, B et Rhésus, les globules rouges O négatif sont tolérés par presque tous les receveurs : on les utilise en urgence, avant de connaître le groupe du blessé. Le groupe AB positif, lui, est « receveur universel ».",
+      "anecdote": "Les groupes sanguins A, B et O ont été découverts en 1901 par le médecin autrichien Karl Landsteiner.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "poches de sang pour transfusion",
+        "fichier": "sciences01-q14.jpg",
+        "auteur": "Ufficio Comunicazione, Azienda Ospedaliera SS. Antonio e Biagio e Cesare Arrigo, Alessandria, Biblioteca Biomedica Centro di Documentazione",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Antonio_e_Biagio_e_Cesare_Arrigo_Blood_Bags.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/38/Antonio_e_Biagio_e_Cesare_Arrigo_Blood_Bags.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "sciences01-q15",
+      "titre": "Le nombre pi",
+      "categorie": "Mathématiques",
+      "difficulte": "facile",
+      "question": "Quelle est la valeur approchée du nombre pi ?",
+      "indices": [
+        "Ses décimales ne s’arrêtent jamais et ne se répètent pas.",
+        "Il permet de calculer le périmètre d’un cercle à partir de son diamètre."
+      ],
+      "reponse": "Environ 3,14.",
+      "reponse_courte": "3,14",
+      "distracteurs": [
+        "2,71",
+        "1,61",
+        "1,41"
+      ],
+      "variantes_acceptees": [
+        "3,14",
+        "3.14",
+        "3,1416"
+      ],
+      "explication": "Pi est le rapport entre la circonférence d’un cercle et son diamètre, quel que soit le cercle. Ses décimales ne suivent aucun motif qui se répète. Les autres valeurs proposées sont d’autres nombres célèbres : e, le nombre d’or et la racine de 2.",
+      "anecdote": "Le 14 mars, noté 3/14 en anglais, est fêté comme la « journée de pi ».",
+      "image": {
+        "statut": "verifie",
+        "recherche": "cercle tracé au compas avec son diamètre",
+        "fichier": "sciences01-q15.jpg",
+        "auteur": "Rama",
+        "licence": "CC BY-SA 3.0 fr",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Quarter_circle_compass-MHS_1889-IMG_3832-white.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/19/Quarter_circle_compass-MHS_1889-IMG_3832-white.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0 fr",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en"
+      }
+    },
+    {
+      "id": "sciences01-q16",
+      "titre": "Pythagore",
+      "categorie": "Mathématiques",
+      "difficulte": "facile",
+      "question": "Quel savant grec a donné son nom au théorème du triangle rectangle ?",
+      "indices": [
+        "Le carré de l’hypoténuse est égal à la somme des carrés des deux autres côtés.",
+        "Il a fondé une école de pensée à Crotone, en Italie du Sud."
+      ],
+      "reponse": "Pythagore.",
+      "reponse_courte": "Pythagore",
+      "distracteurs": [
+        "Thalès",
+        "Euclide",
+        "Archimède"
+      ],
+      "variantes_acceptees": [
+        "pythagore"
+      ],
+      "explication": "Le théorème de Pythagore relie les longueurs des trois côtés d’un triangle rectangle. Il sert à calculer une distance, à vérifier un angle droit, et il est utilisé en architecture comme en navigation.",
+      "anecdote": "Des tablettes babyloniennes montrent que cette relation était connue plus d’un millénaire avant Pythagore.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "triangle rectangle et carrés sur ses côtés",
+        "fichier": "sciences01-q16.jpg",
+        "auteur": "Auteur inconnu",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Pythagoras_in_the_Roman_Forum,_Colosseum.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Pythagoras_in_the_Roman_Forum%2C_Colosseum.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "sciences01-q17",
+      "titre": "Archimède",
+      "categorie": "Grands savants",
+      "difficulte": "facile",
+      "question": "Quel savant grec se serait écrié « Eurêka ! » en sortant de son bain ?",
+      "indices": [
+        "Il vivait à Syracuse, en Sicile.",
+        "Il devait vérifier si une couronne était en or pur."
+      ],
+      "reponse": "Archimède.",
+      "reponse_courte": "Archimède",
+      "distracteurs": [
+        "Pythagore",
+        "Euclide",
+        "Aristote"
+      ],
+      "variantes_acceptees": [
+        "archimède"
+      ],
+      "explication": "Selon Vitruve, qui écrit deux siècles plus tard, Archimède comprit dans son bain qu’un corps plongé dans l’eau en déplace un volume égal au sien : il put ainsi comparer la couronne à un lingot d’or de même masse. L’anecdote est douteuse, mais Archimède a bien énoncé, dans un traité, le principe de la poussée qui porte son nom.",
+      "anecdote": "Il aurait aussi conçu des machines de guerre pour défendre Syracuse contre les Romains.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "gravure ancienne d’Archimède dans son bain",
+        "fichier": "sciences01-q17.jpg",
+        "auteur": "Max Karl Baldamus",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Archimede_(Ritratto).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Archimede_%28Ritratto%29.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "sciences01-q18",
+      "titre": "Le zéro",
+      "categorie": "Mathématiques",
+      "difficulte": "facile",
+      "question": "Quel nombre sépare les nombres positifs des nombres négatifs ?",
+      "indices": [
+        "Il est arrivé tardivement en Europe, venu de l’Inde par le monde arabe.",
+        "Diviser par lui n’a pas de sens."
+      ],
+      "reponse": "Zéro.",
+      "reponse_courte": "Zéro",
+      "distracteurs": [
+        "Un",
+        "Moins un",
+        "L’infini"
+      ],
+      "variantes_acceptees": [
+        "zéro",
+        "0"
+      ],
+      "explication": "Le zéro sert à la fois de chiffre, pour noter les positions (dans 105 par exemple), et de nombre à part entière. Les mathématiciens indiens l’ont utilisé comme nombre dès le VIIe siècle. En France, par convention, on le dit d’ailleurs à la fois positif et négatif.",
+      "anecdote": "Les chiffres que nous utilisons sont dits « arabes », mais ils sont nés en Inde.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "chiffres anciens gravés",
+        "fichier": "sciences01-q18.jpg",
+        "auteur": "DLR",
+        "licence": "CC BY 3.0 de",
+        "url_page": "https://commons.wikimedia.org/wiki/File:A310_ZERO_G.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/11/A310_ZERO_G.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "CC BY 3.0 de",
+        "licence_url": "https://creativecommons.org/licenses/by/3.0/de/deed.en"
+      }
+    },
+    {
+      "id": "sciences01-q19",
+      "titre": "Le téléphone",
+      "categorie": "Inventions",
+      "difficulte": "moyenne",
+      "question": "À qui attribue-t-on l’invention du téléphone, brevetée en 1876 ?",
+      "indices": [
+        "Il était né en Écosse et enseignait aux personnes sourdes.",
+        "Sa première phrase au téléphone aurait été adressée à son assistant, Watson."
+      ],
+      "reponse": "Alexander Graham Bell.",
+      "reponse_courte": "Alexander Graham Bell",
+      "distracteurs": [
+        "Thomas Edison",
+        "Guglielmo Marconi",
+        "Nikola Tesla"
+      ],
+      "variantes_acceptees": [
+        "graham bell",
+        "bell",
+        "alexander graham bell"
+      ],
+      "explication": "Bell dépose son brevet en 1876, le même jour qu’une demande proche d’Elisha Gray. Le téléphone transforme la voix en signal électrique, puis de nouveau en son à l’autre bout du fil.",
+      "anecdote": "L’Italien Antonio Meucci avait conçu un appareil semblable plus tôt ; la Chambre des représentants des États-Unis a salué son rôle en 2002.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "téléphone ancien en bois",
+        "fichier": "sciences01-q19.jpg",
+        "auteur": "Auteur inconnu",
+        "licence": "CC0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Alexander_Graham_Bell_1895_NPG_77_363.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Alexander_Graham_Bell_1895_NPG_77_363.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "sciences01-q20",
+      "titre": "L’ampoule électrique",
+      "categorie": "Inventions",
+      "difficulte": "moyenne",
+      "question": "Quel inventeur américain a mis au point une ampoule électrique durable, vers 1879 ?",
+      "indices": [
+        "Il a aussi inventé le phonographe.",
+        "Son laboratoire se trouvait à Menlo Park, dans le New Jersey."
+      ],
+      "reponse": "Thomas Edison.",
+      "reponse_courte": "Thomas Edison",
+      "distracteurs": [
+        "Nikola Tesla",
+        "Benjamin Franklin",
+        "Alexander Graham Bell"
+      ],
+      "variantes_acceptees": [
+        "edison",
+        "thomas edison"
+      ],
+      "explication": "Edison n’a pas inventé l’éclairage électrique, mais il a mis au point une ampoule à filament de carbone qui durait longtemps, et tout un système pour produire et distribuer l’électricité. L’Anglais Joseph Swan travaillait en même temps sur une ampoule semblable.",
+      "anecdote": "Il a déposé plus de mille brevets au cours de sa vie.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "ampoule ancienne à filament de carbone",
+        "fichier": "sciences01-q20.jpg",
+        "auteur": "Pfnicholls",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Filament_Lamp.JPG",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/5/59/Filament_Lamp.JPG",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "sciences01-q21",
+      "titre": "Le paratonnerre",
+      "categorie": "Inventions",
+      "difficulte": "moyenne",
+      "question": "Quel objet Benjamin Franklin a-t-il inventé après ses expériences sur la foudre ?",
+      "indices": [
+        "Il est relié au sol par un câble métallique.",
+        "On le fixe au sommet des bâtiments."
+      ],
+      "reponse": "Le paratonnerre.",
+      "reponse_courte": "Le paratonnerre",
+      "distracteurs": [
+        "L’ampoule",
+        "La pile électrique",
+        "Le télégraphe"
+      ],
+      "variantes_acceptees": [
+        "paratonnerre"
+      ],
+      "explication": "Les expériences proposées par Franklin ont montré que la foudre est un phénomène électrique. Une tige métallique placée en hauteur et reliée à la terre offre à la foudre un chemin sans danger, qui protège le bâtiment. D’autres, comme le Tchèque Prokop Diviš, ont eu des idées proches à la même époque.",
+      "anecdote": "On lui attribue aussi les lunettes à double foyer, sans preuve certaine.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "paratonnerre au sommet d’un clocher",
+        "fichier": "sciences01-q21.jpg",
+        "auteur": "Amakuha",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Emmanuel_United_Church,_Odessa,_ON_-_2025_-_7.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/66/Emmanuel_United_Church%2C_Odessa%2C_ON_-_2025_-_7.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "sciences01-q22",
+      "titre": "Le magma",
+      "categorie": "Géologie",
+      "difficulte": "difficile",
+      "question": "Comment appelle-t-on la roche en fusion qui se trouve sous la surface de la Terre ?",
+      "indices": [
+        "Quand elle sort d’un volcan, on lui donne un autre nom.",
+        "En refroidissant lentement en profondeur, elle peut former du granite."
+      ],
+      "reponse": "Le magma.",
+      "reponse_courte": "Le magma",
+      "distracteurs": [
+        "La lave",
+        "Le basalte",
+        "Le granite"
+      ],
+      "variantes_acceptees": [
+        "magma"
+      ],
+      "explication": "Le magma est un mélange de roche fondue, de gaz et de cristaux. Quand il atteint la surface lors d’une éruption, on l’appelle lave. Refroidi vite, il donne des roches comme le basalte ; refroidi lentement en profondeur, du granite.",
+      "anecdote": "Le Piton de la Fournaise, à La Réunion, est l’un des volcans les plus actifs du monde.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "coulée de lave incandescente",
+        "fichier": "sciences01-q22.jpg",
+        "auteur": "Giles Laurent",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:001_Volcano_eruption_of_Litli-Hr%C3%BAtur_in_Iceland_in_2023_Photo_by_Giles_Laurent.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/04/001_Volcano_eruption_of_Litli-Hr%C3%BAtur_in_Iceland_in_2023_Photo_by_Giles_Laurent.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "sciences01-q23",
+      "titre": "Le diamant",
+      "categorie": "Géologie",
+      "difficulte": "facile",
+      "question": "Quel est le minéral naturel le plus dur ?",
+      "indices": [
+        "Il est fait uniquement de carbone.",
+        "Il occupe la note 10 sur l’échelle de Mohs."
+      ],
+      "reponse": "Le diamant.",
+      "reponse_courte": "Le diamant",
+      "distracteurs": [
+        "Le quartz",
+        "Le rubis",
+        "Le granite"
+      ],
+      "variantes_acceptees": [
+        "diamant",
+        "le diamant"
+      ],
+      "explication": "Le diamant se forme à plus de 150 km de profondeur, sous une pression et une chaleur énormes, puis remonte avec certains magmas. Sa dureté en fait aussi un outil pour couper et polir.",
+      "anecdote": "Le graphite des mines de crayon est fait du même élément, mais ses atomes sont arrangés autrement.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "diamant brut dans sa roche",
+        "fichier": "sciences01-q23.jpg",
+        "auteur": "James St. John",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Diamonds,_State_Line_Kimberlite_Field,_Colorado-Wyoming.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Diamonds%2C_State_Line_Kimberlite_Field%2C_Colorado-Wyoming.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "sciences01-q24",
+      "titre": "L’arc-en-ciel",
+      "categorie": "Physique",
+      "difficulte": "moyenne",
+      "question": "Qu’est-ce qui crée un arc-en-ciel ?",
+      "indices": [
+        "On le voit quand on a le Soleil dans le dos et la pluie devant soi.",
+        "Chaque couleur est déviée selon un angle légèrement différent."
+      ],
+      "reponse": "La lumière du Soleil décomposée par les gouttes de pluie.",
+      "reponse_courte": "La lumière décomposée par les gouttes",
+      "distracteurs": [
+        "Le reflet de la mer sur les nuages",
+        "La foudre",
+        "La pollution de l’air"
+      ],
+      "variantes_acceptees": [
+        "la lumière décomposée par les gouttes",
+        "décomposition de la lumière",
+        "réfraction de la lumière"
+      ],
+      "explication": "En entrant dans une goutte, la lumière blanche est déviée et se décompose en couleurs, comme dans un prisme, puis elle se réfléchit au fond de la goutte avant d’en ressortir. On voit l’arc à environ 42° de la direction opposée au Soleil.",
+      "anecdote": "Newton a fixé à sept le nombre de couleurs, en partie par analogie avec les sept notes de la gamme.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "arc-en-ciel au-dessus d’un paysage",
+        "fichier": "sciences01-q24.jpg",
+        "auteur": "Wing-Chi Poon",
+        "licence": "CC BY-SA 2.5",
+        "url_page": "https://commons.wikimedia.org/wiki/File:WhereRainbowRises.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/27/WhereRainbowRises.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 2.5",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.5"
+      }
+    },
+    {
+      "id": "sciences01-q25",
+      "titre": "L’éclair et le tonnerre",
+      "categorie": "Physique",
+      "difficulte": "facile",
+      "question": "Pourquoi voit-on l’éclair avant d’entendre le tonnerre ?",
+      "indices": [
+        "Le son parcourt environ un kilomètre en trois secondes.",
+        "Le premier signal, lui, nous parvient presque instantanément."
+      ],
+      "reponse": "La lumière va bien plus vite que le son.",
+      "reponse_courte": "La lumière va plus vite que le son",
+      "distracteurs": [
+        "L’éclair se produit d’abord",
+        "La pluie arrête le son",
+        "Nos yeux réagissent plus vite"
+      ],
+      "variantes_acceptees": [
+        "la lumière va plus vite que le son",
+        "vitesse de la lumière"
+      ],
+      "explication": "L’éclair et le tonnerre se produisent en même temps, mais le son voyage à environ 340 mètres par seconde dans l’air. En comptant les secondes entre les deux et en divisant par trois, on obtient la distance de l’orage en kilomètres.",
+      "anecdote": "Le tonnerre vient de l’air brutalement chauffé par l’éclair, jusqu’à près de 30 000 °C.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "éclair dans un ciel d’orage",
+        "fichier": "sciences01-q25.jpg",
+        "auteur": "Maxime Raynal from France",
+        "licence": "CC BY 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Port_and_lighthouse_overnight_storm_with_lightning_in_Port-la-Nouvelle.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Port_and_lighthouse_overnight_storm_with_lightning_in_Port-la-Nouvelle.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    }
+  ]
+}

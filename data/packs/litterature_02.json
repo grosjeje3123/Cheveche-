@@ -1,0 +1,563 @@
+{
+  "pack": {
+    "id": "litterature_02",
+    "titre": "Pack Littérature n° 2",
+    "premier_numero": 616,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Romans": "Littérature",
+      "Théâtre": "Littérature",
+      "Contes et fables": "Littérature",
+      "Poésie": "Littérature"
+    }
+  },
+  "questions": [
+    {
+      "id": "litterature02-q01",
+      "titre": "Madame Bovary",
+      "categorie": "Romans",
+      "difficulte": "moyenne",
+      "question": "Qui a écrit Madame Bovary ?",
+      "indices": [
+        "Il était normand, né à Rouen.",
+        "Le roman lui a valu un procès pour atteinte aux bonnes mœurs, en 1857."
+      ],
+      "reponse": "Gustave Flaubert.",
+      "reponse_courte": "Gustave Flaubert",
+      "distracteurs": [
+        "Guy de Maupassant",
+        "Stendhal",
+        "Émile Zola"
+      ],
+      "variantes_acceptees": [
+        "flaubert",
+        "gustave flaubert"
+      ],
+      "explication": "Madame Bovary raconte les rêves déçus d’Emma, épouse d’un médecin de campagne, qui cherche dans les romans et l’adultère une vie plus exaltante. Flaubert, qui travaillait chaque phrase pendant des heures, fut acquitté à son procès.",
+      "anecdote": "On lui prête la phrase « Madame Bovary, c’est moi », qu’il n’a sans doute jamais écrite.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "portrait photographique de Gustave Flaubert",
+        "fichier": "litterature02-q01.jpg",
+        "auteur": "Scanning Dmitry Makeev, scan date - 2019 year.",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Photographs_of_Gustave_Flaubert_by_Nadar.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Photographs_of_Gustave_Flaubert_by_Nadar.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature02-q02",
+      "titre": "Germinal",
+      "categorie": "Romans",
+      "difficulte": "facile",
+      "question": "Quel écrivain a écrit Germinal, roman de la série des Rougon-Macquart ?",
+      "indices": [
+        "Le roman se déroule dans les mines du Nord.",
+        "Il a aussi publié « J’accuse… ! » pour défendre le capitaine Dreyfus."
+      ],
+      "reponse": "Émile Zola.",
+      "reponse_courte": "Émile Zola",
+      "distracteurs": [
+        "Honoré de Balzac",
+        "Victor Hugo",
+        "Guy de Maupassant"
+      ],
+      "variantes_acceptees": [
+        "zola",
+        "émile zola"
+      ],
+      "explication": "Les Rougon-Macquart comptent vingt romans qui suivent une famille sous le Second Empire. Dans Germinal (1885), Zola raconte une grève de mineurs dans le bassin houiller du Nord, d’après une documentation minutieuse.",
+      "anecdote": "Pour l’écrire, Zola est allé observer la grève des mineurs d’Anzin, en 1884, et il est descendu dans une mine.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "chevalement de mine du bassin minier du Nord",
+        "fichier": "litterature02-q02.jpg",
+        "auteur": "Pierre André Leclercq",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Chevalement_du_puits_n%C2%B0_8_de_la_fosse_n%C2%B0_8_-_8_bis_des_mines_de_Dourges_(bis)_(1).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/61/Chevalement_du_puits_n%C2%B0_8_de_la_fosse_n%C2%B0_8_-_8_bis_des_mines_de_Dourges_%28bis%29_%281%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "litterature02-q03",
+      "titre": "La Comédie humaine",
+      "categorie": "Romans",
+      "difficulte": "moyenne",
+      "question": "Quel romancier a réuni ses œuvres sous le titre La Comédie humaine, avec Le Père Goriot ?",
+      "indices": [
+        "Son œuvre compte près d’une centaine de romans et de nouvelles.",
+        "Il buvait, dit-on, des quantités de café pour écrire la nuit."
+      ],
+      "reponse": "Honoré de Balzac.",
+      "reponse_courte": "Honoré de Balzac",
+      "distracteurs": [
+        "Stendhal",
+        "Gustave Flaubert",
+        "Alexandre Dumas"
+      ],
+      "variantes_acceptees": [
+        "balzac",
+        "honoré de balzac"
+      ],
+      "explication": "Balzac voulait peindre toute la société française de son temps. Ses personnages reviennent d’un roman à l’autre, comme Eugène de Rastignac, jeune provincial ambitieux venu conquérir Paris.",
+      "anecdote": "Sa maison de Passy, à Paris, où il a travaillé plusieurs années, est devenue un musée.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "maison de Balzac à Paris",
+        "fichier": "litterature02-q03.jpg",
+        "auteur": "Celette",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Maison_de_Balzac,_Paris_16e.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Maison_de_Balzac%2C_Paris_16e.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "litterature02-q04",
+      "titre": "Le Rouge et le Noir",
+      "categorie": "Romans",
+      "difficulte": "moyenne",
+      "question": "Qui a écrit Le Rouge et le Noir ?",
+      "indices": [
+        "Le héros, Julien Sorel, est un jeune homme ambitieux, fils de charpentier.",
+        "Son véritable nom était Henri Beyle."
+      ],
+      "reponse": "Stendhal.",
+      "reponse_courte": "Stendhal",
+      "distracteurs": [
+        "Honoré de Balzac",
+        "Gustave Flaubert",
+        "François-René de Chateaubriand"
+      ],
+      "variantes_acceptees": [
+        "stendhal",
+        "henri beyle"
+      ],
+      "explication": "Publié en 1830, le roman suit l’ascension et la chute de Julien Sorel, précepteur puis secrétaire, dans la France de la Restauration. Le titre opposerait l’armée (le rouge) et l’Église (le noir), deux voies pour réussir.",
+      "anecdote": "Il a donné son nom au « syndrome de Stendhal », malaise ressenti devant la beauté des œuvres d’art, qu’il décrit après une visite à Florence.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "portrait de Stendhal",
+        "fichier": "litterature02-q04.jpg",
+        "auteur": "Olof Södermark",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Stendhal.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Stendhal.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature02-q05",
+      "titre": "Phèdre",
+      "categorie": "Théâtre",
+      "difficulte": "difficile",
+      "question": "Quelle tragédie de Racine raconte l’amour coupable d’une reine pour son beau-fils ?",
+      "indices": [
+        "La pièce a été créée en 1677.",
+        "La reine est l’épouse de Thésée, et elle aime Hippolyte."
+      ],
+      "reponse": "Phèdre.",
+      "reponse_courte": "Phèdre",
+      "distracteurs": [
+        "Andromaque",
+        "Britannicus",
+        "Bérénice"
+      ],
+      "variantes_acceptees": [
+        "phèdre"
+      ],
+      "explication": "Racine reprend un sujet de la tragédie antique : Phèdre, consumée par une passion qu’elle condamne, accuse Hippolyte, ce qui cause sa perte. La pièce, en alexandrins, est l’un des sommets de la tragédie classique française.",
+      "anecdote": "Après Phèdre, Racine cesse presque d’écrire pour le théâtre et devient historiographe de Louis XIV.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "portrait de Jean Racine",
+        "fichier": "litterature02-q05.jpg",
+        "auteur": "Jean-Baptiste Racine",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Racine_par_Jean-Baptiste_Racine_1.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/01/Racine_par_Jean-Baptiste_Racine_1.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature02-q06",
+      "titre": "Le Cid",
+      "categorie": "Théâtre",
+      "difficulte": "moyenne",
+      "question": "Quel auteur a écrit Le Cid, créé en 1637 ?",
+      "indices": [
+        "Le héros, Rodrigue, doit choisir entre son amour et l’honneur de sa famille.",
+        "Ce dilemme a donné une expression : un « choix cornélien »."
+      ],
+      "reponse": "Pierre Corneille.",
+      "reponse_courte": "Pierre Corneille",
+      "distracteurs": [
+        "Jean Racine",
+        "Molière",
+        "Marivaux"
+      ],
+      "variantes_acceptees": [
+        "corneille",
+        "pierre corneille"
+      ],
+      "explication": "Pour venger son père, Rodrigue doit affronter le père de Chimène, la femme qu’il aime. Le succès du Cid est immense, mais la pièce, qui ne respecte pas toutes les règles du théâtre classique, est vivement critiquée.",
+      "anecdote": "La querelle du Cid fut telle que l’Académie française, fondée peu avant, dut rendre un avis sur la pièce.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "portrait de Pierre Corneille",
+        "fichier": "litterature02-q06.jpg",
+        "auteur": "Giogo",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_Pierre_Corneille_(Rouen)_-_Pierre_Corneille_(pr%C3%A9sum%C3%A9).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/29/Mus%C3%A9e_Pierre_Corneille_%28Rouen%29_-_Pierre_Corneille_%28pr%C3%A9sum%C3%A9%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "litterature02-q07",
+      "titre": "Hansel et Gretel",
+      "categorie": "Contes et fables",
+      "difficulte": "facile",
+      "question": "Quel conte de Grimm met en scène deux enfants abandonnés qui trouvent une maison en pain d’épice ?",
+      "indices": [
+        "Une sorcière y attire les enfants pour les manger.",
+        "Ils sèment des cailloux blancs pour retrouver le chemin de la maison."
+      ],
+      "reponse": "Hansel et Gretel.",
+      "reponse_courte": "Hansel et Gretel",
+      "distracteurs": [
+        "Le Petit Poucet",
+        "Blanche-Neige",
+        "Le Petit Chaperon rouge"
+      ],
+      "variantes_acceptees": [
+        "hansel et gretel",
+        "hänsel et gretel"
+      ],
+      "explication": "Les frères Jacob et Wilhelm Grimm ont recueilli et publié ce conte populaire allemand en 1812, dans leurs Contes de l’enfance et du foyer. Gretel finit par pousser la sorcière dans le four et libère son frère.",
+      "anecdote": "Les frères Grimm étaient aussi linguistes : ils ont commencé un immense dictionnaire de la langue allemande.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "illustration ancienne de Hansel et Gretel",
+        "fichier": "litterature02-q07.jpg",
+        "auteur": "Sue Clark Malcom McGregor Jamieson",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Hansel_and_Gretel.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Hansel_and_Gretel.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature02-q08",
+      "titre": "Andersen",
+      "categorie": "Contes et fables",
+      "difficulte": "facile",
+      "question": "Quel écrivain danois a écrit La Petite Sirène et Le Vilain Petit Canard ?",
+      "indices": [
+        "Il est né à Odense, en 1805.",
+        "Une statue de son héroïne marine est devenue un symbole de Copenhague."
+      ],
+      "reponse": "Hans Christian Andersen.",
+      "reponse_courte": "Hans Christian Andersen",
+      "distracteurs": [
+        "Charles Perrault",
+        "Jacob Grimm",
+        "Lewis Carroll"
+      ],
+      "variantes_acceptees": [
+        "andersen",
+        "hans christian andersen"
+      ],
+      "explication": "Contrairement aux frères Grimm, qui recueillaient des contes populaires, Andersen a surtout inventé les siens. Ils mêlent merveilleux et mélancolie, comme La Petite Fille aux allumettes ou La Reine des neiges.",
+      "anecdote": "Sa date de naissance, le 2 avril, a été choisie comme Journée internationale du livre pour enfants.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Un portrait photographique d’Andersen (XIXe siècle, domaine public)",
+        "fichier": "litterature02-q08.jpg",
+        "auteur": "Franz Hanfstaengl",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Hans_Christian_Andersen_2.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Hans_Christian_Andersen_2.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature02-q09",
+      "titre": "1984",
+      "categorie": "Romans",
+      "difficulte": "moyenne",
+      "question": "Quel auteur a écrit 1984, roman où « Big Brother vous regarde » ?",
+      "indices": [
+        "Il a aussi écrit La Ferme des animaux.",
+        "Son vrai nom était Eric Arthur Blair."
+      ],
+      "reponse": "George Orwell.",
+      "reponse_courte": "George Orwell",
+      "distracteurs": [
+        "Aldous Huxley",
+        "Ray Bradbury",
+        "H. G. Wells"
+      ],
+      "variantes_acceptees": [
+        "orwell",
+        "george orwell"
+      ],
+      "explication": "Publié en 1949, 1984 décrit une société totalitaire qui surveille chaque citoyen, réécrit le passé et appauvrit la langue, la « novlangue », pour empêcher de penser. Le roman a fait entrer « Big Brother » dans le langage courant.",
+      "anecdote": "Selon une explication souvent avancée, le titre viendrait de l’inversion des deux derniers chiffres de 1948, l’année où il l’a achevé.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "photographie de George Orwell",
+        "fichier": "litterature02-q09.jpg",
+        "auteur": "Branch of the National Union of Journalists (BNUJ).",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:George_Orwell_press_photo.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/7/7e/George_Orwell_press_photo.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature02-q10",
+      "titre": "Ronsard",
+      "categorie": "Poésie",
+      "difficulte": "difficile",
+      "question": "Quel poète a écrit « Mignonne, allons voir si la rose… » ?",
+      "indices": [
+        "Il était l’un des poètes de la Pléiade, au XVIe siècle.",
+        "Le poème invite une jeune femme à profiter de sa jeunesse."
+      ],
+      "reponse": "Pierre de Ronsard.",
+      "reponse_courte": "Pierre de Ronsard",
+      "distracteurs": [
+        "Joachim du Bellay",
+        "Clément Marot",
+        "François Villon"
+      ],
+      "variantes_acceptees": [
+        "ronsard",
+        "pierre de ronsard"
+      ],
+      "explication": "Dans cette ode, Ronsard compare la beauté de la jeune femme à une rose qui fane en un jour, pour l’inviter à cueillir sa jeunesse : c’est le thème antique du carpe diem.",
+      "anecdote": "Devenu en partie sourd jeune homme, il renonce à la carrière de diplomate et se consacre aux lettres.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "rose épanouie dans un jardin",
+        "fichier": "litterature02-q10.jpg",
+        "auteur": "JLPC",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Rose_P_de_Ronsard_FR_2014.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/9/94/Rose_P_de_Ronsard_FR_2014.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "litterature02-q11",
+      "titre": "Verlaine",
+      "categorie": "Poésie",
+      "difficulte": "difficile",
+      "question": "Quel poète a écrit « Les sanglots longs des violons de l’automne » ?",
+      "indices": [
+        "Le poème s’intitule « Chanson d’automne ».",
+        "Il a eu une relation tumultueuse avec Arthur Rimbaud."
+      ],
+      "reponse": "Paul Verlaine.",
+      "reponse_courte": "Paul Verlaine",
+      "distracteurs": [
+        "Arthur Rimbaud",
+        "Charles Baudelaire",
+        "Guillaume Apollinaire"
+      ],
+      "variantes_acceptees": [
+        "verlaine",
+        "paul verlaine"
+      ],
+      "explication": "« Chanson d’automne » paraît en 1866 dans les Poèmes saturniens, le premier recueil de Verlaine. Sa musicalité est typique de son art : « De la musique avant toute chose », écrira-t-il plus tard.",
+      "anecdote": "Début juin 1944, la BBC a diffusé ces vers pour annoncer à la Résistance l’imminence du Débarquement.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "photographie de Paul Verlaine",
+        "fichier": "litterature02-q11.jpg",
+        "auteur": "Otto Wegener",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Profile_portrait_of_Paul_Verlaine_by_Otto_Wegener.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Profile_portrait_of_Paul_Verlaine_by_Otto_Wegener.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature02-q12",
+      "titre": "Rabelais",
+      "categorie": "Romans",
+      "difficulte": "moyenne",
+      "question": "Quel écrivain a créé les géants Gargantua et Pantagruel ?",
+      "indices": [
+        "Il était aussi médecin, au XVIe siècle.",
+        "Ses géants ont donné l’adjectif « pantagruélique »."
+      ],
+      "reponse": "François Rabelais.",
+      "reponse_courte": "François Rabelais",
+      "distracteurs": [
+        "Michel de Montaigne",
+        "Voltaire",
+        "Jean de La Fontaine"
+      ],
+      "variantes_acceptees": [
+        "rabelais",
+        "françois rabelais"
+      ],
+      "explication": "Sous couvert de récits comiques et démesurés, Rabelais défend les idées humanistes : le goût du savoir, une éducation nouvelle, la critique des abus de son temps. Ses livres furent condamnés par la Sorbonne.",
+      "anecdote": "L’abbaye de Thélème, imaginée dans Gargantua, a pour seule règle « Fais ce que voudras ».",
+      "image": {
+        "statut": "verifie",
+        "recherche": "gravure de Gustave Doré pour Gargantua",
+        "fichier": "litterature02-q12.jpg",
+        "auteur": "Gustave Doré",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Gustave_Dor%C3%A9_-_Gargantua.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/b/be/Gustave_Dor%C3%A9_-_Gargantua.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature02-q13",
+      "titre": "Candide",
+      "categorie": "Romans",
+      "difficulte": "difficile",
+      "question": "Quel conte philosophique de Voltaire se termine par « il faut cultiver notre jardin » ?",
+      "indices": [
+        "Le héros suit son maître Pangloss, pour qui tout est au mieux.",
+        "Le livre paraît en 1759."
+      ],
+      "reponse": "Candide.",
+      "reponse_courte": "Candide",
+      "distracteurs": [
+        "Zadig",
+        "Micromégas",
+        "L’Ingénu"
+      ],
+      "variantes_acceptees": [
+        "candide",
+        "candide ou l'optimisme"
+      ],
+      "explication": "Chassé du château où il a grandi, Candide traverse guerres, naufrages et tremblement de terre, qui contredisent l’optimisme de Pangloss. Voltaire y raille la philosophie selon laquelle tout serait pour le mieux dans le meilleur des mondes.",
+      "anecdote": "Voltaire l’a publié sous un faux nom, celui d’un « docteur Ralph » ; le livre s’est pourtant vendu à six mille exemplaires en un mois.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "portrait de Voltaire",
+        "fichier": "litterature02-q13.jpg",
+        "auteur": "Maurice-Quentin de La Tour",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Portrait_of_Voltaire_(Maurice_Quentin_de_La_Tour)_-_Nationalmuseum_-_25891.tif",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Portrait_of_Voltaire_%28Maurice_Quentin_de_La_Tour%29_-_Nationalmuseum_-_25891.tif",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature02-q14",
+      "titre": "L’Île au trésor",
+      "categorie": "Romans",
+      "difficulte": "facile",
+      "question": "Quel roman de Robert Louis Stevenson raconte la quête d’un trésor caché par des pirates ?",
+      "indices": [
+        "Le jeune héros s’appelle Jim Hawkins.",
+        "Le pirate unijambiste Long John Silver en est un personnage célèbre."
+      ],
+      "reponse": "L’Île au trésor.",
+      "reponse_courte": "L’Île au trésor",
+      "distracteurs": [
+        "Robinson Crusoé",
+        "Moby Dick",
+        "Vingt mille lieues sous les mers"
+      ],
+      "variantes_acceptees": [
+        "l'île au trésor",
+        "île au trésor"
+      ],
+      "explication": "Publié en 1883, le roman a fixé pour longtemps l’image des pirates : carte au trésor, jambe de bois, perroquet sur l’épaule et coffre enterré sur une île.",
+      "anecdote": "La carte de l’île a été dessinée avant le roman, pour amuser le beau-fils de Stevenson.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "carte ancienne d’une île au trésor",
+        "fichier": "litterature02-q14.jpg",
+        "auteur": "Newell Convers Wyeth",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Treasure_Island-Scribner%27s-1911.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/8/83/Treasure_Island-Scribner%27s-1911.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "litterature02-q15",
+      "titre": "L’Étranger",
+      "categorie": "Romans",
+      "difficulte": "moyenne",
+      "question": "Quel écrivain, prix Nobel en 1957, a écrit L’Étranger ?",
+      "indices": [
+        "Il est né en Algérie, en 1913.",
+        "Le héros du roman s’appelle Meursault."
+      ],
+      "reponse": "Albert Camus.",
+      "reponse_courte": "Albert Camus",
+      "distracteurs": [
+        "Jean-Paul Sartre",
+        "André Malraux",
+        "Albert Cohen"
+      ],
+      "variantes_acceptees": [
+        "camus",
+        "albert camus"
+      ],
+      "explication": "Paru en 1942, L’Étranger suit un homme indifférent aux conventions qui, après un meurtre, est jugé autant pour son attitude que pour son acte. Camus y explore le sentiment de l’absurde. Il reçoit le prix Nobel à 44 ans.",
+      "anecdote": "Il est mort dans un accident de voiture en 1960 ; le manuscrit inachevé du Premier Homme a été retrouvé près de lui.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "paysage de la côte algérienne",
+        "fichier": "litterature02-q15.jpg",
+        "auteur": "Ervin Marton (photographie) ; Barkilehet, Wikimedia Commons",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Albert_Camus_by_Ervin_Marton.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/64/Albert_Camus_by_Ervin_Marton.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ]
+}

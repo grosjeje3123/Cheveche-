@@ -1,0 +1,569 @@
+{
+  "pack": {
+    "id": "astro_02",
+    "titre": "Pack Astronomie n° 2",
+    "premier_numero": 116,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Système solaire": "Astronomie",
+      "Galaxies et Univers": "Astronomie",
+      "Étoiles": "Astronomie",
+      "Exploration spatiale": "Astronomie",
+      "Phénomènes célestes": "Astronomie"
+    }
+  },
+  "questions": [
+    {
+      "id": "astro02-q01",
+      "titre": "Saturne",
+      "categorie": "Système solaire",
+      "difficulte": "facile",
+      "question": "Quelle planète est célèbre pour ses anneaux spectaculaires, visibles avec une petite lunette ?",
+      "indices": [
+        "C’est la deuxième plus grande planète du Système solaire.",
+        "Sa densité moyenne est inférieure à celle de l’eau."
+      ],
+      "reponse": "Saturne.",
+      "reponse_courte": "Saturne",
+      "distracteurs": [
+        "Jupiter",
+        "Neptune",
+        "Mars"
+      ],
+      "variantes_acceptees": [
+        "saturne"
+      ],
+      "explication": "Les anneaux de Saturne sont faits presque entièrement de glace d’eau, avec un peu de roche, du grain de poussière au bloc de plusieurs mètres. Très larges, ils sont pourtant très minces : par endroits une dizaine de mètres seulement, au plus un kilomètre environ. Les autres planètes géantes ont aussi des anneaux, mais bien plus discrets.",
+      "anecdote": "En 1610, Galilée les prit pour deux grosses lunes collées à la planète ; Christiaan Huygens comprit dans les années 1650 qu’il s’agissait d’un anneau.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Saturne et ses anneaux photographiés par la sonde Cassini",
+        "fichier": "astro02-q01.jpg",
+        "auteur": "NASA/JPL/Space Science Institute",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Saturn_from_Cassini_Orbiter_(2004-10-06).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Saturn_from_Cassini_Orbiter_%282004-10-06%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro02-q02",
+      "titre": "Vénus",
+      "categorie": "Système solaire",
+      "difficulte": "facile",
+      "question": "Quelle planète, souvent appelée « l’étoile du Berger », brille le soir ou le matin près de l’horizon ?",
+      "indices": [
+        "Elle tourne sur elle-même dans le sens inverse de la plupart des planètes.",
+        "Après la Lune, c’est l’astre le plus brillant du ciel nocturne."
+      ],
+      "reponse": "Vénus.",
+      "reponse_courte": "Vénus",
+      "distracteurs": [
+        "Mars",
+        "Jupiter",
+        "Sirius"
+      ],
+      "variantes_acceptees": [
+        "vénus",
+        "venus"
+      ],
+      "explication": "Vénus est couverte d’épais nuages qui renvoient beaucoup de lumière. Plus proche du Soleil que la Terre, elle ne s’en écarte jamais beaucoup dans le ciel : on la voit donc peu après le coucher du Soleil ou peu avant son lever.",
+      "anecdote": "Sur Vénus, un tour sur elle-même dure plus longtemps qu’une année : environ 243 jours terrestres, contre 225 pour faire le tour du Soleil.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Vénus brillant dans le ciel du soir",
+        "fichier": "astro02-q02.jpg",
+        "auteur": "Sandro Botticelli",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_046.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Sandro_Botticelli_046.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro02-q03",
+      "titre": "Horizon des événements",
+      "categorie": "Galaxies et Univers",
+      "difficulte": "difficile",
+      "question": "Comment s’appelle la limite autour d’un trou noir au-delà de laquelle rien ne peut revenir ?",
+      "indices": [
+        "Même la lumière qui la franchit ne peut plus en ressortir.",
+        "Un réseau mondial de radiotélescopes porte son nom en anglais, Event Horizon."
+      ],
+      "reponse": "L’horizon des événements.",
+      "reponse_courte": "L’horizon des événements",
+      "distracteurs": [
+        "La ceinture de Kuiper",
+        "L’héliopause",
+        "La limite de Roche"
+      ],
+      "variantes_acceptees": [
+        "horizon des événements",
+        "horizon des évènements",
+        "event horizon"
+      ],
+      "explication": "Autour d’un trou noir, l’attraction devient si forte qu’au-delà d’une certaine distance, rien ne peut s’échapper. En 2019, l’Event Horizon Telescope a publié la première image de l’ombre d’un trou noir, au cœur de la galaxie M87 ; en 2022, celle du trou noir du centre de la Voie lactée.",
+      "anecdote": "Pour un trou noir de la masse de la Terre, l’horizon des événements ne mesurerait qu’environ 9 millimètres de rayon.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "première image d’un trou noir, au centre de la galaxie M87",
+        "fichier": "astro02-q03.png",
+        "auteur": "852278-MCS",
+        "licence": "CC BY-SA 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Black_Hole_Full.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Black_Hole_Full.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "astro02-q04",
+      "titre": "La Grande Ourse",
+      "categorie": "Étoiles",
+      "difficulte": "facile",
+      "question": "Quel ensemble d’étoiles, en forme de casserole, aide à trouver l’étoile Polaire ?",
+      "indices": [
+        "On le voit toute l’année dans le ciel de France.",
+        "Il suffit de prolonger environ cinq fois l’écart entre les deux étoiles du bout."
+      ],
+      "reponse": "La Grande Ourse.",
+      "reponse_courte": "La Grande Ourse",
+      "distracteurs": [
+        "Orion",
+        "Cassiopée",
+        "La Croix du Sud"
+      ],
+      "variantes_acceptees": [
+        "grande ourse",
+        "la grande ourse",
+        "grand chariot",
+        "la casserole"
+      ],
+      "explication": "Les sept étoiles brillantes de la « casserole », ou Grand Chariot, font partie de la constellation de la Grande Ourse. En prolongeant le côté formé par les deux étoiles du bout de la casserole, on tombe sur l’étoile Polaire, qui indique le nord.",
+      "anecdote": "Cinq de ces sept étoiles voyagent ensemble dans l’espace : elles forment un même groupe d’étoiles.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "la Grande Ourse dans le ciel nocturne",
+        "fichier": "astro02-q04.jpg",
+        "auteur": "BreakdownDiode",
+        "licence": "CC BY-SA 3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Big_Dipper_taken_in_Yongtai_July_26,2013.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Big_Dipper_taken_in_Yongtai_July_26%2C2013.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "astro02-q05",
+      "titre": "Spoutnik",
+      "categorie": "Exploration spatiale",
+      "difficulte": "moyenne",
+      "question": "Quel a été le premier satellite artificiel, lancé en 1957 ?",
+      "indices": [
+        "Il a été lancé par l’Union soviétique.",
+        "Cette petite sphère de métal émettait de simples « bips » radio."
+      ],
+      "reponse": "Spoutnik 1.",
+      "reponse_courte": "Spoutnik 1",
+      "distracteurs": [
+        "Explorer 1",
+        "Hubble",
+        "Telstar"
+      ],
+      "variantes_acceptees": [
+        "spoutnik",
+        "spoutnik 1",
+        "sputnik"
+      ],
+      "explication": "Lancé le 4 octobre 1957, Spoutnik 1 était une sphère d’environ 58 cm et 84 kg, munie de quatre antennes. Ses signaux, captés dans le monde entier, ont lancé la course à l’espace entre les États-Unis et l’URSS.",
+      "anecdote": "Un mois plus tard, Spoutnik 2 emportait la chienne Laïka, premier animal placé en orbite.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "réplique de Spoutnik 1 dans un musée",
+        "fichier": "astro02-q05.jpg",
+        "auteur": "Soyuz235",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Sputnik_1_satellite_replica.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/07/Sputnik_1_satellite_replica.png",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro02-q06",
+      "titre": "Perseverance",
+      "categorie": "Exploration spatiale",
+      "difficulte": "moyenne",
+      "question": "Quel robot de la NASA s’est posé en 2021 dans le cratère Jezero, sur Mars ?",
+      "indices": [
+        "Il a emporté un petit hélicoptère, Ingenuity.",
+        "Il prélève des échantillons de roche destinés à être un jour rapportés sur Terre."
+      ],
+      "reponse": "Perseverance.",
+      "reponse_courte": "Perseverance",
+      "distracteurs": [
+        "Curiosity",
+        "Sojourner",
+        "Philae"
+      ],
+      "variantes_acceptees": [
+        "perseverance",
+        "persévérance"
+      ],
+      "explication": "Perseverance s’est posé le 18 février 2021 dans le cratère Jezero, un ancien lac martien. Il y cherche des traces d’une vie microscopique passée et met de côté des échantillons de roche. Curiosity, lui, explore depuis 2012 le cratère Gale.",
+      "anecdote": "En 2021, Ingenuity a réalisé le premier vol motorisé et contrôlé sur une autre planète.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "sol martien photographié par un robot",
+        "fichier": "astro02-q06.png",
+        "auteur": "NASA",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Perseverance_rover_design.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Perseverance_rover_design.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro02-q07",
+      "titre": "La Station spatiale",
+      "categorie": "Exploration spatiale",
+      "difficulte": "moyenne",
+      "question": "À quelle altitude environ tourne la Station spatiale internationale ?",
+      "indices": [
+        "Elle fait le tour de la Terre en à peu près une heure et demie.",
+        "On peut la voir à l’œil nu, comme un point brillant qui traverse le ciel."
+      ],
+      "reponse": "Environ 400 km.",
+      "reponse_courte": "Environ 400 km",
+      "distracteurs": [
+        "Environ 40 km",
+        "Environ 4 000 km",
+        "Environ 36 000 km"
+      ],
+      "variantes_acceptees": [
+        "400 km",
+        "environ 400 km"
+      ],
+      "explication": "La Station spatiale internationale file à environ 28 000 km/h, à quelque 400 km d’altitude. Elle est occupée en permanence depuis l’an 2000 par des équipages de plusieurs pays. Les satellites géostationnaires, eux, sont à près de 36 000 km.",
+      "anecdote": "Ses occupants voient environ seize levers et couchers de Soleil par jour.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Station spatiale internationale au-dessus de la Terre",
+        "fichier": "astro02-q07.jpg",
+        "auteur": "NASA / pingnews.com",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Earth_and_international_space_station.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Earth_and_international_space_station.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro02-q08",
+      "titre": "L’année-lumière",
+      "categorie": "Galaxies et Univers",
+      "difficulte": "moyenne",
+      "question": "Qu’est-ce qu’une année-lumière ?",
+      "indices": [
+        "Elle vaut près de 10 000 milliards de kilomètres.",
+        "C’est le chemin parcouru par la lumière en un an."
+      ],
+      "reponse": "Une distance.",
+      "reponse_courte": "Une distance",
+      "distracteurs": [
+        "Une durée",
+        "Une vitesse",
+        "Une luminosité"
+      ],
+      "variantes_acceptees": [
+        "une distance",
+        "distance"
+      ],
+      "explication": "Malgré son nom, l’année-lumière mesure une distance : celle que la lumière parcourt en un an, environ 9 460 milliards de kilomètres. Elle permet d’exprimer simplement les immenses distances entre les étoiles.",
+      "anecdote": "La lumière de la Lune nous parvient en un peu plus d’une seconde.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "champ d’étoiles et de galaxies lointaines",
+        "fichier": "astro02-q08.jpg",
+        "auteur": "NASA and the European Space Agency.",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Hubble_ultra_deep_field.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Hubble_ultra_deep_field.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro02-q09",
+      "titre": "Queue des comètes",
+      "categorie": "Système solaire",
+      "difficulte": "difficile",
+      "question": "Pourquoi la queue d’une comète pointe-t-elle toujours à l’opposé du Soleil ?",
+      "indices": [
+        "Elle n’apparaît que lorsque la comète s’approche du Soleil.",
+        "La lumière et un flot de particules exercent sur elle une légère pression."
+      ],
+      "reponse": "Parce que le Soleil la repousse.",
+      "reponse_courte": "Le Soleil la repousse",
+      "distracteurs": [
+        "Elle traîne derrière la comète",
+        "Les planètes l’attirent",
+        "Elle brûle comme une flamme"
+      ],
+      "variantes_acceptees": [
+        "le soleil la repousse",
+        "vent solaire",
+        "le vent solaire"
+      ],
+      "explication": "En approchant du Soleil, la glace du noyau se vaporise et libère gaz et poussières. La pression de la lumière pousse les poussières, et le vent solaire les gaz : la queue s’allonge donc toujours à l’opposé du Soleil, même quand la comète s’en éloigne.",
+      "anecdote": "La comète de Halley revient tous les 75 à 76 ans environ ; son prochain passage est attendu en 2061.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "comète et sa longue queue dans le ciel",
+        "fichier": "astro02-q09.jpg",
+        "auteur": "NASA/Dan Burbank",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Iss030e015472_Edit.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Iss030e015472_Edit.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro02-q10",
+      "titre": "Neptune",
+      "categorie": "Système solaire",
+      "difficulte": "difficile",
+      "question": "Quelle planète a été découverte en 1846 grâce aux calculs du Français Urbain Le Verrier ?",
+      "indices": [
+        "C’est la planète la plus éloignée du Soleil.",
+        "Elle doit son nom au dieu romain de la mer."
+      ],
+      "reponse": "Neptune.",
+      "reponse_courte": "Neptune",
+      "distracteurs": [
+        "Uranus",
+        "Pluton",
+        "Saturne"
+      ],
+      "variantes_acceptees": [
+        "neptune"
+      ],
+      "explication": "L’orbite d’Uranus présentait de petites irrégularités. Le Verrier calcula qu’une planète inconnue devait l’attirer et indiqua où la chercher : l’astronome Johann Galle la trouva à Berlin, tout près de la position prévue.",
+      "anecdote": "Il lui faut environ 165 ans pour faire le tour du Soleil : depuis sa découverte, elle n’en a bouclé qu’un seul, en 2011.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Neptune photographiée par la sonde Voyager 2",
+        "fichier": "astro02-q10.png",
+        "auteur": "NASA / JPL / Voyager-ISS / Justin Cowart",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Neptune_-_Voyager_2_(29347980845).png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Neptune_-_Voyager_2_%2829347980845%29.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro02-q11",
+      "titre": "Les marées",
+      "categorie": "Phénomènes célestes",
+      "difficulte": "facile",
+      "question": "Quel astre est le principal responsable des marées sur Terre ?",
+      "indices": [
+        "Le Soleil y contribue aussi, mais à peu près deux fois moins.",
+        "Les plus grandes marées surviennent quand il est aligné avec le Soleil."
+      ],
+      "reponse": "La Lune.",
+      "reponse_courte": "La Lune",
+      "distracteurs": [
+        "Le Soleil",
+        "Mars",
+        "Jupiter"
+      ],
+      "variantes_acceptees": [
+        "lune",
+        "la lune"
+      ],
+      "explication": "L’attraction de la Lune est un peu plus forte sur la face de la Terre tournée vers elle que sur la face opposée : les océans forment deux renflements, que la Terre traverse en tournant. D’où, le plus souvent, deux marées hautes par jour.",
+      "anecdote": "La baie de Fundy, au Canada, connaît les plus grandes marées du monde, avec jusqu’à 16 mètres d’écart.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "marée basse sur une côte rocheuse",
+        "fichier": "astro02-q11.jpg",
+        "auteur": "Roger Cornfoot",
+        "licence": "CC BY-SA 2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Rocky_foreshore,_at_low_tide_-_geograph.org.uk_-_2585016.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Rocky_foreshore%2C_at_low_tide_-_geograph.org.uk_-_2585016.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer",
+        "licence_source": "CC BY-SA 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "astro02-q12",
+      "titre": "Le télescope Hubble",
+      "categorie": "Exploration spatiale",
+      "difficulte": "moyenne",
+      "question": "Quel télescope spatial, lancé en 1990, porte le nom d’un astronome américain ?",
+      "indices": [
+        "Un défaut de son miroir a dû être corrigé par des astronautes en 1993.",
+        "Il tourne autour de la Terre à quelques centaines de kilomètres d’altitude."
+      ],
+      "reponse": "Le télescope Hubble.",
+      "reponse_courte": "Hubble",
+      "distracteurs": [
+        "James Webb",
+        "Kepler",
+        "Gaia"
+      ],
+      "variantes_acceptees": [
+        "hubble",
+        "télescope hubble"
+      ],
+      "explication": "Placé au-dessus de l’atmosphère, qui brouille les images, Hubble a photographié des galaxies très lointaines et aidé à mesurer l’expansion de l’Univers. Il a été réparé et amélioré lors de cinq missions de la navette spatiale.",
+      "anecdote": "Son successeur, le télescope James Webb, observe surtout dans l’infrarouge, depuis un point situé à 1,5 million de km de la Terre.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "télescope Hubble en orbite",
+        "fichier": "astro02-q12.jpg",
+        "auteur": "NASA Hubble Space Telescope",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:View_of_Hubble_after_Being_Released_from_the_Shuttle_Atlantis_(28223588012).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/10/View_of_Hubble_after_Being_Released_from_the_Shuttle_Atlantis_%2828223588012%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro02-q13",
+      "titre": "Le gaz du Soleil",
+      "categorie": "Étoiles",
+      "difficulte": "moyenne",
+      "question": "De quel élément le Soleil est-il principalement composé ?",
+      "indices": [
+        "C’est l’élément le plus léger et le plus abondant de l’Univers.",
+        "Dans le cœur du Soleil, ses noyaux fusionnent et libèrent de l’énergie."
+      ],
+      "reponse": "D’hydrogène.",
+      "reponse_courte": "L’hydrogène",
+      "distracteurs": [
+        "L’oxygène",
+        "L’hélium",
+        "Le fer"
+      ],
+      "variantes_acceptees": [
+        "hydrogène",
+        "l'hydrogène"
+      ],
+      "explication": "En masse, le Soleil est fait d’environ trois quarts d’hydrogène et d’un quart d’hélium, avec une petite part d’éléments plus lourds. La fusion de l’hydrogène en hélium, dans son cœur, produit l’énergie qui nous éclaire.",
+      "anecdote": "L’hélium a été découvert dans la lumière du Soleil en 1868, avant d’être trouvé sur Terre : son nom vient du grec hélios, le Soleil.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "surface du Soleil en lumière ultraviolette",
+        "fichier": "astro02-q13.jpg",
+        "auteur": "NASA/SDO (AIA)",
+        "licence": "Domaine public",
+        "url_page": "https://commons.wikimedia.org/wiki/File:The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "Public domain",
+        "licence_url": null
+      }
+    },
+    {
+      "id": "astro02-q14",
+      "titre": "Les météorites",
+      "categorie": "Phénomènes célestes",
+      "difficulte": "moyenne",
+      "question": "Comment appelle-t-on un caillou venu de l’espace qui atteint le sol terrestre ?",
+      "indices": [
+        "La plupart sont des fragments d’astéroïdes.",
+        "On en distingue de pierreuses, de métalliques, faites de fer et de nickel, et de mixtes."
+      ],
+      "reponse": "Une météorite.",
+      "reponse_courte": "Une météorite",
+      "distracteurs": [
+        "Un météore",
+        "Une comète",
+        "Un satellite"
+      ],
+      "variantes_acceptees": [
+        "météorite",
+        "une météorite"
+      ],
+      "explication": "Dans l’espace, ce caillou est un météoroïde ; sa traversée lumineuse de l’atmosphère est un météore, ou étoile filante ; et ce qui reste au sol est une météorite. La plupart se consument entièrement avant d’arriver.",
+      "anecdote": "La météorite d’Ensisheim, tombée en Alsace en 1492, est l’une des plus anciennes chutes observées en Europe dont des fragments sont conservés.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "météorite métallique exposée dans un muséum",
+        "fichier": "astro02-q14.jpg",
+        "auteur": "Calips (auteur présumé)",
+        "licence": "CC BY 2.5",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Namibie_Hoba_Meteorite_05.JPG",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/18/Namibie_Hoba_Meteorite_05.JPG",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 2.5",
+        "licence_url": "https://creativecommons.org/licenses/by/2.5"
+      }
+    },
+    {
+      "id": "astro02-q15",
+      "titre": "Les exoplanètes",
+      "categorie": "Galaxies et Univers",
+      "difficulte": "moyenne",
+      "question": "Comment appelle-t-on une planète qui tourne autour d’une autre étoile que le Soleil ?",
+      "indices": [
+        "La première autour d’une étoile semblable au Soleil a été découverte en 1995 par deux astronomes suisses.",
+        "On en connaît aujourd’hui plusieurs milliers."
+      ],
+      "reponse": "Une exoplanète.",
+      "reponse_courte": "Une exoplanète",
+      "distracteurs": [
+        "Une planète naine",
+        "Un astéroïde",
+        "Une protoétoile"
+      ],
+      "variantes_acceptees": [
+        "exoplanète",
+        "une exoplanète",
+        "planète extrasolaire"
+      ],
+      "explication": "En 1995, Michel Mayor et Didier Queloz détectent 51 Pegasi b en mesurant le léger balancement de son étoile ; ils reçoivent le prix Nobel de physique en 2019. D’autres exoplanètes sont repérées par la petite baisse d’éclat de leur étoile quand elles passent devant.",
+      "anecdote": "La première, 51 Pegasi b, est une géante gazeuse qui fait le tour de son étoile en à peine plus de quatre jours.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "vue d’artiste d’une exoplanète devant son étoile",
+        "fichier": "astro02-q15.jpg",
+        "auteur": "NASA, ESA and A. Schaller",
+        "licence": "CC BY 4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Artist%27s_impression_of_an_ultra-short-period_planet.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Artist%27s_impression_of_an_ultra-short-period_planet.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0"
+      }
+    }
+  ]
+}

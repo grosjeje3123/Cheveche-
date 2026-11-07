@@ -1,0 +1,1103 @@
+{
+  "pack": {
+    "id": "astro_n2_01",
+    "titre": "Astronomie, niveau 2",
+    "niveau": 2,
+    "premier_numero": 131,
+    "langue": "fr",
+    "version": 1,
+    "licences_autorisees": [
+      "Domaine public",
+      "CC0",
+      "CC BY",
+      "CC BY-SA"
+    ],
+    "schema": 3,
+    "collection_par_categorie": {
+      "Système solaire": "Astronomie",
+      "Étoiles": "Astronomie",
+      "Galaxies et Univers": "Astronomie",
+      "Exploration spatiale": "Astronomie",
+      "Phénomènes célestes": "Astronomie"
+    }
+  },
+  "questions": [
+    {
+      "id": "astron2-q01",
+      "titre": "La planète couchée",
+      "categorie": "Système solaire",
+      "difficulte": "moyenne",
+      "question": "Quelle planète tourne sur elle-même presque couchée, son axe incliné d’environ 98 degrés ?",
+      "indices": [
+        "Elle a été la première planète découverte au télescope, par William Herschel, en 1781.",
+        "Sa couleur bleu-vert vient du méthane de son atmosphère."
+      ],
+      "reponse": "Uranus.",
+      "reponse_courte": "Uranus",
+      "distracteurs": [
+        "Neptune",
+        "Saturne",
+        "Vénus"
+      ],
+      "variantes_acceptees": [
+        "Uranus"
+      ],
+      "explication": "L’axe de rotation d’Uranus est presque couché sur le plan de son orbite. Chaque pôle reçoit ainsi le Soleil pendant environ 42 ans, puis reste 42 ans dans la nuit. Ce basculement viendrait d’une collision géante, il y a très longtemps.",
+      "anecdote": "Herschel voulait l’appeler « l’étoile de George », en l’honneur du roi George III.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Uranus et ses anneaux, vus par un télescope spatial",
+        "fichier": "astron2-q01.jpg",
+        "auteur": "NASA",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:Uranus_as_seen_by_NASA%27s_Voyager_2.tif",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Uranus_as_seen_by_NASA%27s_Voyager_2.tif",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q02",
+      "titre": "Un jour plus long qu’une année",
+      "categorie": "Système solaire",
+      "difficulte": "facile",
+      "question": "Sur quelle planète un jour, c’est-à-dire un tour sur elle-même, dure-t-il plus longtemps qu’une année ?",
+      "indices": [
+        "Elle tourne sur elle-même à l’envers, dans le sens inverse de presque toutes les autres planètes.",
+        "C’est la planète la plus chaude du Système solaire, sous d’épais nuages d’acide sulfurique."
+      ],
+      "reponse": "Vénus.",
+      "reponse_courte": "Vénus",
+      "distracteurs": [
+        "Mercure",
+        "Mars",
+        "Neptune"
+      ],
+      "variantes_acceptees": [
+        "Vénus",
+        "Venus"
+      ],
+      "explication": "Vénus met environ 243 jours terrestres à faire un tour sur elle-même, mais seulement 225 jours à faire le tour du Soleil. Elle tourne en plus dans le sens rétrograde : là-bas, le Soleil se lève à l’ouest et se couche à l’est.",
+      "anecdote": "Malgré cette rotation très lente, son atmosphère fait le tour de la planète en quatre jours environ.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Vénus photographiée par la sonde Mariner 10",
+        "fichier": "astron2-q02.jpg",
+        "auteur": "NASA/JPL-Caltech",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:PIA23791-Venus-RealAndEnhancedContrastViews-20200608_(cropped).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/c/c7/PIA23791-Venus-RealAndEnhancedContrastViews-20200608_%28cropped%29.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q03",
+      "titre": "Des lacs de méthane",
+      "categorie": "Système solaire",
+      "difficulte": "moyenne",
+      "question": "Quelle lune possède une atmosphère épaisse et des lacs d’hydrocarbures liquides à sa surface ?",
+      "indices": [
+        "C’est la plus grande lune de Saturne.",
+        "La sonde européenne Huygens s’y est posée en janvier 2005."
+      ],
+      "reponse": "Titan.",
+      "reponse_courte": "Titan",
+      "distracteurs": [
+        "Encelade",
+        "Europe",
+        "Triton"
+      ],
+      "variantes_acceptees": [
+        "Titan"
+      ],
+      "explication": "Titan est le seul satellite du Système solaire doté d’une atmosphère épaisse, surtout faite d’azote. Il y fait environ −180 °C : le méthane et l’éthane y sont liquides et forment des lacs et des mers, près des pôles.",
+      "anecdote": "La pression au sol y est une fois et demie celle de la Terre : on pourrait y marcher sans combinaison pressurisée, mais pas sans protection contre le froid ni sans oxygène.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Titan vu par la sonde Cassini, à travers sa brume",
+        "fichier": "astron2-q03.jpg",
+        "auteur": "Justin Cowart",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:Titan_-_Cassini_Rev_17_(36451538673).png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/67/Titan_-_Cassini_Rev_17_%2836451538673%29.png",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer"
+      }
+    },
+    {
+      "id": "astron2-q04",
+      "titre": "Les geysers d’Encelade",
+      "categorie": "Système solaire",
+      "difficulte": "moyenne",
+      "question": "De quelle lune de Saturne jaillissent, près du pôle sud, des geysers de vapeur d’eau et de glace ?",
+      "indices": [
+        "Elle est couverte d’une glace très blanche, l’une des surfaces les plus réfléchissantes du Système solaire.",
+        "C’est la sonde Cassini qui a découvert ces jets, en 2005."
+      ],
+      "reponse": "Encelade.",
+      "reponse_courte": "Encelade",
+      "distracteurs": [
+        "Titan",
+        "Mimas",
+        "Io"
+      ],
+      "variantes_acceptees": [
+        "Encelade",
+        "Enceladus"
+      ],
+      "explication": "Sous sa croûte de glace, Encelade cache un océan d’eau salée. Par des fractures du pôle sud, surnommées les « rayures de tigre », des jets s’échappent dans l’espace et alimentent l’un des anneaux de Saturne, l’anneau E.",
+      "anecdote": "En traversant ces panaches, Cassini a « goûté » l’océan caché : de l’eau salée, de la silice et des molécules organiques.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Les panaches d’Encelade photographiés par Cassini",
+        "fichier": "astron2-q04.jpg",
+        "auteur": "National Aeronautics and Space Administration (NASA) / Jet Propulsion Laboratory (JPL)",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:PIA17202_-_Approaching_Enceladus.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/8/83/PIA17202_-_Approaching_Enceladus.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer"
+      }
+    },
+    {
+      "id": "astron2-q05",
+      "titre": "La lune volcanique",
+      "categorie": "Système solaire",
+      "difficulte": "facile",
+      "question": "Quel astre est le plus volcanique du Système solaire ?",
+      "indices": [
+        "C’est une lune de Jupiter, découverte par Galilée en 1610.",
+        "Les marées de Jupiter la déforment et la chauffent de l’intérieur."
+      ],
+      "reponse": "Io, une lune de Jupiter.",
+      "reponse_courte": "Io",
+      "distracteurs": [
+        "Mars",
+        "Vénus",
+        "Europe"
+      ],
+      "variantes_acceptees": [
+        "Io"
+      ],
+      "explication": "Io compte plus de 400 volcans actifs. Tiraillée par la gravité de Jupiter et de ses voisines Europe et Ganymède, elle se déforme sans cesse, et ce frottement interne fait fondre la roche. Ses éruptions projettent du soufre à des centaines de kilomètres d’altitude.",
+      "anecdote": "Le soufre colore sa surface de jaune, d’orange et de rouge : on l’a comparée à une pizza.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Io, lune de Jupiter, photographiée par la sonde Galileo",
+        "fichier": "astron2-q05.png",
+        "auteur": "zelario12",
+        "licence": "CC BY-SA 4.0",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Io_mosaic_in_true_color.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Io_mosaic_in_true_color.png",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q06",
+      "titre": "Plus grande que Mercure",
+      "categorie": "Système solaire",
+      "difficulte": "facile",
+      "question": "Quelle est la plus grande lune du Système solaire, plus large que la planète Mercure ?",
+      "indices": [
+        "Elle tourne autour de Jupiter.",
+        "C’est la seule lune connue qui possède son propre champ magnétique."
+      ],
+      "reponse": "Ganymède.",
+      "reponse_courte": "Ganymède",
+      "distracteurs": [
+        "Titan",
+        "Callisto",
+        "La Lune"
+      ],
+      "variantes_acceptees": [
+        "Ganymède",
+        "Ganymede"
+      ],
+      "explication": "Ganymède mesure environ 5 270 km de diamètre, contre 4 880 km pour Mercure. Elle est pourtant deux fois moins massive que la planète, car elle est faite pour moitié de glace. Un océan salé se cacherait sous sa surface.",
+      "anecdote": "La sonde européenne JUICE, lancée en 2023, doit se mettre en orbite autour d’elle dans les années 2030.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Ganymède photographiée par la sonde Juno",
+        "fichier": "astron2-q06.jpg",
+        "auteur": "NASA /JPL",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:Juno_Ganymede_PIA25028.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Juno_Ganymede_PIA25028.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q07",
+      "titre": "Le réservoir des comètes",
+      "categorie": "Système solaire",
+      "difficulte": "moyenne",
+      "question": "Comment s’appelle l’immense réserve de comètes qui entourerait le Système solaire, bien au-delà de Pluton ?",
+      "indices": [
+        "Il porte le nom d’un astronome néerlandais, qui l’a imaginé en 1950.",
+        "Personne ne l’a encore observé directement : on le déduit des orbites des comètes."
+      ],
+      "reponse": "Le nuage d’Oort.",
+      "reponse_courte": "Le nuage d’Oort",
+      "distracteurs": [
+        "La ceinture de Kuiper",
+        "La ceinture d’astéroïdes",
+        "L’héliopause"
+      ],
+      "variantes_acceptees": [
+        "nuage d’Oort",
+        "nuage de Oort",
+        "Oort"
+      ],
+      "explication": "Le nuage d’Oort serait une sphère de milliards de noyaux glacés, jusqu’à plus de 100 000 fois la distance de la Terre au Soleil. Une étoile qui passe ou la marée de la Galaxie en dérangent parfois un, qui plonge alors vers le Soleil : c’est une comète à très longue période.",
+      "anecdote": "Les sondes Voyager, pourtant les plus lointaines, mettront environ 300 ans à atteindre son bord intérieur.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Schéma du nuage d’Oort et de la ceinture de Kuiper",
+        "fichier": "astron2-q07.jpg",
+        "auteur": "Celestialobjects",
+        "licence": "CC BY 4.0",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Oort_Cloud_atristic_concept.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/44/Oort_Cloud_atristic_concept.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q08",
+      "titre": "La reine de la ceinture",
+      "categorie": "Système solaire",
+      "difficulte": "moyenne",
+      "question": "Quel est le plus gros objet de la ceinture d’astéroïdes, entre Mars et Jupiter ?",
+      "indices": [
+        "On l’a d’abord prise pour une planète quand on l’a découverte, le 1er janvier 1801.",
+        "Depuis 2006, elle est classée « planète naine », comme Pluton."
+      ],
+      "reponse": "Cérès.",
+      "reponse_courte": "Cérès",
+      "distracteurs": [
+        "Vesta",
+        "Pallas",
+        "Éris"
+      ],
+      "variantes_acceptees": [
+        "Cérès",
+        "Ceres"
+      ],
+      "explication": "Cérès mesure environ 940 km de diamètre, assez pour que sa gravité l’ait rendue presque ronde. La sonde Dawn, en orbite autour d’elle de 2015 à 2018, y a photographié de mystérieuses taches brillantes : des dépôts de sels laissés par une eau salée remontée des profondeurs.",
+      "anecdote": "Elle a été découverte à Palerme par Giuseppe Piazzi, qui l’a nommée d’après la déesse romaine des moissons, dont le plus ancien temple se trouvait en Sicile.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Cérès photographiée par la sonde Dawn",
+        "fichier": "astron2-q08.png",
+        "auteur": "NASA/JPL-Caltech/UCLA/MPS/DLR/IDA/Justin Cowart",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:Ceres_-_RC3_-_Haulani_Crater_(22381131691).png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/8/86/Ceres_-_RC3_-_Haulani_Crater_%2822381131691%29.png",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer"
+      }
+    },
+    {
+      "id": "astron2-q09",
+      "titre": "L’étoile la plus brillante",
+      "categorie": "Étoiles",
+      "difficulte": "facile",
+      "question": "Quelle est l’étoile la plus brillante du ciel nocturne ?",
+      "indices": [
+        "On la trouve dans la constellation du Grand Chien, en prolongeant vers le bas la ceinture d’Orion.",
+        "Elle n’est qu’à 8,6 années-lumière de nous."
+      ],
+      "reponse": "Sirius.",
+      "reponse_courte": "Sirius",
+      "distracteurs": [
+        "Bételgeuse",
+        "Véga",
+        "L’étoile Polaire"
+      ],
+      "variantes_acceptees": [
+        "Sirius"
+      ],
+      "explication": "Sirius doit son éclat à deux raisons : elle est environ 25 fois plus lumineuse que le Soleil, et elle est très proche. Elle a une petite compagne, Sirius B, une naine blanche à peine plus grande que la Terre.",
+      "anecdote": "Dans l’Égypte ancienne, son retour à l’aube, en été, annonçait la crue du Nil.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Sirius A et sa compagne Sirius B, vues par Hubble",
+        "fichier": "astron2-q09.jpg",
+        "auteur": "NASA, ESA, H. Bond (STScI), and M. Barstow (University of Leicester); modified by Bokus",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:Sirius_A_and_B_Hubble_photo.editted.PNG",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/1/18/Sirius_A_and_B_Hubble_photo.editted.PNG",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer"
+      }
+    },
+    {
+      "id": "astron2-q10",
+      "titre": "Les Sept Sœurs",
+      "categorie": "Étoiles",
+      "difficulte": "facile",
+      "question": "Quel amas d’étoiles, surnommé « les Sept Sœurs », brille à l’œil nu dans la constellation du Taureau ?",
+      "indices": [
+        "En japonais, on l’appelle Subaru, comme la marque automobile qui en a fait son logo.",
+        "Il se trouve à environ 440 années-lumière."
+      ],
+      "reponse": "Les Pléiades.",
+      "reponse_courte": "Les Pléiades",
+      "distracteurs": [
+        "Les Hyades",
+        "La Ruche",
+        "Oméga du Centaure"
+      ],
+      "variantes_acceptees": [
+        "Pléiades",
+        "les Pléiades"
+      ],
+      "explication": "Les Pléiades forment un amas ouvert d’un millier d’étoiles jeunes, nées ensemble il y a environ 100 millions d’années. À l’œil nu, on en distingue six ou sept, d’où leur surnom. Elles traversent un nuage de poussière qui les entoure d’un voile bleu.",
+      "anecdote": "Le disque de Nebra, en Allemagne, vieux d’environ 3 600 ans, les représenterait déjà.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "L’amas des Pléiades et son voile bleu",
+        "fichier": "astron2-q10.jpg",
+        "auteur": "Celestialobjects",
+        "licence": "CC BY-SA 4.0",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Pleiades_DSS_NASA-Donatiello-WISEinfrared-PBudassi.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Pleiades_DSS_NASA-Donatiello-WISEinfrared-PBudassi.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q11",
+      "titre": "La grande baisse d’éclat",
+      "categorie": "Étoiles",
+      "difficulte": "moyenne",
+      "question": "Quelle étoile supergéante rouge de la constellation d’Orion a brusquement et fortement pâli à la fin de 2019 ?",
+      "indices": [
+        "Elle marque une épaule du chasseur Orion, en haut à gauche de la constellation.",
+        "À la place du Soleil, elle dépasserait l’orbite de Mars."
+      ],
+      "reponse": "Bételgeuse.",
+      "reponse_courte": "Bételgeuse",
+      "distracteurs": [
+        "Rigel",
+        "Antarès",
+        "Aldébaran"
+      ],
+      "variantes_acceptees": [
+        "Bételgeuse",
+        "Betelgeuse"
+      ],
+      "explication": "Entre la fin de 2019 et le début de 2020, Bételgeuse a perdu près des deux tiers de son éclat. On a cru qu’elle allait exploser ; les observations ont montré qu’elle avait en fait expulsé un nuage de matière qui, en refroidissant, a formé une poussière qui la masquait.",
+      "anecdote": "Elle explosera bien un jour en supernova, dans moins de 100 000 ans selon les estimations : on la verra alors même en plein jour.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Bételgeuse avant et pendant sa baisse d’éclat (VLT)",
+        "fichier": "astron2-q11.jpg",
+        "auteur": "Andrea Dupree (Harvard-Smithsonian CfA), Ronald Gilliland (STScI), NASA and ESA",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:Betelgeuse_%E2%80%93_NASA.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Betelgeuse_%E2%80%93_NASA.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer"
+      }
+    },
+    {
+      "id": "astron2-q12",
+      "titre": "Le premier pulsar",
+      "categorie": "Étoiles",
+      "difficulte": "difficile",
+      "question": "Quelle astrophysicienne a découvert le premier pulsar, en 1967, alors qu’elle était encore étudiante ?",
+      "indices": [
+        "Elle travaillait à Cambridge, sur un radiotélescope qu’elle avait aidé à construire.",
+        "Le signal était si régulier qu’on l’a surnommé, pour rire, « LGM-1 », pour « petits hommes verts »."
+      ],
+      "reponse": "Jocelyn Bell Burnell.",
+      "reponse_courte": "Jocelyn Bell Burnell",
+      "distracteurs": [
+        "Vera Rubin",
+        "Henrietta Leavitt",
+        "Cecilia Payne"
+      ],
+      "variantes_acceptees": [
+        "Jocelyn Bell",
+        "Bell Burnell"
+      ],
+      "explication": "Un pulsar est une étoile à neutrons qui tourne très vite sur elle-même et balaie l’espace d’un faisceau radio, comme un phare. Le prix Nobel de physique 1974 a récompensé cette découverte, mais il a été attribué à son directeur de thèse, Antony Hewish, et à Martin Ryle.",
+      "anecdote": "En 2018, elle a reçu un prix de 3 millions de dollars, qu’elle a entièrement donné pour aider des étudiants peu représentés en physique.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "La nébuleuse du Crabe et son pulsar (Chandra)",
+        "fichier": "astron2-q12.jpg",
+        "auteur": "NASA/HST/ASU/J. Hester et al. (optique) ; NASA/CXC/ASU/J. Hester et al. (rayons X)",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:Chandra-crab.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Chandra-crab.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q13",
+      "titre": "De quoi sont faites les étoiles",
+      "categorie": "Étoiles",
+      "difficulte": "difficile",
+      "question": "Quelle astronome a montré, en 1925, que les étoiles sont faites surtout d’hydrogène et d’hélium ?",
+      "indices": [
+        "Née en Angleterre, elle a fait sa carrière à Harvard, aux États-Unis.",
+        "Un grand astronome de l’époque l’a d’abord poussée à écrire que son résultat n’était sans doute pas réel."
+      ],
+      "reponse": "Cecilia Payne.",
+      "reponse_courte": "Cecilia Payne",
+      "distracteurs": [
+        "Henrietta Leavitt",
+        "Annie Jump Cannon",
+        "Vera Rubin"
+      ],
+      "variantes_acceptees": [
+        "Cecilia Payne-Gaposchkin",
+        "Payne"
+      ],
+      "explication": "En analysant la lumière des étoiles, Cecilia Payne a compris que l’hydrogène et l’hélium y dominent de très loin tous les autres éléments. On pensait alors que les étoiles avaient à peu près la même composition que la Terre. Quatre ans plus tard, Henry Norris Russell, qui l’avait mise en garde, est arrivé au même résultat.",
+      "anecdote": "L’astronome Otto Struve a qualifié sa thèse de « plus brillante jamais écrite en astronomie ».",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Spectre du Soleil et ses raies sombres",
+        "fichier": "astron2-q13.jpg",
+        "auteur": "Smithsonian Institution/Science Service, restored by Adam Cuerden",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:Cecilia_Helena_Payne-Gaposchkin_(1900-1979)_-_Science_Service.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/26/Cecilia_Helena_Payne-Gaposchkin_%281900-1979%29_-_Science_Service.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q14",
+      "titre": "La limite des naines blanches",
+      "categorie": "Étoiles",
+      "difficulte": "difficile",
+      "question": "Quelle limite, d’environ 1,4 fois la masse du Soleil, porte le nom d’un astrophysicien indien ?",
+      "indices": [
+        "Au-delà de cette masse, une naine blanche ne peut plus résister à sa propre gravité.",
+        "Son auteur l’a calculée à 19 ans, sur le bateau qui l’emmenait étudier en Angleterre, en 1930."
+      ],
+      "reponse": "La limite de Chandrasekhar.",
+      "reponse_courte": "La limite de Chandrasekhar",
+      "distracteurs": [
+        "La limite de Roche",
+        "Le rayon de Schwarzschild",
+        "La limite d’Eddington"
+      ],
+      "variantes_acceptees": [
+        "Chandrasekhar",
+        "limite de Chandrasekhar"
+      ],
+      "explication": "Une naine blanche, le cœur éteint d’une étoile comme le Soleil, tient grâce à la pression de ses électrons. Si sa masse dépasse environ 1,4 masse solaire, cette pression ne suffit plus : l’astre s’effondre ou explose. Subrahmanyan Chandrasekhar a reçu le prix Nobel de physique en 1983.",
+      "anecdote": "Le télescope spatial à rayons X de la NASA, lancé en 1999, s’appelle Chandra en son honneur.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Une naine blanche au cœur d’une nébuleuse planétaire (Hubble)",
+        "fichier": "astron2-q14.jpg",
+        "auteur": "NASA and H. Richer (University of British Columbia)",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:Close_Up_of_Ancient,_White_Dwarf_Stars_in_the_Milky_Way_Galaxy_(2002-10-1178).tiff",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/8/88/Close_Up_of_Ancient%2C_White_Dwarf_Stars_in_the_Milky_Way_Galaxy_%282002-10-1178%29.tiff",
+        "modifications": "Redimensionnée à 960 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer"
+      }
+    },
+    {
+      "id": "astron2-q15",
+      "titre": "L’Univers en expansion",
+      "categorie": "Galaxies et Univers",
+      "difficulte": "difficile",
+      "question": "Quelle loi, rebaptisée en 2018 pour honorer aussi un savant belge, relie distance et vitesse des galaxies ?",
+      "indices": [
+        "Ce savant belge était aussi prêtre catholique.",
+        "Plus une galaxie est loin, plus elle s’éloigne vite de nous."
+      ],
+      "reponse": "La loi de Hubble-Lemaître.",
+      "reponse_courte": "La loi de Hubble-Lemaître",
+      "distracteurs": [
+        "La loi de Titius-Bode",
+        "La loi de Stefan-Boltzmann",
+        "La loi de Kepler"
+      ],
+      "variantes_acceptees": [
+        "Hubble-Lemaître",
+        "loi de Hubble-Lemaître",
+        "loi de Hubble"
+      ],
+      "explication": "Georges Lemaître publie cette relation en 1927, deux ans avant Edwin Hubble, mais dans une revue belge peu lue. En 2018, les membres de l’Union astronomique internationale ont recommandé de l’appeler loi de Hubble-Lemaître. C’est la première preuve que l’Univers est en expansion.",
+      "anecdote": "Lemaître est aussi l’un des pères de l’idée du Big Bang, qu’il appelait « l’atome primitif ».",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Le champ ultra-profond de Hubble, rempli de galaxies lointaines",
+        "fichier": "astron2-q15.jpg",
+        "auteur": "NASA and the European Space Agency.",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:Hubble_ultra_deep_field.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Hubble_ultra_deep_field.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q16",
+      "titre": "La plus vieille lumière",
+      "categorie": "Galaxies et Univers",
+      "difficulte": "moyenne",
+      "question": "Quel rayonnement, découvert par hasard en 1964, est la plus ancienne lumière que l’on puisse observer ?",
+      "indices": [
+        "Ses découvreurs ont d’abord cru que le bruit de leur antenne venait de fientes de pigeons.",
+        "Il baigne tout le ciel, à une température d’environ −270 °C."
+      ],
+      "reponse": "Le fond diffus cosmologique.",
+      "reponse_courte": "Le fond diffus cosmologique",
+      "distracteurs": [
+        "Le vent solaire",
+        "Les rayons cosmiques",
+        "La lumière zodiacale"
+      ],
+      "variantes_acceptees": [
+        "fond diffus cosmologique",
+        "rayonnement fossile"
+      ],
+      "explication": "Ce rayonnement a été émis environ 380 000 ans après le Big Bang, quand l’Univers est devenu transparent. Arno Penzias et Robert Wilson l’ont capté avec une antenne radio, ce qui leur a valu le prix Nobel de physique en 1978. C’est l’une des meilleures preuves du Big Bang.",
+      "anecdote": "Une petite partie de la « neige » des anciens téléviseurs mal réglés venait de ce rayonnement.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Carte du fond diffus cosmologique par le satellite Planck",
+        "fichier": "astron2-q16.jpg",
+        "auteur": "ESA and the Planck Collaboration",
+        "licence": "CC BY 4.0",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Cosmic_Microwave_Background_(CMB).jpeg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/0/04/Cosmic_Microwave_Background_%28CMB%29.jpeg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q17",
+      "titre": "Le trou noir de notre galaxie",
+      "categorie": "Galaxies et Univers",
+      "difficulte": "difficile",
+      "question": "Comment s’appelle le trou noir géant du centre de la Voie lactée, photographié pour la première fois en 2022 ?",
+      "indices": [
+        "Il est environ quatre millions de fois plus massif que le Soleil.",
+        "Il se trouve dans la direction de la constellation du Sagittaire, à quelque 27 000 années-lumière."
+      ],
+      "reponse": "Sagittarius A*.",
+      "reponse_courte": "Sagittarius A*",
+      "distracteurs": [
+        "M87*",
+        "Cygnus X-1",
+        "Centaurus A"
+      ],
+      "variantes_acceptees": [
+        "Sagittarius A",
+        "Sgr A*",
+        "Sagittarius A*"
+      ],
+      "explication": "L’image a été obtenue par l’Event Horizon Telescope, un réseau de radiotélescopes répartis sur toute la Terre qui fonctionnent comme une antenne géante. On n’y voit pas le trou noir lui-même, mais l’anneau de gaz brûlant qui tourne autour, et son ombre au centre. En 2019, la même équipe avait montré le premier trou noir jamais photographié, M87*.",
+      "anecdote": "Reinhard Genzel et Andrea Ghez ont reçu le prix Nobel de physique 2020 pour avoir prouvé sa présence, en suivant les étoiles qui tournent autour.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Première image de Sagittarius A* (Event Horizon Telescope)",
+        "fichier": "astron2-q17.jpg",
+        "auteur": "EHT Collaboration",
+        "licence": "CC BY 4.0",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:EHT_Sagittarius_A_black_hole.tif",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/45/EHT_Sagittarius_A_black_hole.tif",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q18",
+      "titre": "La matière invisible",
+      "categorie": "Galaxies et Univers",
+      "difficulte": "moyenne",
+      "question": "Quelle matière invisible expliquerait que les étoiles du bord des galaxies tournent si vite ?",
+      "indices": [
+        "L’astronome américaine Vera Rubin l’a mise en évidence dans les années 1970, en mesurant la rotation des galaxies.",
+        "Elle pèserait environ cinq fois plus que tous les atomes des étoiles, des planètes et du gaz réunis."
+      ],
+      "reponse": "La matière noire.",
+      "reponse_courte": "La matière noire",
+      "distracteurs": [
+        "L’antimatière",
+        "L’énergie noire",
+        "Le gaz interstellaire"
+      ],
+      "variantes_acceptees": [
+        "matière noire",
+        "matière sombre"
+      ],
+      "explication": "Dans une galaxie, les étoiles du bord devraient tourner plus lentement que celles du centre ; or elles vont presque aussi vite. Il faut donc une masse invisible qui les retient. Personne ne sait encore de quoi elle est faite : on ne la détecte que par sa gravité.",
+      "anecdote": "Dès 1933, Fritz Zwicky avait soupçonné cette « matière sombre » en étudiant un amas de galaxies.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "L’amas de la Balle, où la matière noire a été cartographiée",
+        "fichier": "astron2-q18.jpg",
+        "auteur": "CTIO/NOIRLab/DOE/NSF/AURA Image Processing: T.A. Rector (University of Alaska Anchorage/NSF NOIRLab) & M. Zamani (NSF NOIRLab)",
+        "licence": "CC BY 4.0",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Bullet_Cluster_with_DECam_(noirlab2603a).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bullet_Cluster_with_DECam_%28noirlab2603a%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q19",
+      "titre": "L’expansion qui accélère",
+      "categorie": "Galaxies et Univers",
+      "difficulte": "difficile",
+      "question": "Grâce à quelles explosions d’étoiles a-t-on découvert, en 1998, que l’expansion de l’Univers accélère ?",
+      "indices": [
+        "Elles ont toutes à peu près le même éclat réel : elles servent de « chandelles » pour mesurer les distances.",
+        "Elles se produisent quand une naine blanche dépasse une masse limite."
+      ],
+      "reponse": "Les supernovas de type Ia.",
+      "reponse_courte": "Les supernovas de type Ia",
+      "distracteurs": [
+        "Les sursauts gamma",
+        "Les novas récurrentes",
+        "Les pulsars"
+      ],
+      "variantes_acceptees": [
+        "supernovas de type Ia",
+        "supernovae de type Ia",
+        "supernovas Ia"
+      ],
+      "explication": "Deux équipes ont observé que les supernovas lointaines paraissaient plus faibles que prévu : l’Univers s’étend donc de plus en plus vite. On attribue cette accélération à une mystérieuse « énergie noire ». Saul Perlmutter, Brian Schmidt et Adam Riess ont reçu le prix Nobel de physique 2011.",
+      "anecdote": "L’énergie noire représenterait environ 70 % du contenu de l’Univers, sans que personne sache ce qu’elle est.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "La supernova SN 1994D dans sa galaxie (Hubble)",
+        "fichier": "astron2-q19.jpg",
+        "auteur": "NASA & ESA",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:Ground-Based_Image_of_Supernova_1994D_in_Galaxy_NGC_4526_(opo9919h).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/36/Ground-Based_Image_of_Supernova_1994D_in_Galaxy_NGC_4526_%28opo9919h%29.jpg",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer"
+      }
+    },
+    {
+      "id": "astron2-q20",
+      "titre": "Le quartier de la Voie lactée",
+      "categorie": "Galaxies et Univers",
+      "difficulte": "moyenne",
+      "question": "Comment s’appelle le petit groupe de galaxies auquel appartiennent la Voie lactée et Andromède ?",
+      "indices": [
+        "Il compte plus d’une centaine de galaxies connues, presque toutes petites.",
+        "La galaxie du Triangle en est la troisième plus grande."
+      ],
+      "reponse": "Le Groupe local.",
+      "reponse_courte": "Le Groupe local",
+      "distracteurs": [
+        "L’amas de la Vierge",
+        "L’amas de Coma",
+        "Le Grand Attracteur"
+      ],
+      "variantes_acceptees": [
+        "Groupe local"
+      ],
+      "explication": "Le Groupe local s’étend sur plus de 10 millions d’années-lumière. Andromède et la Voie lactée en sont les deux géantes ; autour d’elles gravitent de nombreuses galaxies naines, comme les Nuages de Magellan. Il fait lui-même partie d’un ensemble bien plus vaste, le superamas de la Vierge.",
+      "anecdote": "Andromède et la Voie lactée se rapprochent à environ 110 km par seconde.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "La galaxie du Triangle",
+        "fichier": "astron2-q20.jpg",
+        "auteur": "Lviatour",
+        "licence": "CC BY-SA 4.0",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:M33-Hamois-30-11-2024-Luc-Viatour.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/e5/M33-Hamois-30-11-2024-Luc-Viatour.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q21",
+      "titre": "Les étoiles étalons",
+      "categorie": "Galaxies et Univers",
+      "difficulte": "difficile",
+      "question": "Quelles étoiles, dont l’éclat varie à un rythme régulier, ont permis de mesurer la distance des galaxies ?",
+      "indices": [
+        "Henrietta Leavitt a montré en 1912 que plus elles sont lumineuses, plus leur rythme est lent.",
+        "Elles tirent leur nom d’une étoile de la constellation de Céphée."
+      ],
+      "reponse": "Les céphéides.",
+      "reponse_courte": "Les céphéides",
+      "distracteurs": [
+        "Les naines brunes",
+        "Les pulsars",
+        "Les géantes bleues"
+      ],
+      "variantes_acceptees": [
+        "céphéides",
+        "Céphéides"
+      ],
+      "explication": "En comparant l’éclat apparent d’une céphéide à son éclat réel, déduit de son rythme, on obtient sa distance. C’est ainsi qu’Edwin Hubble a prouvé, au milieu des années 1920, que la nébuleuse d’Andromède est une galaxie à part, bien au-delà de la Voie lactée.",
+      "anecdote": "Henrietta Leavitt travaillait à Harvard comme « calculatrice », payée pour mesurer des milliers d’étoiles sur des plaques photographiques.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "La céphéide RS Puppis et ses échos de lumière (Hubble)",
+        "fichier": "astron2-q21.jpg",
+        "auteur": "NASA, ESA, CSA, STScI, A. Riess (JHU/STScI)",
+        "licence": "CC BY 4.0",
+        "licence_source": "CC BY 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by/4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Comparison_of_Hubble_and_Webb_views_of_a_Cepheid_variable_star_(weic2408b).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/9/94/Comparison_of_Hubble_and_Webb_views_of_a_Cepheid_variable_star_%28weic2408b%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q22",
+      "titre": "Le plus lointain des voyageurs",
+      "categorie": "Exploration spatiale",
+      "difficulte": "facile",
+      "question": "Quel engin, lancé en 1977, est l’objet fabriqué par l’humanité le plus éloigné de la Terre ?",
+      "indices": [
+        "Il a quitté l’héliosphère, la bulle du vent solaire, en 2012.",
+        "Il emporte un disque doré avec des sons et des images de la Terre."
+      ],
+      "reponse": "La sonde Voyager 1.",
+      "reponse_courte": "Voyager 1",
+      "distracteurs": [
+        "Voyager 2",
+        "Pioneer 10",
+        "New Horizons"
+      ],
+      "variantes_acceptees": [
+        "Voyager 1",
+        "Voyager"
+      ],
+      "explication": "Voyager 1 a survolé Jupiter et Saturne, puis a continué sa route vers l’espace interstellaire. La sonde se trouve aujourd’hui à plus de 25 milliards de kilomètres : ses signaux mettent environ une journée à nous parvenir.",
+      "anecdote": "En 1990, en se retournant, la sonde a photographié la Terre comme un minuscule « point bleu pâle ».",
+      "image": {
+        "statut": "verifie",
+        "recherche": "La sonde Voyager (vue d’artiste de la NASA)",
+        "fichier": "astron2-q22.jpg",
+        "auteur": "NASA/JPL",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:Voyager_spacecraft.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/29/Voyager_spacecraft.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q23",
+      "titre": "Un robot sur une comète",
+      "categorie": "Exploration spatiale",
+      "difficulte": "moyenne",
+      "question": "Quelle sonde européenne a déposé le petit robot Philae sur une comète, en novembre 2014 ?",
+      "indices": [
+        "Elle porte le nom d’une pierre qui a permis de déchiffrer les hiéroglyphes.",
+        "Elle a voyagé dix ans pour rejoindre la comète Tchourioumov-Guérassimenko."
+      ],
+      "reponse": "Rosetta.",
+      "reponse_courte": "Rosetta",
+      "distracteurs": [
+        "Giotto",
+        "Huygens",
+        "Mars Express"
+      ],
+      "variantes_acceptees": [
+        "Rosetta"
+      ],
+      "explication": "Philae a rebondi deux fois avant de s’immobiliser à l’ombre d’une falaise, si bien que ses panneaux solaires ont manqué de lumière. Il a pourtant envoyé les premières mesures prises à la surface d’une comète. Rosetta, elle, a étudié la comète pendant deux ans avant de s’y poser à son tour, en 2016.",
+      "anecdote": "Vue de près, la comète ressemble à un canard en caoutchouc, avec deux lobes reliés par un cou.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "La comète Tchourioumov-Guérassimenko vue par Rosetta",
+        "fichier": "astron2-q23.jpg",
+        "auteur": "Sintakso",
+        "licence": "CC BY-SA 4.0",
+        "licence_source": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Rosetta_model.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/40/Rosetta_model.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q24",
+      "titre": "Le cœur de Pluton",
+      "categorie": "Exploration spatiale",
+      "difficulte": "moyenne",
+      "question": "Quelle sonde de la NASA a survolé Pluton en juillet 2015, révélant une grande plaine claire en forme de cœur ?",
+      "indices": [
+        "Elle a été lancée en 2006, l’année même où Pluton a perdu son statut de planète.",
+        "Elle a voyagé plus de neuf ans pour l’atteindre."
+      ],
+      "reponse": "New Horizons.",
+      "reponse_courte": "New Horizons",
+      "distracteurs": [
+        "Voyager 2",
+        "Cassini",
+        "Juno"
+      ],
+      "variantes_acceptees": [
+        "New Horizons"
+      ],
+      "explication": "Le 14 juillet 2015, New Horizons est passée à 12 500 km de Pluton. Ses images ont montré des montagnes de glace d’eau, des glaciers d’azote et la grande région claire en forme de cœur, baptisée Tombaugh Regio en l’honneur du découvreur de Pluton.",
+      "anecdote": "La sonde emporte une petite partie des cendres de Clyde Tombaugh, qui avait découvert Pluton en 1930.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Pluton et son « cœur », photographiés par New Horizons",
+        "fichier": "astron2-q24.png",
+        "auteur": "National Aeronautics and Space Administration (NASA), Applied Physics Laboratory",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:New_Horizons_spacecraft_model_1.png",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/e/ee/New_Horizons_spacecraft_model_1.png",
+        "modifications": "Recadrée sur la bande que le jeu peut montrer"
+      }
+    },
+    {
+      "id": "astron2-q25",
+      "titre": "Le télescope doré",
+      "categorie": "Exploration spatiale",
+      "difficulte": "facile",
+      "question": "Quel télescope spatial, lancé le 25 décembre 2021, observe dans l’infrarouge à 1,5 million de km de la Terre ?",
+      "indices": [
+        "Son miroir de 6,5 mètres est fait de 18 hexagones recouverts d’or.",
+        "Il a été lancé par une fusée Ariane 5, depuis Kourou, en Guyane."
+      ],
+      "reponse": "Le télescope spatial James Webb.",
+      "reponse_courte": "James Webb",
+      "distracteurs": [
+        "Hubble",
+        "Gaia",
+        "Euclid"
+      ],
+      "variantes_acceptees": [
+        "James Webb",
+        "JWST",
+        "Webb"
+      ],
+      "explication": "Le James Webb est placé près du point de Lagrange L2, où il reste à l’abri de la chaleur du Soleil derrière un pare-soleil grand comme un court de tennis. L’infrarouge lui permet de voir à travers la poussière et de capter la lumière des toutes premières galaxies.",
+      "anecdote": "Son pare-soleil, fait de cinq couches fines comme un cheveu, a dû être plié comme un origami pour tenir sous la coiffe de la fusée.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Le miroir doré du télescope James Webb",
+        "fichier": "astron2-q25.jpg",
+        "auteur": "Chris Gunn",
+        "licence": "CC BY 2.0",
+        "licence_source": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:James_Webb_Space_Telescope_Mirrors_Will_Piece_Together_Cosmic_Puzzles_(30108124923).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/6/60/James_Webb_Space_Telescope_Mirrors_Will_Piece_Together_Cosmic_Puzzles_%2830108124923%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q26",
+      "titre": "Le premier Français dans l’espace",
+      "categorie": "Exploration spatiale",
+      "difficulte": "moyenne",
+      "question": "Qui a été le premier Français à voyager dans l’espace, en 1982 ?",
+      "indices": [
+        "Il a rejoint la station soviétique Saliout 7, à bord d’un vaisseau Soyouz.",
+        "Il était pilote d’essai dans l’armée de l’air."
+      ],
+      "reponse": "Jean-Loup Chrétien.",
+      "reponse_courte": "Jean-Loup Chrétien",
+      "distracteurs": [
+        "Patrick Baudry",
+        "Thomas Pesquet",
+        "Jean-Pierre Haigneré"
+      ],
+      "variantes_acceptees": [
+        "Chrétien",
+        "Jean-Loup Chrétien"
+      ],
+      "explication": "Le 24 juin 1982, Jean-Loup Chrétien décolle de Baïkonour avec deux cosmonautes soviétiques et devient le premier Européen de l’Ouest à aller dans l’espace. Il a volé deux autres fois, dont une à bord de la navette spatiale américaine, en 1997.",
+      "anecdote": "En 1988, il est devenu le premier astronaute ni soviétique ni américain à faire une sortie dans l’espace.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "La station spatiale Saliout 7",
+        "fichier": "astron2-q26.jpg",
+        "auteur": "Esby",
+        "licence": "CC BY 2.5",
+        "licence_source": "CC BY 2.5",
+        "licence_url": "https://creativecommons.org/licenses/by/2.5",
+        "url_page": "https://commons.wikimedia.org/wiki/File:P1080649_-_Jean_Loup_CHRETIEN.JPG",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/d/df/P1080649_-_Jean_Loup_CHRETIEN.JPG",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q27",
+      "titre": "Pousser un astéroïde",
+      "categorie": "Exploration spatiale",
+      "difficulte": "difficile",
+      "question": "Quelle mission de la NASA a percuté l’astéroïde Dimorphos, en 2022, pour tester la déviation d’un astéroïde ?",
+      "indices": [
+        "Son nom veut dire « fléchette » en anglais.",
+        "Dimorphos est une petite lune qui tourne autour d’un astéroïde plus gros, Didymos."
+      ],
+      "reponse": "La mission DART.",
+      "reponse_courte": "DART",
+      "distracteurs": [
+        "OSIRIS-REx",
+        "Hayabusa2",
+        "Lucy"
+      ],
+      "variantes_acceptees": [
+        "DART"
+      ],
+      "explication": "Le 26 septembre 2022, la sonde DART s’est écrasée sur Dimorphos à plus de 22 000 km/h. Le choc a raccourci de 32 minutes le tour que Dimorphos fait autour de Didymos : la preuve qu’on pourrait dévier un astéroïde menaçant, s’il était repéré assez tôt.",
+      "anecdote": "La sonde européenne Hera, lancée en 2024, doit aller voir de près le cratère laissé par l’impact.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Dimorphos photographié par DART juste avant l’impact",
+        "fichier": "astron2-q27.jpg",
+        "auteur": "National Aeronautics and Space Administration",
+        "licence": "Domaine public",
+        "licence_source": "Public domain",
+        "licence_url": null,
+        "url_page": "https://commons.wikimedia.org/wiki/File:Artist%27s_illustration_of_NASA%27s_Double_Asteroid_Redirection_Test_Mission.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/3/35/Artist%27s_illustration_of_NASA%27s_Double_Asteroid_Redirection_Test_Mission.jpg",
+        "modifications": "Réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q28",
+      "titre": "La lumière cendrée",
+      "categorie": "Phénomènes célestes",
+      "difficulte": "facile",
+      "question": "Quand la Lune n’est qu’un mince croissant, qu’est-ce qui éclaire faiblement sa partie sombre ?",
+      "indices": [
+        "Léonard de Vinci a été l’un des premiers à l’expliquer, au début du XVIe siècle.",
+        "C’est en quelque sorte un reflet de reflet."
+      ],
+      "reponse": "La lumière du Soleil renvoyée par la Terre.",
+      "reponse_courte": "La lumière renvoyée par la Terre",
+      "distracteurs": [
+        "La lumière des étoiles",
+        "Une lueur propre aux roches lunaires",
+        "Le reflet de Vénus"
+      ],
+      "variantes_acceptees": [
+        "la Terre",
+        "lumière de la Terre"
+      ],
+      "explication": "Vue de la Lune, la Terre est alors presque « pleine » et brille fortement. Une partie de la lumière solaire qu’elle reflète, par ses nuages et ses océans, éclaire la face nocturne de la Lune, qui nous la renvoie à son tour.",
+      "anecdote": "En mesurant la lumière cendrée, des scientifiques suivent la quantité de lumière que renvoie la Terre, une donnée utile pour étudier le climat.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Croissant de Lune et lumière cendrée",
+        "fichier": "astron2-q28.jpg",
+        "auteur": "Stephen Rahn from Macon, GA, USA",
+        "licence": "CC0",
+        "licence_source": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "url_page": "https://commons.wikimedia.org/wiki/File:4%25_Illuminated_Crescent_Moon_with_Earthshine_(41490002672).jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/2/2e/4%25_Illuminated_Crescent_Moon_with_Earthshine_%2841490002672%29.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q29",
+      "titre": "La Lune rouge",
+      "categorie": "Phénomènes célestes",
+      "difficulte": "facile",
+      "question": "Pourquoi la Lune devient-elle rouge cuivré pendant une éclipse totale de Lune ?",
+      "indices": [
+        "Pendant l’éclipse, la Lune se trouve dans l’ombre de la Terre.",
+        "C’est la même raison qui rend les couchers de Soleil rougeoyants."
+      ],
+      "reponse": "L’atmosphère de la Terre dévie jusqu’à elle la lumière rouge du Soleil.",
+      "reponse_courte": "La lumière filtrée par l’air terrestre",
+      "distracteurs": [
+        "La Lune s’échauffe et rougit",
+        "Mars se reflète sur la Lune",
+        "Des poussières lunaires se soulèvent"
+      ],
+      "variantes_acceptees": [
+        "atmosphère terrestre",
+        "l’atmosphère de la Terre"
+      ],
+      "explication": "Même dans l’ombre de la Terre, la Lune reçoit un peu de lumière : celle du Soleil qui traverse l’atmosphère terrestre et y est déviée. En chemin, l’air disperse surtout la lumière bleue et laisse passer le rouge, comme au coucher du Soleil. Vue de la Lune, la Terre serait entourée d’un anneau rougeoyant.",
+      "anecdote": "Après de grandes éruptions volcaniques, les poussières dans l’atmosphère peuvent rendre la Lune éclipsée presque noire.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Éclipse totale de Lune",
+        "fichier": "astron2-q29.jpg",
+        "auteur": "Robert Jay GaBany",
+        "licence": "CC BY-SA 3.0",
+        "licence_source": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Lunar_eclipse_04-15-2014_by_R_Jay_GaBany.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/4/46/Lunar_eclipse_04-15-2014_by_R_Jay_GaBany.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    },
+    {
+      "id": "astron2-q30",
+      "titre": "L’étoile Polaire changera",
+      "categorie": "Phénomènes célestes",
+      "difficulte": "difficile",
+      "question": "Quel lent mouvement de l’axe terrestre, sur environ 26 000 ans, change l’étoile qui indique le nord ?",
+      "indices": [
+        "L’axe de la Terre décrit un cône, comme celui d’une toupie qui ralentit.",
+        "Il a été découvert dans l’Antiquité par l’astronome grec Hipparque."
+      ],
+      "reponse": "La précession des équinoxes.",
+      "reponse_courte": "La précession des équinoxes",
+      "distracteurs": [
+        "La nutation",
+        "La libration",
+        "L’aberration de la lumière"
+      ],
+      "variantes_acceptees": [
+        "précession",
+        "précession des équinoxes"
+      ],
+      "explication": "L’attraction de la Lune et du Soleil sur le renflement de la Terre, à l’équateur, fait lentement tourner son axe. Aujourd’hui, il pointe près de l’étoile Polaire ; dans environ 12 000 ans, c’est la brillante Véga qui jouera ce rôle.",
+      "anecdote": "Ce mouvement décale aussi peu à peu le ciel du zodiaque : le Soleil ne traverse plus les mêmes constellations qu’à l’époque où les signes astrologiques ont été fixés.",
+      "image": {
+        "statut": "verifie",
+        "recherche": "Schéma de la précession de l’axe de la Terre",
+        "fichier": "astron2-q30.jpg",
+        "auteur": "Tauʻolunga",
+        "licence": "CC BY-SA 2.5",
+        "licence_source": "CC BY-SA 2.5",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "url_page": "https://commons.wikimedia.org/wiki/File:Precession_torque.jpg",
+        "url_fichier": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Precession_torque.jpg",
+        "modifications": "Redimensionnée à 1280 px de large (miniature produite par Wikimedia Commons) ; puis recadrée sur la bande que le jeu peut montrer et réduite à 1024 px de large"
+      }
+    }
+  ]
+}
