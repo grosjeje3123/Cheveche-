@@ -120,9 +120,9 @@
       "reponse": "Des grains de pollen.",
       "reponse_courte": "Des grains de pollen",
       "distracteurs": [
-        "Des spores de fougère",
-        "Des œufs d’insectes",
-        "Des cellules de levure"
+        "Des ovules",
+        "Des spores",
+        "Des akènes"
       ],
       "variantes_acceptees": [
         "pollen",
@@ -328,9 +328,9 @@
       "reponse": "Le nautile.",
       "reponse_courte": "Le nautile",
       "distracteurs": [
-        "L’escargot",
-        "L’huître perlière",
-        "Le bernard-l’ermite"
+        "La seiche",
+        "Le bulot",
+        "L’huître perlière"
       ],
       "variantes_acceptees": [
         "nautile",

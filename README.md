@@ -121,6 +121,13 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   Pour l'AAB (Gradle), `tools/android_template.sh` installe le modèle Android et règle son thème
   (`tools/android_splash.py`) ; pour un APK exporté sans Gradle, `tools/apk_splash.py` corrige l'APK avant signature.
 
+## Poids
+- Les 270 images sont importées à 900 px au plus sur leur grand côté, en WebP avec perte (qualité 0,7) : `process/size_limit`
+  et `compress/lossy_quality` dans les `.import` de `assets/images/`. Une image fait environ 960 px de large à l’écran d’un
+  téléphone 1080p : la différence ne se voit pas, et les images passent de 28 à 18 Mo. L’APK de test (deux processeurs) fait
+  72 Mo ; depuis le Play Store (AAB, un seul processeur par téléphone), le téléchargement tourne autour de 45 Mo.
+  Prochain levier, s’il le faut : un moteur Godot recompilé sans la 3D (environ la moitié du moteur).
+
 ## Comment jouer
 - Avant la toute première série (une fiche ou le défi du jour), la page « Comment jouer » montre la chouette sur ses livres
   et donne les trois règles :
