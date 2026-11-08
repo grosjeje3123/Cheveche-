@@ -62,10 +62,12 @@ func _initialize() -> void:
 	var curve_ok := true
 	for d in range(1, 31):
 		var levels: Array = Daily.challenge(pack, "2026-11-%02d" % d).map(func(q): return pack.difficulty_level(q))
-		if levels != [1, 1, 2, 2, 3]:
+		var sorted_levels := levels.duplicate()
+		sorted_levels.sort()
+		if levels != sorted_levels or levels[0] > 1 or levels[4] < 3:
 			curve_ok = false
 			print("  courbe du ", d, " : ", levels)
-	check("défi : la difficulté monte (facile, facile, moyen, moyen, difficile), 30 jours de suite", curve_ok)
+	check("défi : un escalier, de la difficulté 1 à 3 ou plus, 30 jours de suite", curve_ok)
 	check("défi : graine fixe (FNV-1a), indépendante du moteur", Daily.seed_of("2026-11-04") == Daily.seed_of("2026-11-04") and Daily.seed_of("a") == 3826002220, str(Daily.seed_of("a")))
 	var fresh := SaveStore.new("user://test_features_other.json")
 	fresh.record_answer(a[0]["id"], true, 100)

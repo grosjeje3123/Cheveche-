@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Physique": "Sciences",
       "Grands savants": "Sciences",
@@ -28,7 +28,7 @@
       "id": "sciences01-q01",
       "titre": "L’eau qui bout",
       "categorie": "Physique",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "À quelle température l’eau pure bout-elle au niveau de la mer ?",
       "indices": [
         "Cette valeur a servi de repère à l’échelle Celsius.",
@@ -65,7 +65,7 @@
       "id": "sciences01-q02",
       "titre": "Vitesse de la lumière",
       "categorie": "Physique",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle est, environ, la vitesse de la lumière dans le vide ?",
       "indices": [
         "Rien ne va plus vite dans l’Univers.",
@@ -101,7 +101,7 @@
       "id": "sciences01-q03",
       "titre": "Isaac Newton",
       "categorie": "Grands savants",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel savant anglais a formulé la loi de la gravitation universelle ?",
       "indices": [
         "Il a publié ses Principia en 1687.",
@@ -137,7 +137,7 @@
       "id": "sciences01-q04",
       "titre": "L’ampère",
       "categorie": "Physique",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quelle unité mesure l’intensité d’un courant électrique ?",
       "indices": [
         "Elle porte le nom d’un physicien français.",
@@ -174,7 +174,7 @@
       "id": "sciences01-q05",
       "titre": "Symbole de l’or",
       "categorie": "Chimie",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel est le symbole chimique de l’or ?",
       "indices": [
         "Celui de l’argent, Ag, vient lui aussi du latin.",
@@ -209,7 +209,7 @@
       "id": "sciences01-q06",
       "titre": "La molécule d’eau",
       "categorie": "Chimie",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle est la formule chimique de l’eau ?",
       "indices": [
         "Sa molécule contient trois atomes.",
@@ -244,7 +244,7 @@
       "id": "sciences01-q07",
       "titre": "Mendeleïev",
       "categorie": "Chimie",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel chimiste russe a classé les éléments dans un célèbre tableau, en 1869 ?",
       "indices": [
         "Il a laissé des cases vides pour des éléments encore inconnus.",
@@ -281,7 +281,7 @@
       "id": "sciences01-q08",
       "titre": "Lavoisier",
       "categorie": "Chimie",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "À quel chimiste français attribue-t-on l’idée « Rien ne se perd, rien ne se crée, tout se transforme » ?",
       "indices": [
         "Il a montré l’importance de peser avec précision avant et après une réaction.",
@@ -317,7 +317,7 @@
       "id": "sciences01-q09",
       "titre": "Marie Curie",
       "categorie": "Grands savants",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle scientifique a reçu deux prix Nobel, en physique puis en chimie ?",
       "indices": [
         "Elle a découvert le polonium et le radium.",
@@ -354,7 +354,7 @@
       "id": "sciences01-q10",
       "titre": "Pasteur et la rage",
       "categorie": "Médecine",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Contre quelle maladie Louis Pasteur a-t-il mis au point un vaccin, essayé sur un enfant en 1885 ?",
       "indices": [
         "Le jeune Joseph Meister, mordu par un chien, a été le premier sauvé.",
@@ -390,7 +390,7 @@
       "id": "sciences01-q11",
       "titre": "Le squelette",
       "categorie": "Corps humain",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Combien d’os compte environ le squelette d’un adulte ?",
       "indices": [
         "Un bébé en a davantage, car certains se soudent en grandissant.",
@@ -425,7 +425,7 @@
       "id": "sciences01-q12",
       "titre": "Le cœur au repos",
       "categorie": "Corps humain",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Combien de fois environ le cœur d’un adulte au repos bat-il par minute ?",
       "indices": [
         "On le mesure en prenant le pouls, au poignet par exemple.",
@@ -462,7 +462,7 @@
       "id": "sciences01-q13",
       "titre": "La peau",
       "categorie": "Corps humain",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel est le plus grand organe du corps humain ?",
       "indices": [
         "Il pèse plusieurs kilos chez un adulte.",
@@ -498,7 +498,7 @@
       "id": "sciences01-q14",
       "titre": "Donneur universel",
       "categorie": "Médecine",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quel groupe sanguin est dit « donneur universel » pour les globules rouges ?",
       "indices": [
         "Ses globules rouges ne portent ni l’antigène A, ni l’antigène B.",
@@ -535,7 +535,7 @@
       "id": "sciences01-q15",
       "titre": "Le nombre pi",
       "categorie": "Mathématiques",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle est la valeur approchée du nombre pi ?",
       "indices": [
         "Ses décimales ne s’arrêtent jamais et ne se répètent pas.",
@@ -572,7 +572,7 @@
       "id": "sciences01-q16",
       "titre": "Pythagore",
       "categorie": "Mathématiques",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel savant grec a donné son nom au théorème du triangle rectangle ?",
       "indices": [
         "Le carré de l’hypoténuse est égal à la somme des carrés des deux autres côtés.",
@@ -607,7 +607,7 @@
       "id": "sciences01-q17",
       "titre": "Archimède",
       "categorie": "Grands savants",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel savant grec se serait écrié « Eurêka ! » en sortant de son bain ?",
       "indices": [
         "Il vivait à Syracuse, en Sicile.",
@@ -642,7 +642,7 @@
       "id": "sciences01-q18",
       "titre": "Le zéro",
       "categorie": "Mathématiques",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel nombre sépare les nombres positifs des nombres négatifs ?",
       "indices": [
         "Il est arrivé tardivement en Europe, venu de l’Inde par le monde arabe.",
@@ -678,7 +678,7 @@
       "id": "sciences01-q19",
       "titre": "Le téléphone",
       "categorie": "Inventions",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "À qui attribue-t-on l’invention du téléphone, brevetée en 1876 ?",
       "indices": [
         "Il était né en Écosse et enseignait aux personnes sourdes.",
@@ -715,7 +715,7 @@
       "id": "sciences01-q20",
       "titre": "L’ampoule électrique",
       "categorie": "Inventions",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel inventeur américain a mis au point une ampoule électrique durable, vers 1879 ?",
       "indices": [
         "Il a aussi inventé le phonographe.",
@@ -751,7 +751,7 @@
       "id": "sciences01-q21",
       "titre": "Le paratonnerre",
       "categorie": "Inventions",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel objet Benjamin Franklin a-t-il inventé après ses expériences sur la foudre ?",
       "indices": [
         "Il est relié au sol par un câble métallique.",
@@ -786,7 +786,7 @@
       "id": "sciences01-q22",
       "titre": "Le magma",
       "categorie": "Géologie",
-      "difficulte": "difficile",
+      "difficulte": 2,
       "question": "Comment appelle-t-on la roche en fusion qui se trouve sous la surface de la Terre ?",
       "indices": [
         "Quand elle sort d’un volcan, on lui donne un autre nom.",
@@ -821,7 +821,7 @@
       "id": "sciences01-q23",
       "titre": "Le diamant",
       "categorie": "Géologie",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel est le minéral naturel le plus dur ?",
       "indices": [
         "Il est fait uniquement de carbone.",
@@ -857,7 +857,7 @@
       "id": "sciences01-q24",
       "titre": "L’arc-en-ciel",
       "categorie": "Physique",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Qu’est-ce qui crée un arc-en-ciel ?",
       "indices": [
         "On le voit quand on a le Soleil dans le dos et la pluie devant soi.",
@@ -894,7 +894,7 @@
       "id": "sciences01-q25",
       "titre": "L’éclair et le tonnerre",
       "categorie": "Physique",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Pourquoi voit-on l’éclair avant d’entendre le tonnerre ?",
       "indices": [
         "Le son parcourt environ un kilomètre en trois secondes.",

@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Botanique": "Nature",
       "Biologie végétale": "Nature",
@@ -29,7 +29,7 @@
       "id": "svt01-q01",
       "titre": "Pollinisation",
       "categorie": "Botanique",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel service les abeilles rendent-elles aux plantes à fleurs en allant de fleur en fleur ?",
       "indices": [
         "Ce service concerne la reproduction des plantes.",
@@ -70,7 +70,7 @@
       "id": "svt01-q02",
       "titre": "Plante carnivore",
       "categorie": "Botanique",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Pourquoi certaines plantes, comme la dionée ou le drosera, capturent-elles des insectes ?",
       "indices": [
         "Elles poussent souvent sur des sols très pauvres, comme les tourbières.",
@@ -111,7 +111,7 @@
       "id": "svt01-q03",
       "titre": "Grains de pollen",
       "categorie": "Botanique",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quels grains microscopiques portent les cellules reproductrices mâles des plantes à fleurs ?",
       "indices": [
         "Leur surface, vue au microscope, est souvent ornée de piquants ou de sillons.",
@@ -150,7 +150,7 @@
       "id": "svt01-q04",
       "titre": "Stomates",
       "categorie": "Biologie végétale",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Comment s’appellent les pores des feuilles par lesquels la plante échange des gaz ?",
       "indices": [
         "Chacun s’ouvre et se ferme grâce à deux cellules en forme de haricot.",
@@ -192,7 +192,7 @@
       "id": "svt01-q05",
       "titre": "Trompe du papillon",
       "categorie": "Zoologie",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "À quoi sert la trompe enroulée du papillon ?",
       "indices": [
         "C’est une pièce buccale, enroulée quand elle ne sert pas.",
@@ -234,7 +234,7 @@
       "id": "svt01-q06",
       "titre": "Camouflage du poulpe",
       "categorie": "Zoologie",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Comment le poulpe parvient-il à changer de couleur pour se camoufler ?",
       "indices": [
         "Le mécanisme se trouve dans sa peau.",
@@ -277,7 +277,7 @@
       "id": "svt01-q07",
       "titre": "Globules rouges",
       "categorie": "Biologie humaine",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle est la fonction principale des globules rouges du sang ?",
       "indices": [
         "Ce sont les cellules les plus nombreuses du sang, en forme de disque creux.",
@@ -319,7 +319,7 @@
       "id": "svt01-q08",
       "titre": "Nautile",
       "categorie": "Zoologie",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quel mollusque marin règle sa flottabilité grâce à une coquille spiralée cloisonnée ?",
       "indices": [
         "C’est un cousin de la pieuvre et du calmar.",
@@ -357,7 +357,7 @@
       "id": "svt01-q09",
       "titre": "Ammonite",
       "categorie": "Paléontologie",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Les ammonites, fossiles très recherchés, appartenaient à quel groupe d’animaux ?",
       "indices": [
         "Ce sont des mollusques marins qui ont vécu pendant plus de 300 millions d’années.",
@@ -397,7 +397,7 @@
       "id": "svt01-q10",
       "titre": "Trilobite",
       "categorie": "Paléontologie",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quels arthropodes marins de l’ère primaire ont disparu il y a environ 250 millions d’années ?",
       "indices": [
         "Leur corps était protégé par une carapace articulée, renouvelée à chaque mue.",
@@ -437,7 +437,7 @@
       "id": "svt01-q11",
       "titre": "Colonnes basaltiques",
       "categorie": "Géologie",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quel phénomène découpe la lave en colonnes régulières, comme à la Chaussée des Géants ?",
       "indices": [
         "Il se produit lorsqu’une roche d’origine volcanique refroidit.",
@@ -478,7 +478,7 @@
       "id": "svt01-q12",
       "titre": "Tectonique des plaques",
       "categorie": "Géologie",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle théorie explique le mouvement des continents, les séismes et la naissance des montagnes ?",
       "indices": [
         "Elle découpe la couche rigide externe de la Terre en grands morceaux.",
@@ -516,7 +516,7 @@
       "id": "svt01-q13",
       "titre": "Lichens",
       "categorie": "Biologie",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quelle association d’un champignon et d’une algue colonise roches et écorces ?",
       "indices": [
         "Elle résiste à des milieux très secs ou très froids, où peu d’êtres vivants survivent.",
@@ -557,7 +557,7 @@
       "id": "svt01-q14",
       "titre": "Aurore boréale",
       "categorie": "Sciences de la Terre",
-      "difficulte": "moyenne",
+      "difficulte": 1,
       "question": "Quel phénomène fait onduler dans le ciel nocturne de grands rideaux lumineux verts ?",
       "indices": [
         "On l’observe surtout aux hautes latitudes, près des pôles.",
@@ -598,7 +598,7 @@
       "id": "svt01-q15",
       "titre": "ADN",
       "categorie": "Biologie moléculaire",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle molécule porte l’essentiel de l’information génétique des êtres vivants ?",
       "indices": [
         "Elle est formée de deux brins enroulés l’un sur l’autre.",

@@ -3,20 +3,21 @@
 
 Règles du brief : jamais d'auteur ni de licence inventés ; une image n'est « verifie »
 que si toutes ses métadonnées sont présentes, la licence est autorisée et le fichier existe.
-Règles de jeu (schéma 3) : on peut répondre sans gratter, donc chaque question doit se comprendre sans
-l'image ; deux indices par dossier, qui ne doivent pas nommer la réponse.
+Règles de jeu (schéma 4) : on peut répondre sans gratter, donc chaque question doit se comprendre sans
+l'image ; deux indices par dossier, qui ne doivent pas nommer la réponse ; une difficulté de 1 (très accessible)
+à 5 (pour spécialistes).
 Usage : python3 validate_pack.py pack_svt_01.json [dossier_des_images]
 """
 import json, os, re, sys
 
-DIFFICULTES = {"facile", "moyenne", "difficile"}
+DIFFICULTES = {1, 2, 3, 4, 5}
 STATUTS = {"a_trouver", "verifie"}
 CHAMPS_Q = ["id", "titre", "categorie", "difficulte", "question", "indices", "reponse",
             "reponse_courte", "distracteurs", "variantes_acceptees", "explication", "anecdote", "image"]
 MAX_LIBELLE = 40  # un choix de QCM doit tenir sur une ligne d’écran
 MAX_QUESTION = 110  # au-delà, la carte mange la place de l’image
 NB_INDICES = 2
-SCHEMA = 3
+SCHEMA = 4
 # Une question qui renvoie à l'image (« cet insecte », « cette image »...) ne tient pas sans elle.
 DEPEND_IMAGE_RE = re.compile(r"\b(cet|cette|ces|ci-dessus|ci-dessous|image|photo|illustration|cliché)\b", re.I)
 MOTS_VIDES = {"dans", "avec", "pour", "sont", "leur", "leurs", "cette", "entre", "elles", "grand", "grande", "autre", "autres"}
@@ -47,7 +48,7 @@ def main(path, img_dir):
         if qid in ids:
             erreurs.append(f"{qid}: identifiant en double")
         ids.add(qid)
-        if q.get("difficulte") not in DIFFICULTES:
+        if type(q.get("difficulte")) is not int or q.get("difficulte") not in DIFFICULTES:
             erreurs.append(f"{qid}: difficulté invalide « {q.get('difficulte')} »")
         if len(q.get("indices", [])) != NB_INDICES:
             erreurs.append(f"{qid}: {len(q.get('indices', []))} indices ({NB_INDICES} attendus)")

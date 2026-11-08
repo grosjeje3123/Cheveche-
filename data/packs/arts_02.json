@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Cinéma": "Arts",
       "Photographie": "Arts",
@@ -29,7 +29,7 @@
       "id": "arts02-q01",
       "titre": "Les frères Lumière",
       "categorie": "Cinéma",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quels frères ont organisé à Paris, en 1895, l’une des premières projections publiques et payantes de cinéma ?",
       "indices": [
         "Ils étaient industriels à Lyon, dans la photographie.",
@@ -66,7 +66,7 @@
       "id": "arts02-q02",
       "titre": "Le Voyage dans la Lune",
       "categorie": "Cinéma",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quel pionnier du cinéma a réalisé Le Voyage dans la Lune, en 1902 ?",
       "indices": [
         "Ancien illusionniste, il a inventé de nombreux trucages.",
@@ -102,7 +102,7 @@
       "id": "arts02-q03",
       "titre": "La première photographie",
       "categorie": "Photographie",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Qui a réalisé, vers 1826-1827, la plus ancienne photographie conservée ?",
       "indices": [
         "Il était français, originaire de Chalon-sur-Saône.",
@@ -138,7 +138,7 @@
       "id": "arts02-q04",
       "titre": "Le flamenco",
       "categorie": "Danse",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "De quel pays vient le flamenco ?",
       "indices": [
         "Il est né en Andalousie, notamment au sein des communautés gitanes.",
@@ -175,7 +175,7 @@
       "id": "arts02-q05",
       "titre": "Le Lac des cygnes",
       "categorie": "Musique",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel compositeur russe a écrit la musique du ballet Le Lac des cygnes ?",
       "indices": [
         "Il a vécu au XIXe siècle et a aussi écrit des symphonies et des concertos célèbres.",
@@ -212,7 +212,7 @@
       "id": "arts02-q06",
       "titre": "Tintin",
       "categorie": "Bande dessinée",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel reporter à la houppe, créé par Hergé, voyage avec son chien Milou ?",
       "indices": [
         "Son auteur était belge.",
@@ -247,7 +247,7 @@
       "id": "arts02-q07",
       "titre": "La Liberté guidant le peuple",
       "categorie": "Peinture",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quel peintre a réalisé La Liberté guidant le peuple ?",
       "indices": [
         "Le tableau célèbre les Trois Glorieuses, la révolution de juillet 1830.",
@@ -283,7 +283,7 @@
       "id": "arts02-q08",
       "titre": "La Jeune Fille à la perle",
       "categorie": "Peinture",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quel peintre hollandais a peint La Jeune Fille à la perle ?",
       "indices": [
         "Il vivait à Delft, au XVIIe siècle.",
@@ -319,7 +319,7 @@
       "id": "arts02-q09",
       "titre": "Le Cri",
       "categorie": "Peinture",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel peintre norvégien a peint Le Cri ?",
       "indices": [
         "Il en a réalisé plusieurs versions, en peinture et en gravure.",
@@ -355,7 +355,7 @@
       "id": "arts02-q10",
       "titre": "La Vénus de Milo",
       "categorie": "Sculpture",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle célèbre statue grecque, privée de ses bras, est exposée au Louvre ?",
       "indices": [
         "Elle a été découverte en 1820 sur une île des Cyclades.",
@@ -390,7 +390,7 @@
       "id": "arts02-q11",
       "titre": "Les touches du piano",
       "categorie": "Musique",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Combien de touches compte un piano moderne standard ?",
       "indices": [
         "Il y a 52 touches blanches.",
@@ -426,7 +426,7 @@
       "id": "arts02-q12",
       "titre": "Carmen",
       "categorie": "Musique",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel compositeur français a écrit l’opéra Carmen ?",
       "indices": [
         "L’action se déroule à Séville.",
@@ -462,7 +462,7 @@
       "id": "arts02-q13",
       "titre": "Le Taj Mahal",
       "categorie": "Architecture",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel mausolée de marbre blanc un empereur moghol a-t-il fait bâtir en Inde pour son épouse ?",
       "indices": [
         "Il se trouve à Agra, au bord de la rivière Yamuna.",
@@ -497,7 +497,7 @@
       "id": "arts02-q14",
       "titre": "Notre-Dame de Paris",
       "categorie": "Architecture",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle cathédrale a perdu sa flèche dans un incendie en avril 2019 ?",
       "indices": [
         "Elle a rouvert ses portes en décembre 2024.",
@@ -533,7 +533,7 @@
       "id": "arts02-q15",
       "titre": "Andy Warhol",
       "categorie": "Art moderne",
-      "difficulte": "moyenne",
+      "difficulte": 1,
       "question": "Quel artiste américain a rendu célèbres les boîtes de soupe Campbell et les portraits de Marilyn Monroe ?",
       "indices": [
         "Il est une figure majeure du pop art.",

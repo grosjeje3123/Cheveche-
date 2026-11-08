@@ -210,7 +210,7 @@ func _initialize() -> void:
 	var lv: Array = play._questions.map(func(x): return main._pack.difficulty_level(x))
 	var sorted_lv := lv.duplicate()
 	sorted_lv.sort()
-	check("« Au hasard » : on commence par les faciles, les difficiles à la fin", lv == sorted_lv and lv[0] == 1 and lv[239] == 3)
+	check("« Au hasard » : on commence par les plus accessibles, les plus difficiles à la fin", lv == sorted_lv and lv[0] == 1 and lv[239] == 4)
 	check("carte : le repère de niveau suit le dossier", play._card._level.visible and play._card._level.level == lv[0])
 	check("en haut : « 0 / 240 trouvés » et une barre vide", play._counter.text == "0 / 240 trouvés" and play._segments.fills.size() == 1
 			and play._segments.fills[0] == 0.0, play._counter.text)
@@ -276,6 +276,8 @@ func _initialize() -> void:
 			"%d dossiers, révision à %d, %d en attente" % [play._questions.size(), play.revision_from, play.waiting])
 	check("reprise : « 4 / 240 trouvés », résultats remis à zéro", play._counter.text == "4 / 240 trouvés" and play._results.is_empty() and play._index == 0)
 	check("reprise : pas de mot de révision sur le premier dossier", play._feedback.text == "Répondez, ou grattez pour un indice.", play._feedback.text)
+	for k in 235:  # on saute les 235 premiers : comme s'ils avaient été joués (la file s'adapte sans eux)
+		main._session_played[play._questions[k]["id"]] = true
 	play._index = 234
 	play._next.pressed.emit()  # le premier dossier de révision
 	await _frames(6)
@@ -298,6 +300,8 @@ func _initialize() -> void:
 	check("fiche Sciences : ses dossiers du jour (30 moins ceux à revoir demain), « n / 30 trouvés »", n_queue == 30 - sciences_waiting
 			and play._questions.all(func(x): return main._pack.collection_of(x) == "Sciences")
 			and play._counter.text == "%d / 30 trouvés" % sciences_found, play._counter.text)
+	for k in n_queue - 1:  # comme si les autres avaient été joués
+		main._session_played[play._questions[k]["id"]] = true
 	play._index = n_queue - 2
 	play._next.pressed.emit()  # on saute au dernier dossier de la file
 	await _frames(6)

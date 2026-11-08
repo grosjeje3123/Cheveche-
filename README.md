@@ -28,25 +28,24 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
 - Le réglage `rendering/textures/vram_compression/import_etc2_astc` est activé : Godot l’exige pour Android.
 - Pour le Play Store, plus tard : compte développeur Google, clé de signature définitive (à garder précieusement), format AAB.
 
-## Compilation automatique (GitHub)
-- À chaque envoi sur la branche `main`, GitHub Actions (`.github/workflows/android.yml`) lance les tests du jeu
-  (`tests/run_all.sh`), puis compile l’AAB pour Google Play avec Godot 4.4.1, en visant l’API 36 exigée par Google.
-  L’AAB se télécharge dans l’onglet **Actions** du dépôt (artefact `cheveche-aab`).
-- Signature : sans secrets, l’AAB est signé avec une clé de test (bon pour vérifier, pas pour publier). Pour publier,
-  ajouter dans Settings > Secrets and variables > Actions : `ANDROID_KEYSTORE_BASE64` (le fichier .jks encodé en base64)
-  et `ANDROID_KEYSTORE_PASSWORD` ; l’alias de la clé est `cheveche` (modifiable par le secret `ANDROID_KEYSTORE_ALIAS`). La clé elle-même ne va jamais dans le dépôt.
-- Le résumé de chaque compilation (tests, export, manifeste) est poussé sur la branche `journal-ci`.
-- Tests en local : `tests/run_all.sh /chemin/vers/Godot` depuis la racine du projet (il faut Python et Pillow pour la photo de test).
-- Les photos originales téléchargées depuis Commons (`images_sources/`) ne sont pas dans le dépôt :
-  `tools/commons_image.py` les retrouve grâce aux adresses notées dans les packs.
-
 ## Règles du jeu (dans `core/reveal_rules.gd`)
 - On peut **répondre tout de suite**, sans rien gratter : les quatre réponses sont ouvertes dès le départ et le dossier vaut 100 points.
 - Gratter est une **aide** qui coûte des points : on gratte l’image du dossier, et **deux indices** se débloquent à **25 %** et **50 %**
   de surface grattée. L’image se révèle au fil du grattage (elle illustre le sujet, elle n’est pas indispensable).
 - La réponse donnée, la couche s’effrite et les deux indices deviennent lisibles.
-- **Niveaux** : chaque dossier est « facile », « moyenne » ou « difficile » (champ `difficulte` des packs ; environ 10, 13 et 6
-  à 7 par discipline). Le bandeau de la carte le montre par trois barres montantes avant le numéro (`ds/ds_level.gd`).
+- **Difficulté** : chaque dossier a une difficulté de 1 (très accessible) à 5 (pour spécialistes) (champ `difficulte` des
+  packs, schéma 4 ; les anciens mots « facile », « moyenne », « difficile » se lisent 2, 3 et 4). Sur 270 dossiers : 86 de
+  difficulté 1, 93 de 2, 66 de 3, 23 de 4, 2 de 5 (ceux-là dans le niveau 2 de l’Astronomie). Le bandeau de la carte la montre
+  par cinq barres montantes avant le numéro (`ds/ds_level.gd`). Après un dossier de difficulté 4 ou 5, la réponse ajoute
+  « Peu de gens le savent. » (trouvé sans indice comme manqué).
+- **Niveau par discipline** (`core/mastery.gd`), calculé sur l’appareil à partir de la *première* réponse à chaque dossier
+  (champ `first` de la sauvegarde ; déduit pour les anciennes sauvegardes) : Découverte, Curieux, Érudit, Expert, Grand Hibou.
+  Un modèle simple (la chance de réussir un dossier dépend de l’écart entre le niveau du joueur et la difficulté) pèse chaque
+  réponse par ses points : réussir sans indice un dossier difficile fait beaucoup monter, rater un facile fait un peu baisser.
+  Pour être Expert, il faut au moins deux dossiers de difficulté 4 réussis (60 points ou plus) ; pour Grand Hibou, deux de
+  difficulté 5. Le niveau s’annonce après 6 dossiers d’une discipline : « Mes résultats » l’écrit sous chaque discipline, et
+  l’explication d’un dossier ajoute « Astronomie : votre niveau est Curieux. », puis « Astronomie : vous passez Érudit. »
+  quand il monte (rien quand il baisse).
 - **Points** (`core/scoring.gd`) : 100 sans indice, 60 avec un, 30 avec deux ; 0 si la réponse est fausse
   (jamais de points en moins). Seuls comptent les indices lus *avant* de répondre. Le total possible du défi du jour (5 dossiers) est 500.
 - **Mise en page** (constantes en tête de `screens/play_screen.gd`) : l’image fait de 260 à 330 px de haut et les lignes de réponse de
@@ -58,8 +57,11 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   En haut de l’écran : les dossiers trouvés dans la fiche (« 12 / 30 trouvés », 240 pour « Au hasard ») et une barre fine remplie
   d’autant. Au bout de la file (tous les dossiers de la fiche vus), le bouton devient « Retour à la couverture ».
 - **Ordre** (`SaveStore.draw`) : toute la fiche, en trois paquets : les dossiers pas encore trouvés, puis ceux
-  trouvés avec un indice, puis ceux trouvés sans indice. Dans chaque paquet, **la difficulté monte** : faciles, puis moyens,
-  puis difficiles, mélangés à l’intérieur de chaque niveau ; « Au hasard » mêle ainsi toutes les disciplines.
+  trouvés avec un indice, puis ceux trouvés sans indice. Dans chaque paquet, **la difficulté monte**, mélangée à l’intérieur
+  de chaque difficulté ; « Au hasard » mêle ainsi toutes les disciplines. **La fiche s’adapte au joueur** : les dossiers pas
+  encore trouvés commencent à la difficulté qui lui convient (`Mastery.start_level`, un peu au-dessus de son niveau ; le tout
+  premier dossier d’une discipline est le plus accessible), les plus faciles passant à la fin ; et la suite de la file est
+  retirée après chaque réponse (`main._adapt_queue`, `PlayScreen.set_upcoming`), sans reproposer les dossiers déjà joués.
 - **Délai avant le retour** (`SaveStore.is_due`, champ `revoir` de la sauvegarde) : un dossier raté, ou trouvé avec un indice,
   ne revient dans les fiches qu’à partir du lendemain : on ne le rejoue pas avec la réponse encore en tête (le défi du jour,
   lui, ne change pas). Trouvé sans indice, il n’a plus de date de retour. Au début de la révision (dossiers déjà trouvés
@@ -89,15 +91,15 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   ni dans « Au hasard », ni dans le défi du jour, ni dans le total de « Mes résultats ».
 - Le niveau 2 s’ouvre quand la fiche de base est complète : la page « Fiche complète » l’annonce et propose « Jouer le
   niveau 2 » (« Plus tard » reprend le jeu). La fiche s’agrandit alors de ses 30 dossiers pointus, qui passent en tête
-  (pas encore trouvés), du plus abordable au plus difficile (champ `difficulte`, relatif au niveau 2).
+  (pas encore trouvés), à partir de la difficulté qui convient au joueur (champ `difficulte`, sur la même échelle de 1 à 5).
 - En haut du jeu : « 4 / 30 niveau 2 », puis « sans indice ». Sur la carte, « niveau 2 » remplace les barres de niveau.
   Sur la couverture, la fiche porte « niveau 2 » et sa barre suit le niveau 2 ; « Mes résultats » dit « Niveau 2 : … ».
   Le niveau 2 terminé a sa propre page, au tampon anthracite.
 - Ajouter un niveau 2 ailleurs : un pack `xxx_n2_01.json` (`"niveau": 2`, numéros libres), ajouté à `PACK_PATHS` dans `main.gd`.
 
 ## Défi du jour
-- Carte « Défi du jour » sur la couverture : 5 dossiers, dans 5 disciplines différentes, de plus en plus difficiles
-  (facile, facile, moyen, moyen, difficile : `Daily.CURVE` ; niveau le plus proche si une discipline n’a pas le bon), **les mêmes pour tout le monde**
+- Carte « Défi du jour » sur la couverture : 5 dossiers, dans 5 disciplines différentes, en escalier, de la difficulté 1
+  à la 5 (`Daily.CURVE` ; la plus proche si une discipline n’a pas la bonne, puis rangés du plus accessible au plus difficile), **les mêmes pour tout le monde**
   le même jour (à pack égal) : le tirage ne dépend que de la date (`Daily.challenge`, graine FNV-1a de « AAAA-MM-JJ »),
   pas de la progression.
 - Une fois par jour. On peut s’arrêter en route : la carte indique « À reprendre » et on repart au dossier suivant.
@@ -112,11 +114,6 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   (`Daily.share_text`).
 - **Jours de suite** : nombre de jours consécutifs où le défi a été terminé (jusqu’à hier si celui du jour reste à faire).
   Les réponses du défi comptent aussi pour la collection et la semaine.
-
-## Politique de confidentialité
-- `docs/confidentialite.html` : la page demandée par Google Play (le jeu ne collecte rien). Publiée par GitHub Pages
-  (Settings > Pages > Deploy from a branch, `main`, dossier `/docs`), à l'adresse
-  https://grosjeje3123.github.io/Cheveche-/confidentialite.html.
 
 ## Lancement
 - Au démarrage, rien d'autre que le papier : l'écran de démarrage d'Android est vidé (fond ivoire #F1EDE3, sans
@@ -184,6 +181,7 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   une fiche de discipline les siens, en continu. « Mes résultats »
   (lien discret, en bas, à côté de « Réglages ») est un simple bilan : dossiers trouvés, semaine, progression par discipline. La flèche retour, Échap (ordinateur) ou le
   bouton Retour (Android) ramène à l’écran d’origine.
+- `core/mastery.gd` : niveau du joueur par discipline (calcul seul, sans état : il relit la sauvegarde).
 - `core/daily.gd` : date du jour et dossier du jour (la couverture s’en sert pour la date ; le dossier du jour reviendra avec le futur défi du jour).
 - `assets/brand/` : l’illustration du jeu, la chouette sur deux livres (`owl_illustration.png`, fond détouré, couverture
   et « Comment jouer ») ; le logo qui en est tiré, simplifié et de face (SVG générés par `tools/make_owl.py`, trois tailles

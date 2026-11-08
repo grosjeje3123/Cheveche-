@@ -7,7 +7,10 @@ extends RefCounted
 ## Aucune dépendance à l'interface : on peut l'utiliser et le tester sans écran.
 
 const IMAGES_ROOT := "res://assets/images"
-const DIFFICULTY_LEVELS := {"facile": 1, "moyenne": 2, "difficile": 3}
+## Difficulté d'un dossier (champ « difficulte », schéma 4) : de 1 (très accessible) à 5 (pour spécialistes).
+const DIFFICULTY_MAX := 5
+## Anciens packs (schéma 3) : la difficulté était un mot.
+const LEGACY_DIFFICULTY := {"facile": 2, "moyenne": 3, "difficile": 4}
 const REQUIRED_KEYS := ["id", "categorie", "difficulte", "question", "indices", "reponse",
 		"reponse_courte", "distracteurs", "explication", "image"]
 
@@ -97,7 +100,8 @@ static func check_question(q: Dictionary) -> PackedStringArray:
 		problems.append("%d indices attendus" % RevealRules.clue_count())
 	if not (q["distracteurs"] is Array) or q["distracteurs"].size() != 3:
 		problems.append("3 distracteurs attendus")
-	if not DIFFICULTY_LEVELS.has(q["difficulte"]):
+	var d = q["difficulte"]
+	if not (LEGACY_DIFFICULTY.has(d) or ((d is int or d is float) and int(d) >= 1 and int(d) <= DIFFICULTY_MAX)):
 		problems.append("difficulté inconnue")
 	if not (q["image"] is Dictionary) or not ["a_trouver", "verifie"].has(q["image"].get("statut", "")):
 		problems.append("statut d'image inconnu")
@@ -143,8 +147,16 @@ func dossier_number(q: Dictionary) -> int:
 	return int(m.get_string()) if m else 0
 
 
+## La difficulté d'un dossier, de 1 à DIFFICULTY_MAX (3 si elle manque).
+static func difficulty_of(q: Dictionary) -> int:
+	var d = q.get("difficulte", 3)
+	if d is String:
+		return int(LEGACY_DIFFICULTY.get(d, 3))
+	return clampi(int(d), 1, DIFFICULTY_MAX)
+
+
 func difficulty_level(q: Dictionary) -> int:
-	return DIFFICULTY_LEVELS.get(q["difficulte"], 1)
+	return difficulty_of(q)
 
 
 func image_path(q: Dictionary) -> String:

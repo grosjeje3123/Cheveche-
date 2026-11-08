@@ -57,6 +57,8 @@ var hold_next := false
 ## Jeu continu : indice du premier dossier de révision (déjà trouvé sans indice), -1 s'il n'y en a pas ;
 ## et nombre de dossiers mis de côté jusqu'à demain dans la fiche (ratés ou trouvés avec un indice).
 var revision_from := -1
+## À partir de cette difficulté, un dossier est « difficile » : un mot de plus après la réponse.
+const HARD := 4
 var waiting := 0
 ## Une phrase qui prend la place de la consigne tant qu'on n'a rien gratté (début de la révision).
 var _notice := ""
@@ -414,16 +416,18 @@ func _on_option_pressed(button: Button) -> void:
 		o.disabled = true
 		if o.text == _correct_text:
 			_mark(o, Ds.SAGE)
+	var hard := QuestionPack.difficulty_of(_q) >= HARD
 	if correct:
 		if clues == 0:
-			_feedback.text = "Exact, sans aucun indice."
+			_feedback.text = "Exact, sans aucun indice." + (" Peu de gens le savent." if hard else "")
 		else:
 			_feedback.text = "Exact, avec %d indice%s." % [clues, "s" if clues > 1 else ""]
 		_points.text = "+%d" % points
 		_points.add_theme_color_override("font_color", Ds.SAGE)
 	else:
 		_mark(button, Ds.TERRACOTTA)
-		_feedback.text = "Pas tout à fait."
+		# Un dossier difficile manqué n'est pas un échec : on vient d'apprendre ce que peu de gens savent.
+		_feedback.text = "Pas tout à fait. Peu de gens le savent." if hard else "Pas tout à fait."
 		_points.text = "0"
 		_points.add_theme_color_override("font_color", Ds.INK_FAINT)
 	_clues.unlock(RevealRules.clue_count())  # la réponse donnée, on lit les deux indices
@@ -441,6 +445,27 @@ func _on_option_pressed(button: Button) -> void:
 	var result := {"id": _q["id"], "correct": correct, "clues": clues, "points": points}
 	_results.append(result)
 	answered.emit(_q["id"], correct, clues, points)
+
+
+## Remplace la suite de la file (après le dossier à l'écran) : la partie s'adapte au fil des réponses.
+## `revision_at` : position, dans `rest`, du premier dossier de la révision (-1 : pas de révision).
+func set_upcoming(rest: Array, revision_at := -1) -> void:
+	_questions = _questions.slice(0, _index + 1) + rest
+	revision_from = _index + 1 + revision_at if revision_at >= 0 else -1
+	if _answered and _continuous:
+		_next.text = "Dossier suivant" if not rest.is_empty() else "Retour à la couverture"
+
+
+## Ajoute une ligne sous l'explication du dossier qu'on vient de jouer (un nouveau niveau, par exemple).
+func add_note(text: String) -> void:
+	if text == "" or _explain_box.get_child_count() == 0:
+		return
+	var label := Ds.label(text, Ds.Role.SMALL, Ds.SAGE, true)
+	_explain_box.add_child(label)
+	_explain_box.move_child(label, _explain_box.get_child_count() - 2)  # avant l'air sous le dernier paragraphe
+	var gap := Ds.spacer(Ds.S2)
+	_explain_box.add_child(gap)
+	_explain_box.move_child(gap, label.get_index())
 
 
 # Ce que vaut le dossier à cet instant : « 100 », « 60 » puis « 30 » points.

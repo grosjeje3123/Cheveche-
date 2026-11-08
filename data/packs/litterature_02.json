@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Romans": "Littérature",
       "Théâtre": "Littérature",
@@ -24,7 +24,7 @@
       "id": "litterature02-q01",
       "titre": "Madame Bovary",
       "categorie": "Romans",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Qui a écrit Madame Bovary ?",
       "indices": [
         "Il était normand, né à Rouen.",
@@ -60,7 +60,7 @@
       "id": "litterature02-q02",
       "titre": "Germinal",
       "categorie": "Romans",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel écrivain a écrit Germinal, roman de la série des Rougon-Macquart ?",
       "indices": [
         "Le roman se déroule dans les mines du Nord.",
@@ -96,7 +96,7 @@
       "id": "litterature02-q03",
       "titre": "La Comédie humaine",
       "categorie": "Romans",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel romancier a réuni ses œuvres sous le titre La Comédie humaine, avec Le Père Goriot ?",
       "indices": [
         "Son œuvre compte près d’une centaine de romans et de nouvelles.",
@@ -132,7 +132,7 @@
       "id": "litterature02-q04",
       "titre": "Le Rouge et le Noir",
       "categorie": "Romans",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Qui a écrit Le Rouge et le Noir ?",
       "indices": [
         "Le héros, Julien Sorel, est un jeune homme ambitieux, fils de charpentier.",
@@ -168,7 +168,7 @@
       "id": "litterature02-q05",
       "titre": "Phèdre",
       "categorie": "Théâtre",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quelle tragédie de Racine raconte l’amour coupable d’une reine pour son beau-fils ?",
       "indices": [
         "La pièce a été créée en 1677.",
@@ -203,7 +203,7 @@
       "id": "litterature02-q06",
       "titre": "Le Cid",
       "categorie": "Théâtre",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel auteur a écrit Le Cid, créé en 1637 ?",
       "indices": [
         "Le héros, Rodrigue, doit choisir entre son amour et l’honneur de sa famille.",
@@ -239,7 +239,7 @@
       "id": "litterature02-q07",
       "titre": "Hansel et Gretel",
       "categorie": "Contes et fables",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel conte de Grimm met en scène deux enfants abandonnés qui trouvent une maison en pain d’épice ?",
       "indices": [
         "Une sorcière y attire les enfants pour les manger.",
@@ -275,7 +275,7 @@
       "id": "litterature02-q08",
       "titre": "Andersen",
       "categorie": "Contes et fables",
-      "difficulte": "facile",
+      "difficulte": 2,
       "question": "Quel écrivain danois a écrit La Petite Sirène et Le Vilain Petit Canard ?",
       "indices": [
         "Il est né à Odense, en 1805.",
@@ -311,7 +311,7 @@
       "id": "litterature02-q09",
       "titre": "1984",
       "categorie": "Romans",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel auteur a écrit 1984, roman où « Big Brother vous regarde » ?",
       "indices": [
         "Il a aussi écrit La Ferme des animaux.",
@@ -347,7 +347,7 @@
       "id": "litterature02-q10",
       "titre": "Ronsard",
       "categorie": "Poésie",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quel poète a écrit « Mignonne, allons voir si la rose… » ?",
       "indices": [
         "Il était l’un des poètes de la Pléiade, au XVIe siècle.",
@@ -383,7 +383,7 @@
       "id": "litterature02-q11",
       "titre": "Verlaine",
       "categorie": "Poésie",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quel poète a écrit « Les sanglots longs des violons de l’automne » ?",
       "indices": [
         "Le poème s’intitule « Chanson d’automne ».",
@@ -419,7 +419,7 @@
       "id": "litterature02-q12",
       "titre": "Rabelais",
       "categorie": "Romans",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel écrivain a créé les géants Gargantua et Pantagruel ?",
       "indices": [
         "Il était aussi médecin, au XVIe siècle.",
@@ -455,7 +455,7 @@
       "id": "litterature02-q13",
       "titre": "Candide",
       "categorie": "Romans",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quel conte philosophique de Voltaire se termine par « il faut cultiver notre jardin » ?",
       "indices": [
         "Le héros suit son maître Pangloss, pour qui tout est au mieux.",
@@ -491,7 +491,7 @@
       "id": "litterature02-q14",
       "titre": "L’Île au trésor",
       "categorie": "Romans",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel roman de Robert Louis Stevenson raconte la quête d’un trésor caché par des pirates ?",
       "indices": [
         "Le jeune héros s’appelle Jim Hawkins.",
@@ -527,7 +527,7 @@
       "id": "litterature02-q15",
       "titre": "L’Étranger",
       "categorie": "Romans",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel écrivain, prix Nobel en 1957, a écrit L’Étranger ?",
       "indices": [
         "Il est né en Algérie, en 1913.",

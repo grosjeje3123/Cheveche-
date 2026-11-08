@@ -23,7 +23,8 @@ const CODE_MAX_BYTES := 4 * 1024 * 1024
 
 var path: String
 
-## id du dossier -> {"best": int, "plays": int, "wins": int, "revoir": "AAAA-MM-JJ" (facultatif)}
+## id du dossier -> {"best": int, "plays": int, "wins": int, "first": int, "revoir": "AAAA-MM-JJ" (facultatif)}
+## « first » : les points de la toute première réponse (c'est elle qui mesure ce que le joueur savait : voir Mastery).
 ## « revoir » : un dossier raté, ou trouvé avec un indice, ne revient dans les fiches qu'à partir de ce jour-là
 ## (le lendemain de la réponse) : on ne le rejoue pas en ayant encore la réponse en tête.
 var _dossiers := {}
@@ -85,6 +86,8 @@ func _apply(data: Dictionary) -> void:
 			}
 			if Week.is_key(str(d.get("revoir", ""))):
 				_dossiers[str(id)]["revoir"] = str(d["revoir"])
+			if d.has("first"):
+				_dossiers[str(id)]["first"] = clampi(int(d["first"]), 0, Scoring.MAX_POINTS)
 	var best = data.get("best_series", {})
 	if best is Dictionary:
 		for k in best:
@@ -157,6 +160,8 @@ func record_answer(question_id: String, correct: bool, points: int, day := "") -
 		s["correct"] = int(s["correct"]) + 1
 	s["points"] = int(s["points"]) + points
 	var d: Dictionary = _dossiers.get(question_id, {"best": 0, "plays": 0, "wins": 0})
+	if int(d["plays"]) == 0:
+		d["first"] = points
 	d["plays"] = int(d["plays"]) + 1
 	if correct:
 		d["wins"] = int(d["wins"]) + 1
@@ -308,6 +313,21 @@ func best_points(question_id: String) -> int:
 	return int(_dossiers.get(question_id, {}).get("best", 0))
 
 
+## Points de la première réponse à ce dossier, ou -1 s'il n'a jamais été joué. Les sauvegardes d'avant ne la
+## gardaient pas : on la déduit alors au mieux (joué une fois : son meilleur score ; plusieurs fois : le meilleur
+## score, au prorata des réussites).
+func first_points(question_id: String) -> int:
+	var d: Dictionary = _dossiers.get(question_id, {})
+	var n := int(d.get("plays", 0))
+	if n == 0:
+		return -1
+	if d.has("first"):
+		return int(d["first"])
+	if n == 1:
+		return int(d.get("best", 0))
+	return roundi(int(d.get("best", 0)) * float(d.get("wins", 0)) / float(n))
+
+
 func plays(question_id: String) -> int:
 	return int(_dossiers.get(question_id, {}).get("plays", 0))
 
@@ -403,29 +423,35 @@ func waiting_in(questions: Array, today := "") -> int:
 ## Ordre de jeu d'une fiche, en trois paquets : les dossiers pas encore trouvés, puis ceux trouvés avec un indice
 ## (à retrouver sans), puis ceux déjà trouvés sans indice (la révision). Les dossiers ratés ou trouvés avec un indice
 ## ne reviennent qu'à partir du lendemain (is_due) : d'ici là, ils restent hors de la file. Dans chaque paquet,
-## la difficulté monte : les faciles, puis les moyens, puis les difficiles, mélangés à l'intérieur de chaque niveau.
-func draw(questions: Array, count: int, today := "") -> Array:
+## la difficulté monte (de 1 à 5, mélangés à l'intérieur de chaque difficulté). `start` : pour les dossiers pas encore
+## trouvés, la difficulté par laquelle commencer (Mastery.start_level) ; les plus faciles passent alors à la fin.
+## `skip` : identifiants à laisser de côté (déjà joués dans la partie en cours).
+func draw(questions: Array, count: int, today := "", start := 1, skip := {}) -> Array:
 	var tiers := [[], [], []]
 	for q in questions:
+		if skip.has(q["id"]):
+			continue
 		var perfect := is_flawless(q["id"])
 		if not perfect and not is_due(q["id"], today):
 			continue
 		var tier := 0 if not is_collected(q["id"]) else (2 if perfect else 1)
 		(tiers[tier] as Array).append(q)
 	var out: Array = []
-	for tier in tiers:
-		out.append_array(_by_rising_difficulty(tier))
+	for i in tiers.size():
+		out.append_array(_by_rising_difficulty(tiers[i], start if i == 0 else 1))
 	return out.slice(0, count)
 
 
-# Faciles, puis moyens, puis difficiles ; chaque niveau mélangé.
-static func _by_rising_difficulty(questions: Array) -> Array:
-	var levels := [[], [], []]
+# De la difficulté `start` à 5, puis les plus faciles (de 1 à start - 1) ; chaque difficulté mélangée.
+static func _by_rising_difficulty(questions: Array, start := 1) -> Array:
+	var levels: Array = []
+	for _i in QuestionPack.DIFFICULTY_MAX:
+		levels.append([])
 	for q in questions:
-		var rank: int = QuestionPack.DIFFICULTY_LEVELS.get(str(q.get("difficulte", "moyenne")), 2)
-		(levels[clampi(rank, 1, 3) - 1] as Array).append(q)
+		(levels[QuestionPack.difficulty_of(q) - 1] as Array).append(q)
 	var out: Array = []
-	for level in levels:
-		level.shuffle()
-		out.append_array(level)
+	var first := clampi(start, 1, QuestionPack.DIFFICULTY_MAX) - 1
+	for i in range(first, levels.size()) + range(0, first):
+		(levels[i] as Array).shuffle()
+		out.append_array(levels[i])
 	return out

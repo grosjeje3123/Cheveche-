@@ -124,11 +124,12 @@ func _initialize() -> void:
 	check("ordre d'une fiche : mélangé à l'intérieur d'un même niveau", mixed_inside.size() > 3, str(mixed_inside.size()))
 	var counts := {}
 	for d in ProgressScreen.DISCIPLINES:
-		var c := [0, 0, 0]
+		var c := [0, 0, 0, 0, 0]
 		for q in main._pack.questions_in(d):
 			c[main._pack.difficulty_level(q) - 1] += 1
 		counts[d] = c
-	check("niveaux : dans chaque discipline, au moins 9 faciles, 12 moyens et 6 difficiles", counts.values().all(func(c): return c[0] >= 9 and c[1] >= 12 and c[2] >= 6), str(counts))
+	check("difficulté : dans chaque discipline, au moins 10 dossiers de difficulté 1 ou 2 et 4 de difficulté 3 ou plus",
+			counts.values().all(func(c): return c[0] + c[1] >= 10 and c[2] + c[3] + c[4] >= 4), str(counts))
 	DirAccess.remove_absolute("user://test_nav_mix.json")
 
 	check("jour de l'année : 3 novembre 2026 = 307", Daily.day_of_year({"year": 2026, "month": 11, "day": 3}) == 307)

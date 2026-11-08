@@ -216,7 +216,11 @@ func _initialize() -> void:
 	await create_timer(0.7).timeout
 	check("« Jouer le niveau 2 » : la fiche s'agrandit, les 30 dossiers du niveau 2 en tête", main._current == play and play._questions.size() == 60
 			and play._questions.slice(0, 30).all(func(q): return QuestionPack.level_of(q) == 2))
-	check("niveau 2 : on commence par ses dossiers les plus abordables", pack.difficulty_level(play._questions[0]) == 1)
+	# Le niveau 2 commence à la difficulté qui convient au joueur (Mastery.start_level), les plus faciles à la fin.
+	var start2 := Mastery.start_level(main._mastery_of("Astronomie"))
+	var level2: Array = play._questions.slice(0, 30).map(func(q): return pack.difficulty_level(q))
+	var expected_first: int = level2.filter(func(d): return d >= start2).min() if level2.any(func(d): return d >= start2) else level2.min()
+	check("niveau 2 : on commence à la difficulté qui convient au joueur (%d)" % start2, level2[0] == expected_first, str(level2))
 	check("en-tête : « 0 / 30 niveau 2 »", play._counter.text == "0 / 30 niveau 2", play._counter.text)
 	check("carte : « niveau 2 » à la place des barres", play._card._tier.visible and not play._card._level.visible)
 	await _answer(play, true)

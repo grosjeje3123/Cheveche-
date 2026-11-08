@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Système solaire": "Astronomie",
       "Phénomènes célestes": "Astronomie",
@@ -25,7 +25,7 @@
       "id": "astro01-q01",
       "titre": "Mercure",
       "categorie": "Système solaire",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle est la planète la plus proche du Soleil ?",
       "indices": [
         "C’est aussi la plus petite planète du Système solaire.",
@@ -61,7 +61,7 @@
       "id": "astro01-q02",
       "titre": "Mars",
       "categorie": "Système solaire",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle planète est surnommée la « planète rouge » ?",
       "indices": [
         "Sa couleur vient d’une poussière riche en oxyde de fer qui couvre son sol.",
@@ -97,7 +97,7 @@
       "id": "astro01-q03",
       "titre": "Jupiter",
       "categorie": "Système solaire",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle est la plus grande planète du Système solaire ?",
       "indices": [
         "C’est une géante gazeuse, faite surtout d’hydrogène et d’hélium.",
@@ -133,7 +133,7 @@
       "id": "astro01-q04",
       "titre": "Face cachée de la Lune",
       "categorie": "Phénomènes célestes",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Pourquoi la Lune nous montre-t-elle toujours la même face ?",
       "indices": [
         "Les marées exercées par la Terre l’ont peu à peu freinée.",
@@ -170,7 +170,7 @@
       "id": "astro01-q05",
       "titre": "Le Soleil",
       "categorie": "Étoiles",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel type d’étoile est le Soleil ?",
       "indices": [
         "Il est dans la phase la plus longue de sa vie, où il fusionne de l’hydrogène.",
@@ -207,7 +207,7 @@
       "id": "astro01-q06",
       "titre": "Proxima du Centaure",
       "categorie": "Étoiles",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Après le Soleil, quelle est l’étoile la plus proche de la Terre ?",
       "indices": [
         "Elle se trouve à un peu plus de 4 années-lumière.",
@@ -244,7 +244,7 @@
       "id": "astro01-q07",
       "titre": "Voie lactée",
       "categorie": "Galaxies et Univers",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Comment s’appelle la galaxie où se trouve le Système solaire ?",
       "indices": [
         "Par une nuit sans lune, loin des villes, elle forme une bande blanchâtre dans le ciel.",
@@ -281,7 +281,7 @@
       "id": "astro01-q08",
       "titre": "Andromède",
       "categorie": "Galaxies et Univers",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle grande galaxie spirale, visible à l’œil nu, pourrait un jour entrer en collision avec la Voie lactée ?",
       "indices": [
         "Elle se trouve à environ 2,5 millions d’années-lumière.",
@@ -318,7 +318,7 @@
       "id": "astro01-q09",
       "titre": "Éclipse de Soleil",
       "categorie": "Phénomènes célestes",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Lors d’une éclipse totale de Soleil, quel astre cache le Soleil ?",
       "indices": [
         "Vu de la Terre, il paraît presque de la même taille que le Soleil.",
@@ -354,7 +354,7 @@
       "id": "astro01-q10",
       "titre": "Premiers pas sur la Lune",
       "categorie": "Exploration spatiale",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Qui a été le premier être humain à marcher sur la Lune ?",
       "indices": [
         "Il commandait la mission Apollo 11, en juillet 1969.",
@@ -390,7 +390,7 @@
       "id": "astro01-q11",
       "titre": "Youri Gagarine",
       "categorie": "Exploration spatiale",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Qui a été le premier être humain à voyager dans l’espace, en 1961 ?",
       "indices": [
         "Il a fait le tour de la Terre en un peu moins de deux heures.",
@@ -427,7 +427,7 @@
       "id": "astro01-q12",
       "titre": "Pluton",
       "categorie": "Système solaire",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Pourquoi Pluton n’est-elle plus considérée comme une planète depuis 2006 ?",
       "indices": [
         "L’Union astronomique internationale a alors fixé trois critères pour être une planète.",
@@ -464,7 +464,7 @@
       "id": "astro01-q13",
       "titre": "Après une supernova",
       "categorie": "Étoiles",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Que devient le cœur d’une étoile très massive après son explosion en supernova ?",
       "indices": [
         "Son cœur s’effondre sur lui-même sous l’effet de sa propre gravité.",
@@ -501,7 +501,7 @@
       "id": "astro01-q14",
       "titre": "Étoiles filantes",
       "categorie": "Phénomènes célestes",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Qu’est-ce qu’une « étoile filante » ?",
       "indices": [
         "Le phénomène se produit à une centaine de kilomètres d’altitude.",
@@ -539,7 +539,7 @@
       "id": "astro01-q15",
       "titre": "Âge de l’Univers",
       "categorie": "Galaxies et Univers",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Selon les mesures actuelles, quel âge a l’Univers ?",
       "indices": [
         "On l’estime notamment grâce au rayonnement fossile, la plus ancienne lumière observable.",

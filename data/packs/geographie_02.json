@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Fleuves et mers": "Géographie",
       "Pays et capitales": "Géographie",
@@ -25,7 +25,7 @@
       "id": "geographie02-q01",
       "titre": "La Volga",
       "categorie": "Fleuves et mers",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quel est le plus long fleuve d’Europe ?",
       "indices": [
         "Il coule entièrement en Russie.",
@@ -61,7 +61,7 @@
       "id": "geographie02-q02",
       "titre": "Brasília",
       "categorie": "Pays et capitales",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle est la capitale du Brésil ?",
       "indices": [
         "Elle a été inaugurée en 1960.",
@@ -97,7 +97,7 @@
       "id": "geographie02-q03",
       "titre": "Les fuseaux horaires",
       "categorie": "Pays et capitales",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quel pays compte le plus de fuseaux horaires, en comptant ses territoires d’outre-mer ?",
       "indices": [
         "Ses territoires sont dispersés dans tous les océans.",
@@ -133,7 +133,7 @@
       "id": "geographie02-q04",
       "titre": "La Russie",
       "categorie": "Pays et capitales",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel est le plus grand pays du monde par sa superficie ?",
       "indices": [
         "Il s’étend sur deux continents.",
@@ -169,7 +169,7 @@
       "id": "geographie02-q05",
       "titre": "Le mont Blanc",
       "categorie": "Reliefs et paysages",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel est le point culminant de la France métropolitaine ?",
       "indices": [
         "Il se trouve dans les Alpes, à la frontière avec l’Italie.",
@@ -205,7 +205,7 @@
       "id": "geographie02-q06",
       "titre": "Le désert d’Atacama",
       "categorie": "Reliefs et paysages",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel désert d’Amérique du Sud est l’un des plus secs du monde ?",
       "indices": [
         "Il longe la côte pacifique, au Chili.",
@@ -241,7 +241,7 @@
       "id": "geographie02-q07",
       "titre": "Le Gulf Stream",
       "categorie": "Climats et repères",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel courant marin chaud traverse l’Atlantique jusqu’aux côtes de l’Europe de l’Ouest ?",
       "indices": [
         "Il se forme au large de la Floride, en partie avec des eaux du golfe du Mexique.",
@@ -278,7 +278,7 @@
       "id": "geographie02-q08",
       "titre": "Le lac Victoria",
       "categorie": "Fleuves et mers",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quel est le plus grand lac d’Afrique ?",
       "indices": [
         "Il est partagé entre l’Ouganda, le Kenya et la Tanzanie.",
@@ -314,7 +314,7 @@
       "id": "geographie02-q09",
       "titre": "La cordillère des Andes",
       "categorie": "Reliefs et paysages",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle chaîne de montagnes longe l’Amérique du Sud du nord au sud ?",
       "indices": [
         "C’est la plus longue chaîne de montagnes continentale du monde.",
@@ -351,7 +351,7 @@
       "id": "geographie02-q10",
       "titre": "Tokyo",
       "categorie": "Pays et capitales",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle est la capitale du Japon ?",
       "indices": [
         "Avant 1868, la ville s’appelait Edo.",
@@ -387,7 +387,7 @@
       "id": "geographie02-q11",
       "titre": "La Gambie",
       "categorie": "Pays et capitales",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quel est le plus petit pays d’Afrique continentale ?",
       "indices": [
         "Il est presque entièrement entouré par le Sénégal.",
@@ -423,7 +423,7 @@
       "id": "geographie02-q12",
       "titre": "Les régions françaises",
       "categorie": "Pays et capitales",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Combien de régions compte la France métropolitaine depuis 2016 ?",
       "indices": [
         "La Corse en fait partie.",
@@ -459,7 +459,7 @@
       "id": "geographie02-q13",
       "titre": "Le Rhin",
       "categorie": "Fleuves et mers",
-      "difficulte": "moyenne",
+      "difficulte": 1,
       "question": "Quel fleuve forme une partie de la frontière entre la France et l’Allemagne ?",
       "indices": [
         "Il prend sa source dans les Alpes suisses.",
@@ -495,7 +495,7 @@
       "id": "geographie02-q14",
       "titre": "L’échelle de Richter",
       "categorie": "Risques naturels",
-      "difficulte": "moyenne",
+      "difficulte": 1,
       "question": "Quel phénomène mesure-t-on avec l’échelle de Richter ?",
       "indices": [
         "Chaque degré correspond à une énergie environ trente fois plus grande.",
@@ -532,7 +532,7 @@
       "id": "geographie02-q15",
       "titre": "Le Groenland",
       "categorie": "Reliefs et paysages",
-      "difficulte": "facile",
+      "difficulte": 2,
       "question": "Quelle est la plus grande île du monde ?",
       "indices": [
         "Elle est couverte à environ 80 % par une calotte de glace.",

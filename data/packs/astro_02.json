@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Système solaire": "Astronomie",
       "Galaxies et Univers": "Astronomie",
@@ -25,7 +25,7 @@
       "id": "astro02-q01",
       "titre": "Saturne",
       "categorie": "Système solaire",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle planète est célèbre pour ses anneaux spectaculaires, visibles avec une petite lunette ?",
       "indices": [
         "C’est la deuxième plus grande planète du Système solaire.",
@@ -60,7 +60,7 @@
       "id": "astro02-q02",
       "titre": "Vénus",
       "categorie": "Système solaire",
-      "difficulte": "facile",
+      "difficulte": 2,
       "question": "Quelle planète, souvent appelée « l’étoile du Berger », brille le soir ou le matin près de l’horizon ?",
       "indices": [
         "Elle tourne sur elle-même dans le sens inverse de la plupart des planètes.",
@@ -96,7 +96,7 @@
       "id": "astro02-q03",
       "titre": "Horizon des événements",
       "categorie": "Galaxies et Univers",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Comment s’appelle la limite autour d’un trou noir au-delà de laquelle rien ne peut revenir ?",
       "indices": [
         "Même la lumière qui la franchit ne peut plus en ressortir.",
@@ -133,7 +133,7 @@
       "id": "astro02-q04",
       "titre": "La Grande Ourse",
       "categorie": "Étoiles",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel ensemble d’étoiles, en forme de casserole, aide à trouver l’étoile Polaire ?",
       "indices": [
         "On le voit toute l’année dans le ciel de France.",
@@ -171,7 +171,7 @@
       "id": "astro02-q05",
       "titre": "Spoutnik",
       "categorie": "Exploration spatiale",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel a été le premier satellite artificiel, lancé en 1957 ?",
       "indices": [
         "Il a été lancé par l’Union soviétique.",
@@ -208,7 +208,7 @@
       "id": "astro02-q06",
       "titre": "Perseverance",
       "categorie": "Exploration spatiale",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quel robot de la NASA s’est posé en 2021 dans le cratère Jezero, sur Mars ?",
       "indices": [
         "Il a emporté un petit hélicoptère, Ingenuity.",
@@ -244,7 +244,7 @@
       "id": "astro02-q07",
       "titre": "La Station spatiale",
       "categorie": "Exploration spatiale",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "À quelle altitude environ tourne la Station spatiale internationale ?",
       "indices": [
         "Elle fait le tour de la Terre en à peu près une heure et demie.",
@@ -280,7 +280,7 @@
       "id": "astro02-q08",
       "titre": "L’année-lumière",
       "categorie": "Galaxies et Univers",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Qu’est-ce qu’une année-lumière ?",
       "indices": [
         "Elle vaut près de 10 000 milliards de kilomètres.",
@@ -316,7 +316,7 @@
       "id": "astro02-q09",
       "titre": "Queue des comètes",
       "categorie": "Système solaire",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Pourquoi la queue d’une comète pointe-t-elle toujours à l’opposé du Soleil ?",
       "indices": [
         "Elle n’apparaît que lorsque la comète s’approche du Soleil.",
@@ -353,7 +353,7 @@
       "id": "astro02-q10",
       "titre": "Neptune",
       "categorie": "Système solaire",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quelle planète a été découverte en 1846 grâce aux calculs du Français Urbain Le Verrier ?",
       "indices": [
         "C’est la planète la plus éloignée du Soleil.",
@@ -388,7 +388,7 @@
       "id": "astro02-q11",
       "titre": "Les marées",
       "categorie": "Phénomènes célestes",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel astre est le principal responsable des marées sur Terre ?",
       "indices": [
         "Le Soleil y contribue aussi, mais à peu près deux fois moins.",
@@ -424,7 +424,7 @@
       "id": "astro02-q12",
       "titre": "Le télescope Hubble",
       "categorie": "Exploration spatiale",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel télescope spatial, lancé en 1990, porte le nom d’un astronome américain ?",
       "indices": [
         "Un défaut de son miroir a dû être corrigé par des astronautes en 1993.",
@@ -460,7 +460,7 @@
       "id": "astro02-q13",
       "titre": "Le gaz du Soleil",
       "categorie": "Étoiles",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "De quel élément le Soleil est-il principalement composé ?",
       "indices": [
         "C’est l’élément le plus léger et le plus abondant de l’Univers.",
@@ -496,7 +496,7 @@
       "id": "astro02-q14",
       "titre": "Les météorites",
       "categorie": "Phénomènes célestes",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Comment appelle-t-on un caillou venu de l’espace qui atteint le sol terrestre ?",
       "indices": [
         "La plupart sont des fragments d’astéroïdes.",
@@ -532,7 +532,7 @@
       "id": "astro02-q15",
       "titre": "Les exoplanètes",
       "categorie": "Galaxies et Univers",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Comment appelle-t-on une planète qui tourne autour d’une autre étoile que le Soleil ?",
       "indices": [
         "La première autour d’une étoile semblable au Soleil a été découverte en 1995 par deux astronomes suisses.",

@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Époque contemporaine": "Histoire",
       "Antiquité": "Histoire",
@@ -26,7 +26,7 @@
       "id": "histoire02-q01",
       "titre": "Louis XVI",
       "categorie": "Époque contemporaine",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel roi de France a été guillotiné en 1793 ?",
       "indices": [
         "Il était l’époux de Marie-Antoinette.",
@@ -63,7 +63,7 @@
       "id": "histoire02-q02",
       "titre": "Le sacre de Napoléon",
       "categorie": "Époque contemporaine",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "En quelle année Napoléon Bonaparte est-il sacré empereur, à Notre-Dame de Paris ?",
       "indices": [
         "Le pape Pie VII assiste à la cérémonie.",
@@ -99,7 +99,7 @@
       "id": "histoire02-q03",
       "titre": "Romulus et Rémus",
       "categorie": "Antiquité",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Selon la légende, quels jumeaux auraient fondé Rome ?",
       "indices": [
         "Ils auraient été allaités par une louve.",
@@ -135,7 +135,7 @@
       "id": "histoire02-q04",
       "titre": "La Grande Muraille",
       "categorie": "Antiquité",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Pourquoi la Grande Muraille de Chine a-t-elle été construite ?",
       "indices": [
         "Ses portions les plus connues datent de la dynastie Ming.",
@@ -172,7 +172,7 @@
       "id": "histoire02-q05",
       "titre": "Toutânkhamon",
       "categorie": "Archéologie",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quel archéologue a découvert la tombe de Toutânkhamon, en 1922 ?",
       "indices": [
         "Il était britannique et travaillait pour lord Carnarvon.",
@@ -208,7 +208,7 @@
       "id": "histoire02-q06",
       "titre": "La pierre de Rosette",
       "categorie": "Archéologie",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel objet a permis à Champollion de déchiffrer les hiéroglyphes ?",
       "indices": [
         "Il porte un même texte en trois écritures.",
@@ -244,7 +244,7 @@
       "id": "histoire02-q07",
       "titre": "La grotte de Lascaux",
       "categorie": "Préhistoire",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle grotte de Dordogne, découverte en 1940, est célèbre pour ses peintures préhistoriques ?",
       "indices": [
         "Quatre adolescents l’ont découverte, selon le récit en suivant leur chien.",
@@ -280,7 +280,7 @@
       "id": "histoire02-q08",
       "titre": "La peste noire",
       "categorie": "Moyen Âge",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle épidémie a tué une grande partie de la population européenne entre 1347 et 1352 ?",
       "indices": [
         "Elle est arrivée d’Asie par les ports de la Méditerranée.",
@@ -317,7 +317,7 @@
       "id": "histoire02-q09",
       "titre": "La première croisade",
       "categorie": "Moyen Âge",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quelle ville les croisés ont-ils prise en 1099, au terme de la première croisade ?",
       "indices": [
         "C’est une ville sainte pour les juifs, les chrétiens et les musulmans.",
@@ -352,7 +352,7 @@
       "id": "histoire02-q10",
       "titre": "Marco Polo",
       "categorie": "Moyen Âge",
-      "difficulte": "moyenne",
+      "difficulte": 1,
       "question": "Quel marchand vénitien a raconté son voyage en Chine, à la fin du XIIIe siècle ?",
       "indices": [
         "Il a séjourné à la cour de l’empereur mongol Kubilai Khan.",
@@ -387,7 +387,7 @@
       "id": "histoire02-q11",
       "titre": "Marignan",
       "categorie": "Temps modernes",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle bataille de 1515 a rendu célèbre le roi François Ier ?",
       "indices": [
         "Elle l’opposait aux mercenaires suisses, en Italie.",
@@ -423,7 +423,7 @@
       "id": "histoire02-q12",
       "titre": "L’édit de Nantes",
       "categorie": "Temps modernes",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quel roi a signé l’édit de Nantes, en 1598 ?",
       "indices": [
         "Ce texte accordait des droits aux protestants et mettait fin aux guerres de Religion.",
@@ -459,7 +459,7 @@
       "id": "histoire02-q13",
       "titre": "La machine à vapeur",
       "categorie": "Temps modernes",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle machine, perfectionnée par James Watt, a lancé la révolution industrielle ?",
       "indices": [
         "Elle tirait sa force de l’eau chauffée par le charbon.",
@@ -495,7 +495,7 @@
       "id": "histoire02-q14",
       "titre": "Le vote des femmes",
       "categorie": "Époque contemporaine",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "En quelle année les Françaises ont-elles voté pour la première fois ?",
       "indices": [
         "Le droit de vote leur avait été accordé l’année précédente, par une ordonnance prise à Alger.",
@@ -531,7 +531,7 @@
       "id": "histoire02-q15",
       "titre": "Abraham Lincoln",
       "categorie": "Époque contemporaine",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel président des États-Unis a dirigé le Nord pendant la guerre de Sécession et aboli l’esclavage ?",
       "indices": [
         "Il a été assassiné dans un théâtre, en 1865.",

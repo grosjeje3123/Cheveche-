@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Pays et capitales": "Géographie",
       "Fleuves et mers": "Géographie",
@@ -24,7 +24,7 @@
       "id": "geographie01-q01",
       "titre": "La Loire",
       "categorie": "Fleuves et mers",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel est le plus long fleuve de France ?",
       "indices": [
         "Il se jette dans l’océan Atlantique, près de Saint-Nazaire.",
@@ -60,7 +60,7 @@
       "id": "geographie01-q02",
       "titre": "Canberra",
       "categorie": "Pays et capitales",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle est la capitale de l’Australie ?",
       "indices": [
         "Elle a été construite exprès pour être capitale, au début du XXe siècle.",
@@ -95,7 +95,7 @@
       "id": "geographie01-q03",
       "titre": "L’Everest",
       "categorie": "Reliefs et paysages",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel est le plus haut sommet du monde ?",
       "indices": [
         "Il culmine à près de 8 850 mètres.",
@@ -132,7 +132,7 @@
       "id": "geographie01-q04",
       "titre": "Le Sahara",
       "categorie": "Reliefs et paysages",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel est le plus grand désert chaud du monde ?",
       "indices": [
         "Il couvre une grande partie du nord de l’Afrique.",
@@ -168,7 +168,7 @@
       "id": "geographie01-q05",
       "titre": "L’océan Pacifique",
       "categorie": "Fleuves et mers",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel est le plus grand océan du monde ?",
       "indices": [
         "Il couvre à lui seul environ un tiers de la surface de la Terre.",
@@ -204,7 +204,7 @@
       "id": "geographie01-q06",
       "titre": "L’Inde",
       "categorie": "Pays et capitales",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quel pays compte le plus d’habitants au monde ?",
       "indices": [
         "Il a dépassé son voisin, longtemps premier, vers 2023.",
@@ -240,7 +240,7 @@
       "id": "geographie01-q07",
       "titre": "Le Nil",
       "categorie": "Fleuves et mers",
-      "difficulte": "moyenne",
+      "difficulte": 1,
       "question": "Quel est le plus long fleuve d’Afrique ?",
       "indices": [
         "Il se jette dans la Méditerranée par un vaste delta.",
@@ -276,7 +276,7 @@
       "id": "geographie01-q08",
       "titre": "Ottawa",
       "categorie": "Pays et capitales",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle est la capitale du Canada ?",
       "indices": [
         "Elle se trouve en Ontario, à la limite du Québec.",
@@ -311,7 +311,7 @@
       "id": "geographie01-q09",
       "titre": "La mer Caspienne",
       "categorie": "Fleuves et mers",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quelle « mer », entre l’Europe et l’Asie, est en fait le plus grand lac du monde ?",
       "indices": [
         "Ses eaux sont légèrement salées.",
@@ -347,7 +347,7 @@
       "id": "geographie01-q10",
       "titre": "Gibraltar",
       "categorie": "Fleuves et mers",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel détroit sépare l’Europe de l’Afrique ?",
       "indices": [
         "Il relie la Méditerranée à l’océan Atlantique.",
@@ -383,7 +383,7 @@
       "id": "geographie01-q11",
       "titre": "Les Pyrénées",
       "categorie": "Reliefs et paysages",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle chaîne de montagnes sépare la France de l’Espagne ?",
       "indices": [
         "Elle s’étend de l’Atlantique à la Méditerranée.",
@@ -419,7 +419,7 @@
       "id": "geographie01-q12",
       "titre": "Les saisons",
       "categorie": "Climats et repères",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Pourquoi fait-il plus chaud en été qu’en hiver, en France ?",
       "indices": [
         "En janvier, la Terre est pourtant au plus près du Soleil.",
@@ -455,7 +455,7 @@
       "id": "geographie01-q13",
       "titre": "L’Italie",
       "categorie": "Pays et capitales",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel pays d’Europe a la forme d’une botte ?",
       "indices": [
         "Il est presque entièrement entouré par la Méditerranée.",
@@ -491,7 +491,7 @@
       "id": "geographie01-q14",
       "titre": "L’Amazonie",
       "categorie": "Reliefs et paysages",
-      "difficulte": "moyenne",
+      "difficulte": 1,
       "question": "Quelle est la plus grande forêt tropicale du monde ?",
       "indices": [
         "Elle s’étend sur neuf pays et territoires, surtout au Brésil.",
@@ -528,7 +528,7 @@
       "id": "geographie01-q15",
       "titre": "Le méridien de Greenwich",
       "categorie": "Climats et repères",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle ligne imaginaire sert de point de départ pour mesurer les longitudes ?",
       "indices": [
         "Elle relie le pôle Nord au pôle Sud.",

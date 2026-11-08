@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Romans": "Littérature",
       "Poésie": "Littérature",
@@ -25,7 +25,7 @@
       "id": "litterature01-q01",
       "titre": "Les Misérables",
       "categorie": "Romans",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Qui a écrit Les Misérables ?",
       "indices": [
         "Il a aussi écrit Notre-Dame de Paris.",
@@ -61,7 +61,7 @@
       "id": "litterature01-q02",
       "titre": "Don Quichotte",
       "categorie": "Romans",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel personnage de Cervantès se bat contre des moulins à vent ?",
       "indices": [
         "Il se prend pour un chevalier errant.",
@@ -97,7 +97,7 @@
       "id": "litterature01-q03",
       "titre": "Le Petit Prince",
       "categorie": "Romans",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Qui a écrit Le Petit Prince ?",
       "indices": [
         "L’auteur était aussi aviateur.",
@@ -134,7 +134,7 @@
       "id": "litterature01-q04",
       "titre": "Vingt mille lieues sous les mers",
       "categorie": "Romans",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel écrivain a imaginé le capitaine Nemo et son sous-marin, le Nautilus ?",
       "indices": [
         "Il est né à Nantes en 1828.",
@@ -170,7 +170,7 @@
       "id": "litterature01-q05",
       "titre": "Le Corbeau et le Renard",
       "categorie": "Contes et fables",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Qui a écrit la fable « Le Corbeau et le Renard » ?",
       "indices": [
         "Il vivait au XVIIe siècle, sous Louis XIV.",
@@ -206,7 +206,7 @@
       "id": "litterature01-q06",
       "titre": "Molière",
       "categorie": "Théâtre",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel auteur de théâtre a écrit L’Avare et Le Malade imaginaire ?",
       "indices": [
         "Il était aussi comédien et dirigeait sa troupe.",
@@ -242,7 +242,7 @@
       "id": "litterature01-q07",
       "titre": "Les Fleurs du mal",
       "categorie": "Poésie",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel poète a publié Les Fleurs du mal, en 1857 ?",
       "indices": [
         "Le recueil lui valut un procès pour outrage à la morale publique.",
@@ -278,7 +278,7 @@
       "id": "litterature01-q08",
       "titre": "Cendrillon",
       "categorie": "Contes et fables",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Dans quel conte de Perrault une jeune fille perd-elle une pantoufle de verre ?",
       "indices": [
         "Ses deux demi-sœurs la traitent comme une servante.",
@@ -313,7 +313,7 @@
       "id": "litterature01-q09",
       "titre": "Roméo et Juliette",
       "categorie": "Théâtre",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Qui a écrit Roméo et Juliette ?",
       "indices": [
         "L’histoire se déroule à Vérone.",
@@ -349,7 +349,7 @@
       "id": "litterature01-q10",
       "titre": "Sherlock Holmes",
       "categorie": "Romans",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel écrivain a créé le détective Sherlock Holmes ?",
       "indices": [
         "Il était médecin, et écossais.",
@@ -385,7 +385,7 @@
       "id": "litterature01-q11",
       "titre": "L’Odyssée",
       "categorie": "Poésie",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle œuvre de l’Antiquité raconte le long retour d’Ulysse vers Ithaque ?",
       "indices": [
         "On l’attribue au poète grec Homère.",
@@ -421,7 +421,7 @@
       "id": "litterature01-q12",
       "titre": "Les Trois Mousquetaires",
       "categorie": "Romans",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel romancier a écrit Les Trois Mousquetaires ?",
       "indices": [
         "Le héros, d’Artagnan, est un jeune Gascon monté à Paris.",
@@ -457,7 +457,7 @@
       "id": "litterature01-q13",
       "titre": "Alice au pays des merveilles",
       "categorie": "Romans",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Qui a écrit Alice au pays des merveilles ?",
       "indices": [
         "C’est le pseudonyme d’un professeur de mathématiques d’Oxford.",
@@ -493,7 +493,7 @@
       "id": "litterature01-q14",
       "titre": "Le prix Goncourt",
       "categorie": "Vie littéraire",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quel prix littéraire français est remis chaque automne au restaurant Drouant, à Paris ?",
       "indices": [
         "Il porte le nom de deux frères écrivains du XIXe siècle.",
@@ -529,7 +529,7 @@
       "id": "litterature01-q15",
       "titre": "Le Bateau ivre",
       "categorie": "Poésie",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quel poète, adolescent prodige, a écrit Le Bateau ivre ?",
       "indices": [
         "Il est né à Charleville en 1854.",

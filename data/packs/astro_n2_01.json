@@ -12,7 +12,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Système solaire": "Astronomie",
       "Étoiles": "Astronomie",
@@ -26,7 +26,7 @@
       "id": "astron2-q01",
       "titre": "La planète couchée",
       "categorie": "Système solaire",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quelle planète tourne sur elle-même presque couchée, son axe incliné d’environ 98 degrés ?",
       "indices": [
         "Elle a été la première planète découverte au télescope, par William Herschel, en 1781.",
@@ -61,7 +61,7 @@
       "id": "astron2-q02",
       "titre": "Un jour plus long qu’une année",
       "categorie": "Système solaire",
-      "difficulte": "facile",
+      "difficulte": 3,
       "question": "Sur quelle planète un jour, c’est-à-dire un tour sur elle-même, dure-t-il plus longtemps qu’une année ?",
       "indices": [
         "Elle tourne sur elle-même à l’envers, dans le sens inverse de presque toutes les autres planètes.",
@@ -97,7 +97,7 @@
       "id": "astron2-q03",
       "titre": "Des lacs de méthane",
       "categorie": "Système solaire",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quelle lune possède une atmosphère épaisse et des lacs d’hydrocarbures liquides à sa surface ?",
       "indices": [
         "C’est la plus grande lune de Saturne.",
@@ -132,7 +132,7 @@
       "id": "astron2-q04",
       "titre": "Les geysers d’Encelade",
       "categorie": "Système solaire",
-      "difficulte": "moyenne",
+      "difficulte": 4,
       "question": "De quelle lune de Saturne jaillissent, près du pôle sud, des geysers de vapeur d’eau et de glace ?",
       "indices": [
         "Elle est couverte d’une glace très blanche, l’une des surfaces les plus réfléchissantes du Système solaire.",
@@ -168,7 +168,7 @@
       "id": "astron2-q05",
       "titre": "La lune volcanique",
       "categorie": "Système solaire",
-      "difficulte": "facile",
+      "difficulte": 3,
       "question": "Quel astre est le plus volcanique du Système solaire ?",
       "indices": [
         "C’est une lune de Jupiter, découverte par Galilée en 1610.",
@@ -203,7 +203,7 @@
       "id": "astron2-q06",
       "titre": "Plus grande que Mercure",
       "categorie": "Système solaire",
-      "difficulte": "facile",
+      "difficulte": 3,
       "question": "Quelle est la plus grande lune du Système solaire, plus large que la planète Mercure ?",
       "indices": [
         "Elle tourne autour de Jupiter.",
@@ -239,7 +239,7 @@
       "id": "astron2-q07",
       "titre": "Le réservoir des comètes",
       "categorie": "Système solaire",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Comment s’appelle l’immense réserve de comètes qui entourerait le Système solaire, bien au-delà de Pluton ?",
       "indices": [
         "Il porte le nom d’un astronome néerlandais, qui l’a imaginé en 1950.",
@@ -276,7 +276,7 @@
       "id": "astron2-q08",
       "titre": "La reine de la ceinture",
       "categorie": "Système solaire",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quel est le plus gros objet de la ceinture d’astéroïdes, entre Mars et Jupiter ?",
       "indices": [
         "On l’a d’abord prise pour une planète quand on l’a découverte, le 1er janvier 1801.",
@@ -312,7 +312,7 @@
       "id": "astron2-q09",
       "titre": "L’étoile la plus brillante",
       "categorie": "Étoiles",
-      "difficulte": "facile",
+      "difficulte": 2,
       "question": "Quelle est l’étoile la plus brillante du ciel nocturne ?",
       "indices": [
         "On la trouve dans la constellation du Grand Chien, en prolongeant vers le bas la ceinture d’Orion.",
@@ -347,7 +347,7 @@
       "id": "astron2-q10",
       "titre": "Les Sept Sœurs",
       "categorie": "Étoiles",
-      "difficulte": "facile",
+      "difficulte": 2,
       "question": "Quel amas d’étoiles, surnommé « les Sept Sœurs », brille à l’œil nu dans la constellation du Taureau ?",
       "indices": [
         "En japonais, on l’appelle Subaru, comme la marque automobile qui en a fait son logo.",
@@ -383,7 +383,7 @@
       "id": "astron2-q11",
       "titre": "La grande baisse d’éclat",
       "categorie": "Étoiles",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quelle étoile supergéante rouge de la constellation d’Orion a brusquement et fortement pâli à la fin de 2019 ?",
       "indices": [
         "Elle marque une épaule du chasseur Orion, en haut à gauche de la constellation.",
@@ -419,7 +419,7 @@
       "id": "astron2-q12",
       "titre": "Le premier pulsar",
       "categorie": "Étoiles",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quelle astrophysicienne a découvert le premier pulsar, en 1967, alors qu’elle était encore étudiante ?",
       "indices": [
         "Elle travaillait à Cambridge, sur un radiotélescope qu’elle avait aidé à construire.",
@@ -455,7 +455,7 @@
       "id": "astron2-q13",
       "titre": "De quoi sont faites les étoiles",
       "categorie": "Étoiles",
-      "difficulte": "difficile",
+      "difficulte": 5,
       "question": "Quelle astronome a montré, en 1925, que les étoiles sont faites surtout d’hydrogène et d’hélium ?",
       "indices": [
         "Née en Angleterre, elle a fait sa carrière à Harvard, aux États-Unis.",
@@ -491,7 +491,7 @@
       "id": "astron2-q14",
       "titre": "La limite des naines blanches",
       "categorie": "Étoiles",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quelle limite, d’environ 1,4 fois la masse du Soleil, porte le nom d’un astrophysicien indien ?",
       "indices": [
         "Au-delà de cette masse, une naine blanche ne peut plus résister à sa propre gravité.",
@@ -527,7 +527,7 @@
       "id": "astron2-q15",
       "titre": "L’Univers en expansion",
       "categorie": "Galaxies et Univers",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quelle loi, rebaptisée en 2018 pour honorer aussi un savant belge, relie distance et vitesse des galaxies ?",
       "indices": [
         "Ce savant belge était aussi prêtre catholique.",
@@ -564,7 +564,7 @@
       "id": "astron2-q16",
       "titre": "La plus vieille lumière",
       "categorie": "Galaxies et Univers",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quel rayonnement, découvert par hasard en 1964, est la plus ancienne lumière que l’on puisse observer ?",
       "indices": [
         "Ses découvreurs ont d’abord cru que le bruit de leur antenne venait de fientes de pigeons.",
@@ -600,7 +600,7 @@
       "id": "astron2-q17",
       "titre": "Le trou noir de notre galaxie",
       "categorie": "Galaxies et Univers",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Comment s’appelle le trou noir géant du centre de la Voie lactée, photographié pour la première fois en 2022 ?",
       "indices": [
         "Il est environ quatre millions de fois plus massif que le Soleil.",
@@ -637,7 +637,7 @@
       "id": "astron2-q18",
       "titre": "La matière invisible",
       "categorie": "Galaxies et Univers",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle matière invisible expliquerait que les étoiles du bord des galaxies tournent si vite ?",
       "indices": [
         "L’astronome américaine Vera Rubin l’a mise en évidence dans les années 1970, en mesurant la rotation des galaxies.",
@@ -673,7 +673,7 @@
       "id": "astron2-q19",
       "titre": "L’expansion qui accélère",
       "categorie": "Galaxies et Univers",
-      "difficulte": "difficile",
+      "difficulte": 5,
       "question": "Grâce à quelles explosions d’étoiles a-t-on découvert, en 1998, que l’expansion de l’Univers accélère ?",
       "indices": [
         "Elles ont toutes à peu près le même éclat réel : elles servent de « chandelles » pour mesurer les distances.",
@@ -710,7 +710,7 @@
       "id": "astron2-q20",
       "titre": "Le quartier de la Voie lactée",
       "categorie": "Galaxies et Univers",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Comment s’appelle le petit groupe de galaxies auquel appartiennent la Voie lactée et Andromède ?",
       "indices": [
         "Il compte plus d’une centaine de galaxies connues, presque toutes petites.",
@@ -745,7 +745,7 @@
       "id": "astron2-q21",
       "titre": "Les étoiles étalons",
       "categorie": "Galaxies et Univers",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quelles étoiles, dont l’éclat varie à un rythme régulier, ont permis de mesurer la distance des galaxies ?",
       "indices": [
         "Henrietta Leavitt a montré en 1912 que plus elles sont lumineuses, plus leur rythme est lent.",
@@ -781,7 +781,7 @@
       "id": "astron2-q22",
       "titre": "Le plus lointain des voyageurs",
       "categorie": "Exploration spatiale",
-      "difficulte": "facile",
+      "difficulte": 2,
       "question": "Quel engin, lancé en 1977, est l’objet fabriqué par l’humanité le plus éloigné de la Terre ?",
       "indices": [
         "Il a quitté l’héliosphère, la bulle du vent solaire, en 2012.",
@@ -817,7 +817,7 @@
       "id": "astron2-q23",
       "titre": "Un robot sur une comète",
       "categorie": "Exploration spatiale",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quelle sonde européenne a déposé le petit robot Philae sur une comète, en novembre 2014 ?",
       "indices": [
         "Elle porte le nom d’une pierre qui a permis de déchiffrer les hiéroglyphes.",
@@ -852,7 +852,7 @@
       "id": "astron2-q24",
       "titre": "Le cœur de Pluton",
       "categorie": "Exploration spatiale",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quelle sonde de la NASA a survolé Pluton en juillet 2015, révélant une grande plaine claire en forme de cœur ?",
       "indices": [
         "Elle a été lancée en 2006, l’année même où Pluton a perdu son statut de planète.",
@@ -887,7 +887,7 @@
       "id": "astron2-q25",
       "titre": "Le télescope doré",
       "categorie": "Exploration spatiale",
-      "difficulte": "facile",
+      "difficulte": 2,
       "question": "Quel télescope spatial, lancé le 25 décembre 2021, observe dans l’infrarouge à 1,5 million de km de la Terre ?",
       "indices": [
         "Son miroir de 6,5 mètres est fait de 18 hexagones recouverts d’or.",
@@ -924,7 +924,7 @@
       "id": "astron2-q26",
       "titre": "Le premier Français dans l’espace",
       "categorie": "Exploration spatiale",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Qui a été le premier Français à voyager dans l’espace, en 1982 ?",
       "indices": [
         "Il a rejoint la station soviétique Saliout 7, à bord d’un vaisseau Soyouz.",
@@ -960,7 +960,7 @@
       "id": "astron2-q27",
       "titre": "Pousser un astéroïde",
       "categorie": "Exploration spatiale",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quelle mission de la NASA a percuté l’astéroïde Dimorphos, en 2022, pour tester la déviation d’un astéroïde ?",
       "indices": [
         "Son nom veut dire « fléchette » en anglais.",
@@ -995,7 +995,7 @@
       "id": "astron2-q28",
       "titre": "La lumière cendrée",
       "categorie": "Phénomènes célestes",
-      "difficulte": "facile",
+      "difficulte": 3,
       "question": "Quand la Lune n’est qu’un mince croissant, qu’est-ce qui éclaire faiblement sa partie sombre ?",
       "indices": [
         "Léonard de Vinci a été l’un des premiers à l’expliquer, au début du XVIe siècle.",
@@ -1031,7 +1031,7 @@
       "id": "astron2-q29",
       "titre": "La Lune rouge",
       "categorie": "Phénomènes célestes",
-      "difficulte": "facile",
+      "difficulte": 2,
       "question": "Pourquoi la Lune devient-elle rouge cuivré pendant une éclipse totale de Lune ?",
       "indices": [
         "Pendant l’éclipse, la Lune se trouve dans l’ombre de la Terre.",
@@ -1067,7 +1067,7 @@
       "id": "astron2-q30",
       "titre": "L’étoile Polaire changera",
       "categorie": "Phénomènes célestes",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quel lent mouvement de l’axe terrestre, sur environ 26 000 ans, change l’étoile qui indique le nord ?",
       "indices": [
         "L’axe de la Terre décrit un cône, comme celui d’une toupie qui ralentit.",

@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Mammifères": "Animaux",
       "Oiseaux": "Animaux",
@@ -25,7 +25,7 @@
       "id": "animaux01-q01",
       "titre": "Baleine bleue",
       "categorie": "Mammifères",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel est le plus grand animal connu, toutes époques confondues ?",
       "indices": [
         "C’est un mammifère marin.",
@@ -62,7 +62,7 @@
       "id": "animaux01-q02",
       "titre": "Chauve-souris",
       "categorie": "Mammifères",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel mammifère est capable de voler activement, comme un oiseau ?",
       "indices": [
         "Ses ailes sont des membranes de peau tendues entre des doigts très allongés.",
@@ -99,7 +99,7 @@
       "id": "animaux01-q03",
       "titre": "Colibri",
       "categorie": "Oiseaux",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel oiseau est capable de voler en arrière ?",
       "indices": [
         "Il bat des ailes plusieurs dizaines de fois par seconde.",
@@ -136,7 +136,7 @@
       "id": "animaux01-q04",
       "titre": "Faucon pèlerin",
       "categorie": "Oiseaux",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel oiseau est l’animal le plus rapide du monde, lorsqu’il plonge en piqué ?",
       "indices": [
         "Il chasse d’autres oiseaux, qu’il frappe en plein vol.",
@@ -173,7 +173,7 @@
       "id": "animaux01-q05",
       "titre": "Métamorphose",
       "categorie": "Insectes",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Comment s’appelle la transformation d’une chenille en papillon ?",
       "indices": [
         "Entre les deux, l’insecte passe par un stade immobile, la chrysalide.",
@@ -209,7 +209,7 @@
       "id": "animaux01-q06",
       "titre": "Six pattes",
       "categorie": "Insectes",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Combien de pattes possède un insecte adulte ?",
       "indices": [
         "Son corps est divisé en trois parties : tête, thorax et abdomen.",
@@ -246,7 +246,7 @@
       "id": "animaux01-q07",
       "titre": "Les cœurs de la pieuvre",
       "categorie": "Animaux marins",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Combien de cœurs possède une pieuvre ?",
       "indices": [
         "Son sang est bleu, car il contient un pigment à base de cuivre.",
@@ -283,7 +283,7 @@
       "id": "animaux01-q08",
       "titre": "Le requin",
       "categorie": "Animaux marins",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "À quel groupe d’animaux appartient le requin ?",
       "indices": [
         "Il respire grâce à des branchies.",
@@ -320,7 +320,7 @@
       "id": "animaux01-q09",
       "titre": "Queue de lézard",
       "categorie": "Reptiles et amphibiens",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel animal peut abandonner sa queue pour échapper à un prédateur, puis la faire repousser ?",
       "indices": [
         "On appelle ce réflexe l’autotomie.",
@@ -357,7 +357,7 @@
       "id": "animaux01-q10",
       "titre": "Respiration des grenouilles",
       "categorie": "Reptiles et amphibiens",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "En plus de ses poumons, par où une grenouille adulte respire-t-elle ?",
       "indices": [
         "Elle doit rester humide pour que cela fonctionne.",
@@ -394,7 +394,7 @@
       "id": "animaux01-q11",
       "titre": "Ornithorynque",
       "categorie": "Mammifères",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel mammifère australien pond des œufs ?",
       "indices": [
         "Il a un bec qui ressemble à celui d’un canard et des pattes palmées.",
@@ -431,7 +431,7 @@
       "id": "animaux01-q12",
       "titre": "Le tigre",
       "categorie": "Mammifères",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quel est le plus grand félin du monde ?",
       "indices": [
         "Il vit en Asie, des forêts tropicales jusqu’à la taïga de Sibérie.",
@@ -468,7 +468,7 @@
       "id": "animaux01-q13",
       "titre": "Le manchot",
       "categorie": "Oiseaux",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quel oiseau de l’hémisphère sud ne vole pas dans les airs mais « vole » sous l’eau ?",
       "indices": [
         "Ses ailes sont devenues des nageoires rigides.",
@@ -505,7 +505,7 @@
       "id": "animaux01-q14",
       "titre": "Ver à soie",
       "categorie": "Insectes",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quel insecte produit la soie utilisée pour fabriquer des tissus ?",
       "indices": [
         "Sa chenille se nourrit presque uniquement des feuilles d’un arbre.",
@@ -542,7 +542,7 @@
       "id": "animaux01-q15",
       "titre": "Galère portugaise",
       "categorie": "Animaux marins",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quelle fausse « méduse » est en réalité une colonie de nombreux organismes ?",
       "indices": [
         "Elle flotte grâce à une poche de gaz violacée, dressée comme une voile.",

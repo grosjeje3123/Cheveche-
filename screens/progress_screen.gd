@@ -15,6 +15,7 @@ var _scroll: ScrollContainer
 # Éléments qui suivent la progression (mis à jour par refresh()).
 var _category_meta := {}
 var _category_bar := {}
+var _category_level := {}
 var _cabinet_count: Label
 var _cabinet_unit: Label
 var _cabinet_total: Label
@@ -100,6 +101,10 @@ func _build_summary(col: VBoxContainer) -> void:
 		bar.fill_color = Ds.discipline_color(d)
 		row.add_child(bar)
 		_category_bar[d] = bar
+		# Le niveau dans la discipline (Mastery), calculé sur les premières réponses à chaque dossier.
+		var lvl := Ds.label("", Ds.Role.SMALL, Ds.INK_SOFT)
+		row.add_child(lvl)
+		_category_level[d] = lvl
 
 
 func _build_cabinet(col: VBoxContainer) -> void:
@@ -172,6 +177,17 @@ func _week_figure(row: HBoxContainer, caption: String) -> Array:
 
 
 ## Remet à jour tout ce qui dépend de la progression (après chaque réponse ou série).
+## « Votre niveau : Érudit » ; avant assez de réponses : « Votre niveau : connu dans 4 dossiers » ;
+## discipline pas encore jouée : rien.
+static func level_line(info: Dictionary) -> String:
+	if int(info["n"]) == 0:
+		return ""
+	if Mastery.known(info):
+		return "Votre niveau : %s" % Mastery.name_of(info["r"])
+	var left: int = Mastery.MIN_ANSWERS - int(info["n"])
+	return "Votre niveau : connu dans %d dossier%s" % [left, "s" if left > 1 else ""]
+
+
 func refresh() -> void:
 	if _cabinet_count == null:
 		return
@@ -194,6 +210,9 @@ func refresh() -> void:
 			var flawless := _save.flawless_in(all)
 			meta = "Sans faute" if flawless == got else "Complète, %d sans indice" % flawless
 		(_category_meta[category] as Label).text = meta
+		var level_label: Label = _category_level[category]
+		level_label.text = level_line(Mastery.rating(_save, all + expert))
+		level_label.visible = level_label.text != ""
 		var fill := PackedFloat32Array()
 		fill.append(ratio)
 		(_category_bar[category] as DsSegments).fills = fill

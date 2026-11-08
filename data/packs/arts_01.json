@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Peinture": "Arts",
       "Sculpture": "Arts",
@@ -24,7 +24,7 @@
       "id": "arts01-q01",
       "titre": "La Joconde",
       "categorie": "Peinture",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel artiste a peint La Joconde ?",
       "indices": [
         "Cet Italien était aussi ingénieur et inventeur.",
@@ -61,7 +61,7 @@
       "id": "arts01-q02",
       "titre": "La Nuit étoilée",
       "categorie": "Peinture",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel peintre a réalisé La Nuit étoilée, en 1889 ?",
       "indices": [
         "Ce Néerlandais a beaucoup peint en Provence.",
@@ -97,7 +97,7 @@
       "id": "arts01-q03",
       "titre": "L’impressionnisme",
       "categorie": "Peinture",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel mouvement de peinture est né en France dans les années 1870, avec Monet, Renoir et Degas ?",
       "indices": [
         "Ses peintres aimaient travailler en plein air, pour saisir la lumière.",
@@ -134,7 +134,7 @@
       "id": "arts01-q04",
       "titre": "Le Penseur",
       "categorie": "Sculpture",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel sculpteur a créé Le Penseur ?",
       "indices": [
         "L’œuvre devait d’abord surmonter une grande porte inspirée de Dante.",
@@ -170,7 +170,7 @@
       "id": "arts01-q05",
       "titre": "La tour Eiffel",
       "categorie": "Architecture",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Pour quel événement la tour Eiffel a-t-elle été construite ?",
       "indices": [
         "Elle a été inaugurée cent ans après le début de la Révolution française.",
@@ -206,7 +206,7 @@
       "id": "arts01-q06",
       "titre": "La Sagrada Família",
       "categorie": "Architecture",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Dans quelle ville se trouve la Sagrada Família, imaginée par Antoni Gaudí ?",
       "indices": [
         "Sa construction a commencé en 1882 et se poursuit encore.",
@@ -242,7 +242,7 @@
       "id": "arts01-q07",
       "titre": "La Neuvième Symphonie",
       "categorie": "Musique",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel compositeur, devenu sourd, a pourtant écrit la Neuvième Symphonie ?",
       "indices": [
         "Il est né à Bonn en 1770.",
@@ -278,7 +278,7 @@
       "id": "arts01-q08",
       "titre": "Les cordes du violon",
       "categorie": "Musique",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Combien de cordes compte un violon ?",
       "indices": [
         "Elles sont accordées de quinte en quinte.",
@@ -315,7 +315,7 @@
       "id": "arts01-q09",
       "titre": "Le cubisme",
       "categorie": "Peinture",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel peintre espagnol est l’un des fondateurs du cubisme ?",
       "indices": [
         "Il a passé l’essentiel de sa vie en France.",
@@ -351,7 +351,7 @@
       "id": "arts01-q10",
       "titre": "La statue de la Liberté",
       "categorie": "Sculpture",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle statue, offerte par la France, se dresse à l’entrée du port de New York ?",
       "indices": [
         "Sa structure interne a été conçue par Gustave Eiffel.",
@@ -387,7 +387,7 @@
       "id": "arts01-q11",
       "titre": "Le gothique",
       "categorie": "Architecture",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quel style d’architecture, né en France au XIIe siècle, se reconnaît à ses arcs brisés et à ses vitraux ?",
       "indices": [
         "Les croisées d’ogives et les arcs-boutants permettent d’élever des murs très hauts.",
@@ -424,7 +424,7 @@
       "id": "arts01-q12",
       "titre": "Le Radeau de la Méduse",
       "categorie": "Peinture",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quel peintre a réalisé Le Radeau de la Méduse, exposé au Louvre ?",
       "indices": [
         "Le tableau raconte le naufrage d’une frégate française en 1816.",
@@ -460,7 +460,7 @@
       "id": "arts01-q13",
       "titre": "La Flûte enchantée",
       "categorie": "Musique",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel compositeur autrichien a écrit l’opéra La Flûte enchantée ?",
       "indices": [
         "Enfant prodige, il donnait des concerts à travers l’Europe dès six ans.",
@@ -496,7 +496,7 @@
       "id": "arts01-q14",
       "titre": "La chapelle Sixtine",
       "categorie": "Peinture",
-      "difficulte": "facile",
+      "difficulte": 2,
       "question": "Quel artiste de la Renaissance a peint le plafond de la chapelle Sixtine ?",
       "indices": [
         "Il se considérait avant tout comme un sculpteur, l’auteur du David.",
@@ -533,7 +533,7 @@
       "id": "arts01-q15",
       "titre": "L’Arc de triomphe",
       "categorie": "Architecture",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel monument parisien, achevé en 1836, célèbre les victoires des armées françaises ?",
       "indices": [
         "Napoléon Ier en a ordonné la construction en 1806.",

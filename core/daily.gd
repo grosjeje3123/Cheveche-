@@ -57,27 +57,35 @@ static func seed_of(key: String) -> int:
 	return h
 
 
-## La courbe du défi : deux dossiers faciles pour se mettre en route, deux moyens, un difficile pour finir.
-const CURVE := ["facile", "facile", "moyenne", "moyenne", "difficile"]
-## Si une discipline n'a pas le niveau voulu : le niveau le plus proche d'abord.
-const NEAREST := {"facile": ["facile", "moyenne", "difficile"], "moyenne": ["moyenne", "facile", "difficile"],
-		"difficile": ["difficile", "moyenne", "facile"]}
+## La courbe du défi : un escalier, de la difficulté 1 à la difficulté 5 (le même pour tout le monde).
+const CURVE := [1, 2, 3, 4, 5]
+
+
+## Si une discipline n'a pas la difficulté voulue : la plus proche, en cherchant d'abord juste en dessous.
+static func nearest(want: int) -> Array:
+	var out: Array = [want]
+	for gap in range(1, QuestionPack.DIFFICULTY_MAX):
+		for d in [want - gap, want + gap]:
+			if d >= 1 and d <= QuestionPack.DIFFICULTY_MAX:
+				out.append(d)
+	return out
 
 
 ## Le défi d'un jour : CHALLENGE_LENGTH dossiers, chacun d'une discipline différente (tant qu'il y en a assez),
-## de plus en plus difficiles (CURVE), tirés à partir de la date seule. Il ne dépend pas de la progression du joueur :
+## de plus en plus difficiles (CURVE, au plus près), tirés à partir de la date seule. Il ne dépend pas de la progression du joueur :
 ## à pack égal, tout le monde joue les mêmes dossiers le même jour.
 static func challenge(pack: QuestionPack, key: String, count := CHALLENGE_LENGTH) -> Array:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = seed_of(key)
-	# discipline -> niveau -> dossiers (triés par identifiant : l'ordre ne dépend pas du chargement)
+	# discipline -> difficulté -> dossiers (triés par identifiant : l'ordre ne dépend pas du chargement)
 	var groups := {}
 	for q in pack.questions:
 		var g := pack.collection_of(q)
 		if not groups.has(g):
-			groups[g] = {"facile": [], "moyenne": [], "difficile": []}
-		var level := str(q.get("difficulte", "moyenne"))
-		(groups[g].get(level, groups[g]["moyenne"]) as Array).append(q)
+			groups[g] = {}
+			for d in range(1, QuestionPack.DIFFICULTY_MAX + 1):
+				groups[g][d] = []
+		(groups[g][QuestionPack.difficulty_of(q)] as Array).append(q)
 	var names: Array = groups.keys()
 	names.sort()
 	for i in range(names.size() - 1, 0, -1):  # mélange de Fisher-Yates, avec le générateur du jour
@@ -93,13 +101,16 @@ static func challenge(pack: QuestionPack, key: String, count := CHALLENGE_LENGTH
 	var slot := 0
 	while out.size() < wanted and slot < count * 20:
 		var g: String = names[slot % names.size()]
-		var want: String = CURVE[mini(out.size(), CURVE.size() - 1)]
-		for level in NEAREST[want]:
+		var want: int = CURVE[mini(out.size(), CURVE.size() - 1)]
+		for level in nearest(want):
 			var list: Array = (groups[g][level] as Array).filter(func(q): return not out.has(q))
 			if not list.is_empty():
 				out.append(list[rng.randi_range(0, list.size() - 1)])
 				break
 		slot += 1
+	# L'escalier, même quand une discipline n'a pas la difficulté voulue : du plus accessible au plus difficile.
+	var rank := func(q: Dictionary) -> int: return QuestionPack.difficulty_of(q) * 1000 + out.find(q)
+	out.sort_custom(func(a: Dictionary, b: Dictionary) -> bool: return rank.call(a) < rank.call(b))
 	return out
 
 

@@ -46,6 +46,8 @@ var _current: Control
 var _play_origin: Control
 ## Discipline de la fiche en cours (« » = « Au hasard », tout le pack).
 var _series_category := ""
+## Dossiers déjà joués dans la fiche en cours (la file s'adapte après chaque réponse sans les reproposer).
+var _session_played := {}
 ## « free » (une fiche de la couverture) ou « daily » (défi du jour), et la date du défi en cours.
 var _series_kind := "free"
 var _daily_key := ""
@@ -163,7 +165,7 @@ func _start_fiche(category: String, origin: Control) -> void:
 	var pool := _fiche_pool(category)
 	if pool.is_empty():
 		return
-	var queue := _save.draw(pool, pool.size())
+	var queue := _save.draw(pool, pool.size(), "", Mastery.start_level(_mastery_of(category)))
 	if queue.is_empty():
 		# Tout ce qui reste est à revoir demain (et rien n'est encore trouvé sans indice) : on le dit, sans ouvrir le jeu.
 		var waiting := _save.waiting_in(pool)
@@ -172,6 +174,7 @@ func _start_fiche(category: String, origin: Control) -> void:
 		return
 	_series_category = category
 	_series_kind = "free"
+	_session_played = {}
 	_play.start(_pack, queue, [], true)
 	# Où commence la révision (dossiers déjà trouvés sans indice), pour dire que les autres reviendront demain.
 	var revision := -1
@@ -184,6 +187,37 @@ func _start_fiche(category: String, origin: Control) -> void:
 	_play.refresh_notice()
 	_play_origin = origin
 	_enter_play()
+
+
+# Le niveau du joueur sur une fiche : la discipline entière (niveaux 1 et 2) ; « Au hasard » : tout le jeu de base.
+func _mastery_of(category: String) -> Dictionary:
+	var qs: Array = _pack.questions if category == "" else _pack.questions_in(category) + _pack.questions_in(category, 2)
+	return Mastery.rating(_save, qs)
+
+
+# Après chaque réponse d'une fiche : la suite de la file est retirée selon le niveau du moment (les dossiers déjà
+# joués dans la partie restent de côté).
+func _adapt_queue() -> void:
+	var pool := _fiche_pool(_series_category)
+	var rest := _save.draw(pool, pool.size(), "", Mastery.start_level(_mastery_of(_series_category)), _session_played)
+	var revision := -1
+	for i in rest.size():
+		if _save.is_flawless(rest[i]["id"]):
+			revision = i
+			break
+	_play.set_upcoming(rest, revision)
+
+
+# Une ligne sous l'explication quand le niveau d'une discipline s'annonce ou monte (jamais quand il baisse).
+static func _level_note(discipline: String, before: Dictionary, after: Dictionary) -> String:
+	if discipline == "" or not Mastery.known(after):
+		return ""
+	var name := Mastery.name_of(after["r"])
+	if not Mastery.known(before):
+		return "%s : votre niveau est %s." % [discipline, name]
+	if Mastery.rank_of(after["r"]) > Mastery.rank_of(before["r"]):
+		return "%s : vous passez %s." % [discipline, name]
+	return ""
 
 
 # « 1 dossier à revoir », « 4 dossiers à revoir ».
@@ -263,7 +297,10 @@ func _on_answered(question_id: String, correct: bool, clues: int, points: int) -
 	var pool := _pack.questions_in(discipline, level)
 	var found_before := _save.collected_in(pool)
 	var flawless_before := _save.flawless_in(pool)
+	var mastery_before := _mastery_of(discipline) if discipline != "" else {}
 	_save.record_answer(question_id, correct, points)
+	if discipline != "":
+		_play.add_note(_level_note(discipline, mastery_before, _mastery_of(discipline)))
 	var total := pool.size()
 	if total > 0 and _save.collected_in(pool) == total and (found_before < total
 			or _save.flawless_in(pool) == total and flawless_before < total):
@@ -273,6 +310,8 @@ func _on_answered(question_id: String, correct: bool, clues: int, points: int) -
 	if _series_kind == "daily":
 		_save.record_daily_answer(_daily_key, {"id": question_id, "correct": correct, "clues": clues, "points": points})
 	else:
+		_session_played[question_id] = true
+		_adapt_queue()
 		_show_found()
 	_cover.refresh()
 	_progress.refresh()

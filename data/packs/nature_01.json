@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Botanique": "Nature",
       "Arbres": "Nature",
@@ -26,7 +26,7 @@
       "id": "nature01-q01",
       "titre": "Photosynthèse",
       "categorie": "Botanique",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel gaz les plantes rejettent-elles grâce à la photosynthèse ?",
       "indices": [
         "Cette réaction se fait à la lumière, dans les parties vertes de la plante.",
@@ -63,7 +63,7 @@
       "id": "nature01-q02",
       "titre": "Chlorophylle",
       "categorie": "Botanique",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel pigment donne aux feuilles leur couleur verte ?",
       "indices": [
         "Il capte l’énergie de la lumière.",
@@ -98,7 +98,7 @@
       "id": "nature01-q03",
       "titre": "Âge d’un arbre",
       "categorie": "Arbres",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Comment peut-on connaître l’âge d’un arbre abattu ?",
       "indices": [
         "Il suffit d’observer la souche, coupée bien à plat.",
@@ -136,7 +136,7 @@
       "id": "nature01-q04",
       "titre": "Séquoia géant",
       "categorie": "Arbres",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quel arbre est le plus massif du monde, par son volume de bois ?",
       "indices": [
         "Il pousse sur les pentes de la Sierra Nevada, en Californie.",
@@ -173,7 +173,7 @@
       "id": "nature01-q05",
       "titre": "Amanite phalloïde",
       "categorie": "Champignons",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel champignon mortel est responsable de la plupart des intoxications graves en France ?",
       "indices": [
         "Son chapeau est souvent vert olive à jaunâtre.",
@@ -209,7 +209,7 @@
       "id": "nature01-q06",
       "titre": "Le règne des champignons",
       "categorie": "Champignons",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Les champignons sont-ils des plantes ?",
       "indices": [
         "Ils ne font pas de photosynthèse.",
@@ -247,7 +247,7 @@
       "id": "nature01-q07",
       "titre": "Les producteurs",
       "categorie": "Écologie",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Comment appelle-t-on les êtres vivants qui, grâce à la lumière, forment le début des chaînes alimentaires ?",
       "indices": [
         "Ce sont surtout les plantes et les algues.",
@@ -284,7 +284,7 @@
       "id": "nature01-q08",
       "titre": "Gaz à effet de serre",
       "categorie": "Environnement",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel gaz, rejeté en brûlant charbon, pétrole et gaz, est le principal responsable du réchauffement actuel ?",
       "indices": [
         "Sa concentration dans l’air a augmenté de plus de moitié depuis le XIXe siècle.",
@@ -321,7 +321,7 @@
       "id": "nature01-q09",
       "titre": "La taïga",
       "categorie": "Écologie",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel est le plus grand ensemble forestier du monde, qui couvre le nord de la Russie et du Canada ?",
       "indices": [
         "On l’appelle aussi forêt boréale.",
@@ -358,7 +358,7 @@
       "id": "nature01-q10",
       "titre": "Le lotus",
       "categorie": "Botanique",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle plante aquatique, sacrée en Asie, a des feuilles sur lesquelles l’eau perle sans les mouiller ?",
       "indices": [
         "Cette propriété a donné son nom à un effet utilisé pour des surfaces autonettoyantes.",
@@ -395,7 +395,7 @@
       "id": "nature01-q11",
       "titre": "Fin des dinosaures",
       "categorie": "Paléontologie",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Qu’est-ce qui a sans doute causé la disparition des dinosaures non aviens, il y a 66 millions d’années ?",
       "indices": [
         "Un cratère d’environ 200 km de large en garde la trace, au Mexique.",
@@ -432,7 +432,7 @@
       "id": "nature01-q12",
       "titre": "Tyrannosaure",
       "categorie": "Paléontologie",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel dinosaure carnivore géant d’Amérique du Nord avait de minuscules bras à deux doigts ?",
       "indices": [
         "Il a vécu à la toute fin du Crétacé.",
@@ -469,7 +469,7 @@
       "id": "nature01-q13",
       "titre": "Paléontologie",
       "categorie": "Paléontologie",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Comment s’appelle la science qui étudie les fossiles ?",
       "indices": [
         "Elle s’intéresse aux êtres vivants disparus.",
@@ -504,7 +504,7 @@
       "id": "nature01-q14",
       "titre": "L’ambre",
       "categorie": "Paléontologie",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Qu’est-ce que l’ambre, dans lequel on trouve parfois des insectes fossiles ?",
       "indices": [
         "Il peut être vieux de plusieurs dizaines de millions d’années.",
@@ -541,7 +541,7 @@
       "id": "nature01-q15",
       "titre": "La fleur et le fruit",
       "categorie": "Botanique",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Quelle partie de la fleur devient le fruit ?",
       "indices": [
         "Elle se trouve au cœur de la fleur, à la base du pistil.",
@@ -577,7 +577,7 @@
       "id": "nature01-q16",
       "titre": "Les légumineuses",
       "categorie": "Botanique",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quelles plantes enrichissent le sol en azote grâce à des bactéries logées dans leurs racines ?",
       "indices": [
         "Le pois, la lentille et le trèfle en font partie.",
@@ -613,7 +613,7 @@
       "id": "nature01-q17",
       "titre": "Chute des feuilles",
       "categorie": "Arbres",
-      "difficulte": "moyenne",
+      "difficulte": 3,
       "question": "Pourquoi beaucoup d’arbres perdent-ils leurs feuilles en automne ?",
       "indices": [
         "Quand le sol est gelé, l’eau y est difficile à puiser.",
@@ -650,7 +650,7 @@
       "id": "nature01-q18",
       "titre": "Blanchissement des coraux",
       "categorie": "Écologie",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Qu’est-ce qui provoque surtout le blanchissement des coraux ?",
       "indices": [
         "Le corail expulse alors les algues microscopiques qui vivent dans ses tissus.",
@@ -687,7 +687,7 @@
       "id": "nature01-q19",
       "titre": "Palétuviers",
       "categorie": "Écologie",
-      "difficulte": "difficile",
+      "difficulte": 4,
       "question": "Quels arbres poussent les pieds dans l’eau salée, sur les côtes tropicales ?",
       "indices": [
         "Leurs racines en échasses émergent à marée basse.",
@@ -724,7 +724,7 @@
       "id": "nature01-q20",
       "titre": "La pomme de terre",
       "categorie": "Botanique",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quelle partie de la plante mange-t-on quand on mange une pomme de terre ?",
       "indices": [
         "Ses « yeux » sont des bourgeons qui peuvent donner de nouvelles pousses.",

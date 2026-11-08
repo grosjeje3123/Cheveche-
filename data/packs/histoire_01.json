@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Antiquité": "Histoire",
       "Moyen Âge": "Histoire",
@@ -24,7 +24,7 @@
       "id": "histoire01-q01",
       "titre": "Pyramides de Gizeh",
       "categorie": "Antiquité",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel peuple de l’Antiquité a construit les pyramides de Gizeh ?",
       "indices": [
         "Elles servaient de tombeaux à des souverains.",
@@ -62,7 +62,7 @@
       "id": "histoire01-q02",
       "titre": "Pompéi",
       "categorie": "Antiquité",
-      "difficulte": "moyenne",
+      "difficulte": 1,
       "question": "Quelle ville romaine a été ensevelie par l’éruption du Vésuve, en 79 ?",
       "indices": [
         "Elle se trouve près de l’actuelle Naples.",
@@ -98,7 +98,7 @@
       "id": "histoire01-q03",
       "titre": "Vercingétorix",
       "categorie": "Antiquité",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel chef gaulois a affronté Jules César à Alésia, en 52 av. J.-C. ?",
       "indices": [
         "Il était le chef des Arvernes, un peuple de l’actuelle Auvergne.",
@@ -133,7 +133,7 @@
       "id": "histoire01-q04",
       "titre": "Charlemagne",
       "categorie": "Moyen Âge",
-      "difficulte": "facile",
+      "difficulte": 2,
       "question": "Quel roi des Francs a été couronné empereur à Rome, le jour de Noël de l’an 800 ?",
       "indices": [
         "Il était le fils de Pépin le Bref.",
@@ -170,7 +170,7 @@
       "id": "histoire01-q05",
       "titre": "Bataille d’Hastings",
       "categorie": "Moyen Âge",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Quelle bataille de 1066 ouvre à Guillaume de Normandie la conquête de l’Angleterre ?",
       "indices": [
         "Le roi anglais Harold y fut tué.",
@@ -206,7 +206,7 @@
       "id": "histoire01-q06",
       "titre": "Jeanne d’Arc",
       "categorie": "Moyen Âge",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quelle jeune paysanne a conduit les troupes françaises qui délivrent Orléans, en 1429 ?",
       "indices": [
         "Elle disait entendre des voix célestes.",
@@ -243,7 +243,7 @@
       "id": "histoire01-q07",
       "titre": "Christophe Colomb",
       "categorie": "Temps modernes",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "En quelle année Christophe Colomb atteint-il l’Amérique ?",
       "indices": [
         "Il cherchait une route vers l’Asie en naviguant vers l’ouest.",
@@ -279,7 +279,7 @@
       "id": "histoire01-q08",
       "titre": "Louis XIV à Versailles",
       "categorie": "Temps modernes",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel roi installe la cour et le gouvernement à Versailles, en 1682 ?",
       "indices": [
         "On le surnommait le Roi-Soleil.",
@@ -316,7 +316,7 @@
       "id": "histoire01-q09",
       "titre": "Gutenberg",
       "categorie": "Temps modernes",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Qui a mis au point en Europe l’imprimerie à caractères mobiles, vers 1450 ?",
       "indices": [
         "Il travaillait à Mayence, en Allemagne.",
@@ -352,7 +352,7 @@
       "id": "histoire01-q10",
       "titre": "Prise de la Bastille",
       "categorie": "Époque contemporaine",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel événement du 14 juillet 1789 est devenu le symbole de la Révolution française ?",
       "indices": [
         "Une foule parisienne s’empare d’une forteresse servant de prison.",
@@ -388,7 +388,7 @@
       "id": "histoire01-q11",
       "titre": "Sainte-Hélène",
       "categorie": "Époque contemporaine",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Sur quelle île Napoléon Ier est-il mort en exil, en 1821 ?",
       "indices": [
         "Elle est isolée au milieu de l’Atlantique Sud.",
@@ -424,7 +424,7 @@
       "id": "histoire01-q12",
       "titre": "Armistice de 1918",
       "categorie": "Époque contemporaine",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "En quelle année la Première Guerre mondiale s’est-elle terminée ?",
       "indices": [
         "L’armistice fut signé dans un wagon, en forêt de Compiègne.",
@@ -460,7 +460,7 @@
       "id": "histoire01-q13",
       "titre": "Débarquement de Normandie",
       "categorie": "Époque contemporaine",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel jour a eu lieu le débarquement allié en Normandie ?",
       "indices": [
         "L’opération portait le nom de code « Overlord ».",
@@ -496,7 +496,7 @@
       "id": "histoire01-q14",
       "titre": "Chute du mur de Berlin",
       "categorie": "Époque contemporaine",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "En quelle année le mur de Berlin est-il tombé ?",
       "indices": [
         "Il coupait la ville en deux depuis 1961.",
@@ -532,7 +532,7 @@
       "id": "histoire01-q15",
       "titre": "Alexandre le Grand",
       "categorie": "Antiquité",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel roi de Macédoine a conquis un empire allant de la Grèce jusqu’à l’Inde ?",
       "indices": [
         "Il eut pour précepteur le philosophe Aristote.",

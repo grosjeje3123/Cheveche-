@@ -49,7 +49,7 @@ func _init() -> void:
 	_category.add_theme_font_size_override("font_size", 26)
 	_category.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	head.add_child(_category)
-	# Le niveau du dossier, discret, juste avant son numéro : trois barres montantes.
+	# La difficulté du dossier, discrète, juste avant son numéro : cinq barres montantes.
 	_level = DsLevel.new(18.0)
 	_level.color = Color(Ds.IVORY, 0.9)
 	head.add_child(_level)

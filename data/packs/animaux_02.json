@@ -11,7 +11,7 @@
       "CC BY",
       "CC BY-SA"
     ],
-    "schema": 3,
+    "schema": 4,
     "collection_par_categorie": {
       "Mammifères": "Animaux",
       "Oiseaux": "Animaux",
@@ -27,7 +27,7 @@
       "id": "animaux02-q01",
       "titre": "Le cou de la girafe",
       "categorie": "Mammifères",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Combien de vertèbres compte le cou d’une girafe ?",
       "indices": [
         "C’est le même nombre que chez l’être humain.",
@@ -63,7 +63,7 @@
       "id": "animaux02-q02",
       "titre": "Les oreilles de l’éléphant",
       "categorie": "Mammifères",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "À quoi servent surtout les grandes oreilles de l’éléphant d’Afrique ?",
       "indices": [
         "Elles sont parcourues d’un réseau de vaisseaux sanguins très dense.",
@@ -100,7 +100,7 @@
       "id": "animaux02-q03",
       "titre": "La tête de la chouette",
       "categorie": "Oiseaux",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Jusqu’à quel angle environ une chouette peut-elle tourner la tête ?",
       "indices": [
         "Ses yeux sont fixes dans leurs orbites.",
@@ -137,7 +137,7 @@
       "id": "animaux02-q04",
       "titre": "La respiration du dauphin",
       "categorie": "Animaux marins",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Par où le dauphin respire-t-il ?",
       "indices": [
         "C’est un mammifère : il doit remonter à la surface.",
@@ -174,7 +174,7 @@
       "id": "animaux02-q05",
       "titre": "La reine des abeilles",
       "categorie": "Insectes",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Dans une ruche, quelle abeille pond les œufs ?",
       "indices": [
         "Elle est nourrie de gelée royale.",
@@ -210,7 +210,7 @@
       "id": "animaux02-q06",
       "titre": "Le chemin des fourmis",
       "categorie": "Insectes",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Comment les fourmis guident-elles les autres vers la nourriture ?",
       "indices": [
         "Une fourmi qui a trouvé de quoi manger marque le trajet du retour.",
@@ -247,7 +247,7 @@
       "id": "animaux02-q07",
       "titre": "Le père hippocampe",
       "categorie": "Animaux marins",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Chez l’hippocampe, qui porte les petits jusqu’à leur naissance ?",
       "indices": [
         "C’est un poisson, malgré son allure de petit cheval.",
@@ -284,7 +284,7 @@
       "id": "animaux02-q08",
       "titre": "Le paresseux",
       "categorie": "Mammifères",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Quel mammifère d’Amérique tropicale passe presque toute sa vie suspendu aux branches, la tête en bas ?",
       "indices": [
         "Il est si lent que des algues poussent dans son pelage.",
@@ -321,7 +321,7 @@
       "id": "animaux02-q09",
       "titre": "L’autruche",
       "categorie": "Oiseaux",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "Quel est le plus grand oiseau vivant ?",
       "indices": [
         "Il ne vole pas, mais court à plus de 60 km/h.",
@@ -357,7 +357,7 @@
       "id": "animaux02-q10",
       "titre": "La peau de l’ours polaire",
       "categorie": "Mammifères",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "De quelle couleur est la peau de l’ours polaire, sous sa fourrure ?",
       "indices": [
         "Ses poils ne sont pas vraiment blancs : ils sont transparents.",
@@ -393,7 +393,7 @@
       "id": "animaux02-q11",
       "titre": "Les yeux de l’escargot",
       "categorie": "Invertébrés",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Où se trouvent les yeux de l’escargot ?",
       "indices": [
         "Il possède deux paires de tentacules sur la tête.",
@@ -430,7 +430,7 @@
       "id": "animaux02-q12",
       "titre": "Le retour du saumon",
       "categorie": "Poissons",
-      "difficulte": "moyenne",
+      "difficulte": 2,
       "question": "Pourquoi le saumon remonte-t-il les rivières ?",
       "indices": [
         "Il a passé plusieurs années en mer avant ce voyage.",
@@ -467,7 +467,7 @@
       "id": "animaux02-q13",
       "titre": "Les marsupiaux",
       "categorie": "Mammifères",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "À quel groupe de mammifères appartient le kangourou, dont le petit grandit dans une poche ?",
       "indices": [
         "Le koala et le wombat en font aussi partie.",
@@ -503,7 +503,7 @@
       "id": "animaux02-q14",
       "titre": "La coccinelle",
       "categorie": "Insectes",
-      "difficulte": "facile",
+      "difficulte": 1,
       "question": "De quoi se nourrissent surtout les coccinelles, au grand bonheur des jardiniers ?",
       "indices": [
         "Une seule larve peut en dévorer des centaines avant de devenir adulte.",
@@ -539,7 +539,7 @@
       "id": "animaux02-q15",
       "titre": "Les pattes du gecko",
       "categorie": "Reptiles et amphibiens",
-      "difficulte": "difficile",
+      "difficulte": 3,
       "question": "Comment le gecko arrive-t-il à marcher au plafond ?",
       "indices": [
         "Ses doigts sont couverts de lamelles très fines.",
