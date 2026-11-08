@@ -139,16 +139,8 @@ jobs:
                "$HOME/gradle-dist/gradle-${GRADLE_VERSION}-bin.zip" 2>&1 | tee -a journal/export.txt
           timeout 2100 "$GODOT" --headless --path . $mode "Android AAB" "$PWD/build/cheveche.aab" 2>&1 | tee -a journal/export.txt
           grep -E "androidGradlePlugin|compileSdk|targetSdk|buildTools" android/build/config.gradle > journal/gradle.txt || true
+          ls -la build/ | tee -a journal/export.txt
           test -s build/cheveche.aab
-
-      - name: Vérifier l'AAB
-        timeout-minutes: 10
-        run: |
-          curl -fsSL -o "$HOME/bundletool.jar" https://github.com/google/bundletool/releases/download/1.17.2/bundletool-all-1.17.2.jar
-          java -jar "$HOME/bundletool.jar" dump manifest --bundle build/cheveche.aab > journal/manifest.xml
-          grep -oE '(package|android:versionCode|android:versionName|android:minSdkVersion|android:targetSdkVersion)="[^"]+"' journal/manifest.xml | tee journal/resume.txt
-          ls -la build/cheveche.aab | tee -a journal/resume.txt
-          java -jar "$HOME/bundletool.jar" dump resources --bundle build/cheveche.aab --resource style/GodotAppSplashTheme --values >> journal/resume.txt 2>&1 || true
 
       - name: AAB à télécharger
         uses: actions/upload-artifact@v4
@@ -156,6 +148,18 @@ jobs:
           name: cheveche-aab
           path: build/cheveche.aab
           if-no-files-found: error
+
+      # Après l'envoi de l'AAB : si GitHub ne sert pas bundletool, l'AAB reste téléchargeable.
+      - name: Vérifier l'AAB
+        timeout-minutes: 15
+        continue-on-error: true
+        run: |
+          curl -fsSL --retry 6 --retry-all-errors --retry-delay 20 --connect-timeout 30 -o "$HOME/bundletool.jar" \
+               https://github.com/google/bundletool/releases/download/1.17.2/bundletool-all-1.17.2.jar 2>&1 | tee journal/bundletool.txt
+          java -jar "$HOME/bundletool.jar" dump manifest --bundle build/cheveche.aab > journal/manifest.xml
+          grep -oE '(package|android:versionCode|android:versionName|android:minSdkVersion|android:targetSdkVersion)="[^"]+"' journal/manifest.xml | tee journal/resume.txt
+          ls -la build/cheveche.aab | tee -a journal/resume.txt
+          java -jar "$HOME/bundletool.jar" dump resources --bundle build/cheveche.aab --resource style/GodotAppSplashTheme --values >> journal/resume.txt 2>&1 || true
 
       # Journal lisible sans connexion : poussé sur la branche journal-ci.
       - name: Journal
