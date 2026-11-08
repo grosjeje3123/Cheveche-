@@ -113,6 +113,11 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
 - **Jours de suite** : nombre de jours consécutifs où le défi a été terminé (jusqu’à hier si celui du jour reste à faire).
   Les réponses du défi comptent aussi pour la collection et la semaine.
 
+## Politique de confidentialité
+- `docs/confidentialite.html` : la page demandée par Google Play (le jeu ne collecte rien). Publiée par GitHub Pages
+  (Settings > Pages > Deploy from a branch, `main`, dossier `/docs`), à l'adresse
+  https://grosjeje3123.github.io/Cheveche-/confidentialite.html.
+
 ## Lancement
 - Au démarrage, rien d'autre que le papier : l'écran de démarrage d'Android est vidé (fond ivoire #F1EDE3, sans
   icône), l'écran de chargement de Godot aussi (même couleur, sans image), puis la couverture s'ouvre.
