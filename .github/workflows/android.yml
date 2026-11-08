@@ -17,6 +17,7 @@ env:
 jobs:
   aab:
     runs-on: ubuntu-24.04
+    timeout-minutes: 75
     defaults:
       run:
         shell: bash
@@ -72,22 +73,13 @@ jobs:
           } > "$HOME/.config/godot/editor_settings-${major_minor}.tres"
 
       - name: Tests du jeu
+        timeout-minutes: 25
         run: |
           pip install --quiet pillow
           bash tests/run_all.sh "$GODOT" 2>&1 | tee journal/tests.txt
 
-      - name: Modèle de compilation Android
-        run: |
-          "$GODOT" --headless --path . --install-android-build-template 2>&1 | tail -5 || true
-          if [ ! -f android/build/build.gradle ]; then
-            mkdir -p android/build
-            unzip -q "$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable/android_source.zip" -d android/build
-            echo "${GODOT_VERSION}.stable" > android/.build_version
-            touch android/build/.gdignore
-          fi
-          grep -E "androidGradlePlugin|compileSdk|targetSdk|buildTools" android/build/config.gradle | tee journal/gradle.txt
-
       - name: Exporter l'AAB
+        timeout-minutes: 40
         env:
           KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
           KEYSTORE_ALIAS: ${{ secrets.ANDROID_KEYSTORE_ALIAS }}
@@ -104,10 +96,13 @@ jobs:
             mode=--export-debug
             echo "Pas de clé de publication dans les secrets : AAB signé avec une clé de test, non publiable" | tee journal/export.txt
           fi
-          "$GODOT" --headless --path . $mode "Android AAB" "$PWD/build/cheveche.aab" 2>&1 | tee -a journal/export.txt
+          # --install-android-build-template installe le modèle Gradle avant l'export (sans export, Godot lancerait le jeu).
+          timeout 2100 "$GODOT" --headless --path . --install-android-build-template $mode "Android AAB" "$PWD/build/cheveche.aab" 2>&1 | tee -a journal/export.txt
+          grep -E "androidGradlePlugin|compileSdk|targetSdk|buildTools" android/build/config.gradle > journal/gradle.txt || true
           test -s build/cheveche.aab
 
       - name: Vérifier l'AAB
+        timeout-minutes: 10
         run: |
           curl -fsSL -o "$HOME/bundletool.jar" https://github.com/google/bundletool/releases/download/1.17.2/bundletool-all-1.17.2.jar
           java -jar "$HOME/bundletool.jar" dump manifest --bundle build/cheveche.aab > journal/manifest.xml
@@ -124,6 +119,7 @@ jobs:
       # Journal lisible sans connexion : poussé sur la branche journal-ci.
       - name: Journal
         if: always()
+        timeout-minutes: 5
         run: |
           mkdir -p /tmp/journal && cp -r journal/. /tmp/journal/ 2>/dev/null || true
           echo "run ${{ github.run_number }} : ${{ job.status }} ($(date -u +%FT%TZ), commit ${GITHUB_SHA::7})" > /tmp/journal/etat.txt
