@@ -113,6 +113,14 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
 - **Jours de suite** : nombre de jours consécutifs où le défi a été terminé (jusqu’à hier si celui du jour reste à faire).
   Les réponses du défi comptent aussi pour la collection et la semaine.
 
+## Comment jouer
+- Avant la toute première série (une fiche ou le défi du jour), la page « Comment jouer » montre la chouette sur ses livres
+  et donne les trois règles :
+  une image et une question à quatre réponses ; gratter dévoile l’image et deux indices, qui font baisser les points
+  (100, 60, 30) ; un dossier manqué ou trouvé avec des indices revient le lendemain, et le défi du jour est le même
+  pour tous. « Commencer » lance la série ; la page ne revient plus d’elle-même (réglage `rules_seen`), elle reste
+  dans Réglages > Comment jouer. La remise à zéro de la progression ne la fait pas revenir.
+
 ## Réglages, crédits, sons
 - « Réglages » (lien en bas de la couverture) : son, vibrations, code de sauvegarde, remise à zéro de la progression
   (deux touchers pour confirmer, sans fenêtre surgissante ; les réglages sont gardés), crédits. Réglages dans `user://settings.json`.
@@ -166,7 +174,9 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   (lien discret, en bas, à côté de « Réglages ») est un simple bilan : dossiers trouvés, semaine, progression par discipline. La flèche retour, Échap (ordinateur) ou le
   bouton Retour (Android) ramène à l’écran d’origine.
 - `core/daily.gd` : date du jour et dossier du jour (la couverture s’en sert pour la date ; le dossier du jour reviendra avec le futur défi du jour).
-- `assets/brand/` : la chouette (SVG générés par `tools/make_owl.py`, trois tailles optiques) et l’icône d’application ;
+- `assets/brand/` : la chouette (SVG générés par `tools/make_owl.py`, trois tailles optiques), son illustration sur deux livres
+  (`owl_scene.svg`, page « Comment jouer ») et l’icône d’application (la chouette en buste sur l’ardoise), avec l’icône
+  de 512 px à téléverser dans la Play Console (`launcher/play_store_512.png`, exclue de l’export) ;
   `ds/owl_mark.gd` choisit la bonne taille selon l’affichage.
 - `data/packs/` : les packs, schéma 3 (deux indices par dossier, questions autonomes) :
   `svt_01.json` (dossiers 1 à 15, disciplines Nature et Sciences), `astro_01.json` (dossiers 101 à 115, Astronomie),

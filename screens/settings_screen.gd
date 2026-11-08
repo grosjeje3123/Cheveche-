@@ -1,15 +1,17 @@
 class_name SettingsScreen
 extends Control
-## « Réglages » : son, vibrations ; le code de sauvegarde (copier, restaurer) et la remise à zéro de la progression
+## « Réglages » : son, vibrations ; « Comment jouer » ; le code de sauvegarde (copier, restaurer) et la remise à zéro de la progression
 ## (deux touchers pour confirmer ce qui remplace ou efface, sans fenêtre surgissante) ; crédits.
 ## On y arrive depuis la couverture ; la flèche y ramène.
 
 signal closed
 signal open_credits
+## « Comment jouer » : les règles, à relire.
+signal open_rules
 ## La progression vient d'être effacée ou remplacée (les autres écrans doivent se remettre à jour).
 signal progress_reset
 
-const VERSION_TEXT := "Chevêche, prototype 0.9.27."
+const VERSION_TEXT := "Chevêche, prototype 0.9.28."
 ## Délai pour confirmer par un second toucher (remise à zéro, restauration), et durée des messages d'état.
 const CONFIRM_SECONDS := 4.0
 
@@ -97,6 +99,10 @@ func setup(settings: Settings, save: SaveStore) -> void:
 
 	col.add_child(Ds.spacer(Ds.S6))
 	col.add_child(Ds.section_header("À propos"))
+	var rules := _row(col, "Comment jouer", true)
+	(rules[0] as Button).pressed.connect(func() -> void:
+		_disarm()
+		open_rules.emit())
 	var credits := _row(col, "Crédits", true)
 	(credits[0] as Button).pressed.connect(func() -> void: open_credits.emit())
 	col.add_child(Ds.spacer(Ds.S3))

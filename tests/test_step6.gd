@@ -189,6 +189,9 @@ func _initialize() -> void:
 	var main: Control = load("res://main.tscn").instantiate()
 	main.save_path = SAVE
 	root.add_child(main)
+	if not main.is_node_ready():
+		await main.ready
+	main._settings.rules_seen = true  # « Comment jouer » déjà vue : on entre directement dans le jeu
 	await _frames(8)
 	await create_timer(0.8).timeout
 	check("couverture : consigne de premier lancement", main._cover._info.visible and main._cover._info.text == "Touchez une fiche et jouez autant que vous voulez.", main._cover._info.text)

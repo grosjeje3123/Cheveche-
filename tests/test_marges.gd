@@ -39,6 +39,9 @@ func _initialize() -> void:
 	main = load("res://main.tscn").instantiate()
 	main.save_path = SAVE
 	root.add_child(main)
+	if not main.is_node_ready():
+		await main.ready
+	main._settings.rules_seen = true  # « Comment jouer » déjà vue : on entre directement dans le jeu
 	await create_timer(2.6).timeout
 	print("largeur visible : ", root.get_visible_rect().size)
 	_check_screen("couverture", main._cover)

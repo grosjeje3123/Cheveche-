@@ -148,6 +148,9 @@ func _initialize() -> void:
 	main.save_path = SAVE
 	main.settings_path = SETTINGS
 	root.add_child(main)
+	if not main.is_node_ready():
+		await main.ready
+	main._settings.rules_seen = true  # « Comment jouer » déjà vue : on entre directement dans le jeu
 	await create_timer(1.0).timeout
 	var cover: CoverScreen = main._cover
 	var play: PlayScreen = main._play
@@ -218,9 +221,10 @@ func _initialize() -> void:
 	var ss: SettingsScreen = main._settings_screen
 	check("réglages : écran visible, son et vibrations « Activé »", main._current == ss and ss._sound_state.text == "Activé" and ss._vibration_state.text == "Activé")
 	var all_rows := ss.find_children("*", "Button", true, false).filter(func(x): return x.theme_type_variation == "RowButton")
-	# Les lignes dans l'ordre utilisé ici : son, vibrations, remise à zéro, crédits (le code de sauvegarde a son test).
-	var rows: Array = [all_rows[0], all_rows[1], all_rows[4], all_rows[5]]
-	check("réglages : six lignes (son, vibrations, copier, restaurer, remise à zéro, crédits)", all_rows.size() == 6)
+	# Les lignes dans l'ordre utilisé ici : son, vibrations, remise à zéro, crédits (le code de sauvegarde et
+	# « Comment jouer » ont leur test).
+	var rows: Array = [all_rows[0], all_rows[1], all_rows[4], all_rows[6]]
+	check("réglages : sept lignes (son, vibrations, copier, restaurer, remise à zéro, comment jouer, crédits)", all_rows.size() == 7)
 	(rows[0] as Button).pressed.emit()
 	check("réglages : son coupé, et gardé", ss._sound_state.text == "Coupé" and not main._settings.sound and not Settings.new(SETTINGS).sound)
 	(rows[0] as Button).pressed.emit()

@@ -17,6 +17,9 @@ func _initialize() -> void:
 	main.save_path = "user://test_nav_progress.json"
 	DirAccess.remove_absolute(main.save_path)
 	root.add_child(main)
+	if not main.is_node_ready():
+		await main.ready
+	main._settings.rules_seen = true  # « Comment jouer » déjà vue : on entre directement dans le jeu
 	for i in 8:
 		await process_frame
 	await create_timer(0.8).timeout

@@ -19,6 +19,6 @@ run() {
     echo "ÉCHEC $name"; echo "$out" | grep -E "FAIL|ERROR|ÉCHEC|Parse" | head -20; rc=1
   fi
 }
-for t in test_complete test_images test_nav test_play test_sauvegarde test_week test_features test_step6; do run "$t"; done
+for t in test_complete test_images test_nav test_play test_sauvegarde test_week test_features test_step6 test_regles; do run "$t"; done
 run test_marges --resolution 720x1600
 exit $rc

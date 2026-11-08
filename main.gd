@@ -1,6 +1,6 @@
 extends Control
 ## Point d'entrée : charge le pack et la progression, installe le fond de papier
-## et fait passer d'un écran à l'autre (couverture, mes résultats, réglages, crédits, jeu, fin du défi).
+## et fait passer d'un écran à l'autre (couverture, mes résultats, réglages, crédits, comment jouer, jeu, fin du défi).
 
 ## Les packs du jeu, dans l'ordre. Un nouveau pack s'ajoute ici (et ses disciplines dans ProgressScreen.DISCIPLINES).
 const PACK_PATHS := ["res://data/packs/svt_01.json", "res://data/packs/astro_01.json", "res://data/packs/animaux_01.json",
@@ -30,6 +30,9 @@ var _progress: ProgressScreen
 var _play: PlayScreen
 var _result: ResultScreen
 var _complete: CompleteScreen
+var _rules: RulesScreen
+## La page « Comment jouer » s'est ouverte avant la première série (et non depuis les Réglages).
+var _rules_before_play := false
 ## Fiche que la dernière réponse vient de compléter (page « Fiche complète » à montrer), sinon « »,
 ## et le niveau complété (1 ou 2).
 var _pending_complete := ""
@@ -83,6 +86,7 @@ func _ready() -> void:
 	_settings_screen.setup(_settings, _save)
 	_settings_screen.closed.connect(_back_to_cover)
 	_settings_screen.open_credits.connect(func() -> void: _open_credits(_settings_screen))
+	_settings_screen.open_rules.connect(func() -> void: _open_rules(false))
 	_settings_screen.progress_reset.connect(func() -> void:
 		_cover.refresh()
 		_progress.refresh())
@@ -126,6 +130,16 @@ func _ready() -> void:
 	_complete.back.connect(_leave_play)
 	_complete.play_next_level.connect(func() -> void: _start_fiche(_complete_discipline, _cover))
 
+	_rules = RulesScreen.new()
+	_rules.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_rules.visible = false
+	add_child(_rules)
+	_rules.build()
+	_rules.start_pressed.connect(func() -> void:
+		_settings.set_rules_seen(true)
+		_go(_play))
+	_rules.closed.connect(_close_rules)
+
 	_current = _cover
 	# Laisser libre le haut de l'écran (caméra, encoche) : tous les écrans descendent d'autant.
 	# Android ne connaît la caméra qu'une fois la fenêtre affichée : on recalcule aussi un peu après.
@@ -137,7 +151,7 @@ func _ready() -> void:
 
 func _apply_safe_area() -> void:
 	var insets := SafeArea.insets(get_viewport())
-	for screen: Control in [_cover, _settings_screen, _credits, _progress, _play, _result, _complete]:
+	for screen: Control in [_cover, _settings_screen, _credits, _progress, _play, _result, _complete, _rules]:
 		screen.offset_top = insets.x
 		screen.offset_bottom = -insets.y
 
@@ -169,7 +183,7 @@ func _start_fiche(category: String, origin: Control) -> void:
 	_show_found()
 	_play.refresh_notice()
 	_play_origin = origin
-	_go(_play)
+	_enter_play()
 
 
 # « 1 dossier à revoir », « 4 dossiers à revoir ».
@@ -236,7 +250,7 @@ func _start_daily() -> void:
 		_on_series_finished(state["results"])
 		return
 	_play.start(_pack, ordered, state["results"])
-	_go(_play)
+	_enter_play()
 
 
 # La progression est écrite à chaque réponse : on peut quitter le jeu à tout moment.
@@ -341,6 +355,29 @@ func _open_credits(origin: Control) -> void:
 	_go(_credits)
 
 
+# Le jeu est prêt : on y entre, sauf la toute première fois, où « Comment jouer » passe avant.
+func _enter_play() -> void:
+	if _settings.rules_seen:
+		_go(_play)
+	else:
+		_open_rules(true)
+
+
+func _open_rules(before_play: bool) -> void:
+	_rules_before_play = before_play
+	_rules.open(before_play)
+	_go(_rules)
+
+
+# Flèche retour de « Comment jouer » : vers les Réglages, ou, avant la première série, vers d'où l'on venait
+# (la page reviendra au prochain lancement d'une série, puisqu'on ne l'a pas validée).
+func _close_rules() -> void:
+	if _rules_before_play:
+		_leave_play()
+	else:
+		_go(_settings_screen)
+
+
 # Fondu enchaîné discret entre deux écrans.
 func _go(target: Control) -> void:
 	if target == _current:
@@ -369,6 +406,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		_back_to_cover()
 	elif _current == _credits:
 		_go(_credits_origin if _credits_origin != null else _cover)
+	elif _current == _rules:
+		_close_rules()
 	get_viewport().set_input_as_handled()
 
 
