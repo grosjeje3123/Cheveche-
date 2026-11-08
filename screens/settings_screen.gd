@@ -9,7 +9,7 @@ signal open_credits
 ## La progression vient d'être effacée ou remplacée (les autres écrans doivent se remettre à jour).
 signal progress_reset
 
-const VERSION_TEXT := "Chevêche, prototype 0.9.26."
+const VERSION_TEXT := "Chevêche, prototype 0.9.27."
 ## Délai pour confirmer par un second toucher (remise à zéro, restauration), et durée des messages d'état.
 const CONFIRM_SECONDS := 4.0
 

@@ -21,7 +21,7 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   téléphone : ouvrir le fichier, autoriser l’installation d’applications inconnues pour l’appli qui l’ouvre, installer.
   Une nouvelle version s’installe par-dessus l’ancienne et garde la progression.
 - **L’exporter soi-même depuis Godot** : préréglage « Android » déjà fourni (`export_presets.cfg` : portrait, plein écran,
-  autorisation VIBRATE, nom « Chevêche », identifiant `fr.lindice.prototype` (à remplacer par l’identifiant définitif, par exemple `fr.hosdez.cheveche`, au moment de publier), ARMv7 et ARM64). Il faut installer dans
+  autorisation VIBRATE, nom « Chevêche », identifiant définitif `fr.hosdez.cheveche` depuis la 0.9.27 (avant : `fr.lindice.prototype`), ARMv7 et ARM64). Il faut installer dans
   Godot les modèles d’export 4.4.1 (Éditeur > Gérer les modèles d’export), un JDK 17 et le SDK Android (outils
   « platform-tools » et « build-tools »), puis renseigner leurs chemins dans Éditeur > Paramètres de l’éditeur > Export > Android.
   Avec le téléphone branché en USB (débogage USB activé), le bouton « déployer » de Godot installe et lance le jeu directement.
@@ -33,8 +33,8 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   (`tests/run_all.sh`), puis compile l’AAB pour Google Play avec Godot 4.4.1, en visant l’API 36 exigée par Google.
   L’AAB se télécharge dans l’onglet **Actions** du dépôt (artefact `cheveche-aab`).
 - Signature : sans secrets, l’AAB est signé avec une clé de test (bon pour vérifier, pas pour publier). Pour publier,
-  ajouter dans Settings > Secrets and variables > Actions : `ANDROID_KEYSTORE_BASE64` (le fichier .jks encodé en base64),
-  `ANDROID_KEYSTORE_ALIAS` et `ANDROID_KEYSTORE_PASSWORD`. La clé elle-même ne va jamais dans le dépôt.
+  ajouter dans Settings > Secrets and variables > Actions : `ANDROID_KEYSTORE_BASE64` (le fichier .jks encodé en base64)
+  et `ANDROID_KEYSTORE_PASSWORD` ; l’alias de la clé est `cheveche` (modifiable par le secret `ANDROID_KEYSTORE_ALIAS`). La clé elle-même ne va jamais dans le dépôt.
 - Le résumé de chaque compilation (tests, export, manifeste) est poussé sur la branche `journal-ci`.
 - Tests en local : `tests/run_all.sh /chemin/vers/Godot` depuis la racine du projet (il faut Python et Pillow pour la photo de test).
 - Les photos originales téléchargées depuis Commons (`images_sources/`) ne sont pas dans le dépôt :

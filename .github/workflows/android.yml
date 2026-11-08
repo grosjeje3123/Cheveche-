@@ -1,5 +1,5 @@
 # Compile Chevêche pour Android (AAB pour Google Play) à chaque envoi sur main.
-# Les secrets ANDROID_KEYSTORE_BASE64, ANDROID_KEYSTORE_ALIAS et ANDROID_KEYSTORE_PASSWORD
+# Les secrets ANDROID_KEYSTORE_BASE64 et ANDROID_KEYSTORE_PASSWORD (et, au besoin, ANDROID_KEYSTORE_ALIAS)
 # servent à signer l'AAB avec la clé de publication. Sans eux, l'AAB est signé avec une clé de test.
 name: Android
 
@@ -88,7 +88,7 @@ jobs:
           if [ -n "$KEYSTORE_B64" ]; then
             echo "$KEYSTORE_B64" | base64 -d > "$HOME/upload.jks"
             export GODOT_ANDROID_KEYSTORE_RELEASE_PATH="$HOME/upload.jks"
-            export GODOT_ANDROID_KEYSTORE_RELEASE_USER="$KEYSTORE_ALIAS"
+            export GODOT_ANDROID_KEYSTORE_RELEASE_USER="${KEYSTORE_ALIAS:-cheveche}"
             export GODOT_ANDROID_KEYSTORE_RELEASE_PASSWORD="$KEYSTORE_PASSWORD"
             mode=--export-release
             echo "Signature : clé de publication" | tee journal/export.txt
