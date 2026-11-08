@@ -17,8 +17,8 @@ const RULES := [
 		"Un dossier manqué, ou trouvé avec des indices, revient le lendemain. Et chaque jour, un défi de cinq dossiers, le même pour tout le monde."],
 ]
 
-## La chouette sur ses livres (dessinée par tools/make_owl.py).
-const SCENE := preload("res://assets/brand/owl_scene.svg")
+## La chouette sur ses livres : l'illustration du jeu (fond détouré pour se poser sur le papier ivoire).
+const SCENE := preload("res://assets/brand/owl_illustration.png")
 
 ## Le bouton « Commencer » : visible seulement avant la première série.
 var start_button: Button

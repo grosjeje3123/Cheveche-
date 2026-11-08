@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl0e12wptmfe3"
-path="res://.godot/imported/owl_scene.svg-940193cf6fe7110f6b7720c5abb7e4a8.ctex"
+uid="uid://domg77of8md6d"
+path="res://.godot/imported/owl_illustration.png-4f3de25487dbfd5255957bebeed5eae2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/brand/owl_scene.svg"
-dest_files=["res://.godot/imported/owl_scene.svg-940193cf6fe7110f6b7720c5abb7e4a8.ctex"]
+source_file="res://assets/brand/owl_illustration.png"
+dest_files=["res://.godot/imported/owl_illustration.png-4f3de25487dbfd5255957bebeed5eae2.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

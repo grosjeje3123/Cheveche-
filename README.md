@@ -174,9 +174,10 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   (lien discret, en bas, à côté de « Réglages ») est un simple bilan : dossiers trouvés, semaine, progression par discipline. La flèche retour, Échap (ordinateur) ou le
   bouton Retour (Android) ramène à l’écran d’origine.
 - `core/daily.gd` : date du jour et dossier du jour (la couverture s’en sert pour la date ; le dossier du jour reviendra avec le futur défi du jour).
-- `assets/brand/` : la chouette (SVG générés par `tools/make_owl.py`, trois tailles optiques), son illustration sur deux livres
-  (`owl_scene.svg`, page « Comment jouer ») et l’icône d’application (la chouette en buste sur l’ardoise), avec l’icône
-  de 512 px à téléverser dans la Play Console (`launcher/play_store_512.png`, exclue de l’export) ;
+- `assets/brand/` : l’illustration du jeu, la chouette sur deux livres (`owl_illustration.png`, fond détouré, page
+  « Comment jouer ») ; le logo qui en est tiré, simplifié et de face (SVG générés par `tools/make_owl.py`, trois tailles
+  optiques) ; l’icône d’application (le logo sur l’olive de l’illustration) et l’icône de 512 px à téléverser dans la
+  Play Console (`launcher/play_store_512.png`, exclue de l’export) ;
   `ds/owl_mark.gd` choisit la bonne taille selon l’affichage.
 - `data/packs/` : les packs, schéma 3 (deux indices par dossier, questions autonomes) :
   `svt_01.json` (dossiers 1 à 15, disciplines Nature et Sciences), `astro_01.json` (dossiers 101 à 115, Astronomie),
