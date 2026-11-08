@@ -13,6 +13,7 @@ permissions:
 
 env:
   GODOT_VERSION: "4.4.1"
+  GRADLE_VERSION: "8.2"   # celle du modèle Android de Godot 4.4.1 (android/build/gradle/wrapper)
 
 jobs:
   aab:
@@ -78,6 +79,34 @@ jobs:
           pip install --quiet pillow
           bash tests/run_all.sh "$GODOT" 2>&1 | tee journal/tests.txt
 
+      # Gradle lui-même (le zip de 120 Mo que le wrapper télécharge) : téléchargé une fois avec des reprises,
+      # puis gardé d'un run à l'autre. Le serveur de Gradle répond parfois 504 ou ne répond plus.
+      - name: Gradle mis de côté
+        id: cache-gradle-zip
+        uses: actions/cache/restore@v4
+        with:
+          path: ~/gradle-dist
+          key: gradle-dist-${{ env.GRADLE_VERSION }}
+
+      - name: Télécharger Gradle
+        if: steps.cache-gradle-zip.outputs.cache-hit != 'true'
+        timeout-minutes: 20
+        run: |
+          mkdir -p ~/gradle-dist
+          zip=~/gradle-dist/gradle-${GRADLE_VERSION}-bin.zip
+          for url in "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip" \
+                     "https://github.com/gradle/gradle-distributions/releases/download/v${GRADLE_VERSION}.0/gradle-${GRADLE_VERSION}-bin.zip"; do
+            curl -fL --retry 6 --retry-all-errors --retry-delay 20 --connect-timeout 30 --max-time 900 -o "$zip" "$url" && break
+          done
+          unzip -tq "$zip"
+
+      - name: Garder Gradle pour les prochains runs
+        if: steps.cache-gradle-zip.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ~/gradle-dist
+          key: gradle-dist-${{ env.GRADLE_VERSION }}
+
       - name: Cache de Gradle
         uses: actions/cache@v4
         with:
@@ -106,13 +135,8 @@ jobs:
             echo "Pas de clé de publication dans les secrets : AAB signé avec une clé de test, non publiable" | tee journal/export.txt
           fi
           # Le modèle Gradle est installé à la main, pour vider l'écran de démarrage d'Android (papier ivoire, sans icône).
-          bash tools/android_template.sh "$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable" 2>&1 | tee -a journal/export.txt
-          # Gradle se télécharge au premier appel, et le serveur répond parfois 504 : quelques essais avant l'export.
-          chmod +x android/build/gradlew
-          for i in 1 2 3 4; do
-            (cd android/build && ./gradlew --version > /dev/null 2>&1) && break
-            echo "Gradle indisponible, nouvel essai ($i)" | tee -a journal/export.txt; sleep 30
-          done
+          bash tools/android_template.sh "$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable" \
+               "$HOME/gradle-dist/gradle-${GRADLE_VERSION}-bin.zip" 2>&1 | tee -a journal/export.txt
           timeout 2100 "$GODOT" --headless --path . $mode "Android AAB" "$PWD/build/cheveche.aab" 2>&1 | tee -a journal/export.txt
           grep -E "androidGradlePlugin|compileSdk|targetSdk|buildTools" android/build/config.gradle > journal/gradle.txt || true
           test -s build/cheveche.aab
