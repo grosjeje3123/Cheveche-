@@ -65,7 +65,8 @@ func setup(pack: QuestionPack, save: SaveStore) -> void:
 
 	col.add_child(_flex())
 
-	_emblem = CoverEmblem.new(250.0)
+	_emblem = CoverEmblem.new(300.0, RulesScreen.SCENE)  # la chouette sur ses livres, comme sur « Comment jouer »
+	resized.connect(_fit_emblem)
 	_emblem.show_stars = false
 	_emblem.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	col.add_child(_emblem)
@@ -349,9 +350,16 @@ func _refresh_daily() -> void:
 	_daily_streak_caption.text = "jour de suite" if streak == 1 else "jours de suite"
 
 
+## L'illustration grandit avec la hauteur de l'écran : 300 sur un écran 16:9, jusqu'à 390 sur un écran allongé.
+func _fit_emblem() -> void:
+	if size.y > 0.0:
+		_emblem.set_emblem_size(clampf(size.y * 0.235, 260.0, 390.0))
+
+
 ## Ouverture de la couverture. `first` : au lancement (complète) ; sinon, simple fondu rapide au retour.
 ## Rien n'est bloqué pendant l'animation : on peut toucher une fiche tout de suite.
 func play_intro(first := false) -> void:
+	_fit_emblem()
 	_emblem.play(first)
 	if first:  # au lancement seulement : le thème d'ouverture, quand la chouette apparaît
 		get_tree().create_timer(0.45).timeout.connect(func() -> void: Feedback.say("startup"))

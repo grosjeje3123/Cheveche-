@@ -113,6 +113,12 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
 - **Jours de suite** : nombre de jours consécutifs où le défi a été terminé (jusqu’à hier si celui du jour reste à faire).
   Les réponses du défi comptent aussi pour la collection et la semaine.
 
+## Lancement
+- Au démarrage, rien d'autre que le papier : l'écran de démarrage d'Android est vidé (fond ivoire #F1EDE3, sans
+  icône), l'écran de chargement de Godot aussi (même couleur, sans image), puis la couverture s'ouvre.
+  Pour l'AAB (Gradle), `tools/android_template.sh` installe le modèle Android et règle son thème
+  (`tools/android_splash.py`) ; pour un APK exporté sans Gradle, `tools/apk_splash.py` corrige l'APK avant signature.
+
 ## Comment jouer
 - Avant la toute première série (une fiche ou le défi du jour), la page « Comment jouer » montre la chouette sur ses livres
   et donne les trois règles :
@@ -142,7 +148,7 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   faux 70 ms). `core/feedback.gd` gère tout ; **l’export Android doit cocher l’autorisation VIBRATE**.
 
 ## Identité visuelle
-- Couverture : sur le papier ivoire, la chouette dans son cercle, le titre, puis neuf fiches pleines : « Au hasard »
+- Couverture : sur le papier ivoire, l’illustration (la chouette sur ses livres, plus grande sur un écran allongé), le titre, puis neuf fiches pleines : « Au hasard »
   (anthracite, avec la chouette) et une par discipline, à sa couleur. Chaque fiche de discipline porte une fine barre : la part de ses
   dossiers trouvés. Pas de compteur global sur l’accueil ; au tout premier lancement, une consigne d’une ligne. (Le fond vert « cabinet », `Ds.FELT`, reste
   disponible dans le design system : `CoverEmblem.on_dark`, bouton `IvoryButton`.)
@@ -174,8 +180,8 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   (lien discret, en bas, à côté de « Réglages ») est un simple bilan : dossiers trouvés, semaine, progression par discipline. La flèche retour, Échap (ordinateur) ou le
   bouton Retour (Android) ramène à l’écran d’origine.
 - `core/daily.gd` : date du jour et dossier du jour (la couverture s’en sert pour la date ; le dossier du jour reviendra avec le futur défi du jour).
-- `assets/brand/` : l’illustration du jeu, la chouette sur deux livres (`owl_illustration.png`, fond détouré, page
-  « Comment jouer ») ; le logo qui en est tiré, simplifié et de face (SVG générés par `tools/make_owl.py`, trois tailles
+- `assets/brand/` : l’illustration du jeu, la chouette sur deux livres (`owl_illustration.png`, fond détouré, couverture
+  et « Comment jouer ») ; le logo qui en est tiré, simplifié et de face (SVG générés par `tools/make_owl.py`, trois tailles
   optiques) ; l’icône d’application (le logo sur l’olive de l’illustration) et l’icône de 512 px à téléverser dans la
   Play Console (`launcher/play_store_512.png`, exclue de l’export) ;
   `ds/owl_mark.gd` choisit la bonne taille selon l’affichage.

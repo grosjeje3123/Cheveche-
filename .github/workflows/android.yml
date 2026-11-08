@@ -96,8 +96,9 @@ jobs:
             mode=--export-debug
             echo "Pas de clé de publication dans les secrets : AAB signé avec une clé de test, non publiable" | tee journal/export.txt
           fi
-          # --install-android-build-template installe le modèle Gradle avant l'export (sans export, Godot lancerait le jeu).
-          timeout 2100 "$GODOT" --headless --path . --install-android-build-template $mode "Android AAB" "$PWD/build/cheveche.aab" 2>&1 | tee -a journal/export.txt
+          # Le modèle Gradle est installé à la main, pour vider l'écran de démarrage d'Android (papier ivoire, sans icône).
+          bash tools/android_template.sh "$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable" 2>&1 | tee -a journal/export.txt
+          timeout 2100 "$GODOT" --headless --path . $mode "Android AAB" "$PWD/build/cheveche.aab" 2>&1 | tee -a journal/export.txt
           grep -E "androidGradlePlugin|compileSdk|targetSdk|buildTools" android/build/config.gradle > journal/gradle.txt || true
           test -s build/cheveche.aab
 
@@ -108,6 +109,7 @@ jobs:
           java -jar "$HOME/bundletool.jar" dump manifest --bundle build/cheveche.aab > journal/manifest.xml
           grep -oE '(package|android:versionCode|android:versionName|android:minSdkVersion|android:targetSdkVersion)="[^"]+"' journal/manifest.xml | tee journal/resume.txt
           ls -la build/cheveche.aab | tee -a journal/resume.txt
+          java -jar "$HOME/bundletool.jar" dump resources --bundle build/cheveche.aab --resource style/GodotAppSplashTheme --values >> journal/resume.txt 2>&1 || true
 
       - name: AAB à télécharger
         uses: actions/upload-artifact@v4
