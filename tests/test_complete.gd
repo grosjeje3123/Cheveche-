@@ -27,13 +27,21 @@ func _labels(n: Node, out: Array) -> void:
 	for c in n.get_children():
 		_labels(c, out)
 
+# Un dossier acquis : trouvé sans indice deux fois, à dix jours d'écart (révision espacée).
+func _acquire(save: SaveStore, id: String) -> void:
+	save.record_answer(id, true, 100, Week.key(Week.shifted(Week.today(), -20)))
+	save.record_answer(id, true, 100, Week.key(Week.shifted(Week.today(), -10)))
+
+
 func _initialize() -> void:
 	# ---------- Sauvegarde : sans indice, total, ordre en trois paquets ----------
 	var s := SaveStore.new("user://test_complete_unit.json")
 	s.reset()
 	var qs := [{"id": "a"}, {"id": "b"}, {"id": "c"}, {"id": "d"}]
 	var yesterday := Week.key(Week.shifted(Week.today(), -1))
-	s.record_answer("a", true, 100, yesterday)
+	# « a » : trouvé sans indice deux fois, à dix jours d'écart : acquis (il passe en révision, à la fin).
+	s.record_answer("a", true, 100, Week.key(Week.shifted(Week.today(), -20)))
+	s.record_answer("a", true, 100, Week.key(Week.shifted(Week.today(), -10)))
 	s.record_answer("b", true, 60, yesterday)
 	s.record_answer("b", true, 30, yesterday)
 	s.record_answer("c", false, 0, yesterday)
@@ -44,13 +52,14 @@ func _initialize() -> void:
 		var ids: Array = s.draw(qs, 4).map(func(q): return q["id"])
 		if not ((ids[0] in ["c", "d"]) and (ids[1] in ["c", "d"]) and ids[2] == "b" and ids[3] == "a"):
 			order_ok = false
-	check("ordre d'une fiche : pas trouvés, puis trouvés avec indice, puis sans indice", order_ok)
+	check("ordre d'une fiche : pas trouvés, puis à consolider, puis les acquis", order_ok)
 	s.record_answer("d", false, 0)
 	s.record_answer("b", true, 60)
 	var today_ids: Array = s.draw(qs, 4).map(func(q): return q["id"])
 	check("raté ou trouvé avec un indice aujourd'hui : pas avant demain", today_ids == ["c", "a"] and s.waiting_in(qs) == 2, str(today_ids))
 	s.record_answer("b", true, 100)
-	check("retrouvé sans indice : plus rien à revoir", s.is_due("b") and s.waiting_in(qs) == 1)
+	check("retrouvé sans indice : à consolider, de retour dans 3 jours", s.stage("b") == SaveStore.STAGE_CONSOLIDATE
+			and s.return_day("b") == Week.key(Week.shifted(Week.today(), 3)) and s.waiting_in(qs) == 2)
 	DirAccess.remove_absolute("user://test_complete_unit.json")
 	check("nombres groupés par trois", Ds.thousands(2640) == "2 640" and Ds.thousands(300) == "300" and Ds.thousands(1234567) == "1 234 567")
 
@@ -70,11 +79,15 @@ func _initialize() -> void:
 	var complete: CompleteScreen = main._complete
 	check("couverture : aucun tampon au départ", main._cover._stamps.size() == 8 and main._cover._stamps.values().all(func(x): return not x.visible))
 
-	# Histoire (pas de niveau 2) : 29 dossiers trouvés d'avance, un sur trois avec un indice (60 points).
+	# Histoire (pas de niveau 2) : 29 dossiers trouvés d'avance, un sur trois avec un indice aujourd'hui (60 points,
+	# à revoir demain), les autres acquis.
 	var astro := pack.questions_in("Histoire")
 	var helped := 0
 	for i in range(1, astro.size()):
-		save.record_answer(astro[i]["id"], true, 60 if i % 3 == 0 else 100)
+		if i % 3 == 0:
+			save.record_answer(astro[i]["id"], true, 60)
+		else:
+			_acquire(save, astro[i]["id"])
 		helped += 1 if i % 3 == 0 else 0
 	main._cover.refresh()
 	check("29 / 30 : pas encore de tampon", not main._cover._stamps["Histoire"].visible)
@@ -116,22 +129,23 @@ func _initialize() -> void:
 	# Rejouer la fiche complète le jour même : ceux trouvés avec un indice attendent demain ; on révise les autres
 	main._start_fiche("Histoire", main._cover)
 	await create_timer(0.6).timeout
-	var still_helped := 30 - save.flawless_in(astro)
-	check("fiche rejouée le jour même : seulement la révision, les dossiers trouvés avec un indice attendent demain",
-			still_helped > 0 and play._questions.size() == 30 - still_helped and play._questions.all(func(q): return save.is_flawless(q["id"]))
-			and play.revision_from == 0 and play.waiting == still_helped, "%d / %d" % [play._questions.size(), still_helped])
-	check("la révision le dit : « … reviendront demain. »", play._feedback.text == "Révision : les %d dossiers à revoir reviendront demain." % still_helped, play._feedback.text)
+	var still_waiting := 30 - save.acquired_in(astro)
+	check("fiche rejouée le jour même : seulement la révision des acquis, les autres attendent leur date",
+			still_waiting > 0 and play._questions.size() == 30 - still_waiting and play._questions.all(func(q): return save.is_acquired(q["id"]))
+			and play.revision_from == 0 and play.waiting == still_waiting, "%d / %d" % [play._questions.size(), still_waiting])
+	check("la révision le dit : « … reviendront à partir de demain. »", play._feedback.text == "Révision : les %d dossiers à revoir reviendront à partir de demain." % still_waiting, play._feedback.text)
 	var tomorrow := Week.key(Week.shifted(Week.today(), 1))
 	var next_day := save.draw(astro, 30, tomorrow)
-	check("demain : les dossiers trouvés avec un indice passent en premier", next_day.slice(0, still_helped).all(func(q): return not save.is_flawless(q["id"]))
-			and next_day.size() == 30)
+	var due_tomorrow := next_day.filter(func(q): return not save.is_acquired(q["id"]))
+	check("demain : les dossiers trouvés avec un indice passent en premier, avant la révision", due_tomorrow.size() == helped
+			and next_day.slice(0, helped).all(func(q): return not save.is_acquired(q["id"])) and next_day.size() == 30 - 1, "%d, %d" % [due_tomorrow.size(), next_day.size()])
 	play.closed.emit()
 	await create_timer(0.6).timeout
 
 	# Arts : sans faute d'un coup, et sortie par la flèche retour avant « Dossier suivant »
 	var arts := pack.questions_in("Arts")
 	for i in range(1, arts.size()):
-		save.record_answer(arts[i]["id"], true, 100)
+		_acquire(save, arts[i]["id"])
 	main._cover.refresh()
 	main._start_fiche("Arts", main._cover)
 	await create_timer(0.6).timeout
@@ -197,7 +211,7 @@ func _initialize() -> void:
 	await create_timer(0.5).timeout
 	var astro_base: Array = pack.questions_in("Astronomie")
 	for i in range(1, astro_base.size()):
-		save.record_answer(astro_base[i]["id"], true, 100)
+		_acquire(save, astro_base[i]["id"])
 	main._start_fiche("Astronomie", main._cover)
 	await create_timer(0.6).timeout
 	await _answer(play, true)
@@ -214,7 +228,8 @@ func _initialize() -> void:
 			(main._progress._category_meta["Astronomie"] as Label).text)
 	complete.play_next_level.emit()
 	await create_timer(0.7).timeout
-	check("« Jouer le niveau 2 » : la fiche s'agrandit, les 30 dossiers du niveau 2 en tête", main._current == play and play._questions.size() == 60
+	check("« Jouer le niveau 2 » : la fiche s'agrandit, les 30 dossiers du niveau 2 en tête", main._current == play
+			and play._questions.size() == 30 + save.acquired_in(astro_base)
 			and play._questions.slice(0, 30).all(func(q): return QuestionPack.level_of(q) == 2))
 	# Le niveau 2 commence à la difficulté qui convient au joueur (Mastery.start_level), les plus faciles à la fin.
 	var start2 := Mastery.start_level(main._mastery_of("Astronomie"))

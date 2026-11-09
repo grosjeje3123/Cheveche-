@@ -7,6 +7,7 @@ extends RefCounted
 ## Aucune dépendance à l'interface : on peut l'utiliser et le tester sans écran.
 
 const IMAGES_ROOT := "res://assets/images"
+const THUMBS_ROOT := "res://assets/thumbs"
 ## Difficulté d'un dossier (champ « difficulte », schéma 4) : de 1 (très accessible) à 5 (pour spécialistes).
 const DIFFICULTY_MAX := 5
 ## Anciens packs (schéma 3) : la difficulté était un mot.
@@ -161,6 +162,14 @@ func difficulty_level(q: Dictionary) -> int:
 
 func image_path(q: Dictionary) -> String:
 	return "%s/%s/%s" % [IMAGES_ROOT, q.get("_pack", id), q["image"].get("fichier", "")]
+
+
+## Vignette du carnet (176 px, recadrée au centre ; tools/make_thumbs.py). Vide si le dossier n'a pas d'image vérifiée.
+func thumb_path(q: Dictionary) -> String:
+	if not has_verified_image(q):
+		return ""
+	var path := "%s/%s/%s.webp" % [THUMBS_ROOT, q.get("_pack", id), String(q["image"].get("fichier", "")).get_basename()]
+	return path if ResourceLoader.exists(path) else ""
 
 
 ## Famille d'une licence notée exactement (« CC BY-SA 4.0 » donne « CC BY-SA »). Vide si la forme n'est pas reconnue.

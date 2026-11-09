@@ -14,6 +14,11 @@ const DEFAULT_PATH := "user://progress.json"
 const KEEP_DAYS := 120
 ## Défis du jour gardés (pour compter les jours de suite).
 const KEEP_DAILY := 400
+## Révision espacée : jours avant le retour d'un dossier, selon sa boîte (0 : à revoir ; 1, 2 : à consolider).
+## Trouvé sans indice, un dossier monte d'une boîte ; manqué ou trouvé avec un indice, il retourne à la boîte 0.
+## Trouvé sans indice dès la première fois : il saute en boîte 2 (on le vérifie une fois, une semaine plus tard).
+const RETURN_DAYS := [1, 3, 7]
+const ACQUIRED := 3
 ## Clé du meilleur défi du jour dans les records (les autres clés : nombre de dossiers de la série).
 const BEST_DAILY := "defi"
 ## Début du code de sauvegarde : le reconnaître dans un texte collé, et changer de format un jour (CHEVECHE2-…).
@@ -23,7 +28,9 @@ const CODE_MAX_BYTES := 4 * 1024 * 1024
 
 var path: String
 
-## id du dossier -> {"best": int, "plays": int, "wins": int, "first": int, "revoir": "AAAA-MM-JJ" (facultatif)}
+## id du dossier -> {"best": int, "plays": int, "wins": int, "first": int, "boite": int, "revoir": "AAAA-MM-JJ" (facultatif)}
+## « boite » : la révision espacée (voir RETURN_DAYS). 0 : à revoir demain (manqué, ou trouvé avec un indice) ;
+## 1 et 2 : à consolider (trouvé sans indice, revient dans 3 puis 7 jours) ; 3 : acquis (ne revient plus qu'en révision).
 ## « first » : les points de la toute première réponse (c'est elle qui mesure ce que le joueur savait : voir Mastery).
 ## « revoir » : un dossier raté, ou trouvé avec un indice, ne revient dans les fiches qu'à partir de ce jour-là
 ## (le lendemain de la réponse) : on ne le rejoue pas en ayant encore la réponse en tête.
@@ -35,6 +42,8 @@ var _series_played := 0
 var _days := {}
 ## Défi du jour : « AAAA-MM-JJ » -> {"results": [{id, correct, clues, points}], "done": bool, "points": int}
 var _daily := {}
+## Dossiers gardés en favori dans le carnet (id -> true).
+var _favorites := {}
 
 
 func _init(save_path := DEFAULT_PATH) -> void:
@@ -67,6 +76,7 @@ func _clear() -> void:
 	_series_played = 0
 	_days = {}
 	_daily = {}
+	_favorites = {}
 
 
 static func _is_valid(data) -> bool:
@@ -88,6 +98,11 @@ func _apply(data: Dictionary) -> void:
 				_dossiers[str(id)]["revoir"] = str(d["revoir"])
 			if d.has("first"):
 				_dossiers[str(id)]["first"] = clampi(int(d["first"]), 0, Scoring.MAX_POINTS)
+			# Sauvegardes d'avant la révision espacée : trouvé sans indice, il revient une fois pour devenir acquis.
+			if d.has("boite"):
+				_dossiers[str(id)]["boite"] = clampi(int(d["boite"]), 0, ACQUIRED)
+			elif int(d.get("best", 0)) >= Scoring.MAX_POINTS and not d.has("revoir"):
+				_dossiers[str(id)]["boite"] = 2
 	var best = data.get("best_series", {})
 	if best is Dictionary:
 		for k in best:
@@ -106,6 +121,10 @@ func _apply(data: Dictionary) -> void:
 					"series": maxi(0, int(d.get("series", 0))),
 				}
 	# Défis du jour (absents avant la version 3).
+	var favorites = data.get("favoris", [])
+	if favorites is Array:
+		for id in favorites:
+			_favorites[str(id)] = true
 	var daily = data.get("daily", {})
 	if daily is Dictionary:
 		for k in daily:
@@ -127,6 +146,7 @@ func _data() -> Dictionary:
 		"series_played": _series_played,
 		"days": _days,
 		"daily": _daily,
+		"favoris": _favorites.keys(),
 	}
 
 
@@ -162,15 +182,22 @@ func record_answer(question_id: String, correct: bool, points: int, day := "") -
 	var d: Dictionary = _dossiers.get(question_id, {"best": 0, "plays": 0, "wins": 0})
 	if int(d["plays"]) == 0:
 		d["first"] = points
-	d["plays"] = int(d["plays"]) + 1
 	if correct:
 		d["wins"] = int(d["wins"]) + 1
+	var first_time := int(d["plays"]) == 0
+	d["plays"] = int(d["plays"]) + 1
 	d["best"] = maxi(int(d["best"]), points)
-	# Raté ou trouvé avec un indice : à revoir, mais pas avant demain. Trouvé sans indice : plus rien à revoir.
+	# La révision espacée : sans indice, une boîte de plus (deux d'un coup la toute première fois) ; sinon, retour à 0.
+	var box := int(d.get("boite", 0))
 	if correct and points >= Scoring.MAX_POINTS:
+		box = mini(ACQUIRED, 2 if first_time else box + 1)
+	else:
+		box = 0
+	d["boite"] = box
+	if box >= ACQUIRED:
 		d.erase("revoir")
 	else:
-		d["revoir"] = Week.key(Week.shifted(Week.from_key(day if day != "" else Week.today_key()), 1))
+		d["revoir"] = Week.key(Week.shifted(Week.from_key(day if day != "" else Week.today_key()), RETURN_DAYS[box]))
 	_dossiers[question_id] = d
 	save()
 
@@ -384,6 +411,79 @@ func collected_in(questions: Array) -> int:
 	return n
 
 
+## Où en est un dossier : STAGE_NEW (jamais joué), STAGE_REVIEW (à revoir : manqué ou trouvé avec un indice la
+## dernière fois), STAGE_CONSOLIDATE (trouvé sans indice, à vérifier dans 3 ou 7 jours), STAGE_ACQUIRED (acquis).
+const STAGE_NEW := 0
+const STAGE_REVIEW := 1
+const STAGE_CONSOLIDATE := 2
+const STAGE_ACQUIRED := 3
+
+
+func stage(question_id: String) -> int:
+	var d: Dictionary = _dossiers.get(question_id, {})
+	if int(d.get("plays", 0)) == 0:
+		return STAGE_NEW
+	var box := int(d.get("boite", 0))
+	if box >= ACQUIRED:
+		return STAGE_ACQUIRED
+	return STAGE_CONSOLIDATE if box > 0 else STAGE_REVIEW
+
+
+func is_acquired(question_id: String) -> bool:
+	return stage(question_id) == STAGE_ACQUIRED
+
+
+func acquired_in(questions: Array) -> int:
+	var n := 0
+	for q in questions:
+		if is_acquired(q["id"]):
+			n += 1
+	return n
+
+
+## Dossiers déjà joués (trouvés ou manqués) : ceux du carnet.
+func played_in(questions: Array) -> Array:
+	return questions.filter(func(q: Dictionary) -> bool: return plays(q["id"]) > 0)
+
+
+## Date de retour d'un dossier (« AAAA-MM-JJ »), vide s'il n'en a pas (jamais joué, ou acquis).
+func return_day(question_id: String) -> String:
+	return str(_dossiers.get(question_id, {}).get("revoir", ""))
+
+
+## Dans combien de jours reviennent les dossiers mis de côté : [le plus tôt, le plus tard] (0 s'il n'y en a pas).
+func return_span(questions: Array, today := "") -> Array:
+	var t := Week.from_key(today if today != "" else Week.today_key())
+	var lo := 0
+	var hi := 0
+	for q in questions:
+		if not is_acquired(q["id"]) and not is_due(q["id"], today):
+			var days := Week.days_between(t, Week.from_key(return_day(q["id"])))
+			lo = days if lo == 0 else mini(lo, days)
+			hi = maxi(hi, days)
+	return [lo, hi]
+
+
+## « demain », « dans 3 jours », ou « dans les prochains jours » quand les retours s'étalent.
+func return_words(questions: Array, today := "") -> String:
+	var span := return_span(questions, today)
+	if span[0] != span[1]:
+		return "à partir de demain" if span[0] == 1 else "dans les prochains jours"
+	return "demain" if span[0] <= 1 else "dans %d jours" % span[0]
+
+
+func is_favorite(question_id: String) -> bool:
+	return _favorites.has(question_id)
+
+
+func set_favorite(question_id: String, on: bool) -> void:
+	if on:
+		_favorites[question_id] = true
+	else:
+		_favorites.erase(question_id)
+	save()
+
+
 ## Trouvé sans aucun indice (meilleur score = le maximum d'un dossier).
 func is_flawless(question_id: String) -> bool:
 	return best_points(question_id) >= Scoring.MAX_POINTS
@@ -411,18 +511,18 @@ func is_due(question_id: String, today := "") -> bool:
 	return due == "" or due <= (today if today != "" else Week.today_key())
 
 
-## Dossiers mis de côté jusqu'à demain (ou plus tard) : ratés ou trouvés avec un indice, pas encore revenus.
+## Dossiers mis de côté jusqu'à leur date de retour (demain, ou dans 3 ou 7 jours) : pas encore acquis.
 func waiting_in(questions: Array, today := "") -> int:
 	var n := 0
 	for q in questions:
-		if not is_flawless(q["id"]) and not is_due(q["id"], today):
+		if not is_acquired(q["id"]) and not is_due(q["id"], today):
 			n += 1
 	return n
 
 
-## Ordre de jeu d'une fiche, en trois paquets : les dossiers pas encore trouvés, puis ceux trouvés avec un indice
-## (à retrouver sans), puis ceux déjà trouvés sans indice (la révision). Les dossiers ratés ou trouvés avec un indice
-## ne reviennent qu'à partir du lendemain (is_due) : d'ici là, ils restent hors de la file. Dans chaque paquet,
+## Ordre de jeu d'une fiche, en trois paquets : les dossiers pas encore trouvés, puis ceux à consolider dont c'est
+## le jour (à retrouver sans indice), puis les acquis (la révision). Un dossier pas encore acquis ne revient qu'à
+## sa date de retour (is_due : demain, ou dans 3 ou 7 jours) : d'ici là, il reste hors de la file. Dans chaque paquet,
 ## la difficulté monte (de 1 à 5, mélangés à l'intérieur de chaque difficulté). `start` : pour les dossiers pas encore
 ## trouvés, la difficulté par laquelle commencer (Mastery.start_level) ; les plus faciles passent alors à la fin.
 ## `skip` : identifiants à laisser de côté (déjà joués dans la partie en cours).
@@ -431,10 +531,10 @@ func draw(questions: Array, count: int, today := "", start := 1, skip := {}) -> 
 	for q in questions:
 		if skip.has(q["id"]):
 			continue
-		var perfect := is_flawless(q["id"])
-		if not perfect and not is_due(q["id"], today):
+		var acquired := is_acquired(q["id"])
+		if not acquired and not is_due(q["id"], today):
 			continue
-		var tier := 0 if not is_collected(q["id"]) else (2 if perfect else 1)
+		var tier := 0 if not is_collected(q["id"]) else (2 if acquired else 1)
 		(tiers[tier] as Array).append(q)
 	var out: Array = []
 	for i in tiers.size():

@@ -37,6 +37,11 @@ static func _unix(date: Dictionary) -> int:
 			"day": int(date["day"]), "hour": 12, "minute": 0, "second": 0})
 
 
+## Nombre de jours de `a` à `b` (positif si `b` est après `a`).
+static func days_between(a: Dictionary, b: Dictionary) -> int:
+	return roundi((_unix(b) - _unix(a)) / 86400.0)
+
+
 ## La date `days` jours plus tard (ou plus tôt si négatif).
 static func shifted(date: Dictionary, days: int) -> Dictionary:
 	return Time.get_date_dict_from_unix_time(_unix(date) + days * 86400)

@@ -14,7 +14,7 @@ const RULES := [
 	["Gratter aide, mais coûte",
 		"En grattant, l’image apparaît et deux indices se dévoilent. Chaque indice fait baisser les points : 100 sans indice, 60 avec un, 30 avec deux."],
 	["Rien n’est perdu",
-		"Un dossier manqué, ou trouvé avec des indices, revient le lendemain. Et chaque jour, un défi de cinq dossiers, le même pour tout le monde."],
+		"Un dossier manqué revient le lendemain, un dossier trouvé quelques jours plus tard, jusqu’à être acquis. Tout ce que vous découvrez reste dans votre carnet. Et chaque jour, un défi de cinq dossiers, le même pour tous."],
 ]
 
 ## La chouette sur ses livres : l'illustration du jeu (fond détouré pour se poser sur le papier ivoire).
@@ -92,9 +92,9 @@ func build() -> void:
 	resized.connect(_fit_scene)
 
 
-## L’illustration grandit avec la hauteur de l’écran : 270 sur un écran 16:9, 330 sur un écran allongé.
+## L’illustration grandit avec la hauteur de l’écran : 245 sur un écran 16:9, 300 sur un écran allongé.
 func _fit_scene() -> void:
-	var h := clampf(size.y * 0.21, 190.0, 330.0) if size.y > 0.0 else 270.0
+	var h := clampf(size.y * 0.19, 190.0, 330.0) if size.y > 0.0 else 245.0
 	scene.custom_minimum_size = Vector2(0, h)
 
 

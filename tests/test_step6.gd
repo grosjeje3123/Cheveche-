@@ -105,10 +105,12 @@ func _initialize() -> void:
 	check("tirage : demain, il revient après les dossiers pas encore trouvés", later.size() == 3 and later[2]["id"] == pack.questions[0]["id"])
 	again.record_answer(pack.questions[1]["id"], true, 100)
 	var perfect := again.draw(pack.questions.slice(0, 3), 5)
-	check("tirage : trouvé sans indice, il reste dans la file, en révision à la fin", perfect.size() == 2 and perfect[1]["id"] == pack.questions[1]["id"])
+	var in_week := Week.key(Week.shifted(Week.today(), 7))
+	check("tirage : trouvé sans indice du premier coup, il est vérifié dans 7 jours (à consolider)", perfect.size() == 1
+			and again.return_day(pack.questions[1]["id"]) == in_week)
 	var reread := SaveStore.new(SAVE)
 	check("la date de retour est gardée dans la sauvegarde", not reread.is_due(pack.questions[0]["id"]) and reread.is_due(pack.questions[0]["id"], tomorrow)
-			and reread.is_due(pack.questions[1]["id"]))
+			and not reread.is_due(pack.questions[1]["id"]) and reread.is_due(pack.questions[1]["id"], in_week))
 	var fresh := SaveStore.new("user://test_step6_empty.json")
 	DirAccess.remove_absolute("user://test_step6_empty.json")
 	fresh.load_from_disk()
@@ -271,23 +273,22 @@ func _initialize() -> void:
 	for k in 235:
 		if main._save.is_collected(play._questions[k]["id"]):
 			known_first += 1
-	check("reprise : 235 dossiers pas encore trouvés, puis 1 en révision ; les 4 autres attendent demain", play._questions.size() == 236
-			and known_first == 0 and main._save.is_flawless(play._questions[235]["id"]) and play.revision_from == 235 and play.waiting == 4,
-			"%d dossiers, révision à %d, %d en attente" % [play._questions.size(), play.revision_from, play.waiting])
+	check("reprise : 235 dossiers pas encore trouvés ; les 5 joués reviendront à leur date", play._questions.size() == 235
+			and known_first == 0 and play.revision_from == -1 and play.waiting == 5 and play.return_words == "à partir de demain",
+			"%d dossiers, révision à %d, %d en attente, %s" % [play._questions.size(), play.revision_from, play.waiting, play.return_words])
 	check("reprise : « 4 / 240 trouvés », résultats remis à zéro", play._counter.text == "4 / 240 trouvés" and play._results.is_empty() and play._index == 0)
 	check("reprise : pas de mot de révision sur le premier dossier", play._feedback.text == "Répondez, ou grattez pour un indice.", play._feedback.text)
-	for k in 235:  # on saute les 235 premiers : comme s'ils avaient été joués (la file s'adapte sans eux)
+	for k in 234:  # on saute les 234 premiers : comme s'ils avaient été joués (la file s'adapte sans eux)
 		main._session_played[play._questions[k]["id"]] = true
-	play._index = 234
-	play._next.pressed.emit()  # le premier dossier de révision
+	play._index = 233
+	play._next.pressed.emit()  # le dernier dossier de la file
 	await _frames(6)
-	check("révision : « Révision : les 4 dossiers à revoir reviendront demain. »", play._feedback.text == "Révision : les 4 dossiers à revoir reviendront demain.", play._feedback.text)
 	await _answer(play, false, 0.0)
 	var notes: Array = []
 	for n in play._explain_box.get_children():
 		if n is Label:
 			notes.append(n.text)
-	check("bout de la file : « La suite demain : 5 dossiers à revoir. »", notes.back() == "La suite demain : 5 dossiers à revoir." and play._next.text == "Retour à la couverture", str(notes.back()))
+	check("bout de la file : « La suite à partir de demain : 6 dossiers à revoir. »", notes.back() == "La suite à partir de demain : 6 dossiers à revoir." and play._next.text == "Retour à la couverture", str(notes.back()))
 	play.closed.emit()
 	await create_timer(0.7).timeout
 

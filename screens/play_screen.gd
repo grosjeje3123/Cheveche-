@@ -60,6 +60,8 @@ var revision_from := -1
 ## À partir de cette difficulté, un dossier est « difficile » : un mot de plus après la réponse.
 const HARD := 4
 var waiting := 0
+## Quand reviennent les dossiers mis de côté : « demain », « dans 3 jours »… (SaveStore.return_words).
+var return_words := "demain"
 ## Une phrase qui prend la place de la consigne tant qu'on n'a rien gratté (début de la révision).
 var _notice := ""
 
@@ -434,9 +436,8 @@ func _on_option_pressed(button: Button) -> void:
 	_hide_hint()
 	_zone.cover.reveal_all()
 	var last := _index >= _questions.size() - 1
-	# Bout de la file d'une fiche : ce qui a été raté ou trouvé avec un indice reviendra demain.
-	var later := waiting + (0 if correct and points >= Scoring.MAX_POINTS else 1)
-	_show_explanation(correct, button.text, "La suite demain : %s." % _waiting_phrase(later, false) if _continuous and last and later > 0 else "")
+	# (Bout de la file d'une fiche : « La suite demain : … », ajouté par main.gd une fois la réponse enregistrée.)
+	_show_explanation(correct, button.text)
 	if _continuous:
 		_next.text = "Dossier suivant" if not last else "Retour à la couverture"
 	else:
@@ -476,7 +477,7 @@ func _show_points(value: int, color: Color) -> void:
 
 func _revision_notice() -> String:
 	if _continuous and _index == revision_from and waiting > 0:
-		return "Révision : %s demain." % _waiting_phrase(waiting)
+		return "Révision : %s %s." % [_waiting_phrase(waiting), return_words]
 	return ""
 
 

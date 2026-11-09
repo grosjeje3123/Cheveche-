@@ -2,12 +2,13 @@ class_name CoverScreen
 extends Control
 ## Couverture : sur le papier ivoire, la chouette, le titre, le défi du jour, puis neuf fiches : « Au hasard »
 ## (un mélange de toutes les disciplines, en anthracite) et une fiche pleine à la couleur de chaque discipline.
-## Un seul geste pour jouer : toucher une fiche (ou le défi). « Mes résultats » et « Réglages » sont deux liens
+## Un seul geste pour jouer : toucher une fiche (ou le défi). « Carnet », « Mes résultats » et « Réglages » sont trois liens
 ## discrets, tout en bas.
 
 ## « Au hasard » : tous les dossiers, toutes disciplines mêlées, en continu.
 signal play_pressed
 signal open_results
+signal open_carnet
 signal open_settings
 ## Le défi du jour : à jouer, à reprendre, ou déjà fait (on revoit alors son résultat).
 signal daily_pressed
@@ -108,6 +109,7 @@ func setup(pack: QuestionPack, save: SaveStore) -> void:
 	var links := HBoxContainer.new()
 	links.add_theme_constant_override("separation", 0)
 	col.add_child(links)
+	links.add_child(_link("Carnet", func() -> void: open_carnet.emit()))
 	links.add_child(_link("Mes résultats", func() -> void: open_results.emit()))
 	links.add_child(_link("Réglages", func() -> void: open_settings.emit()))
 

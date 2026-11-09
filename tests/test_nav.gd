@@ -103,8 +103,9 @@ func _initialize() -> void:
 	# Ordre d'une fiche : le seul dossier d'Arts pas encore trouvé passe en tête, les autres suivent.
 	var store := SaveStore.new("user://test_nav_mix.json")
 	for q in main._pack.questions:
-		if main._pack.collection_of(q) == "Arts" and q["id"] != "arts01-q03":
-			store.record_answer(q["id"], true, 100)
+		if main._pack.collection_of(q) == "Arts" and q["id"] != "arts01-q03":  # acquis : sans indice, à dix jours d'écart
+			store.record_answer(q["id"], true, 100, Week.key(Week.shifted(Week.today(), -20)))
+			store.record_answer(q["id"], true, 100, Week.key(Week.shifted(Week.today(), -10)))
 	var always_first := true
 	for i in 20:
 		var order := store.draw(main._pack.questions_in("Arts"), 30)

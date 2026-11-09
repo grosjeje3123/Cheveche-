@@ -31,6 +31,7 @@ var _play: PlayScreen
 var _result: ResultScreen
 var _complete: CompleteScreen
 var _rules: RulesScreen
+var _carnet: CarnetScreen
 ## La page « Comment jouer » s'est ouverte avant la première série (et non depuis les Réglages).
 var _rules_before_play := false
 ## Fiche que la dernière réponse vient de compléter (page « Fiche complète » à montrer), sinon « »,
@@ -74,6 +75,9 @@ func _ready() -> void:
 	add_child(_cover)
 	_cover.setup(_pack, _save)
 	_cover.open_results.connect(func() -> void: _go(_progress))
+	_cover.open_carnet.connect(func() -> void:
+		_carnet.open()
+		_go(_carnet))
 	_cover.open_category.connect(func(category: String) -> void: _start_fiche(category, _cover))
 	_cover.play_pressed.connect(func() -> void: _start_fiche("", _cover))
 	_cover.daily_pressed.connect(_start_daily)
@@ -132,6 +136,13 @@ func _ready() -> void:
 	_complete.back.connect(_leave_play)
 	_complete.play_next_level.connect(func() -> void: _start_fiche(_complete_discipline, _cover))
 
+	_carnet = CarnetScreen.new()
+	_carnet.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_carnet.visible = false
+	add_child(_carnet)
+	_carnet.setup(_pack, _save)
+	_carnet.closed.connect(_back_to_cover)
+
 	_rules = RulesScreen.new()
 	_rules.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_rules.visible = false
@@ -153,7 +164,7 @@ func _ready() -> void:
 
 func _apply_safe_area() -> void:
 	var insets := SafeArea.insets(get_viewport())
-	for screen: Control in [_cover, _settings_screen, _credits, _progress, _play, _result, _complete, _rules]:
+	for screen: Control in [_cover, _settings_screen, _credits, _progress, _play, _result, _complete, _rules, _carnet]:
 		screen.offset_top = insets.x
 		screen.offset_bottom = -insets.y
 
@@ -167,19 +178,19 @@ func _start_fiche(category: String, origin: Control) -> void:
 		return
 	var queue := _save.draw(pool, pool.size(), "", Mastery.start_level(_mastery_of(category)))
 	if queue.is_empty():
-		# Tout ce qui reste est à revoir demain (et rien n'est encore trouvé sans indice) : on le dit, sans ouvrir le jeu.
+		# Tout ce qui reste revient plus tard (et rien n'est encore acquis) : on le dit, sans ouvrir le jeu.
 		var waiting := _save.waiting_in(pool)
 		var name := category if category != "" else "Au hasard"
-		_cover.show_note("%s : %s demain." % [name, _waiting_words(waiting)])
+		_cover.show_note("%s : %s %s." % [name, _waiting_words(waiting), _save.return_words(pool)])
 		return
 	_series_category = category
 	_series_kind = "free"
 	_session_played = {}
 	_play.start(_pack, queue, [], true)
-	# Où commence la révision (dossiers déjà trouvés sans indice), pour dire que les autres reviendront demain.
+	# Où commence la révision (dossiers acquis), pour dire quand les autres reviendront.
 	var revision := -1
 	for i in queue.size():
-		if _save.is_flawless(queue[i]["id"]):
+		if _save.is_acquired(queue[i]["id"]):
 			revision = i
 			break
 	_play.revision_from = revision
@@ -202,10 +213,14 @@ func _adapt_queue() -> void:
 	var rest := _save.draw(pool, pool.size(), "", Mastery.start_level(_mastery_of(_series_category)), _session_played)
 	var revision := -1
 	for i in rest.size():
-		if _save.is_flawless(rest[i]["id"]):
+		if _save.is_acquired(rest[i]["id"]):
 			revision = i
 			break
 	_play.set_upcoming(rest, revision)
+	# Bout de la file : ce qui n'est pas encore acquis reviendra à sa date.
+	var waiting := _save.waiting_in(pool)
+	if rest.is_empty() and waiting > 0:
+		_play.add_note("La suite %s : %s." % [_save.return_words(pool), _waiting_words(waiting)])
 
 
 # Une ligne sous l'explication quand le niveau d'une discipline s'annonce ou monte (jamais quand il baisse).
@@ -246,6 +261,7 @@ func _level2_open(discipline: String) -> bool:
 # niveau 2 ouvert : les chiffres du niveau 2.
 func _show_found() -> void:
 	_play.waiting = _save.waiting_in(_fiche_pool(_series_category))
+	_play.return_words = _save.return_words(_fiche_pool(_series_category))
 	if _series_category != "" and _level2_open(_series_category):
 		var expert := _pack.questions_in(_series_category, 2)
 		_play.show_found(_save.collected_in(expert), expert.size(), _save.flawless_in(expert), 2)
@@ -447,6 +463,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		_go(_credits_origin if _credits_origin != null else _cover)
 	elif _current == _rules:
 		_close_rules()
+	elif _current == _carnet:
+		_carnet.back()
 	get_viewport().set_input_as_handled()
 
 

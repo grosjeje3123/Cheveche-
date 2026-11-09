@@ -73,7 +73,7 @@ func rebuild() -> void:
 	else:
 		_body.add_child(_text("Les images viennent de Wikimedia Commons, sous licence libre. Touchez un lien pour ouvrir la page de l’image ou le texte de sa licence."))
 		_body.add_child(Ds.spacer(Ds.S2))
-		_body.add_child(_text("[i]Réduite[/i] : une copie plus petite que l’original, faite par Commons ou pour le jeu. [i]Recadrée[/i] : seule la bande que le jeu peut montrer est gardée. Rien d’autre n’est changé."))
+		_body.add_child(_text("[i]Réduite[/i] : une copie plus petite que l’original, faite par Commons ou pour le jeu. [i]Recadrée[/i] : seule la bande que le jeu peut montrer est gardée. Rien d’autre n’est changé. Les vignettes du carnet sont, en plus, réduites et recadrées en carré : mêmes auteurs, mêmes licences."))
 		_body.add_child(Ds.spacer(Ds.S4))
 		var groups := {}
 		for e in entries:

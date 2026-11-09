@@ -121,6 +121,23 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   Pour l'AAB (Gradle), `tools/android_template.sh` installe le modèle Android et règle son thème
   (`tools/android_splash.py`) ; pour un APK exporté sans Gradle, `tools/apk_splash.py` corrige l'APK avant signature.
 
+## Carnet et révision espacée
+- **Révision espacée** (`SaveStore.record_answer`, champ `boite` de la sauvegarde ; `RETURN_DAYS`) : un dossier manqué, ou
+  trouvé avec un indice, revient le lendemain (boîte 0, « à revoir ») ; trouvé sans indice, il monte d’une boîte et revient
+  dans 3 puis 7 jours (« à consolider »), puis il est **acquis** (boîte 3) et ne revient plus qu’en révision, à la fin des
+  fiches. Trouvé sans indice du premier coup, il saute en boîte 2 : on le vérifie une fois, une semaine plus tard. Un acquis
+  manqué repart à zéro. Les anciennes sauvegardes : un dossier trouvé sans indice revient une fois pour devenir acquis.
+  Les phrases disent la vraie date : « La suite demain », « dans 3 jours », « à partir de demain » quand les retours s’étalent
+  (`SaveStore.return_words`).
+- **Carnet** (`screens/carnet_screen.gd`, lien « Carnet » de la couverture) : tous les dossiers joués, trouvés ou manqués
+  (on en a déjà vu la réponse), rangés par discipline, avec leur vignette, leur titre, leur réponse et leur état (à revoir,
+  à consolider, acquis). Onglets : Tout, À revoir, Acquis, Favoris. Toucher une ligne ouvre la fiche du dossier : l’image,
+  la question, la réponse, l’explication, l’anecdote, le crédit, la date de retour, et l’étoile « Garder en favori »
+  (champ `favoris` de la sauvegarde, transmis par le code de sauvegarde). La flèche ramène de la fiche à la liste, puis à la couverture.
+- **Vignettes** : `tools/make_thumbs.py` fait un carré de 176 px, recadré au centre, de chaque image vérifiée
+  (`assets/thumbs/<pack>/<fichier>.webp`, environ 2 Mo en tout) : le carnet ne charge jamais les grandes images dans la liste.
+  À relancer après l’ajout d’images.
+
 ## Poids
 - Les 270 images sont importées à 900 px au plus sur leur grand côté, en WebP avec perte (qualité 0,7) : `process/size_limit`
   et `compress/lossy_quality` dans les `.import` de `assets/images/`. Une image fait environ 960 px de large à l’écran d’un
