@@ -49,6 +49,11 @@ var _play_origin: Control
 var _series_category := ""
 ## Dossiers déjà joués dans la fiche en cours (la file s'adapte après chaque réponse sans les reproposer).
 var _session_played := {}
+## Une fiche se joue par séries de SERIES_LENGTH dossiers, chacune fermée par son bilan.
+const SERIES_LENGTH := 10
+## Les réponses de la série en cours ({id, correct, clues, points, pepite}) et le niveau au début de la série.
+var _series_results: Array = []
+var _series_mastery_before := {}
 ## « free » (une fiche de la couverture) ou « daily » (défi du jour), et la date du défi en cours.
 var _series_kind := "free"
 var _daily_key := ""
@@ -126,6 +131,8 @@ func _ready() -> void:
 	_result.visible = false
 	add_child(_result)
 	_result.back.connect(_leave_play)
+	_result.next_pressed.connect(_next_series)
+	_play.series_done.connect(func() -> void: _show_series_result(false))
 	_result.open_credits.connect(func() -> void: _open_credits(_result))
 
 	_complete = CompleteScreen.new()
@@ -186,6 +193,8 @@ func _start_fiche(category: String, origin: Control) -> void:
 	_series_category = category
 	_series_kind = "free"
 	_session_played = {}
+	_series_results = []
+	_series_mastery_before = _mastery_of(category) if category != "" else {}
 	_play.start(_pack, queue, [], true)
 	# Où commence la révision (dossiers acquis), pour dire quand les autres reviendront.
 	var revision := -1
@@ -314,7 +323,12 @@ func _on_answered(question_id: String, correct: bool, clues: int, points: int) -
 	var found_before := _save.collected_in(pool)
 	var flawless_before := _save.flawless_in(pool)
 	var mastery_before := _mastery_of(discipline) if discipline != "" else {}
+	var first_time := _save.plays(question_id) == 0
 	_save.record_answer(question_id, correct, points)
+	# Un dossier difficile trouvé sans indice dès la première rencontre : une pépite.
+	var pepite := is_pepite(q, first_time, correct, points)
+	if pepite:
+		_play.show_pepite()
 	if discipline != "":
 		_play.add_note(_level_note(discipline, mastery_before, _mastery_of(discipline)))
 	var total := pool.size()
@@ -329,8 +343,66 @@ func _on_answered(question_id: String, correct: bool, clues: int, points: int) -
 		_session_played[question_id] = true
 		_adapt_queue()
 		_show_found()
+		_series_results.append({"id": question_id, "correct": correct, "clues": clues, "points": points, "pepite": pepite})
+		# Dix dossiers, ou le bout de la file : le bouton mène au bilan.
+		if _series_results.size() >= SERIES_LENGTH or not _play.has_next():
+			_play.end_series_here()
 	_cover.refresh()
 	_progress.refresh()
+
+
+## Pépite : difficulté 4 ou plus, trouvé sans indice, la toute première fois qu'on le rencontre.
+static func is_pepite(q: Dictionary, first_time: bool, correct: bool, points: int) -> bool:
+	return first_time and correct and points >= Scoring.MAX_POINTS and QuestionPack.difficulty_of(q) >= PlayScreen.HARD
+
+
+# Le bilan d'une série de fiche. `ended` : la file est au bout (plus de « Série suivante »).
+func _show_series_result(ended: bool) -> void:
+	var results := _series_results.duplicate(true)
+	var found := Scoring.correct_count(results)
+	var pepites := results.filter(func(r): return bool(r.get("pepite", false))).size()
+	var summary := "%d dossier%s trouvé%s sur %d" % [found, "s" if found > 1 else "", "s" if found > 1 else "", results.size()]
+	if pepites > 0:
+		summary += ", dont %d pépite%s" % [pepites, "s" if pepites > 1 else ""]
+	_save.record_series(results.size(), Scoring.total(results))
+	var waiting := _save.waiting_in(_fiche_pool(_series_category))
+	var more := not ended and _play.has_next()
+	var note := _series_level_line(_series_category, _series_mastery_before, _mastery_of(_series_category)) if _series_category != "" else ""
+	if not more and waiting > 0:
+		note += ("\n" if note != "" else "") + "La suite %s : %s." % [_save.return_words(_fiche_pool(_series_category)), _waiting_words(waiting)]
+	_result.show_results(_pack, results, {
+		"kicker": "Série terminée",
+		"label": _series_category if _series_category != "" else "Au hasard",
+		"back_text": "Retour à la couverture",
+		"next_text": "Série suivante" if more else "",
+		"note": note,
+		"summary": summary + ".",
+		"celebrate": true,
+	})
+	_cover.refresh()
+	_progress.refresh()
+	_go(_result)
+
+
+# Le niveau à la fin d'une série : « Astronomie : vous passez Érudit ! », ou « Astronomie : niveau Curieux. »
+static func _series_level_line(discipline: String, before: Dictionary, after: Dictionary) -> String:
+	if not Mastery.known(after):
+		var left: int = Mastery.MIN_ANSWERS - int(after.get("n", 0))
+		return "%s : votre niveau sera connu dans %d dossier%s." % [discipline, left, "s" if left > 1 else ""]
+	var name := Mastery.name_of(after["r"])
+	if Mastery.known(before) and Mastery.rank_of(after["r"]) > Mastery.rank_of(before["r"]):
+		return "%s : vous passez %s !" % [discipline, name]
+	if not Mastery.known(before):
+		return "%s : votre niveau est %s." % [discipline, name]
+	return "%s : niveau %s." % [discipline, name]
+
+
+# « Série suivante » : la file reprend là où elle s'était arrêtée.
+func _next_series() -> void:
+	_series_results = []
+	_series_mastery_before = _mastery_of(_series_category) if _series_category != "" else {}
+	_go(_play)
+	_play.resume()
 
 
 # Page « Fiche complète » : `then` dit où aller ensuite (« play » : reprendre le jeu ; « cover » : la couverture).
@@ -350,7 +422,10 @@ func _show_complete(then: String) -> void:
 
 
 func _after_complete() -> void:
-	if _complete_then == "play":
+	if _complete_then == "play" and _play.series_end:
+		_play.series_end = false
+		_show_series_result(false)  # la fiche complète fermait aussi la série : son bilan, puis la suite
+	elif _complete_then == "play":
 		_go(_play)
 		_play.resume()
 	else:
@@ -369,6 +444,8 @@ func _on_play_closed() -> void:
 func _on_series_finished(results: Array) -> void:
 	if _series_kind == "daily":
 		_finish_daily(results)
+	elif not _series_results.is_empty():
+		_show_series_result(true)  # la file est au bout avant dix dossiers : le bilan de ce qui a été joué
 	else:
 		_leave_play()
 
@@ -393,6 +470,7 @@ func _show_daily_result(results: Array, again: bool) -> void:
 		"stamp": _daily_stamp(_daily_key),
 		"share": Daily.share_text(date, results),
 		"quiet": again,
+		"celebrate": true,
 	})
 	_go(_result)
 

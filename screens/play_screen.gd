@@ -14,6 +14,8 @@ signal closed
 signal answered(question_id: String, correct: bool, clues: int, points: int)
 ## Dernier dossier traité : `results` contient une entrée {id, correct, clues, points} par dossier.
 signal finished(results: Array)
+## Le dixième dossier d'une série de fiche est joué et « Voir le bilan » touché (voir end_series_here).
+signal series_done
 ## Le joueur veut passer au dossier suivant alors que `hold_next` est vrai (une fiche vient d'être complétée) :
 ## l'écran attend ; resume() reprend là où on en était.
 signal held
@@ -57,8 +59,12 @@ var hold_next := false
 ## Jeu continu : indice du premier dossier de révision (déjà trouvé sans indice), -1 s'il n'y en a pas ;
 ## et nombre de dossiers mis de côté jusqu'à demain dans la fiche (ratés ou trouvés avec un indice).
 var revision_from := -1
-## À partir de cette difficulté, un dossier est « difficile » : un mot de plus après la réponse.
+## À partir de cette difficulté, un dossier est « difficile » : trouvé sans indice du premier coup, c'est une pépite.
 const HARD := 4
+const PEPITE_SIZE := 168.0
+## Vrai quand le dossier à l'écran ferme une série de fiche (end_series_here).
+var series_end := false
+var _pepite: DsStamp
 var waiting := 0
 ## Quand reviennent les dossiers mis de côté : « demain », « dans 3 jours »… (SaveStore.return_words).
 var return_words := "demain"
@@ -151,6 +157,7 @@ func build() -> void:
 	_zone = ImageZone.new()
 	_zone.size_flags_vertical = Control.SIZE_FILL  # ne s'étire pas : _fit_layout règle sa hauteur
 	_zone.custom_minimum_size = Vector2(0, ZONE_MIN)
+	_zone.resized.connect(_place_pepite)
 	inner.add_child(_zone)
 	_clues = ClueList.new()
 	inner.add_child(_clues)
@@ -302,6 +309,10 @@ func _set_counter(text: String) -> void:
 func _show_question() -> void:
 	_q = _questions[_index]
 	_answered = false
+	series_end = false
+	if is_instance_valid(_pepite):
+		_pepite.queue_free()
+	_pepite = null
 	_correct_text = _q["reponse_courte"]
 	var choices := QuestionPack.choices_for(_q)
 
@@ -421,7 +432,7 @@ func _on_option_pressed(button: Button) -> void:
 	var hard := QuestionPack.difficulty_of(_q) >= HARD
 	if correct:
 		if clues == 0:
-			_feedback.text = "Exact, sans aucun indice." + (" Peu de gens le savent." if hard else "")
+			_feedback.text = "Exact, sans aucun indice."  # main.gd en fait une pépite (show_pepite) la première fois
 		else:
 			_feedback.text = "Exact, avec %d indice%s." % [clues, "s" if clues > 1 else ""]
 		_points.text = "+%d" % points
@@ -453,7 +464,7 @@ func _on_option_pressed(button: Button) -> void:
 func set_upcoming(rest: Array, revision_at := -1) -> void:
 	_questions = _questions.slice(0, _index + 1) + rest
 	revision_from = _index + 1 + revision_at if revision_at >= 0 else -1
-	if _answered and _continuous:
+	if _answered and _continuous and not series_end:
 		_next.text = "Dossier suivant" if not rest.is_empty() else "Retour à la couverture"
 
 
@@ -578,7 +589,58 @@ func _on_next_pressed() -> void:
 		hold_next = false
 		held.emit()
 		return
+	if series_end:
+		series_end = false
+		series_done.emit()
+		return
 	resume()
+
+
+## Le dossier qu'on vient de jouer ferme la série : le bouton mène au bilan (series_done) au lieu du dossier suivant.
+func end_series_here() -> void:
+	series_end = true
+	if _answered:
+		_next.text = "Voir le bilan"
+
+
+# Le tampon dans le coin haut droit de l'image (et il y reste si la carte change de taille).
+func _place_pepite() -> void:
+	if is_instance_valid(_pepite):
+		_pepite.position = Vector2(_zone.size.x - PEPITE_SIZE - Ds.S2, Ds.S2)
+
+
+## Un dossier difficile trouvé sans indice du premier coup : une pépite. Un tampon ocre se pose sur l'image,
+## avec son « tchok », et le résultat du dossier le garde (le bilan de la série les compte).
+func show_pepite() -> void:
+	_feedback.text = "Exact, sans aucun indice. Une pépite !"
+	if not _results.is_empty():
+		_results.back()["pepite"] = true
+	if is_instance_valid(_pepite):
+		_pepite.queue_free()
+	_pepite = DsStamp.new(PEPITE_SIZE)
+	_pepite.color = Ds.OCHRE
+	_pepite.top_text = "Pépite"
+	_pepite.bottom_text = "peu le savent"
+	_pepite.arc_text_scale = 0.2
+	_pepite.discipline = _pack.collection_of(_q)
+	_pepite.tilt = 0.2
+	_pepite.size = Vector2(PEPITE_SIZE, PEPITE_SIZE)
+	_zone.add_child(_pepite)
+	_place_pepite()
+	_pepite.modulate.a = 0.0
+	_pepite.scale = Vector2(1.5, 1.5)
+	var st := create_tween()
+	st.tween_interval(0.25)
+	st.tween_property(_pepite, "modulate:a", 1.0, 0.06)
+	st.parallel().tween_property(_pepite, "scale", Vector2.ONE, 0.14).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	st.tween_callback(func() -> void: Feedback.say("stamp"))
+	st.tween_property(_pepite, "scale", Vector2(0.96, 0.96), 0.05).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	st.tween_property(_pepite, "scale", Vector2.ONE, 0.12).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+
+## Vrai s'il reste un dossier après celui à l'écran.
+func has_next() -> bool:
+	return _index < _questions.size() - 1
 
 
 ## Passe au dossier suivant (ou termine la file).

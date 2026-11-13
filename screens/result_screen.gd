@@ -1,10 +1,18 @@
 class_name ResultScreen
 extends Control
-## Fin du défi du jour : le score, un mot, le détail de chaque dossier, les crédits des images,
-## puis le retour. Pas de confettis : une page de revue qui se referme.
+## Fin d'une série (dix dossiers d'une fiche, ou le défi du jour) : la chouette sur ses livres sous une courte pluie
+## de papier découpé (`celebrate`), le score, un mot, ce qui a été trouvé (et les pépites), le niveau s'il a monté,
+## le détail de chaque dossier avec sa difficulté, les crédits des images, puis la suite ou le retour.
 
 signal back
 signal open_credits
+## « Série suivante » (seulement avec `next_text` dans `info`).
+signal next_pressed
+
+## La pluie de papier (null sans `celebrate`).
+var confetti: PaperConfetti
+## L'illustration de la chouette (null sans `celebrate`).
+var owl: TextureRect
 
 var _fade: Array[Control] = []
 ## Le tampon dateur de la page (null sans `stamp` dans `info`).
@@ -19,7 +27,10 @@ var clipboard_set := func(text: String) -> void: DisplayServer.clipboard_set(tex
 ##           back_text: String, note: String (ligne en sauge, ex. « 3 jours de suite »),
 ##           stamp: {top, day, month, bottom} (facultatif : tampon dateur à droite du score, posé à l'ouverture),
 ##           share: String (facultatif : texte copié par « Copier mon résultat »),
-##           quiet: bool (page revue plus tard : le tampon est déjà posé, pas de jingle)}
+##           quiet: bool (page revue plus tard : le tampon est déjà posé, pas de jingle),
+##           celebrate: bool (la chouette ; et la pluie de papier, si au moins la moitié est trouvée),
+##           summary: String (remplace « 3 bonnes réponses sur 5 »),
+##           next_text: String (bouton principal « Série suivante » ; le retour devient un bouton discret)}
 func show_results(pack: QuestionPack, results: Array, info: Dictionary) -> void:
 	for c in get_children():
 		remove_child(c)
@@ -41,7 +52,10 @@ func show_results(pack: QuestionPack, results: Array, info: Dictionary) -> void:
 	var top := HBoxContainer.new()
 	top.add_theme_constant_override("separation", Ds.S2)
 	col.add_child(top)
-	top.add_child(OwlMark.new(48))  # la signature du jeu, dans le coin : elle se retrouve sur une capture d'écran
+	# La signature du jeu, dans le coin (elle se retrouve sur une capture d'écran) ; sauf quand l'illustration de la
+	# chouette vient fêter la série juste en dessous : une seule chouette par page.
+	if not bool(info.get("celebrate", false)):
+		top.add_child(OwlMark.new(48))
 	var kicker := Ds.fill_h(Ds.label(str(info.get("kicker", "Terminé")), Ds.Role.OVERLINE, Ds.INK_SOFT))
 	(kicker as Label).vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	top.add_child(kicker)
@@ -50,7 +64,24 @@ func show_results(pack: QuestionPack, results: Array, info: Dictionary) -> void:
 	top.add_child(where)
 	col.add_child(Ds.spacer(Ds.S2))
 	col.add_child(Ds.rule(Ds.RULE, 1))
-	col.add_child(Ds.spacer(Ds.S5))
+	var celebrate := bool(info.get("celebrate", false))
+	owl = null
+	confetti = null
+	if celebrate:
+		# La chouette sur ses livres : l'illustration de la couverture, qui vient saluer la fin de la série.
+		col.add_child(Ds.spacer(Ds.S3))
+		owl = TextureRect.new()
+		owl.texture = RulesScreen.SCENE
+		owl.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		owl.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		owl.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+		owl.custom_minimum_size = Vector2(0, 180)
+		owl.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		col.add_child(owl)
+		_fade.append(owl)
+		col.add_child(Ds.spacer(Ds.S2))
+	else:
+		col.add_child(Ds.spacer(Ds.S5))
 
 	# Le score : un grand chiffre, puis un mot. Avec un tampon : le score à gauche, le tampon à droite,
 	# comme une fiche remplie puis tamponnée ; sans tampon, tout est centré.
@@ -105,8 +136,8 @@ func show_results(pack: QuestionPack, results: Array, info: Dictionary) -> void:
 	block.add_child(verdict)
 	_fade.append(verdict)
 	block.add_child(Ds.spacer(Ds.S1))
-	var sub := Ds.label("%d bonne%s réponse%s sur %d" % [right, "s" if right > 1 else "",
-			"s" if right > 1 else "", count], Ds.Role.SMALL, Ds.INK_SOFT)
+	var sub := Ds.label(str(info.get("summary", "%d bonne%s réponse%s sur %d" % [right, "s" if right > 1 else "",
+			"s" if right > 1 else "", count])), Ds.Role.SMALL, Ds.INK_SOFT, true)
 	sub.horizontal_alignment = align
 	block.add_child(sub)
 	_fade.append(sub)
@@ -166,23 +197,44 @@ func show_results(pack: QuestionPack, results: Array, info: Dictionary) -> void:
 		share_button.pressed.connect(func() -> void: _copy_share(share))
 		col.add_child(share_button)
 		col.add_child(Ds.spacer(Ds.S2))
+	var next_text := str(info.get("next_text", ""))
+	if next_text != "":
+		var next := Button.new()
+		next.theme_type_variation = "PrimaryButton"
+		next.text = next_text
+		next.custom_minimum_size = Vector2(0, 96)
+		next.pressed.connect(func() -> void: next_pressed.emit())
+		col.add_child(next)
+		col.add_child(Ds.spacer(Ds.S2))
 	var leave := Button.new()
-	leave.theme_type_variation = "PrimaryButton"
+	leave.theme_type_variation = "PrimaryButton" if next_text == "" else "GhostButton"
 	leave.text = str(info.get("back_text", "Retour"))
-	leave.custom_minimum_size = Vector2(0, 96)
+	leave.custom_minimum_size = Vector2(0, 96 if next_text == "" else 80)
 	leave.pressed.connect(func() -> void: back.emit())
 	col.add_child(leave)
+
+	# La pluie de papier quand au moins la moitié des dossiers est trouvée ; sinon, la chouette seule.
+	if celebrate and Scoring.correct_count(results) * 2 >= results.size():
+		confetti = PaperConfetti.new()
+		confetti.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		add_child(confetti)
 
 	var quiet := bool(info.get("quiet", false))
 	_play_intro(quiet)
 	if quiet:
 		return
+	if confetti != null:
+		get_tree().create_timer(0.25).timeout.connect(func() -> void:
+			if is_instance_valid(confetti):
+				confetti.burst())
 	# Le jingle arrive avec le score, une fois l'écran apparu (après le tampon, s'il y en a un).
 	var effect := Scoring.finish_effect(results)
 	get_tree().create_timer(0.35 if stamp == null else 0.85).timeout.connect(func() -> void: Feedback.say(effect))
 
 
 const SHARE_TEXT := "Copier mon résultat"
+## L'ocre des pépites, foncé pour se lire sur le papier.
+const PEPITE_INK := Color("8C7440")
 
 
 # Le résultat part dans le presse-papiers ; le bouton le dit quelques secondes, puis reprend son nom.
@@ -228,8 +280,19 @@ func _row(rank: int, r: Dictionary, q: Dictionary, pack: QuestionPack) -> Contro
 		detail = "sans indice"
 	else:
 		detail = "%d indice%s" % [clues, "s" if clues > 1 else ""]
-	words.add_child(Ds.label("Dossier %d, %s" % [pack.dossier_number(q), detail], Ds.Role.SMALL,
+	var line := HBoxContainer.new()
+	line.add_theme_constant_override("separation", Ds.S2)
+	words.add_child(line)
+	# La difficulté du dossier, en cinq barres, avant ce qui s'est passé.
+	var level := DsLevel.new(16.0)
+	level.color = Ds.INK_SOFT
+	level.level = pack.difficulty_level(q)
+	level.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	line.add_child(level)
+	line.add_child(Ds.label("Dossier %d, %s" % [pack.dossier_number(q), detail], Ds.Role.SMALL,
 			Ds.INK_SOFT if correct else Ds.TERRACOTTA))
+	if bool(r.get("pepite", false)):
+		line.add_child(Ds.label("pépite", Ds.Role.SMALL, PEPITE_INK))
 
 	var pts := Ds.label(("+%d" % int(r["points"])) if correct else "0", Ds.Role.NUMERAL,
 			Ds.SAGE if correct else Ds.INK_FAINT)

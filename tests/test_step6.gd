@@ -288,11 +288,11 @@ func _initialize() -> void:
 	for n in play._explain_box.get_children():
 		if n is Label:
 			notes.append(n.text)
-	check("bout de la file : « La suite à partir de demain : 6 dossiers à revoir. »", notes.back() == "La suite à partir de demain : 6 dossiers à revoir." and play._next.text == "Retour à la couverture", str(notes.back()))
+	check("bout de la file : « La suite à partir de demain : 6 dossiers à revoir. », puis le bilan", notes.back() == "La suite à partir de demain : 6 dossiers à revoir." and play._next.text == "Voir le bilan", str(notes.back()) + " / " + play._next.text)
 	play.closed.emit()
 	await create_timer(0.7).timeout
 
-	# Une fiche de discipline jusqu'au bout de la file : retour à la couverture
+	# Une fiche de discipline jusqu'au bout de la file : le bilan de la série, puis la couverture
 	main._cover.open_category.emit("Sciences")
 	await create_timer(0.7).timeout
 	var sciences_found: int = main._save.collected_in(main._pack.questions_in("Sciences"))
@@ -307,10 +307,14 @@ func _initialize() -> void:
 	play._next.pressed.emit()  # on saute au dernier dossier de la file
 	await _frames(6)
 	await _answer(play, true, 0.0)
-	check("dernier dossier de la fiche : « Retour à la couverture »", play._next.text == "Retour à la couverture", play._next.text)
+	check("dernier dossier de la fiche : « Voir le bilan »", play._next.text == "Voir le bilan", play._next.text)
 	play._next.pressed.emit()
 	await create_timer(0.8).timeout
-	check("bout de la file : couverture, sans page de résultat", main._cover.visible and main._current == main._cover and not result.visible)
+	check("bout de la file : le bilan de la série, sans « Série suivante »", main._current == result and result.visible
+			and not result.find_children("*", "Button", true, false).any(func(b): return b.text == "Série suivante"))
+	result.back.emit()
+	await create_timer(0.8).timeout
+	check("puis la couverture", main._cover.visible and main._current == main._cover)
 	check("résultats : progression de Sciences mise à jour, le dernier dossier compte", (main._progress._category_meta["Sciences"] as Label).text == Ds.discipline_count(main._save.collected_in(main._pack.questions_in("Sciences")), 30)
 			and main._save.is_collected(play._questions[n_queue - 1]["id"]), (main._progress._category_meta["Sciences"] as Label).text)
 
@@ -345,7 +349,8 @@ func _initialize() -> void:
 			and not labels.any(func(t): return ". Image : " in t), str(labels))
 	check("résultat : un seul bouton, retour à la couverture (plus de « Rejouer »)", "Retour à la couverture" in _button_texts(result)
 			and not "Rejouer" in _button_texts(result), str(_button_texts(result)))
-	check("résultat : le petit hibou est dans le coin", _has_owl(result))
+	check("résultat : la chouette sur ses livres (la fête), sans le petit hibou du coin en double",
+			result.owl != null and result.owl.texture == RulesScreen.SCENE and not _has_owl(result))
 	check("résultat : tampon dateur « Défi du jour », jour, mois, année ; pas plein (défi non parfait)", result.stamp != null
 			and result.stamp.top_text == "Défi du jour" and result.stamp.center_text == str(int(today["day"]))
 			and result.stamp.center_caption == Week.MONTHS_SHORT[int(today["month"]) - 1] and result.stamp.bottom_text == str(int(today["year"]))

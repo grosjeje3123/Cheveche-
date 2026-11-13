@@ -36,8 +36,8 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
 - **Difficulté** : chaque dossier a une difficulté de 1 (très accessible) à 5 (pour spécialistes) (champ `difficulte` des
   packs, schéma 4 ; les anciens mots « facile », « moyenne », « difficile » se lisent 2, 3 et 4). Sur 270 dossiers : 86 de
   difficulté 1, 93 de 2, 66 de 3, 23 de 4, 2 de 5 (ceux-là dans le niveau 2 de l’Astronomie). Le bandeau de la carte la montre
-  par cinq barres montantes avant le numéro (`ds/ds_level.gd`). Après un dossier de difficulté 4 ou 5, la réponse ajoute
-  « Peu de gens le savent. » (trouvé sans indice comme manqué).
+  par cinq barres montantes avant le numéro (`ds/ds_level.gd`). Un dossier de difficulté 4 ou 5 manqué fait dire
+  « Pas tout à fait. Peu de gens le savent. » ; trouvé sans indice du premier coup, c’est une pépite (plus bas).
 - **Niveau par discipline** (`core/mastery.gd`), calculé sur l’appareil à partir de la *première* réponse à chaque dossier
   (champ `first` de la sauvegarde ; déduit pour les anciennes sauvegardes) : Découverte, Curieux, Érudit, Expert, Grand Hibou.
   Un modèle simple (la chance de réussir un dossier dépend de l’écart entre le niveau du joueur et la difficulté) pèse chaque
@@ -52,10 +52,19 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   72 à 96 px ; sur un téléphone allongé, la place en trop va d’abord aux réponses, puis à l’air autour de la carte, puis au bas de l’écran.
 - Après la réponse, l’explication, l’anecdote et le crédit de l’image prennent la place des quatre réponses : elle occupe d’abord l’air
   libre en bas, puis la carte cède jusqu’à 120 px, l’image gardant au moins 200 px ; le texte défile au doigt s’il est plus long.
-- Les **fiches** (« Au hasard » et les 8 disciplines) se jouent **en continu** : les dossiers s’enchaînent (« Dossier suivant »),
-  sans fin de série ni page de résultat ; on s’arrête quand on veut avec la flèche retour, chaque réponse étant déjà enregistrée.
-  En haut de l’écran : les dossiers trouvés dans la fiche (« 12 / 30 trouvés », 240 pour « Au hasard ») et une barre fine remplie
-  d’autant. Au bout de la file (tous les dossiers de la fiche vus), le bouton devient « Retour à la couverture ».
+- Les **fiches** (« Au hasard » et les 8 disciplines) se jouent **par séries de 10 dossiers** (`main.SERIES_LENGTH`) : les dossiers
+  s’enchaînent (« Dossier suivant ») ; au dixième, le bouton devient « Voir le bilan ». On peut aussi s’arrêter avant avec la flèche
+  retour (chaque réponse est déjà enregistrée) : le bilan vient alors pour les dossiers joués. En haut de l’écran : les dossiers
+  trouvés dans la fiche (« 12 / 30 trouvés », 240 pour « Au hasard ») et une barre fine remplie d’autant.
+- **Bilan de série** (`screens/result_screen.gd`, `main._show_series_result`) : la chouette sur ses livres, une courte pluie de
+  papier découpé aux couleurs du carnet (`ds/paper_confetti.gd`, 2,6 s, seulement si au moins la moitié des dossiers est trouvée),
+  les points, « 8 dossiers trouvés sur 10, dont 1 pépite. », le niveau dans la discipline (« Astronomie : vous passez Érudit ! »),
+  puis chaque dossier avec ses cinq barres de difficulté, ses points et, s’il y a lieu, « pépite ». « Série suivante » reprend la
+  file au onzième dossier ; « Retour à la couverture ». Au bout de la file (tous les dossiers de la fiche vus), le bilan n’a que
+  le retour. Le défi du jour finit sur le même bilan (chouette et papier), avec son tampon dateur.
+- **Pépite** (`main.is_pepite`, `PlayScreen.show_pepite`) : un dossier de difficulté 4 ou 5, trouvé sans indice la toute première
+  fois qu’on le rencontre. Le jeu dit « Exact, sans aucun indice. Une pépite ! » et un tampon ocre « Pépite · peu le savent »
+  tombe dans le coin de l’image ; le bilan compte les pépites de la série.
 - **Ordre** (`SaveStore.draw`) : toute la fiche, en trois paquets : les dossiers pas encore trouvés, puis ceux
   trouvés avec un indice, puis ceux trouvés sans indice. Dans chaque paquet, **la difficulté monte**, mélangée à l’intérieur
   de chaque difficulté ; « Au hasard » mêle ainsi toutes les disciplines. **La fiche s’adapte au joueur** : les dossiers pas

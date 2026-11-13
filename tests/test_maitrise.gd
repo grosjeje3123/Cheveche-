@@ -114,7 +114,8 @@ func _initialize() -> void:
 		play._on_option_pressed(right)
 		await create_timer(0.3).timeout
 		notes += " ".join(play._explain_box.find_children("*", "Label", true, false).map(func(l): return (l as Label).text))
-		check("réponse %d : « Peu de gens le savent. » après un dossier difficile trouvé sans indice" % (i + 1), play._feedback.text == "Exact, sans aucun indice. Peu de gens le savent.", play._feedback.text)
+		check("réponse %d : une pépite (difficile, sans indice, première fois), son tampon sur l'image" % (i + 1), play._feedback.text == "Exact, sans aucun indice. Une pépite !"
+				and is_instance_valid(play._pepite) and play._pepite.get_parent() == play._zone, play._feedback.text)
 		if i == 0:
 			play.resume()
 			await create_timer(0.4).timeout
