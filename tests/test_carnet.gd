@@ -107,7 +107,7 @@ func _initialize() -> void:
 	main._save.record_answer(hist["id"], true, 100, _day(-10))
 	main._cover.open_carnet.emit()
 	await create_timer(0.6).timeout
-	check("5 découvertes, dont 2 acquises", carnet._count.text == "5" and carnet._count_caption.text == "découvertes, dont 2 acquises", carnet._count_caption.text)
+	check("5 découvertes (sans parler d'acquis)", carnet._count.text == "5" and carnet._count_caption.text == "découvertes", carnet._count_caption.text)
 	var astro_cover: NotebookCover = carnet.covers["Astronomie"].get_child(0)
 	check("carnet d'astronomie : « 4 pages », pas vierge", astro_cover.caption == "4 pages" and not astro_cover.blank)
 	check("carnet d'histoire : « 1 page » ; les sciences : vierge", (carnet.covers["Histoire"].get_child(0) as NotebookCover).caption == "1 page"
@@ -121,8 +121,9 @@ func _initialize() -> void:
 	await create_timer(0.6).timeout
 	check("ouverte : plus de couverture par-dessus", not carnet._frame.get_children().any(func(c): return c is NotebookCover and not c.is_queued_for_deletion()))
 	var text := _labels(carnet)
-	check("sommaire : « Astronomie », « 4 pages, dont 1 acquise. »", carnet.book == "Astronomie" and carnet.page_index == 0 and text.contains("4 pages, dont 1 acquise."), text.left(200))
-	check("sommaire : une ligne par dossier joué, avec son état", text.contains("à revoir") and text.contains("à consolider") and text.contains("acquis"))
+	check("sommaire : « Astronomie », « 4 pages. »", carnet.book == "Astronomie" and carnet.page_index == 0 and text.contains("4 pages."), text.left(200))
+	check("sommaire : une ligne par dossier joué, sans état de révision", carnet._paper.find_children("*", "Button", true, false).size() == 4
+			and not text.contains("à revoir") and not text.contains("consolider") and not text.contains("acquis"))
 	check("sommaire : les dossiers jamais joués n'y sont pas", not text.contains(str(astro[5].get("titre", "§"))))
 	check("en bas : « sommaire », la flèche de gauche éteinte", carnet._page_label.text == "sommaire" and carnet._prev.disabled and not carnet._next.disabled)
 	# On tourne la page avec la flèche.
@@ -139,8 +140,8 @@ func _initialize() -> void:
 	var page := _labels(carnet)
 	check("page : la question, la réponse, l'explication, l'anecdote", page.contains(str(astro[1]["question"])) and page.contains(str(astro[1]["reponse_courte"]))
 			and page.contains(str(astro[1]["explication"]).left(40)) and page.contains("Le saviez-vous ?"))
-	check("page : « À revoir : il revient demain. » et le tampon « À revoir · demain »", page.contains("À revoir : il revient demain.")
-			and carnet._stage_stamp.top_text == "À revoir" and carnet._stage_stamp.bottom_text == "demain")
+	check("page : pas d'état de révision, le tampon de la discipline et du numéro", not page.contains("À revoir") and not page.contains("consolider")
+			and carnet._page_stamp.top_text == "Astronomie" and carnet._page_stamp.bottom_text == "nº %d" % main._pack.dossier_number(astro[1]))
 	check("page : la photo scotchée et son crédit", page.contains(main._pack.credit_line(astro[1])) if main._pack.has_verified_image(astro[1]) else true)
 	_swipe(carnet, 30)
 	await create_timer(0.5).timeout
@@ -158,9 +159,8 @@ func _initialize() -> void:
 	check("sommaire : 4 lignes", rows.size() == 4, str(rows.size()))
 	rows[3].pressed.emit()
 	await create_timer(0.5).timeout
-	check("une ligne du sommaire : sa page (page 4, l'acquis)", carnet.page_index == 4 and carnet.detail_id == astro[3]["id"])
-	check("page d'un acquis : « Acquis : … » et le tampon vert « Acquis · sans indice »", _labels(carnet).contains("Acquis : vous l’avez retrouvé sans indice")
-			and carnet._stage_stamp.top_text == "Acquis" and carnet._stage_stamp.bottom_text == "sans indice" and carnet._stage_stamp.color == Ds.SAGE)
+	check("une ligne du sommaire : sa page (page 4)", carnet.page_index == 4 and carnet.detail_id == astro[3]["id"])
+	check("page d'un dossier acquis : rien sur la révision non plus", not _labels(carnet).contains("Acquis") and carnet._page_stamp.color == Ds.discipline_color("Astronomie"))
 	carnet.next_page()
 	await create_timer(0.5).timeout
 	check("dernière page : on ne va pas plus loin", carnet.page_index == 4 and carnet._next.disabled)

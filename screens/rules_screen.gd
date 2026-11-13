@@ -14,7 +14,7 @@ const RULES := [
 	["Gratter aide, mais coûte",
 		"En grattant, l’image apparaît et deux indices se dévoilent. Chaque indice fait baisser les points : 100 sans indice, 60 avec un, 30 avec deux."],
 	["Rien n’est perdu",
-		"Un dossier manqué revient le lendemain, un dossier trouvé quelques jours plus tard, jusqu’à être acquis. Tout ce que vous découvrez reste dans votre carnet. Et chaque jour, un défi de cinq dossiers, le même pour tous."],
+		"Un dossier manqué revient le lendemain, un dossier trouvé quelques jours plus tard, jusqu’à être acquis. Tout ce que vous découvrez reste dans vos carnets. Et chaque jour, un défi de cinq dossiers, le même pour tous."],
 ]
 
 ## La chouette sur ses livres : l'illustration du jeu (fond détouré pour se poser sur le papier ivoire).

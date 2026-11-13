@@ -2,7 +2,7 @@ class_name CarnetScreen
 extends Control
 ## « Carnets » : une étagère de petits carnets de naturaliste, un par discipline, et celui des favoris. Chaque dossier
 ## joué (trouvé ou manqué) y a sa page : la photo scotchée, la question, la réponse en grand, l'explication, l'anecdote
-## dans la marge, et un tampon qui dit où on en est (à revoir, à consolider, acquis). Rien de nouveau n'est montré :
+## dans la marge, et le tampon de la discipline avec le numéro du dossier. Rien de nouveau n'est montré :
 ## seuls les dossiers déjà joués, dont on a déjà vu la réponse.
 ##
 ## On touche un carnet : sa couverture s'ouvre sur le sommaire (la liste de ses pages). On tourne les pages du doigt
@@ -49,7 +49,7 @@ var covers := {}
 var _book_color := Ds.SAGE
 var _favorite_button: Button
 var _favorite_star: DsStar
-var _stage_stamp: DsStamp
+var _page_stamp: DsStamp
 
 
 func setup(pack: QuestionPack, save: SaveStore) -> void:
@@ -203,7 +203,6 @@ func _show_shelf() -> void:
 	_clear(_shelf_body)
 	covers.clear()
 	var played := _save.played_in(_all())
-	var acquired := _save.acquired_in(played)
 	# Le compte des découvertes, comme sur « Mes résultats » : un grand chiffre, sa légende à côté.
 	var count_row := HBoxContainer.new()
 	count_row.add_theme_constant_override("separation", Ds.S3)
@@ -211,7 +210,7 @@ func _show_shelf() -> void:
 	_count = Ds.label(str(played.size()), Ds.Role.TITLE, Ds.INK)
 	_count.add_theme_font_size_override("font_size", 60)
 	count_row.add_child(_count)
-	_count_caption = Ds.label(("découverte%s, dont %d acquise%s" % ["s" if played.size() > 1 else "", acquired, "s" if acquired > 1 else ""])
+	_count_caption = Ds.label(("découverte" if played.size() == 1 else "découvertes")
 			if not played.is_empty() else "découverte pour l’instant", Ds.Role.SMALL, Ds.INK_SOFT, true)
 	_count_caption.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_count_caption.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
@@ -471,7 +470,6 @@ func _fill_contents(col: VBoxContainer) -> void:
 		col.add_child(mark)
 	col.add_child(Ds.spacer(Ds.S2))
 	col.add_child(Ds.label(book, Ds.Role.TITLE, Ds.INK))
-	var got := _save.acquired_in(pages)
 	var sub := ""
 	if pages.is_empty():
 		sub = "Pas encore de favori : touchez l’étoile en haut d’une page pour la garder ici." if book == FAVORITES \
@@ -479,7 +477,7 @@ func _fill_contents(col: VBoxContainer) -> void:
 	elif book == FAVORITES:
 		sub = "%s gardée%s." % [_pages_word(pages.size()), "s" if pages.size() > 1 else ""]
 	else:
-		sub = "%s, dont %d acquise%s." % [_pages_word(pages.size()), got, "s" if got > 1 else ""]
+		sub = "%s." % _pages_word(pages.size())
 	col.add_child(Ds.label(sub, Ds.Role.SMALL, Ds.INK_SOFT, true))
 	if pages.is_empty():
 		return
@@ -519,10 +517,6 @@ func _contents_row(q: Dictionary) -> Button:
 		var st := DsStar.new(18.0, Ds.OCHRE, true)
 		st.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 		h.add_child(st)
-	var stage := _save.stage(q["id"])
-	var w := Ds.label(stage_word(stage), Ds.Role.CAPTION, stage_color(stage))
-	w.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	h.add_child(w)
 	for c in h.get_children():
 		(c as Control).mouse_filter = Control.MOUSE_FILTER_IGNORE
 	return b
@@ -609,37 +603,19 @@ func _fill_page(col: VBoxContainer, q: Dictionary) -> void:
 		var fun := Ds.label(anecdote, Ds.Role.NUMERAL, Ds.INK_STRONG, true)
 		fun.add_theme_font_size_override("font_size", 22)
 		note_col.add_child(fun)
-	# En bas de la page : où on en est, en une phrase, et le tampon.
+	# En bas de la page, le tampon de la discipline avec le numéro du dossier, comme sur une fiche de collection.
 	var push := Ds.spacer(Ds.S3)
 	push.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	col.add_child(push)
-	var foot := HBoxContainer.new()
-	foot.add_theme_constant_override("separation", Ds.S3)
-	col.add_child(foot)
-	var stage := _save.stage(id)
-	var said := Ds.label(stage_line(stage, _save.return_day(id)), Ds.Role.SMALL, stage_color(stage), true)
-	said.add_theme_font_size_override("font_size", 19)
-	said.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	said.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	foot.add_child(said)
-	_stage_stamp = DsStamp.new(118.0)
-	_stage_stamp.color = stage_color(stage)
-	_stage_stamp.top_text = {SaveStore.STAGE_ACQUIRED: "Acquis", SaveStore.STAGE_CONSOLIDATE: "À consolider"}.get(stage, "À revoir")
-	_stage_stamp.bottom_text = _stamp_when(stage, _save.return_day(id))
-	_stage_stamp.arc_text_scale = 0.2
-	_stage_stamp.discipline = discipline
-	_stage_stamp.tilt = -0.22 if stage == SaveStore.STAGE_ACQUIRED else 0.18
-	foot.add_child(_stage_stamp)
-
-
-## Le bas du tampon : « sans indice » pour un acquis, sinon quand le dossier revient.
-static func _stamp_when(stage: int, return_day: String) -> String:
-	if stage == SaveStore.STAGE_ACQUIRED:
-		return "sans indice"
-	if not Week.is_key(return_day):
-		return "à rejouer"
-	var days := Week.days_between(Week.today(), Week.from_key(return_day))
-	return "à rejouer" if days <= 0 else ("demain" if days == 1 else "dans %d jours" % days)
+	_page_stamp = DsStamp.new(126.0)
+	_page_stamp.color = Ds.discipline_color(discipline)
+	_page_stamp.top_text = discipline
+	_page_stamp.bottom_text = "nº %d" % _pack.dossier_number(q)
+	_page_stamp.arc_text_scale = 0.2
+	_page_stamp.discipline = discipline
+	_page_stamp.tilt = -0.2 if _pack.dossier_number(q) % 2 == 0 else 0.16
+	_page_stamp.size_flags_horizontal = Control.SIZE_SHRINK_END
+	col.add_child(_page_stamp)
 
 
 # La photo d'un dossier, tirée sur papier (un liseré clair), un peu de travers, deux bouts de scotch en haut.
@@ -684,25 +660,6 @@ func _taped_photo(q: Dictionary) -> Control:
 	return holder
 
 
-## « à revoir », « à consolider », « acquis ».
-static func stage_word(stage: int) -> String:
-	match stage:
-		SaveStore.STAGE_ACQUIRED:
-			return "acquis"
-		SaveStore.STAGE_CONSOLIDATE:
-			return "à consolider"
-	return "à revoir"
-
-
-static func stage_color(stage: int) -> Color:
-	match stage:
-		SaveStore.STAGE_ACQUIRED:
-			return Ds.SAGE
-		SaveStore.STAGE_CONSOLIDATE:
-			return Color("8C7440")  # l'ocre, foncé pour se lire sur le papier
-	return Ds.TERRACOTTA
-
-
 # La photo d'un dossier, recadrée et arrondie.
 func _photo(q: Dictionary, box: Vector2) -> Control:
 	var path := _pack.image_path(q) if _pack.has_verified_image(q) else ""
@@ -730,13 +687,3 @@ func _photo(q: Dictionary, box: Vector2) -> Control:
 	return r
 
 
-## L'état d'un dossier en une phrase, avec sa date de retour.
-static func stage_line(stage: int, return_day: String) -> String:
-	if stage == SaveStore.STAGE_ACQUIRED:
-		return "Acquis : vous l’avez retrouvé sans indice, plusieurs jours de suite."
-	var when := ""
-	if Week.is_key(return_day):
-		var days := Week.days_between(Week.today(), Week.from_key(return_day))
-		when = "il vous attend dans sa fiche" if days <= 0 else ("il revient demain" if days == 1 else "il revient dans %d jours" % days)
-	var what := "À consolider" if stage == SaveStore.STAGE_CONSOLIDATE else "À revoir"
-	return "%s : %s." % [what, when] if when != "" else "%s." % what

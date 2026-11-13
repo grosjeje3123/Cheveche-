@@ -24,7 +24,7 @@ const EFFECTS := {
 	"stamp": ["stamp.wav", -3.0, 30],
 	"complete": ["series_great.wav", -5.0, 0],
 	# Carnet : une page qu'on tourne, la couverture qu'on ouvre.
-	"page": ["page.wav", -8.0, 0],
+	"page": ["page.wav", -14.0, 0],
 }
 const SOUNDS_DIR := "res://assets/sounds"
 

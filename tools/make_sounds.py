@@ -139,32 +139,22 @@ def tampon(seed=11):
 
 
 def page(seed=23):
-    """Une page de carnet qu'on tourne : un souffle de papier qui monte puis retombe (bruit feutré, entre 500 Hz et
-    3 kHz environ), et le petit claquement mat de la feuille qui se pose. Court et discret."""
+    """Une page de carnet qu'on tourne : un souffle de papier, doux et court. Bruit feutré (rien au-dessus de
+    1,8 kHz : pas de sifflement), qui monte et retombe en douceur sur un quart de seconde, sans claquement."""
     rnd = random.Random(seed)
-    n = int(0.36 * RATE)
+    n = int(0.26 * RATE)
     out = [0.0] * n
-    haut = _passe_bas(_coef(3000))
-    bas = _passe_bas(_coef(500))
+    haut1 = _passe_bas(_coef(1800))
+    haut2 = _passe_bas(_coef(1800))
+    bas = _passe_bas(_coef(250))
     for i in range(n):
         t = i / RATE
-        x = haut(rnd.uniform(-1, 1))
-        x = x - bas(x)              # passe-bande : ni grave, ni sifflant
-        # le geste : monte en 0,12 s, retombe en 0,2 s, avec un léger froissement irrégulier
-        geste = math.sin(math.pi * min(1.0, t / 0.3)) ** 1.6 if t < 0.3 else 0.0
-        froisse = 0.75 + 0.25 * math.sin(2 * math.pi * 23 * t + 1.3 * math.sin(2 * math.pi * 7 * t))
-        out[i] += 1.6 * geste * froisse * x
-    pose = int(0.27 * RATE)        # la feuille se pose
-    sourd = _passe_bas(_coef(900))
-    for i in range(int(0.04 * RATE)):
-        t = i / RATE
-        out[pose + i] += 0.5 * min(1.0, t / 0.001) * math.exp(-t / 0.009) * sourd(rnd.uniform(-1, 1)) * 3.0
+        x = haut2(haut1(rnd.uniform(-1, 1)))   # deux passes : la pente est plus douce, le son plus rond
+        x = x - bas(x)                         # et pas de grave sourd
+        geste = math.sin(math.pi * t / 0.26) ** 2   # monte et retombe, sans à-coup
+        out[i] = geste * x
     peak = max(abs(v) for v in out)
-    out = [0.55 * v / peak for v in out]
-    m = int(0.03 * RATE)
-    for i in range(m):
-        out[-1 - i] *= i / m
-    return out
+    return [0.32 * v / peak for v in out]
 
 
 def mallet(freq, dur, amp, tau=0.35):

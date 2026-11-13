@@ -26,7 +26,12 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   « platform-tools » et « build-tools »), puis renseigner leurs chemins dans Éditeur > Paramètres de l’éditeur > Export > Android.
   Avec le téléphone branché en USB (débogage USB activé), le bouton « déployer » de Godot installe et lance le jeu directement.
 - Le réglage `rendering/textures/vram_compression/import_etc2_astc` est activé : Godot l’exige pour Android.
-- Pour le Play Store, plus tard : compte développeur Google, clé de signature définitive (à garder précieusement), format AAB.
+- **Pour le Play Store** : GitHub Actions fabrique à chaque envoi le fichier `cheveche.aab` (cible Android 16, API 36),
+  à télécharger dans l’onglet Actions (artefact `cheveche-aab`). Il n’est signé pour Google Play qu’une fois la clé
+  d’importation rangée dans les secrets du dépôt : double-cliquer une seule fois sur `creer_cle_play.bat` (Windows ; il
+  crée la clé dans `Documents\Cheveche-cle-Play`, hors du dépôt, et copie le texte à coller dans le secret
+  `ANDROID_KEYSTORE_BASE64` ; le mot de passe va dans `ANDROID_KEYSTORE_PASSWORD`), puis relancer le workflow
+  (Actions > Android > Run workflow). Sans ces secrets, le journal de construction (branche `journal-ci`, `export.txt`) dit « clé de test, non publiable ».
 
 ## Règles du jeu (dans `core/reveal_rules.gd`)
 - On peut **répondre tout de suite**, sans rien gratter : les quatre réponses sont ouvertes dès le départ et le dossier vaut 100 points.
@@ -154,13 +159,13 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   un par discipline et celui des favoris (`ds/notebook_cover.gd` : toile de la couleur de la discipline, dos, élastique,
   pictogramme, étiquette « Astronomie · 12 pages » ; un carnet vierge est plus pâle). Chaque dossier joué, trouvé ou manqué
   (on en a déjà vu la réponse), y a sa page. Toucher un carnet : la couverture s’ouvre en pivotant autour du dos, sur le
-  sommaire (une ligne par page, avec son état ; toucher une ligne mène à sa page). On tourne les pages en glissant le doigt
+  sommaire (une ligne par page ; toucher une ligne mène à sa page). On tourne les pages en glissant le doigt
   (vers la gauche : la suivante) ou avec les flèches du bas ; la page se replie vers la reliure en jetant une ombre sur la
-  suivante, avec un bruit de papier (`page.wav`, synthétisé par `tools/make_sounds.py`).
+  suivante, avec un souffle de papier très discret (`page.wav`, synthétisé par `tools/make_sounds.py`).
 - **Une page** (`ds/notebook_paper.gd` : papier clair, trame de points, ombre de la reliure) : la photo tirée sur papier et
   scotchée de travers, son crédit, la question, la réponse en grand (italique), l’explication, l’anecdote en note de marge
-  (trait ocre), puis en bas la phrase d’état (« À revoir : il revient demain. ») et un tampon : « À revoir · demain »,
-  « À consolider · dans 7 jours » (ocre), « Acquis · sans indice » (vert). L’étoile en haut à droite garde la page dans les
+  (trait ocre), et en bas le tampon de la discipline avec le numéro du dossier. Les carnets ne parlent pas de la
+  révision (à revoir, acquis) : elle reste dans les fiches. L’étoile en haut à droite garde la page dans les
   favoris (champ `favoris` de la sauvegarde, transmis par le code de sauvegarde). La flèche du haut referme le carnet,
   puis ramène à la couverture.
 
