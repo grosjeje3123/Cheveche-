@@ -1,0 +1,9 @@
+    androidGradlePlugin: '8.2.0',
+    compileSdk         : 34,
+    targetSdk          : 34,
+    buildTools         : '34.0.0',
+    String targetSdkVersion = project.hasProperty("export_version_target_sdk") ? project.property("export_version_target_sdk") : ""
+    if (targetSdkVersion == null || targetSdkVersion.isEmpty()) {
+        targetSdkVersion = "$versions.targetSdk"
+        return Integer.parseInt(targetSdkVersion)
+        return versions.targetSdk

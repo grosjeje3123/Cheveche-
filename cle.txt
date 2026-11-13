@@ -1,0 +1,4 @@
+Clé : 2652 octets, empreinte 73e9d86b9013d46c, texte de 3536 caractères
+Mot de passe : 20 caractères ; alias : cheveche
+cheveche, Nov 13, 2026, PrivateKeyEntry, 
+Certificate fingerprint (SHA-256): 06:7F:E7:49:AA:B4:36:B6:69:67:9F:CC:F0:B8:9A:2E:89:BA:B5:B3:88:9B:22:06:8A:9F:3E:A3:19:35:55:92

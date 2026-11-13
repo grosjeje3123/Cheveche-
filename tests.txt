@@ -1,0 +1,14 @@
+OK    test_complete
+OK    test_images
+OK    test_nav
+OK    test_play
+OK    test_sauvegarde
+OK    test_week
+OK    test_features
+OK    test_step6
+OK    test_regles
+OK    test_maitrise
+OK    test_carnet
+OK    test_bilan
+OK    test_visuels
+OK    test_marges

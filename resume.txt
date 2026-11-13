@@ -1,0 +1,11 @@
+android:versionCode="38"
+android:versionName="0.9.35"
+package="fr.hosdez.cheveche"
+android:minSdkVersion="24"
+android:targetSdkVersion="36"
+-rw-r--r-- 1 runner runner 69573962 Nov 13 22:26 build/cheveche.aab
+Package 'fr.hosdez.cheveche':
+0x7f0c0009 - style/GodotAppSplashTheme
+	(default) - [STYLE] [@color/cheveche_papier, @android:color/transparent, @style/GodotAppMainTheme]
+	sdk_version: 31 - [STYLE] [@color/cheveche_papier, @android:color/transparent, @style/GodotAppMainTheme, @color/cheveche_papier]
+
