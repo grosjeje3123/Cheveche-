@@ -45,6 +45,9 @@ var filled := false:
 		queue_redraw()
 ## Couleur du motif sur le disque plein.
 var paper := Ds.IVORY
+## Fond du disque (transparent par défaut) : un papier clair sous le tampon posé sur une photo, pour qu'il se lise
+## sur n'importe quelle image.
+var backing := Color(0, 0, 0, 0)
 ## Inclinaison (en radians) : un tampon n'est jamais posé tout droit.
 var tilt := -0.16
 
@@ -62,6 +65,8 @@ func _draw() -> void:
 	var c := size / 2.0
 	draw_set_transform(c, tilt)
 	var outer := r * (0.97 if with_text else 0.92)
+	if backing.a > 0.0:
+		draw_circle(Vector2.ZERO, outer + maxf(2.0, r * 0.05) * 0.5, backing)
 	draw_arc(Vector2.ZERO, outer, 0.0, TAU, 96, color, maxf(2.0, r * 0.05), true)
 	var date_only := with_text and top_text == "" and bottom_text == "" and center_text != ""
 	var inner := r * (0.80 if date_only else 0.70)

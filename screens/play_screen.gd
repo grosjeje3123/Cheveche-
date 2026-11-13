@@ -618,7 +618,8 @@ func show_pepite() -> void:
 	if is_instance_valid(_pepite):
 		_pepite.queue_free()
 	_pepite = DsStamp.new(PEPITE_SIZE)
-	_pepite.color = Ds.OCHRE
+	_pepite.color = Color("8C7440")  # l'ocre foncé du bilan : il se lit sur le papier clair
+	_pepite.backing = Color(Ds.IVORY, 0.86)
 	_pepite.top_text = "Pépite"
 	_pepite.bottom_text = "peu le savent"
 	_pepite.arc_text_scale = 0.2
