@@ -13,6 +13,7 @@ const DIFFICULTY_MAX := 5
 const LEGACY_DIFFICULTY := {"facile": 2, "moyenne": 3, "difficile": 4}
 const REQUIRED_KEYS := ["id", "categorie", "difficulte", "question", "indices", "reponse",
 		"reponse_courte", "distracteurs", "explication", "image"]
+const VISUAL_KEYS := ["id", "image_de", "difficulte", "question", "reponse_courte", "distracteurs", "explication"]
 
 var id := ""
 var title := ""
@@ -21,6 +22,10 @@ var questions: Array = []
 ## Les dossiers du niveau 2, à part : ils ne comptent ni dans les 30 dossiers d'une fiche, ni dans « Au hasard »,
 ## ni dans le défi du jour.
 var expert: Array = []
+## Les dossiers en image (pack de type « visuels ») : une question courte sur l'image d'un autre dossier du jeu
+## (champ « image_de » : on en reprend l'image, ses auteurs et sa licence), sans indice écrit. Un par série de dix,
+## en bonus : ils ne comptent dans aucun total.
+var visuals: Array = []
 var allowed_licences: Array = []
 ## Nombre de questions écartées au chargement parce qu'elles étaient incomplètes.
 var ignored := 0
@@ -45,6 +50,19 @@ static func load_file(path: String) -> QuestionPack:
 	pack.allowed_licences = data["pack"].get("licences_autorisees", [])
 	pack._collection_of_category = data["pack"].get("collection_par_categorie", {})
 	pack._licences_of_pack[pack.id] = pack.allowed_licences
+	if String(data["pack"].get("type", "")) == "visuels":
+		for q in data["questions"]:
+			var missing := VISUAL_KEYS.filter(func(k): return not q.has(k))
+			if missing.is_empty() and q["distracteurs"] is Array and q["distracteurs"].size() == 3:
+				q["_visual"] = true
+				q["_niveau"] = 1
+				q["indices"] = []
+				q["reponse"] = q.get("reponse", q["reponse_courte"])
+				pack.visuals.append(q)
+			else:
+				pack.ignored += 1
+				push_error("Dossier en image ignoré (%s) : incomplet" % q.get("id", "?"))
+		return pack
 	var first := int(data["pack"].get("premier_numero", 1))
 	var level := maxi(1, int(data["pack"].get("niveau", 1)))
 	var number_re := RegEx.create_from_string("(\\d+)$")
@@ -83,6 +101,24 @@ static func load_files(paths: Array) -> QuestionPack:
 				continue
 			seen[q["id"]] = true
 			(all.questions if level_of(q) == 1 else all.expert).append(q)
+		for v in p.visuals:
+			if not seen.has(v["id"]):
+				seen[v["id"]] = true
+				all.visuals.append(v)
+	# Un dossier en image prend l'image de son dossier source (et donc ses auteurs, sa licence, sa discipline).
+	var kept: Array = []
+	for v in all.visuals:
+		var source := all.by_id(String(v["image_de"]))
+		if source.is_empty() or not all.has_verified_image(source):
+			push_error("Dossier en image ignoré (%s) : image de « %s » introuvable" % [v["id"], v["image_de"]])
+			all.ignored += 1
+			continue
+		v["image"] = (source["image"] as Dictionary).duplicate(true)
+		v["_pack"] = source["_pack"]
+		v["categorie"] = source["categorie"]
+		v["_source"] = source["id"]
+		kept.append(v)
+	all.visuals = kept
 	all.id = "" if all._licences_of_pack.size() != 1 else all._licences_of_pack.keys()[0]
 	all.title = ", ".join(titles)
 	return all
@@ -117,10 +153,20 @@ static func choices_for(q: Dictionary) -> Array:
 
 
 func by_id(question_id: String) -> Dictionary:
-	for q in questions + expert:
+	for q in questions + expert + visuals:
 		if q["id"] == question_id:
 			return q
 	return {}
+
+
+## Vrai pour un dossier en image (pas d'indice écrit : l'image seule).
+static func is_visual(q: Dictionary) -> bool:
+	return bool(q.get("_visual", false))
+
+
+## Les dossiers en image d'une discipline ("" : tous).
+func visuals_in(collection: String) -> Array:
+	return visuals if collection == "" else visuals.filter(func(q: Dictionary) -> bool: return collection_of(q) == collection)
 
 
 ## 1 : jeu de base ; 2 : dossier pointu, ouvert une fois la fiche complète.

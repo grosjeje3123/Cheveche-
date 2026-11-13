@@ -6,6 +6,8 @@ que si toutes ses métadonnées sont présentes, la licence est autorisée et le
 Règles de jeu (schéma 4) : on peut répondre sans gratter, donc chaque question doit se comprendre sans
 l'image ; deux indices par dossier, qui ne doivent pas nommer la réponse ; une difficulté de 1 (très accessible)
 à 5 (pour spécialistes).
+Un pack de type « visuels » (dossiers en image) est contrôlé à part : chaque dossier reprend l'image vérifiée
+d'un dossier d'un autre pack du même dossier (champ image_de).
 Usage : python3 validate_pack.py pack_svt_01.json [dossier_des_images]
 """
 import json, os, re, sys
@@ -31,8 +33,54 @@ def famille(licence):
     return m.group(1) if m else None
 
 
+CHAMPS_VISUEL = ["id", "image_de", "difficulte", "question", "reponse_courte", "distracteurs", "explication"]
+
+
+def main_visuels(path, pack):
+    """Pack de dossiers en image : chacun reprend l'image vérifiée d'un dossier d'un autre pack (image_de)."""
+    sources = {}
+    for autre in os.listdir(os.path.dirname(os.path.abspath(path))):
+        if autre.endswith(".json") and os.path.join(os.path.dirname(os.path.abspath(path)), autre) != os.path.abspath(path):
+            data = json.load(open(os.path.join(os.path.dirname(os.path.abspath(path)), autre), encoding="utf-8"))
+            for q in data.get("questions", []):
+                sources[q.get("id")] = q
+    erreurs, ids = [], set()
+    for q in pack["questions"]:
+        qid = q.get("id", "?")
+        for c in CHAMPS_VISUEL:
+            if c not in q:
+                erreurs.append(f"{qid}: champ manquant « {c} »")
+        if qid in ids:
+            erreurs.append(f"{qid}: identifiant en double")
+        ids.add(qid)
+        if type(q.get("difficulte")) is not int or q.get("difficulte") not in DIFFICULTES:
+            erreurs.append(f"{qid}: difficulté invalide « {q.get('difficulte')} »")
+        src = sources.get(q.get("image_de"))
+        if src is None:
+            erreurs.append(f"{qid}: dossier source « {q.get('image_de')} » introuvable")
+        elif src.get("image", {}).get("statut") != "verifie":
+            erreurs.append(f"{qid}: l’image de « {q.get('image_de')} » n’est pas vérifiée")
+        distr = q.get("distracteurs", [])
+        if len(distr) != 3 or len(set(distr)) != 3:
+            erreurs.append(f"{qid}: 3 distracteurs différents attendus")
+        if q.get("reponse_courte") in distr:
+            erreurs.append(f"{qid}: la réponse est parmi les distracteurs")
+        for libelle in [q.get("reponse_courte", "")] + distr:
+            if len(libelle) > MAX_LIBELLE:
+                erreurs.append(f"{qid}: choix trop long ({len(libelle)} caractères) « {libelle} »")
+        if len(q.get("question", "")) > MAX_QUESTION:
+            erreurs.append(f"{qid}: question trop longue")
+    print(f"{len(pack['questions'])} dossiers en image")
+    for e in erreurs:
+        print("  ERREUR :", e)
+    print("OK" if not erreurs else f"{len(erreurs)} erreur(s)")
+    return 1 if erreurs else 0
+
+
 def main(path, img_dir):
     pack = json.load(open(path, encoding="utf-8"))
+    if pack["pack"].get("type") == "visuels":
+        return main_visuels(path, pack)
     autorisees = set(pack["pack"]["licences_autorisees"])
     erreurs, alertes = [], []
     ids = set()

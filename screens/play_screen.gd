@@ -19,12 +19,17 @@ signal series_done
 ## Le joueur veut passer au dossier suivant alors que `hold_next` est vrai (une fiche vient d'être complétée) :
 ## l'écran attend ; resume() reprend là où on en était.
 signal held
+## L'explication du premier dossier en image vient d'être lue (« C'est parti ») : elle ne reviendra plus.
+signal visual_intro_seen
 
 const LETTERS := ["A", "B", "C", "D"]
 ## Hauteur de l'image : toujours comprise entre ces deux valeurs, quelle que soit la longueur de l'écran
 ## (sur un téléphone très allongé, la place en trop va aux réponses puis à l'air autour de la carte).
 const ZONE_MIN := 260.0
 const ZONE_MAX := 330.0
+## Dossier en image : pas d'indices écrits sous l'image, elle prend leur place.
+const VISUAL_ZONE_MIN := 320.0
+const VISUAL_ZONE_MAX := 460.0
 ## Hauteur d'une ligne de réponse, mini et maxi.
 const ROW_MIN := 72.0
 const ROW_MAX := 96.0
@@ -65,6 +70,14 @@ const PEPITE_SIZE := 168.0
 ## Vrai quand le dossier à l'écran ferme une série de fiche (end_series_here).
 var series_end := false
 var _pepite: DsStamp
+## Le dossier à l'écran est un dossier en image (pas d'indice écrit, les points suivent la part grattée).
+var visual := false
+## Part de l'image dévoilée à l'instant (dossier en image), puis au moment de répondre.
+var revealed := 0.0
+## Montrer l'explication du dossier en image au premier qui vient (main.gd le règle d'après les réglages).
+var explain_visual := false
+var _visual_intro: Control
+var _gauge: RevealGauge
 var waiting := 0
 ## Quand reviennent les dossiers mis de côté : « demain », « dans 3 jours »… (SaveStore.return_words).
 var return_words := "demain"
@@ -161,6 +174,9 @@ func build() -> void:
 	inner.add_child(_zone)
 	_clues = ClueList.new()
 	inner.add_child(_clues)
+	_gauge = RevealGauge.new()
+	_gauge.visible = false
+	inner.add_child(_gauge)
 	_zone.cover.progress_changed.connect(_on_progress)
 	_zone.cover.scratch_started.connect(_on_scratch_started)
 	# Le frottement s'entend pendant chaque geste de grattage.
@@ -310,6 +326,9 @@ func _show_question() -> void:
 	_q = _questions[_index]
 	_answered = false
 	series_end = false
+	if is_instance_valid(_visual_intro):
+		_visual_intro.queue_free()
+		_visual_intro = null
 	if is_instance_valid(_pepite):
 		_pepite.queue_free()
 	_pepite = null
@@ -321,8 +340,17 @@ func _show_question() -> void:
 		_segments.total = _questions.size()
 		_segments.current = _index
 	_notice = _revision_notice()
-	_card.setup(_pack.dossier_number(_q), _q["categorie"], _q["question"], _pack.collection_of(_q),
-			_pack.difficulty_level(_q), QuestionPack.level_of(_q))
+	visual = QuestionPack.is_visual(_q)
+	revealed = 0.0
+	if visual:
+		_card.setup_visual(_q["question"], _pack.collection_of(_q), _pack.difficulty_level(_q))
+	else:
+		_card.setup(_pack.dossier_number(_q), _q["categorie"], _q["question"], _pack.collection_of(_q),
+				_pack.difficulty_level(_q), QuestionPack.level_of(_q))
+	_clues.visible = not visual
+	_gauge.visible = visual
+	_gauge.fraction = 0.0
+	_hint.text = "Grattez le moins possible" if visual else "Grattez pour découvrir l’image"
 
 	if _pack.has_verified_image(_q):
 		_zone.show_photo(load(_pack.image_path(_q)))
@@ -349,6 +377,8 @@ func _show_question() -> void:
 	_start_hint_pulse()
 	_animate_in()
 	_fit_layout()
+	if visual and explain_visual:
+		_show_visual_intro()
 	# Le texte de la question peut changer de hauteur une fois la mise en page refaite : on règle de nouveau.
 	await get_tree().process_frame
 	_fit_layout()
@@ -359,7 +389,9 @@ func _show_question() -> void:
 func _fit_layout() -> void:
 	if _col == null or _col.size.y <= 0.0 or _slot.visible or _slot_tween != null and _slot_tween.is_running():
 		return
-	_zone.custom_minimum_size.y = ZONE_MIN
+	var zone_min := VISUAL_ZONE_MIN if visual else ZONE_MIN
+	var zone_max := VISUAL_ZONE_MAX if visual else ZONE_MAX
+	_zone.custom_minimum_size.y = zone_min
 	for o in _options:
 		o.custom_minimum_size.y = ROW_MIN
 	_gap_top.custom_minimum_size.y = GAP_TOP_MIN
@@ -367,14 +399,14 @@ func _fit_layout() -> void:
 	var free := floorf(_col.size.y - _col.get_combined_minimum_size().y)
 	if free <= 0.0:
 		return
-	var zone_extra := minf(floorf(free * 0.6), ZONE_MAX - ZONE_MIN)
+	var zone_extra := minf(floorf(free * 0.6), zone_max - zone_min)
 	free -= zone_extra
 	var row_extra := minf(floorf(free / _options.size()), ROW_MAX - ROW_MIN)
 	free -= row_extra * _options.size()
 	var top_extra := minf(floorf(free * 0.5), GAP_TOP_MAX - GAP_TOP_MIN)
 	free -= top_extra
 	var mid_extra := minf(floorf(free * 0.5), GAP_MID_MAX - GAP_MID_MIN)
-	_zone.custom_minimum_size.y = ZONE_MIN + zone_extra
+	_zone.custom_minimum_size.y = zone_min + zone_extra
 	for o in _options:
 		o.custom_minimum_size.y = ROW_MIN + row_extra
 	_gap_top.custom_minimum_size.y = GAP_TOP_MIN + top_extra
@@ -396,6 +428,9 @@ func _hide_hint() -> void:
 func _on_progress(fraction: float) -> void:
 	if _answered:
 		return
+	if visual:
+		_on_visual_progress(fraction)
+		return
 	var before := _clues_found
 	_clues_found = RevealRules.clues_unlocked(fraction)
 	_clues.unlock(_clues_found)
@@ -416,6 +451,30 @@ func _on_progress(fraction: float) -> void:
 		_feedback.text = "Choisissez votre réponse."
 
 
+# Dossier en image : la jauge suit la part dévoilée ; les points baissent à un tiers, puis aux deux tiers.
+func _on_visual_progress(fraction: float) -> void:
+	revealed = fraction
+	var before := _clues_found
+	_clues_found = RevealRules.visual_tier(fraction)
+	_gauge.fraction = fraction
+	if fraction > 0.0:
+		Feedback.scratch_ping()
+	if _clues_found > before and fraction > 0.0:
+		Feedback.say("clue")
+	_show_points(Scoring.points_at(_clues_found), Ds.INK_SOFT)
+	for o in _options:
+		o.disabled = false
+	if fraction <= 0.0:
+		_feedback.text = "Dossier en image : pas d’indice, l’image seule."
+	else:
+		_feedback.text = "Image dévoilée à %d %%." % percent(fraction)
+
+
+## Une part dévoilée en pour cent, arrondie (jamais 0 % dès qu'on a gratté un peu).
+static func percent(fraction: float) -> int:
+	return 0 if fraction <= 0.0 else clampi(roundi(fraction * 100.0), 1, 100)
+
+
 func _on_option_pressed(button: Button) -> void:
 	if _answered:
 		return
@@ -429,8 +488,12 @@ func _on_option_pressed(button: Button) -> void:
 		o.disabled = true
 		if o.text == _correct_text:
 			_mark(o, Ds.SAGE)
-	var hard := QuestionPack.difficulty_of(_q) >= HARD
-	if correct:
+	var hard := QuestionPack.difficulty_of(_q) >= HARD and not visual
+	if correct and visual:
+		_feedback.text = "Exact, sans rien gratter !" if revealed <= 0.0 else "Exact, avec %d %% de l’image dévoilée." % percent(revealed)
+		_points.text = "+%d" % points
+		_points.add_theme_color_override("font_color", Ds.SAGE)
+	elif correct:
 		if clues == 0:
 			_feedback.text = "Exact, sans aucun indice."  # main.gd en fait une pépite (show_pepite) la première fois
 		else:
@@ -443,7 +506,8 @@ func _on_option_pressed(button: Button) -> void:
 		_feedback.text = "Pas tout à fait. Peu de gens le savent." if hard else "Pas tout à fait."
 		_points.text = "0"
 		_points.add_theme_color_override("font_color", Ds.INK_FAINT)
-	_clues.unlock(RevealRules.clue_count())  # la réponse donnée, on lit les deux indices
+	if not visual:
+		_clues.unlock(RevealRules.clue_count())  # la réponse donnée, on lit les deux indices
 	_hide_hint()
 	_zone.cover.reveal_all()
 	var last := _index >= _questions.size() - 1
@@ -455,6 +519,9 @@ func _on_option_pressed(button: Button) -> void:
 		_next.text = "Continuer" if not last else ("Voir le résultat" if _questions.size() > 1 else "Terminer")
 	_set_next_visible(true)
 	var result := {"id": _q["id"], "correct": correct, "clues": clues, "points": points}
+	if visual:
+		result["visual"] = true
+		result["revealed"] = revealed
 	_results.append(result)
 	answered.emit(_q["id"], correct, clues, points)
 
@@ -676,3 +743,66 @@ func _start_hint_pulse() -> void:
 	_hint_tween = create_tween().set_loops()
 	_hint_tween.tween_property(_hint, "modulate:a", 0.62, 1.2).set_trans(Tween.TRANS_SINE)
 	_hint_tween.tween_property(_hint, "modulate:a", 1.0, 1.2).set_trans(Tween.TRANS_SINE)
+
+
+# ---------- Le premier dossier en image : une explication, une seule fois ----------
+
+func _show_visual_intro() -> void:
+	if is_instance_valid(_visual_intro):
+		_visual_intro.queue_free()
+	var veil := ColorRect.new()
+	veil.color = Color(Ds.INK, 0.55)
+	veil.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	veil.mouse_filter = Control.MOUSE_FILTER_STOP  # on ne gratte pas pendant qu'on lit
+	add_child(veil)
+	_visual_intro = veil
+	var center := CenterContainer.new()
+	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	veil.add_child(center)
+	var card := PanelContainer.new()
+	card.add_theme_stylebox_override("panel", Ds.box(Ds.IVORY_CARD, Color(Ds.INK, 0.22), 1, 36, 36, 32, 30))
+	card.custom_minimum_size = Vector2(minf(size.x - Ds.MARGIN * 2, 600.0), 0)
+	center.add_child(card)
+	var col := VBoxContainer.new()
+	col.add_theme_constant_override("separation", Ds.S3)
+	card.add_child(col)
+	var head := HBoxContainer.new()
+	head.add_theme_constant_override("separation", Ds.S2)
+	col.add_child(head)
+	var ic := Ds.icon_rect(_pack.collection_of(_q), 30, Ds.OCHRE)
+	ic.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	head.add_child(ic)
+	head.add_child(Ds.label("Dossier en image", Ds.Role.HEADING, Ds.INK))
+	col.add_child(Ds.label("De temps en temps, un dossier n’a pas d’indice : seulement une image, cachée sous la couche. "
+			+ "Grattez juste ce qu’il faut pour la reconnaître, puis répondez.", Ds.Role.BODY, Ds.INK, true))
+	var demo := RevealGauge.new()
+	demo.fraction = 0.2
+	col.add_child(demo)
+	col.add_child(Ds.label("Moins d’un tiers de l’image dévoilé : 100 points. Jusqu’aux deux tiers : 60. Au-delà : 30.",
+			Ds.Role.SMALL, Ds.INK_SOFT, true))
+	col.add_child(Ds.spacer(Ds.S1))
+	var go := Button.new()
+	go.theme_type_variation = "PrimaryButton"
+	go.custom_minimum_size = Vector2(0, 72)
+	go.text = "C’est parti"
+	go.pressed.connect(close_visual_intro)
+	col.add_child(go)
+	veil.modulate.a = 0.0
+	create_tween().tween_property(veil, "modulate:a", 1.0, 0.25)
+
+
+## « C'est parti » : l'explication s'efface et ne reviendra plus.
+func close_visual_intro() -> void:
+	explain_visual = false
+	if is_instance_valid(_visual_intro):
+		var veil := _visual_intro
+		_visual_intro = null
+		var tw := create_tween()
+		tw.tween_property(veil, "modulate:a", 0.0, 0.2)
+		tw.tween_callback(veil.queue_free)
+	visual_intro_seen.emit()
+
+
+## Vrai tant que l'explication du dossier en image est à l'écran.
+func visual_intro_open() -> bool:
+	return is_instance_valid(_visual_intro)

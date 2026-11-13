@@ -274,8 +274,12 @@ func _row(rank: int, r: Dictionary, q: Dictionary, pack: QuestionPack) -> Contro
 	name.add_theme_font_size_override("font_size", 28)
 	words.add_child(name)
 	var detail: String
+	var in_image := bool(r.get("visual", false))
 	if not correct:
 		detail = "manqué"
+	elif in_image:
+		var pct := PlayScreen.percent(float(r.get("revealed", 0.0)))
+		detail = "rien gratté" if pct == 0 else "%d %% dévoilé" % pct
 	elif clues == 0:
 		detail = "sans indice"
 	else:
@@ -289,8 +293,8 @@ func _row(rank: int, r: Dictionary, q: Dictionary, pack: QuestionPack) -> Contro
 	level.level = pack.difficulty_level(q)
 	level.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	line.add_child(level)
-	line.add_child(Ds.label("Dossier %d, %s" % [pack.dossier_number(q), detail], Ds.Role.SMALL,
-			Ds.INK_SOFT if correct else Ds.TERRACOTTA))
+	var what := "Dossier en image" if in_image else "Dossier %d" % pack.dossier_number(q)
+	line.add_child(Ds.label("%s, %s" % [what, detail], Ds.Role.SMALL, Ds.INK_SOFT if correct else Ds.TERRACOTTA))
 	if bool(r.get("pepite", false)):
 		line.add_child(Ds.label("pépite", Ds.Role.SMALL, PEPITE_INK))
 

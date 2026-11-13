@@ -10,7 +10,9 @@ const PACK_PATHS := ["res://data/packs/svt_01.json", "res://data/packs/astro_01.
 		"res://data/packs/animaux_02.json", "res://data/packs/histoire_02.json", "res://data/packs/arts_02.json",
 		"res://data/packs/geographie_02.json", "res://data/packs/litterature_02.json",
 		# Niveau 2 (dossiers pointus, ouverts une fois la fiche complète) : le champ « niveau » du pack le dit.
-		"res://data/packs/astro_n2_01.json"]
+		"res://data/packs/astro_n2_01.json",
+		# Dossiers en image (un par série de dix, en bonus) : ils reprennent les images des dossiers ci-dessus.
+		"res://data/packs/visuels_01.json"]
 
 ## Où la progression est écrite. Les tests le changent avant d'ajouter le nœud à la scène.
 var save_path := SaveStore.DEFAULT_PATH
@@ -51,6 +53,10 @@ var _series_category := ""
 var _session_played := {}
 ## Une fiche se joue par séries de SERIES_LENGTH dossiers, chacune fermée par son bilan.
 const SERIES_LENGTH := 10
+## Dossier en image : le sixième de chaque série de fiche, une fois joués au moins VISUAL_AFTER dossiers de la fiche
+## (jamais au tout début d'une discipline).
+const VISUAL_SLOT := 6
+const VISUAL_AFTER := 10
 ## Les réponses de la série en cours ({id, correct, clues, points, pepite}) et le niveau au début de la série.
 var _series_results: Array = []
 var _series_mastery_before := {}
@@ -133,6 +139,7 @@ func _ready() -> void:
 	_result.back.connect(_leave_play)
 	_result.next_pressed.connect(_next_series)
 	_play.series_done.connect(func() -> void: _show_series_result(false))
+	_play.visual_intro_seen.connect(func() -> void: _settings.set_visual_seen(true))
 	_result.open_credits.connect(func() -> void: _open_credits(_result))
 
 	_complete = CompleteScreen.new()
@@ -195,6 +202,7 @@ func _start_fiche(category: String, origin: Control) -> void:
 	_session_played = {}
 	_series_results = []
 	_series_mastery_before = _mastery_of(category) if category != "" else {}
+	_play.explain_visual = not _settings.visual_seen
 	_play.start(_pack, queue, [], true)
 	# Où commence la révision (dossiers acquis), pour dire quand les autres reviendront.
 	var revision := -1
@@ -225,11 +233,41 @@ func _adapt_queue() -> void:
 		if _save.is_acquired(rest[i]["id"]):
 			revision = i
 			break
+	var shown := _visual_for_series(rest)
+	if not shown.is_empty():
+		rest.insert(0, shown)
+		if revision >= 0:
+			revision += 1
 	_play.set_upcoming(rest, revision)
 	# Bout de la file : ce qui n'est pas encore acquis reviendra à sa date.
 	var waiting := _save.waiting_in(pool)
 	if rest.is_empty() and waiting > 0:
 		_play.add_note("La suite %s : %s." % [_save.return_words(pool), _waiting_words(waiting)])
+
+
+# Le dossier en image à glisser juste après le dossier qu'on vient de jouer, ou {} : seulement dans une fiche,
+# comme sixième dossier de la série, une fois joués VISUAL_AFTER dossiers de la fiche, un seul par série. On prend
+# d'abord un dossier en image jamais vu, sinon un qui est de retour ; jamais un dont l'image vient d'un dossier
+# de la série en cours ou qui arrive juste après.
+func _visual_for_series(rest: Array) -> Dictionary:
+	if _series_kind != "free" or rest.is_empty() or _series_results.size() != VISUAL_SLOT - 1:
+		return {}
+	if _series_results.any(func(r): return bool(r.get("visual", false))):
+		return {}
+	if _save.played_in(_fiche_pool(_series_category)).size() < VISUAL_AFTER:
+		return {}
+	# Les dossiers de la série en cours et les quatre suivants : leur image ne doit pas revenir tout de suite.
+	var near := {}
+	for q in _series_results + rest.slice(0, 4):
+		near[q["id"]] = true
+	var ok: Array = []
+	for v in _pack.visuals_in(_series_category):
+		if not _session_played.has(v["id"]) and not near.has(v["_source"]):
+			ok.append(v)
+	var fresh := ok.filter(func(v): return _save.plays(v["id"]) == 0)
+	var back := ok.filter(func(v): return _save.plays(v["id"]) > 0 and _save.is_due(v["id"]) and not _save.is_acquired(v["id"]))
+	var pick: Array = fresh if not fresh.is_empty() else back
+	return {} if pick.is_empty() else pick.pick_random()
 
 
 # Une ligne sous l'explication quand le niveau d'une discipline s'annonce ou monte (jamais quand il baisse).
@@ -326,7 +364,8 @@ func _on_answered(question_id: String, correct: bool, clues: int, points: int) -
 	var first_time := _save.plays(question_id) == 0
 	_save.record_answer(question_id, correct, points)
 	# Un dossier difficile trouvé sans indice dès la première rencontre : une pépite.
-	var pepite := is_pepite(q, first_time, correct, points)
+	var visual := QuestionPack.is_visual(q)
+	var pepite := not visual and is_pepite(q, first_time, correct, points)
 	if pepite:
 		_play.show_pepite()
 	if discipline != "":
@@ -341,9 +380,13 @@ func _on_answered(question_id: String, correct: bool, clues: int, points: int) -
 		_save.record_daily_answer(_daily_key, {"id": question_id, "correct": correct, "clues": clues, "points": points})
 	else:
 		_session_played[question_id] = true
+		var entry := {"id": question_id, "correct": correct, "clues": clues, "points": points, "pepite": pepite}
+		if visual:
+			entry["visual"] = true
+			entry["revealed"] = _play.revealed
+		_series_results.append(entry)
 		_adapt_queue()
 		_show_found()
-		_series_results.append({"id": question_id, "correct": correct, "clues": clues, "points": points, "pepite": pepite})
 		# Dix dossiers, ou le bout de la file : le bouton mène au bilan.
 		if _series_results.size() >= SERIES_LENGTH or not _play.has_next():
 			_play.end_series_here()

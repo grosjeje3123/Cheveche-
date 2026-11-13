@@ -54,7 +54,7 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   libre en bas, puis la carte cède jusqu’à 120 px, l’image gardant au moins 200 px ; le texte défile au doigt s’il est plus long.
 - Les **fiches** (« Au hasard » et les 8 disciplines) se jouent **par séries de 10 dossiers** (`main.SERIES_LENGTH`) : les dossiers
   s’enchaînent (« Dossier suivant ») ; au dixième, le bouton devient « Voir le bilan ». On peut aussi s’arrêter avant avec la flèche
-  retour (chaque réponse est déjà enregistrée) : le bilan vient alors pour les dossiers joués. En haut de l’écran : les dossiers
+  retour, qui ramène à la couverture (chaque réponse est déjà enregistrée). En haut de l’écran : les dossiers
   trouvés dans la fiche (« 12 / 30 trouvés », 240 pour « Au hasard ») et une barre fine remplie d’autant.
 - **Bilan de série** (`screens/result_screen.gd`, `main._show_series_result`) : la chouette sur ses livres, une courte pluie de
   papier découpé aux couleurs du carnet (`ds/paper_confetti.gd`, 2,6 s, seulement si au moins la moitié des dossiers est trouvée),
@@ -62,6 +62,18 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   puis chaque dossier avec ses cinq barres de difficulté, ses points et, s’il y a lieu, « pépite ». « Série suivante » reprend la
   file au onzième dossier ; « Retour à la couverture ». Au bout de la file (tous les dossiers de la fiche vus), le bilan n’a que
   le retour. Le défi du jour finit sur le même bilan (chouette et papier), avec son tampon dateur.
+- **Dossier en image** (pack `data/packs/visuels_01.json`, de type « visuels » ; `QuestionPack.visuals`) : 32 dossiers,
+  4 par discipline, sans indice écrit : une question courte (« À quel animal appartient cet œil ? ») sur l’image d’un
+  autre dossier du jeu (champ `image_de` : on reprend son image, ses auteurs, sa licence et sa discipline ; aucune image
+  nouvelle). Dans une fiche, c’est le sixième dossier de chaque série (`main.VISUAL_SLOT`), une fois joués au moins
+  10 dossiers de la fiche (`VISUAL_AFTER` : jamais au tout début d’une discipline), un seul par série, d’abord ceux jamais
+  vus, et jamais un dont l’image vient d’un dossier de la série en cours ou des quatre suivants. Bandeau anthracite
+  « Dossier en image », pas de numéro ; une jauge sous l’image (`ds/reveal_gauge.gd`) suit la part dévoilée :
+  moins d’un tiers, 100 points ; jusqu’aux deux tiers, 60 ; au-delà, 30 (`RevealRules.visual_tier`). La consigne dit
+  « Image dévoilée à 14 %. », la réponse « Exact, avec 36 % de l’image dévoilée. », le bilan « Dossier en image,
+  36 % dévoilé ». La toute première fois, une explication s’ouvre par-dessus le dossier (« C’est parti » ; réglage
+  `visual_seen`). Ils comptent dans les dix dossiers de la série mais ni dans le niveau, ni dans les fiches, ni dans
+  les carnets, ni dans le défi du jour ; pas de pépite. `tools/validate_pack.py` contrôle aussi ce pack.
 - **Pépite** (`main.is_pepite`, `PlayScreen.show_pepite`) : un dossier de difficulté 4 ou 5, trouvé sans indice la toute première
   fois qu’on le rencontre. Le jeu dit « Exact, sans aucun indice. Une pépite ! » et un tampon ocre « Pépite · peu le savent »
   tombe dans le coin de l’image ; le bilan compte les pépites de la série.

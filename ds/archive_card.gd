@@ -97,3 +97,12 @@ func setup(dossier_no: int, category: String, question: String, discipline := ""
 	_band_style.bg_color = Ds.discipline_color(discipline)
 	_icon.texture = Ds.discipline_icon(discipline)
 	_icon.visible = _icon.texture != null
+	_icon.self_modulate = Ds.IVORY
+
+
+## Dossier en image : un bandeau anthracite « Dossier en image », le pictogramme de la discipline en ocre, pas de numéro.
+func setup_visual(question: String, discipline: String, level := 0) -> void:
+	setup(0, "Dossier en image", question, discipline, level)
+	_dossier.text = ""
+	_band_style.bg_color = Ds.INK
+	_icon.self_modulate = Ds.OCHRE

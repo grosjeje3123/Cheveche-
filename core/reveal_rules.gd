@@ -19,3 +19,17 @@ static func clues_unlocked(fraction: float) -> int:
 		if fraction >= t:
 			n += 1
 	return n
+
+
+## Dossier en image : pas d'indice écrit, ce qu'on gratte de l'image fait baisser les points. Moins d'un tiers
+## dévoilé : 100 points ; jusqu'aux deux tiers : 60 ; au-delà : 30 (le même barème que zéro, un ou deux indices).
+const VISUAL_THRESHOLDS := [1.0 / 3.0, 2.0 / 3.0]
+
+
+## Palier d'un dossier en image : 0, 1 ou 2, comme un nombre d'indices (Scoring.points_for s'en sert tel quel).
+static func visual_tier(fraction: float) -> int:
+	var n := 0
+	for t in VISUAL_THRESHOLDS:
+		if fraction >= t:
+			n += 1
+	return n

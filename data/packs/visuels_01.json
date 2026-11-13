@@ -1,0 +1,429 @@
+{
+	"pack": {
+		"id": "visuels_01",
+		"titre": "Dossiers en image n° 1",
+		"type": "visuels",
+		"langue": "fr",
+		"version": 1,
+		"schema": 4,
+		"note": "Chaque dossier reprend l’image d’un dossier du jeu (champ image_de) : mêmes auteurs, mêmes licences."
+	},
+	"questions": [
+		{
+			"id": "visuels01-q01",
+			"image_de": "astro01-q02",
+			"difficulte": 1,
+			"question": "Quelle planète est-ce ?",
+			"reponse_courte": "Mars",
+			"distracteurs": [
+				"Mercure",
+				"Vénus",
+				"Jupiter"
+			],
+			"explication": "C’est Mars, avec sa teinte de rouille due aux oxydes de fer de son sol. La longue entaille sombre qui la traverse est Valles Marineris, un ensemble de canyons long de plus de 4 000 km."
+		},
+		{
+			"id": "visuels01-q02",
+			"image_de": "astro02-q10",
+			"difficulte": 2,
+			"question": "Quelle planète est-ce ?",
+			"reponse_courte": "Neptune",
+			"distracteurs": [
+				"Uranus",
+				"Saturne",
+				"La Terre"
+			],
+			"explication": "C’est Neptune, photographiée par la sonde Voyager 2, la seule à l’avoir survolée, en 1989. Sa couleur bleue vient du méthane de son atmosphère, qui absorbe la lumière rouge."
+		},
+		{
+			"id": "visuels01-q03",
+			"image_de": "astro02-q04",
+			"difficulte": 2,
+			"question": "Quelle figure d’étoiles est tracée dans ce ciel ?",
+			"reponse_courte": "La Grande Ourse",
+			"distracteurs": [
+				"Orion",
+				"Cassiopée",
+				"La Croix du Sud"
+			],
+			"explication": "Ces sept étoiles forment la « casserole », ou Grand Chariot, de la constellation de la Grande Ourse. En prolongeant le côté formé par les deux étoiles du bout de la casserole, on tombe sur l’étoile Polaire, qui indique le nord."
+		},
+		{
+			"id": "visuels01-q04",
+			"image_de": "astro02-q12",
+			"difficulte": 2,
+			"question": "Quel est cet engin, photographié en orbite ?",
+			"reponse_courte": "Le télescope spatial Hubble",
+			"distracteurs": [
+				"La Station spatiale internationale",
+				"Le satellite Spoutnik 1",
+				"Le télescope James Webb"
+			],
+			"explication": "C’est Hubble, lancé en 1990 et placé au-dessus de l’atmosphère, qui brouille les images des télescopes au sol. La photo a été prise depuis la navette Atlantis, qui venait de le relâcher après sa dernière mission d’entretien, en 2009."
+		},
+		{
+			"id": "visuels01-q05",
+			"image_de": "animaux01-q12",
+			"difficulte": 2,
+			"question": "À quel animal appartient cet œil ?",
+			"reponse_courte": "Le tigre",
+			"distracteurs": [
+				"Le lion",
+				"Le jaguar",
+				"Le léopard"
+			],
+			"explication": "C’est l’œil d’un tigre de Sibérie, ou tigre de l’Amour : les rayures noires sur un pelage orangé le trahissent, là où le jaguar et le léopard portent des taches. C’est le plus grand des félins."
+		},
+		{
+			"id": "visuels01-q06",
+			"image_de": "animaux01-q11",
+			"difficulte": 1,
+			"question": "Quel est cet animal ?",
+			"reponse_courte": "L’ornithorynque",
+			"distracteurs": [
+				"La loutre",
+				"Le castor",
+				"Le phoque"
+			],
+			"explication": "C’est un ornithorynque, qui nage dans une rivière du Queensland, en Australie. Son bec de canard, sa queue de castor et ses pattes palmées ont fait croire à une supercherie aux premiers naturalistes européens."
+		},
+		{
+			"id": "visuels01-q07",
+			"image_de": "animaux02-q07",
+			"difficulte": 1,
+			"question": "Quel est cet animal marin ?",
+			"reponse_courte": "L’hippocampe",
+			"distracteurs": [
+				"Le poisson-clown",
+				"La murène",
+				"La rascasse"
+			],
+			"explication": "C’est un hippocampe, un poisson qui nage en position verticale et s’accroche aux algues avec sa queue. Chez lui, c’est le mâle qui porte les œufs, dans une poche ventrale."
+		},
+		{
+			"id": "visuels01-q08",
+			"image_de": "animaux02-q15",
+			"difficulte": 3,
+			"question": "À quel animal appartient cette patte, vue à travers une vitre ?",
+			"reponse_courte": "Au gecko",
+			"distracteurs": [
+				"À la rainette",
+				"Au caméléon",
+				"À la salamandre"
+			],
+			"explication": "C’est la patte d’un gecko, vue de dessous. Ses doigts élargis portent des millions de poils microscopiques, qui lui permettent de tenir sur le verre, et même au plafond, sans colle ni ventouse."
+		},
+		{
+			"id": "visuels01-q09",
+			"image_de": "arts01-q02",
+			"difficulte": 1,
+			"question": "Quel est ce tableau ?",
+			"reponse_courte": "La Nuit étoilée",
+			"distracteurs": [
+				"Les Tournesols",
+				"Impression, soleil levant",
+				"La Terrasse du café le soir"
+			],
+			"explication": "C’est La Nuit étoilée de Vincent van Gogh, peinte en juin 1889 à Saint-Rémy-de-Provence, d’après la vue de sa fenêtre et de mémoire. On la reconnaît à son ciel tourbillonnant et au cyprès sombre du premier plan."
+		},
+		{
+			"id": "visuels01-q10",
+			"image_de": "arts02-q08",
+			"difficulte": 1,
+			"question": "Quel est ce tableau ?",
+			"reponse_courte": "La Jeune Fille à la perle",
+			"distracteurs": [
+				"La Joconde",
+				"La Laitière",
+				"La Dentellière"
+			],
+			"explication": "C’est La Jeune Fille à la perle de Johannes Vermeer, peinte vers 1665 et conservée au Mauritshuis, à La Haye. Le bleu de son turban est de l’outremer, tiré du lapis-lazuli, une pierre importée de très loin et très coûteuse."
+		},
+		{
+			"id": "visuels01-q11",
+			"image_de": "arts01-q14",
+			"difficulte": 2,
+			"question": "Quelle est cette fresque ?",
+			"reponse_courte": "La Création d’Adam",
+			"distracteurs": [
+				"La Cène",
+				"L’École d’Athènes",
+				"Le Jugement dernier"
+			],
+			"explication": "C’est La Création d’Adam, peinte par Michel-Ange sur la voûte de la chapelle Sixtine, au Vatican. Les deux doigts qui se frôlent, celui de Dieu et celui d’Adam, sont l’un des détails les plus célèbres de la peinture."
+		},
+		{
+			"id": "visuels01-q12",
+			"image_de": "arts01-q04",
+			"difficulte": 1,
+			"question": "Quelle est cette sculpture ?",
+			"reponse_courte": "Le Penseur",
+			"distracteurs": [
+				"Le Baiser",
+				"Le David",
+				"Les Bourgeois de Calais"
+			],
+			"explication": "C’est Le Penseur d’Auguste Rodin. Cet exemplaire en bronze est au musée d’art de Cleveland, aux États-Unis : il en existe plus d’une vingtaine de grands, répartis dans le monde."
+		},
+		{
+			"id": "visuels01-q13",
+			"image_de": "geographie01-q13",
+			"difficulte": 1,
+			"question": "Quel pays occupe le centre de cette image satellite ?",
+			"reponse_courte": "L’Italie",
+			"distracteurs": [
+				"La Grèce",
+				"L’Espagne",
+				"Le Portugal"
+			],
+			"explication": "C’est la péninsule italienne, photographiée par satellite en mars 2003. On reconnaît la botte, avec la Corse et la Sardaigne à l’ouest ; la neige souligne les Alpes, au nord, et les Apennins, qui la parcourent du nord au sud."
+		},
+		{
+			"id": "visuels01-q14",
+			"image_de": "geographie01-q10",
+			"difficulte": 3,
+			"question": "Quel détroit voit-on depuis l’espace ?",
+			"reponse_courte": "Le détroit de Gibraltar",
+			"distracteurs": [
+				"Le Bosphore",
+				"Le pas de Calais",
+				"Le détroit de Messine"
+			],
+			"explication": "C’est le détroit de Gibraltar, vu par un satellite : l’Espagne au nord, le Maroc au sud. Large d’environ 14 km à son point le plus étroit, il fait communiquer l’océan Atlantique et la Méditerranée."
+		},
+		{
+			"id": "visuels01-q15",
+			"image_de": "geographie02-q10",
+			"difficulte": 2,
+			"question": "Quelle ville voit-on ici, avec un célèbre volcan au loin ?",
+			"reponse_courte": "Tokyo",
+			"distracteurs": [
+				"Séoul",
+				"Shanghai",
+				"Hong Kong"
+			],
+			"explication": "Ce sont les gratte-ciel du quartier de Shinjuku, à Tokyo, avec à l’horizon le mont Fuji enneigé, à une centaine de kilomètres. Ce volcan de 3 776 m est le point culminant du Japon."
+		},
+		{
+			"id": "visuels01-q16",
+			"image_de": "geographie02-q04",
+			"difficulte": 2,
+			"question": "Quelle ville voit-on ici ?",
+			"reponse_courte": "Moscou",
+			"distracteurs": [
+				"Saint-Pétersbourg",
+				"Prague",
+				"Varsovie"
+			],
+			"explication": "C’est le Kremlin de Moscou, au bord de la Moskova, avec ses tours de brique rouge et les coupoles dorées de ses cathédrales. Kremlin signifie « forteresse » en russe."
+		},
+		{
+			"id": "visuels01-q17",
+			"image_de": "histoire02-q03",
+			"difficulte": 2,
+			"question": "Quelle ville cette statue symbolise-t-elle ?",
+			"reponse_courte": "Rome",
+			"distracteurs": [
+				"Athènes",
+				"Carthage",
+				"Constantinople"
+			],
+			"explication": "C’est la Louve capitoline, conservée aux musées du Capitole, à Rome. Selon la légende, une louve nourrit les jumeaux Romulus et Rémus, futurs fondateurs de la ville ; les deux enfants placés sous la louve ont été ajoutés bien plus tard, à la Renaissance."
+		},
+		{
+			"id": "visuels01-q18",
+			"image_de": "histoire01-q05",
+			"difficulte": 2,
+			"question": "Quelle est cette œuvre ?",
+			"reponse_courte": "La tapisserie de Bayeux",
+			"distracteurs": [
+				"La Dame à la licorne",
+				"La tenture de l’Apocalypse",
+				"Les Très Riches Heures du duc de Berry"
+			],
+			"explication": "C’est la « tapisserie » de Bayeux, en réalité une broderie de laine sur toile de lin, longue d’environ 70 mètres, qui raconte la conquête de l’Angleterre par Guillaume de Normandie. L’inscription latine de cette scène dit que le roi Harold est tué, à Hastings, en 1066."
+		},
+		{
+			"id": "visuels01-q19",
+			"image_de": "histoire02-q15",
+			"difficulte": 2,
+			"question": "Quel président des États-Unis est-ce ?",
+			"reponse_courte": "Abraham Lincoln",
+			"distracteurs": [
+				"George Washington",
+				"Ulysses S. Grant",
+				"Theodore Roosevelt"
+			],
+			"explication": "C’est Abraham Lincoln, président des États-Unis de 1861 à 1865, reconnaissable à sa barbe sans moustache. Il a mené le Nord pendant la guerre de Sécession et fait abolir l’esclavage."
+		},
+		{
+			"id": "visuels01-q20",
+			"image_de": "histoire02-q02",
+			"difficulte": 2,
+			"question": "Quel événement ce tableau montre-t-il ?",
+			"reponse_courte": "Le sacre de Napoléon",
+			"distracteurs": [
+				"Le mariage de Louis XVI",
+				"Le couronnement de Charlemagne",
+				"Le sacre de Charles X"
+			],
+			"explication": "C’est Le Sacre de Napoléon de Jacques-Louis David, immense toile conservée au Louvre. Le 2 décembre 1804, à Notre-Dame de Paris, Napoléon, qui vient de se couronner lui-même, couronne Joséphine sous les yeux du pape."
+		},
+		{
+			"id": "visuels01-q21",
+			"image_de": "litterature01-q13",
+			"difficulte": 1,
+			"question": "De quel livre vient cette illustration ?",
+			"reponse_courte": "Alice au pays des merveilles",
+			"distracteurs": [
+				"Peter Pan",
+				"Le Magicien d’Oz",
+				"Les Voyages de Gulliver"
+			],
+			"explication": "C’est le goûter du Chapelier fou, dessiné par John Tenniel pour Alice au pays des merveilles de Lewis Carroll, paru en 1865. Autour de la table : Alice, le Lièvre de Mars, le Chapelier et le Loir endormi."
+		},
+		{
+			"id": "visuels01-q22",
+			"image_de": "litterature01-q10",
+			"difficulte": 1,
+			"question": "Quel personnage de roman est-ce ?",
+			"reponse_courte": "Sherlock Holmes",
+			"distracteurs": [
+				"Hercule Poirot",
+				"Arsène Lupin",
+				"Le docteur Watson"
+			],
+			"explication": "C’est Sherlock Holmes, dessiné par Sidney Paget, l’illustrateur de ses enquêtes dans le Strand Magazine. Le détective imaginé par Arthur Conan Doyle y apparaît souvent la pipe à la bouche."
+		},
+		{
+			"id": "visuels01-q23",
+			"image_de": "litterature01-q06",
+			"difficulte": 2,
+			"question": "Quel auteur de théâtre est-ce ?",
+			"reponse_courte": "Molière",
+			"distracteurs": [
+				"Jean Racine",
+				"Pierre Corneille",
+				"Beaumarchais"
+			],
+			"explication": "C’est Molière, peint par son ami Pierre Mignard ; le portrait est conservé au musée Condé, à Chantilly. Auteur de L’Avare et du Malade imaginaire, il est le grand maître de la comédie du XVIIe siècle."
+		},
+		{
+			"id": "visuels01-q24",
+			"image_de": "litterature01-q04",
+			"difficulte": 2,
+			"question": "De quel roman vient cette gravure ?",
+			"reponse_courte": "Vingt mille lieues sous les mers",
+			"distracteurs": [
+				"L’Île mystérieuse",
+				"Moby Dick",
+				"Robinson Crusoé"
+			],
+			"explication": "Cette gravure illustre Vingt mille lieues sous les mers de Jules Verne, paru en 1869-1870 chez l’éditeur Hetzel : l’équipage du Nautilus y affronte des poulpes géants."
+		},
+		{
+			"id": "visuels01-q25",
+			"image_de": "nature01-q10",
+			"difficulte": 2,
+			"question": "Quelle est cette fleur ?",
+			"reponse_courte": "Le lotus",
+			"distracteurs": [
+				"Le nénuphar",
+				"La pivoine",
+				"Le magnolia"
+			],
+			"explication": "C’est une fleur de lotus, plante aquatique sacrée en Asie. Contrairement au nénuphar, dont les fleurs flottent à la surface, le lotus dresse ses fleurs et ses feuilles au-dessus de l’eau."
+		},
+		{
+			"id": "visuels01-q26",
+			"image_de": "nature01-q12",
+			"difficulte": 1,
+			"question": "Quel dinosaure est-ce ?",
+			"reponse_courte": "Le tyrannosaure",
+			"distracteurs": [
+				"Le tricératops",
+				"Le diplodocus",
+				"Le stégosaure"
+			],
+			"explication": "C’est le moulage d’un squelette de tyrannosaure, au muséum d’histoire naturelle de Cleveland. On le reconnaît à son énorme crâne et à ses bras minuscules, qui n’avaient que deux doigts."
+		},
+		{
+			"id": "visuels01-q27",
+			"image_de": "nature01-q05",
+			"difficulte": 3,
+			"question": "Quel est ce champignon ?",
+			"reponse_courte": "L’amanite phalloïde",
+			"distracteurs": [
+				"Le cèpe de Bordeaux",
+				"La girolle",
+				"Le rosé des prés"
+			],
+			"explication": "C’est une amanite phalloïde, le champignon le plus dangereux de nos forêts : son chapeau verdâtre, ses lames blanches et l’anneau de son pied doivent alerter. En cas de doute, on fait vérifier sa cueillette par un pharmacien."
+		},
+		{
+			"id": "visuels01-q28",
+			"image_de": "svt01-q02",
+			"difficulte": 2,
+			"question": "Quelle est cette plante ?",
+			"reponse_courte": "La dionée attrape-mouche",
+			"distracteurs": [
+				"Le népenthès",
+				"L’aloe vera",
+				"La sensitive"
+			],
+			"explication": "C’est une dionée attrape-mouche, une plante carnivore. Ses feuilles en forme de mâchoire se referment sur l’insecte quand deux de leurs poils sensibles sont touchés coup sur coup ; la plante digère ensuite sa proie pour en tirer l’azote qui manque au sol."
+		},
+		{
+			"id": "visuels01-q29",
+			"image_de": "sciences01-q03",
+			"difficulte": 2,
+			"question": "Quel savant est-ce ?",
+			"reponse_courte": "Isaac Newton",
+			"distracteurs": [
+				"Galilée",
+				"Blaise Pascal",
+				"Johannes Kepler"
+			],
+			"explication": "C’est Isaac Newton, peint en 1689 par Godfrey Kneller, deux ans après la parution de son grand ouvrage, les Principia, où il expose la loi de la gravitation universelle."
+		},
+		{
+			"id": "visuels01-q30",
+			"image_de": "sciences01-q09",
+			"difficulte": 1,
+			"question": "Quelle scientifique est-ce ?",
+			"reponse_courte": "Marie Curie",
+			"distracteurs": [
+				"Rosalind Franklin",
+				"Lise Meitner",
+				"Ada Lovelace"
+			],
+			"explication": "C’est Marie Curie, dans son laboratoire. Pionnière de l’étude de la radioactivité, elle a reçu le prix Nobel de physique en 1903, puis celui de chimie en 1911."
+		},
+		{
+			"id": "visuels01-q31",
+			"image_de": "svt01-q07",
+			"difficulte": 2,
+			"question": "Que montre cette image prise au microscope électronique ?",
+			"reponse_courte": "Des globules rouges",
+			"distracteurs": [
+				"Des grains de pollen",
+				"Des bactéries",
+				"Des globules blancs"
+			],
+			"explication": "Ce sont des globules rouges, vus au microscope électronique à balayage. Celui de droite a la forme normale, un disque creusé au centre ; celui de gauche, plus rond, est un sphérocyte, une forme anormale."
+		},
+		{
+			"id": "visuels01-q32",
+			"image_de": "svt01-q15",
+			"difficulte": 2,
+			"question": "Quelle molécule ce modèle représente-t-il ?",
+			"reponse_courte": "L’ADN",
+			"distracteurs": [
+				"L’hémoglobine",
+				"Le glucose",
+				"L’eau"
+			],
+			"explication": "C’est un modèle de la molécule d’ADN, où chaque boule est un atome : on y devine les deux brins enroulés en double hélice. L’ordre de ses bases, A, T, C et G, porte l’information génétique."
+		}
+	]
+}

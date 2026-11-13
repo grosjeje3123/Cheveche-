@@ -10,6 +10,8 @@ var sound := true
 var vibration := true
 ## La page « Comment jouer » a été vue avant la première série : elle ne s'ouvre plus d'elle-même.
 var rules_seen := false
+## L'explication du premier dossier en image a été lue : elle ne revient plus.
+var visual_seen := false
 
 
 func _init(settings_path := DEFAULT_PATH) -> void:
@@ -21,6 +23,7 @@ func load_from_disk() -> void:
 	sound = true
 	vibration = true
 	rules_seen = false
+	visual_seen = false
 	if not FileAccess.file_exists(path):
 		return
 	var file := FileAccess.open(path, FileAccess.READ)
@@ -32,6 +35,7 @@ func load_from_disk() -> void:
 		sound = bool(data.get("sound", true))
 		vibration = bool(data.get("vibration", true))
 		rules_seen = bool(data.get("rules_seen", false))
+		visual_seen = bool(data.get("visual_seen", false))
 
 
 func save() -> bool:
@@ -39,7 +43,8 @@ func save() -> bool:
 	if file == null:
 		push_warning("Réglages non enregistrés : %s" % path)
 		return false
-	file.store_string(JSON.stringify({"sound": sound, "vibration": vibration, "rules_seen": rules_seen}, "\t"))
+	file.store_string(JSON.stringify({"sound": sound, "vibration": vibration, "rules_seen": rules_seen,
+			"visual_seen": visual_seen}, "\t"))
 	file.close()
 	return true
 
@@ -56,4 +61,9 @@ func set_vibration(on: bool) -> void:
 
 func set_rules_seen(seen: bool) -> void:
 	rules_seen = seen
+	save()
+
+
+func set_visual_seen(seen: bool) -> void:
+	visual_seen = seen
 	save()
