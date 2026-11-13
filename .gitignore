@@ -16,3 +16,5 @@ images_sources/
 
 # Fichiers de test
 assets/images/svt_01/_test_photo.png*
+__pycache__/
+*.pyc

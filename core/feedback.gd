@@ -23,6 +23,8 @@ const EFFECTS := {
 	# Page « Fiche complète » : le tampon qui se pose (avec un petit choc dans la main), puis le jingle, sans vibrer deux fois.
 	"stamp": ["stamp.wav", -3.0, 30],
 	"complete": ["series_great.wav", -5.0, 0],
+	# Carnet : une page qu'on tourne, la couverture qu'on ouvre.
+	"page": ["page.wav", -8.0, 0],
 }
 const SOUNDS_DIR := "res://assets/sounds"
 

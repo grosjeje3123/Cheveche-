@@ -109,7 +109,7 @@ func setup(pack: QuestionPack, save: SaveStore) -> void:
 	var links := HBoxContainer.new()
 	links.add_theme_constant_override("separation", 0)
 	col.add_child(links)
-	links.add_child(_link("Carnet", func() -> void: open_carnet.emit()))
+	links.add_child(_link("Carnets", func() -> void: open_carnet.emit()))
 	links.add_child(_link("Mes résultats", func() -> void: open_results.emit()))
 	links.add_child(_link("Réglages", func() -> void: open_settings.emit()))
 

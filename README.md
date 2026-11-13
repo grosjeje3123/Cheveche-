@@ -138,14 +138,19 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   manqué repart à zéro. Les anciennes sauvegardes : un dossier trouvé sans indice revient une fois pour devenir acquis.
   Les phrases disent la vraie date : « La suite demain », « dans 3 jours », « à partir de demain » quand les retours s’étalent
   (`SaveStore.return_words`).
-- **Carnet** (`screens/carnet_screen.gd`, lien « Carnet » de la couverture) : tous les dossiers joués, trouvés ou manqués
-  (on en a déjà vu la réponse), rangés par discipline, avec leur vignette, leur titre, leur réponse et leur état (à revoir,
-  à consolider, acquis). Onglets : Tout, À revoir, Acquis, Favoris. Toucher une ligne ouvre la fiche du dossier : l’image,
-  la question, la réponse, l’explication, l’anecdote, le crédit, la date de retour, et l’étoile « Garder en favori »
-  (champ `favoris` de la sauvegarde, transmis par le code de sauvegarde). La flèche ramène de la fiche à la liste, puis à la couverture.
-- **Vignettes** : `tools/make_thumbs.py` fait un carré de 176 px, recadré au centre, de chaque image vérifiée
-  (`assets/thumbs/<pack>/<fichier>.webp`, environ 2 Mo en tout) : le carnet ne charge jamais les grandes images dans la liste.
-  À relancer après l’ajout d’images.
+- **Carnets** (`screens/carnet_screen.gd`, lien « Carnets » de la couverture) : une étagère de petits carnets de naturaliste,
+  un par discipline et celui des favoris (`ds/notebook_cover.gd` : toile de la couleur de la discipline, dos, élastique,
+  pictogramme, étiquette « Astronomie · 12 pages » ; un carnet vierge est plus pâle). Chaque dossier joué, trouvé ou manqué
+  (on en a déjà vu la réponse), y a sa page. Toucher un carnet : la couverture s’ouvre en pivotant autour du dos, sur le
+  sommaire (une ligne par page, avec son état ; toucher une ligne mène à sa page). On tourne les pages en glissant le doigt
+  (vers la gauche : la suivante) ou avec les flèches du bas ; la page se replie vers la reliure en jetant une ombre sur la
+  suivante, avec un bruit de papier (`page.wav`, synthétisé par `tools/make_sounds.py`).
+- **Une page** (`ds/notebook_paper.gd` : papier clair, trame de points, ombre de la reliure) : la photo tirée sur papier et
+  scotchée de travers, son crédit, la question, la réponse en grand (italique), l’explication, l’anecdote en note de marge
+  (trait ocre), puis en bas la phrase d’état (« À revoir : il revient demain. ») et un tampon : « À revoir · demain »,
+  « À consolider · dans 7 jours » (ocre), « Acquis · sans indice » (vert). L’étoile en haut à droite garde la page dans les
+  favoris (champ `favoris` de la sauvegarde, transmis par le code de sauvegarde). La flèche du haut referme le carnet,
+  puis ramène à la couverture.
 
 ## Poids
 - Les 270 images sont importées à 900 px au plus sur leur grand côté, en WebP avec perte (qualité 0,7) : `process/size_limit`

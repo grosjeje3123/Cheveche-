@@ -138,6 +138,35 @@ def tampon(seed=11):
     return out
 
 
+def page(seed=23):
+    """Une page de carnet qu'on tourne : un souffle de papier qui monte puis retombe (bruit feutré, entre 500 Hz et
+    3 kHz environ), et le petit claquement mat de la feuille qui se pose. Court et discret."""
+    rnd = random.Random(seed)
+    n = int(0.36 * RATE)
+    out = [0.0] * n
+    haut = _passe_bas(_coef(3000))
+    bas = _passe_bas(_coef(500))
+    for i in range(n):
+        t = i / RATE
+        x = haut(rnd.uniform(-1, 1))
+        x = x - bas(x)              # passe-bande : ni grave, ni sifflant
+        # le geste : monte en 0,12 s, retombe en 0,2 s, avec un léger froissement irrégulier
+        geste = math.sin(math.pi * min(1.0, t / 0.3)) ** 1.6 if t < 0.3 else 0.0
+        froisse = 0.75 + 0.25 * math.sin(2 * math.pi * 23 * t + 1.3 * math.sin(2 * math.pi * 7 * t))
+        out[i] += 1.6 * geste * froisse * x
+    pose = int(0.27 * RATE)        # la feuille se pose
+    sourd = _passe_bas(_coef(900))
+    for i in range(int(0.04 * RATE)):
+        t = i / RATE
+        out[pose + i] += 0.5 * min(1.0, t / 0.001) * math.exp(-t / 0.009) * sourd(rnd.uniform(-1, 1)) * 3.0
+    peak = max(abs(v) for v in out)
+    out = [0.55 * v / peak for v in out]
+    m = int(0.03 * RATE)
+    for i in range(m):
+        out[-1 - i] *= i / m
+    return out
+
+
 def mallet(freq, dur, amp, tau=0.35):
     """Note de marimba douce : une fondamentale et un partiel aigu qui s'éteint vite (attaque feutrée)."""
     out = []
@@ -239,6 +268,8 @@ def main(folder):
     write(os.path.join(folder, "scratch.wav"), scratch_loop())
     # Page « Fiche complète » : le tampon qui se pose.
     write(os.path.join(folder, "stamp.wav"), tampon())
+    # Carnet : une page qu'on tourne.
+    write(os.path.join(folder, "page.wav"), page())
     # Ouverture (au lancement seulement) : un petit thème de marimba à l'espagnole.
     write(os.path.join(folder, "startup.wav"), ouverture())
     # Fin de série : trois petites phrases, de la plus enjouée à la plus retenue (jamais triste).

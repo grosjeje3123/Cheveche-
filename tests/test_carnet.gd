@@ -1,6 +1,6 @@
 extends SceneTree
-## Révision espacée (boîtes 0 à 3 : demain, 3 jours, 7 jours, acquis) et carnet de curiosités (liste par discipline,
-## onglets, fiche d'un dossier, favoris).
+## Révision espacée (boîtes 0 à 3 : demain, 3 jours, 7 jours, acquis) et carnets à feuilleter (l'étagère, un carnet
+## par discipline et celui des favoris, le sommaire, les pages qu'on tourne du doigt ou par les flèches, l'étoile).
 
 const SAVE := "user://test_carnet.json"
 const SETTINGS := "user://test_carnet_settings.json"
@@ -85,11 +85,13 @@ func _initialize() -> void:
 	await create_timer(1.0).timeout
 	var carnet: CarnetScreen = main._carnet
 	var links: Array = main._cover.find_children("*", "Button", true, false).map(func(b): return (b as Button).text)
-	check("couverture : un lien « Carnet » à côté de « Mes résultats » et « Réglages »", links.has("Carnet") and links.has("Mes résultats") and links.has("Réglages"))
+	check("couverture : un lien « Carnets » à côté de « Mes résultats » et « Réglages »", links.has("Carnets") and links.has("Mes résultats") and links.has("Réglages"))
 	main._cover.open_carnet.emit()
 	await create_timer(0.6).timeout
-	check("carnet vide : « 0 découverte pour l’instant » et une phrase qui dit comment le remplir", main._current == carnet
-			and carnet._count.text == "0" and _labels(carnet).contains("Votre carnet se remplit à chaque dossier joué"))
+	check("carnets vides : « 0 découverte pour l’instant » et une phrase qui dit comment les remplir", main._current == carnet
+			and carnet._count.text == "0" and _labels(carnet).contains("Vos carnets se remplissent à chaque dossier joué"))
+	check("l'étagère : huit carnets et celui des favoris, tous vierges", carnet.covers.size() == 9 and carnet.covers.has("Favoris")
+			and carnet.covers.values().all(func(b): return (b.get_child(0) as NotebookCover).blank))
 	carnet.back()
 	await create_timer(0.6).timeout
 	check("la flèche ramène à la couverture", main._current == main._cover)
@@ -105,51 +107,85 @@ func _initialize() -> void:
 	main._save.record_answer(hist["id"], true, 100, _day(-10))
 	main._cover.open_carnet.emit()
 	await create_timer(0.6).timeout
-	var text := _labels(carnet)
 	check("5 découvertes, dont 2 acquises", carnet._count.text == "5" and carnet._count_caption.text == "découvertes, dont 2 acquises", carnet._count_caption.text)
-	check("rangé par discipline, dans l'ordre du jeu : Astronomie avant Histoire", text.find("Astronomie") >= 0 and text.find("Astronomie") < text.find("Histoire"))
-	check("en-tête de discipline : « 4, dont 1 acquis »", text.contains("4, dont 1 acquis"))
-	check("chaque ligne dit son état", text.contains("à revoir") and text.contains("à consolider") and text.contains("acquis"))
-	var rows: Array = carnet._body.get_children().filter(func(c): return c is Button)
-	check("une ligne par dossier joué", rows.size() == 5, str(rows.size()))
-	check("les dossiers jamais joués n'y sont pas", not text.contains(str(astro[5].get("titre", "§"))))
-	carnet._set_tab(CarnetScreen.Tab.REVIEW)
-	await create_timer(0.3).timeout
-	check("onglet « À revoir » : les 3 dossiers pas encore acquis", carnet._body.get_children().filter(func(c): return c is Button).size() == 3)
-	carnet._set_tab(CarnetScreen.Tab.ACQUIRED)
-	await create_timer(0.3).timeout
-	check("onglet « Acquis » : 2 dossiers", carnet._body.get_children().filter(func(c): return c is Button).size() == 2)
-	carnet._set_tab(CarnetScreen.Tab.FAVORITES)
-	await create_timer(0.3).timeout
-	check("onglet « Favoris » vide : il dit comment en ajouter", _labels(carnet).contains("touchez l’étoile d’un dossier"))
-	carnet._set_tab(CarnetScreen.Tab.ALL)
-	await create_timer(0.3).timeout
+	var astro_cover: NotebookCover = carnet.covers["Astronomie"].get_child(0)
+	check("carnet d'astronomie : « 4 pages », pas vierge", astro_cover.caption == "4 pages" and not astro_cover.blank)
+	check("carnet d'histoire : « 1 page » ; les sciences : vierge", (carnet.covers["Histoire"].get_child(0) as NotebookCover).caption == "1 page"
+			and (carnet.covers["Sciences"].get_child(0) as NotebookCover).blank)
+	check("l'étagère dans l'ordre du jeu, les favoris en dernier", carnet.covers.keys() == ProgressScreen.DISCIPLINES + ["Favoris"], str(carnet.covers.keys()))
 
-	# La fiche d'un dossier : tout ce qu'on a lu en jouant, et l'étoile.
-	carnet._show_detail(astro[1]["id"])
-	await create_timer(0.4).timeout
-	var detail := _labels(carnet)
-	check("fiche : la question, la réponse, l'explication", detail.contains(str(astro[1]["question"])) and detail.contains(str(astro[1]["reponse_courte"]))
-			and detail.contains(str(astro[1]["explication"]).left(40)))
-	check("fiche : « À revoir : il revient demain. »", detail.contains("À revoir : il revient demain."))
-	check("fiche : le résumé et les onglets s'effacent", not carnet._top.visible)
+	# Le carnet d'astronomie : la couverture s'ouvre sur le sommaire.
+	carnet.covers["Astronomie"].pressed.emit()
+	await create_timer(0.1).timeout
+	check("la couverture s'ouvre (elle pivote autour du dos)", carnet._frame.get_children().any(func(c): return c is NotebookCover))
+	await create_timer(0.6).timeout
+	check("ouverte : plus de couverture par-dessus", not carnet._frame.get_children().any(func(c): return c is NotebookCover and not c.is_queued_for_deletion()))
+	var text := _labels(carnet)
+	check("sommaire : « Astronomie », « 4 pages, dont 1 acquise. »", carnet.book == "Astronomie" and carnet.page_index == 0 and text.contains("4 pages, dont 1 acquise."), text.left(200))
+	check("sommaire : une ligne par dossier joué, avec son état", text.contains("à revoir") and text.contains("à consolider") and text.contains("acquis"))
+	check("sommaire : les dossiers jamais joués n'y sont pas", not text.contains(str(astro[5].get("titre", "§"))))
+	check("en bas : « sommaire », la flèche de gauche éteinte", carnet._page_label.text == "sommaire" and carnet._prev.disabled and not carnet._next.disabled)
+	# On tourne la page avec la flèche.
+	carnet._next.pressed.emit()
+	await create_timer(0.1).timeout
+	check("la page tourne : l'ancienne se replie vers la reliure, la nouvelle est dessous", carnet._paper_area.get_child_count() >= 2)
+	await create_timer(0.5).timeout
+	check("page 1 : le premier dossier", carnet.page_index == 1 and carnet.detail_id == astro[0]["id"] and carnet._page_label.text == "page 1 sur 4")
+	check("la page tournée est partie", carnet._paper_area.get_children().filter(func(c): return not c.is_queued_for_deletion()).size() == 1)
+	# Du doigt : glisser vers la gauche, page suivante ; vers la droite, page précédente.
+	_swipe(carnet, -200)
+	await create_timer(0.5).timeout
+	check("glissé vers la gauche : page 2", carnet.page_index == 2 and carnet.detail_id == astro[1]["id"], str(carnet.page_index))
+	var page := _labels(carnet)
+	check("page : la question, la réponse, l'explication, l'anecdote", page.contains(str(astro[1]["question"])) and page.contains(str(astro[1]["reponse_courte"]))
+			and page.contains(str(astro[1]["explication"]).left(40)) and page.contains("Le saviez-vous ?"))
+	check("page : « À revoir : il revient demain. » et le tampon « À revoir · demain »", page.contains("À revoir : il revient demain.")
+			and carnet._stage_stamp.top_text == "À revoir" and carnet._stage_stamp.bottom_text == "demain")
+	check("page : la photo scotchée et son crédit", page.contains(main._pack.credit_line(astro[1])) if main._pack.has_verified_image(astro[1]) else true)
+	_swipe(carnet, 30)
+	await create_timer(0.5).timeout
+	check("un petit glissé ne tourne pas la page", carnet.page_index == 2)
+	_swipe(carnet, 200)
+	await create_timer(0.5).timeout
+	check("glissé vers la droite : retour page 1", carnet.page_index == 1)
+	# L'étoile.
 	carnet._favorite_button.pressed.emit()
-	check("l'étoile : en favori", main._save.is_favorite(astro[1]["id"]) and carnet._favorite_star.filled and carnet._favorite_button.text.contains("Dans vos favoris"))
+	check("l'étoile : en favori", main._save.is_favorite(astro[0]["id"]) and carnet._favorite_star.filled)
+	# Le sommaire : toucher une ligne mène à sa page.
+	carnet.prev_page()
+	await create_timer(0.5).timeout
+	var rows: Array = carnet._paper.find_children("*", "Button", true, false)
+	check("sommaire : 4 lignes", rows.size() == 4, str(rows.size()))
+	rows[3].pressed.emit()
+	await create_timer(0.5).timeout
+	check("une ligne du sommaire : sa page (page 4, l'acquis)", carnet.page_index == 4 and carnet.detail_id == astro[3]["id"])
+	check("page d'un acquis : « Acquis : … » et le tampon vert « Acquis · sans indice »", _labels(carnet).contains("Acquis : vous l’avez retrouvé sans indice")
+			and carnet._stage_stamp.top_text == "Acquis" and carnet._stage_stamp.bottom_text == "sans indice" and carnet._stage_stamp.color == Ds.SAGE)
+	carnet.next_page()
+	await create_timer(0.5).timeout
+	check("dernière page : on ne va pas plus loin", carnet.page_index == 4 and carnet._next.disabled)
 	carnet.back()
 	await create_timer(0.4).timeout
-	check("retour de la fiche : la liste, avec son résumé", carnet.detail_id == "" and carnet._top.visible and main._current == carnet)
-	carnet._set_tab(CarnetScreen.Tab.FAVORITES)
-	await create_timer(0.3).timeout
-	check("onglet « Favoris » : le dossier gardé", carnet._body.get_children().filter(func(c): return c is Button).size() == 1)
-	carnet._show_detail(astro[3]["id"])
-	await create_timer(0.3).timeout
-	check("fiche d'un acquis : « Acquis : … »", _labels(carnet).contains("Acquis : vous l’avez retrouvé sans indice"))
+	check("retour : l'étagère", carnet.book == "" and carnet._shelf_view.visible and main._current == carnet)
+	check("le carnet des favoris : « 1 page »", (carnet.covers["Favoris"].get_child(0) as NotebookCover).caption == "1 page")
+	carnet.open_book("Favoris")
+	await create_timer(0.6).timeout
+	check("favoris : le dossier gardé", carnet.pages.size() == 1 and carnet.pages[0]["id"] == astro[0]["id"] and _labels(carnet).contains("1 page gardée."))
+	carnet.back()
+	carnet.open_book("Sciences")
+	await create_timer(0.6).timeout
+	check("carnet vierge : il dit comment il se remplit, pas de page à tourner", _labels(carnet).contains("Ce carnet est encore vierge") and carnet._next.disabled)
+	carnet.back()
+	carnet.open_book("Histoire")
+	await create_timer(0.6).timeout
+	carnet.next_page()
+	await create_timer(0.5).timeout
 	main._unhandled_input(_cancel())
 	await create_timer(0.3).timeout
-	check("bouton Retour d'Android : de la fiche à la liste", carnet.detail_id == "" and main._current == carnet)
+	check("bouton Retour d'Android : du carnet à l'étagère", carnet.book == "" and main._current == carnet)
 	main._unhandled_input(_cancel())
 	await create_timer(0.6).timeout
-	check("puis de la liste à la couverture", main._current == main._cover)
+	check("puis de l'étagère à la couverture", main._current == main._cover)
 
 	# Dans une fiche, les dossiers à consolider reviennent à leur date, les acquis passent en révision.
 	var order: Array = main._save.draw(astro, astro.size())
@@ -184,3 +220,16 @@ func _cancel() -> InputEventAction:
 	e.action = "ui_cancel"
 	e.pressed = true
 	return e
+
+
+func _swipe(carnet: CarnetScreen, dx: float) -> void:
+	var a := InputEventMouseButton.new()
+	a.button_index = MOUSE_BUTTON_LEFT
+	a.pressed = true
+	a.position = Vector2(360, 600)
+	carnet._input(a)
+	var b := InputEventMouseButton.new()
+	b.button_index = MOUSE_BUTTON_LEFT
+	b.pressed = false
+	b.position = Vector2(360 + dx, 610)
+	carnet._input(b)
