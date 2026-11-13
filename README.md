@@ -31,7 +31,9 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   d’importation rangée dans les secrets du dépôt : double-cliquer une seule fois sur `creer_cle_play.bat` (Windows ; il
   crée la clé dans `Documents\Cheveche-cle-Play`, hors du dépôt, et copie le texte à coller dans le secret
   `ANDROID_KEYSTORE_BASE64` ; le mot de passe va dans `ANDROID_KEYSTORE_PASSWORD`), puis relancer le workflow
-  (Actions > Android > Run workflow). Sans ces secrets, le journal de construction (branche `journal-ci`, `export.txt`) dit « clé de test, non publiable ».
+  (Actions > Android > Run workflow). La page de confidentialité (`docs/confidentialite.html`, copiée à la racine pour que l’adresse marche quel que soit le
+  dossier choisi dans GitHub Pages) est publiée par GitHub Pages : https://grosjeje3123.github.io/Cheveche-/confidentialite.html.
+  Sans ces secrets, le journal de construction (branche `journal-ci`, `export.txt`) dit « clé de test, non publiable ».
 
 ## Règles du jeu (dans `core/reveal_rules.gd`)
 - On peut **répondre tout de suite**, sans rien gratter : les quatre réponses sont ouvertes dès le départ et le dossier vaut 100 points.

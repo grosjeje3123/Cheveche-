@@ -6,7 +6,7 @@ name: Android
 on:
   push:
     branches: [main]
-    paths-ignore: ["docs/**", "**.md"]   # la page de confidentialité et le README ne changent pas l'AAB
+    paths-ignore: ["docs/**", "**.md", "confidentialite.html"]   # la page de confidentialité et le README ne changent pas l'AAB
   workflow_dispatch:
 
 permissions:
