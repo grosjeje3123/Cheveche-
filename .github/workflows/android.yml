@@ -125,7 +125,18 @@ jobs:
           KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
         run: |
           if [ -n "$KEYSTORE_B64" ]; then
-            echo "$KEYSTORE_B64" | base64 -d > "$HOME/upload.jks"
+            # Un copier-coller (surtout depuis un téléphone) ajoute parfois des espaces ou des retours à la ligne.
+            KEYSTORE_B64=$(printf '%s' "$KEYSTORE_B64" | tr -d ' \r\n\t')
+            KEYSTORE_PASSWORD=$(printf '%s' "$KEYSTORE_PASSWORD" | tr -d '\r\n' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+            KEYSTORE_ALIAS=$(printf '%s' "$KEYSTORE_ALIAS" | tr -d '\r\n' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+            printf '%s' "$KEYSTORE_B64" | base64 -d > "$HOME/upload.jks" || true
+            # Contrôle de la clé, sans rien dévoiler : taille, début de l'empreinte, longueurs, réponse de keytool.
+            {
+              echo "Clé : $(stat -c %s "$HOME/upload.jks") octets, empreinte $(sha256sum "$HOME/upload.jks" | cut -c1-16), texte de ${#KEYSTORE_B64} caractères"
+              echo "Mot de passe : ${#KEYSTORE_PASSWORD} caractères ; alias : ${KEYSTORE_ALIAS:-cheveche}"
+              keytool -list -keystore "$HOME/upload.jks" -storepass "$KEYSTORE_PASSWORD" -alias "${KEYSTORE_ALIAS:-cheveche}" 2>&1 \
+                | grep -v JAVA_TOOL | head -3 || true
+            } > journal/cle.txt
             export GODOT_ANDROID_KEYSTORE_RELEASE_PATH="$HOME/upload.jks"
             export GODOT_ANDROID_KEYSTORE_RELEASE_USER="${KEYSTORE_ALIAS:-cheveche}"
             export GODOT_ANDROID_KEYSTORE_RELEASE_PASSWORD="$KEYSTORE_PASSWORD"
