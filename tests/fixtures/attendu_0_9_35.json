@@ -1,0 +1,109 @@
+{
+	"a_revoir_au_2026_11_13": 26,
+	"defi_2026_11_11_en_cours": 2,
+	"defi_2026_11_12_fait": false,
+	"favoris": [
+		"animaux01-q12",
+		"arts02-q07",
+		"astro01-q03",
+		"geographie01-q13",
+		"histoire01-q04",
+		"litterature01-q12",
+		"sciences01-q01"
+	],
+	"joues": 132,
+	"jours_de_suite_au_2026_11_10": 3,
+	"jours_de_suite_au_2026_11_12": 0,
+	"meilleur_defi": 290,
+	"meilleure_serie_10": 898,
+	"par_discipline": {
+		"Animaux": {
+			"acquis": 0,
+			"joues": 11,
+			"maitrise_n": 11,
+			"maitrise_rang": 1,
+			"points": 850,
+			"sans_indice": 7,
+			"trouves": 10,
+			"trouves_n2": 0
+		},
+		"Arts": {
+			"acquis": 0,
+			"joues": 12,
+			"maitrise_n": 12,
+			"maitrise_rang": 1,
+			"points": 920,
+			"sans_indice": 8,
+			"trouves": 10,
+			"trouves_n2": 0
+		},
+		"Astronomie": {
+			"acquis": 6,
+			"joues": 41,
+			"maitrise_n": 41,
+			"maitrise_rang": 2,
+			"points": 3000,
+			"sans_indice": 30,
+			"trouves": 30,
+			"trouves_n2": 11
+		},
+		"Géographie": {
+			"acquis": 1,
+			"joues": 15,
+			"maitrise_n": 15,
+			"maitrise_rang": 1,
+			"points": 1100,
+			"sans_indice": 8,
+			"trouves": 15,
+			"trouves_n2": 0
+		},
+		"Histoire": {
+			"acquis": 2,
+			"joues": 13,
+			"maitrise_n": 13,
+			"maitrise_rang": 1,
+			"points": 1020,
+			"sans_indice": 9,
+			"trouves": 12,
+			"trouves_n2": 0
+		},
+		"Littérature": {
+			"acquis": 2,
+			"joues": 12,
+			"maitrise_n": 12,
+			"maitrise_rang": 0,
+			"points": 510,
+			"sans_indice": 3,
+			"trouves": 8,
+			"trouves_n2": 0
+		},
+		"Nature": {
+			"acquis": 0,
+			"joues": 14,
+			"maitrise_n": 14,
+			"maitrise_rang": 1,
+			"points": 770,
+			"sans_indice": 5,
+			"trouves": 12,
+			"trouves_n2": 0
+		},
+		"Sciences": {
+			"acquis": 1,
+			"joues": 14,
+			"maitrise_n": 14,
+			"maitrise_rang": 0,
+			"points": 850,
+			"sans_indice": 7,
+			"trouves": 11,
+			"trouves_n2": 0
+		}
+	},
+	"semaine_du_2026_11_12": {
+		"jours": 3,
+		"justes": 55,
+		"points": 4820,
+		"reponses": 65
+	},
+	"series_jouees": 35,
+	"trouves": 108
+}

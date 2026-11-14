@@ -1,4 +1,4 @@
-# Chevêche – prototype (Godot 4.4)
+# Chevêche (Godot 4.4)
 
 Le jeu s’est appelé L’INDICE jusqu’à la version 0.9.17 ; le dossier et les fichiers internes gardent parfois ce nom (« lindice »).
 
@@ -194,6 +194,15 @@ au lancement dans `main.gd`. Il faut **réexporter** l’application après tout
   relit le presse-papiers (le code peut être entouré d’autres mots ou coupé en lignes) et, au second toucher, remplace la progression.
   Un code tronqué ou altéré est refusé sans rien changer (`SaveStore.export_code`, `decode_code`, `import_code`).
   Rien n’est envoyé : sans compte ni serveur, c’est ce qui permet de changer de téléphone.
+  Un code écrit par une version plus récente du jeu est refusé (« Mettez d’abord le jeu à jour »).
+- **Sauvegarde à l’épreuve des incidents** (`core/save_store.gd`) : à chaque lancement réussi, `progress.json` est recopié en
+  `progress.json.bak`. Si le fichier est illisible, il est mis de côté (`.bad`, sans écraser celui d’un incident précédent) et
+  la copie prend sa place ; sans copie, on repart de zéro. Un fichier présent mais impossible à ouvrir n’est jamais écrasé.
+  Des défis du jour terminés, seuls les deux plus récents gardent le détail des réponses : le code de sauvegarde reste court.
+  `tests/fixtures/` garde une vraie sauvegarde de la 0.9.35 et les chiffres qu’elle donnait : `test_sauvegarde` vérifie à
+  chaque version qu’ils n’ont pas bougé.
+- **Sauvegarde Android** : `user_data_backup/allow=true` dans les deux presets d’export. Android recopie alors `user://`
+  dans le compte Google du joueur et le rend à la réinstallation ou sur un nouveau téléphone (à vérifier sur appareil).
 - « Crédits » : en tête, l’auteur du jeu (Jérôme Hosdez, avec son adresse en lien `mailto:`, constantes `AUTHOR` et
   `AUTHOR_EMAIL` de `screens/credits_screen.gd`) ; puis les images rangées par discipline (un sommaire de huit étiquettes en haut y mène), et pour chacune le
   dossier (titre et numéro), le titre du fichier (d’après la page Commons), l’auteur, la licence avec lien vers l’acte

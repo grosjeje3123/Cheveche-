@@ -116,7 +116,9 @@ func _initialize() -> void:
 	fresh.load_from_disk()
 	check("tirage sans progression : 5 dossiers distincts", _ids(fresh.draw(pack.questions, 5)).size() == 5)
 
-	# sauvegarde abîmée : on repart de zéro, sans planter, l'ancien fichier est mis de côté
+	# sauvegarde abîmée, sans copie de secours : on repart de zéro, sans planter, l'ancien fichier est mis de côté
+	# (avec une copie, c'est elle qui est reprise : voir test_sauvegarde)
+	DirAccess.remove_absolute(SAVE + SaveStore.BACKUP_SUFFIX)
 	var f := FileAccess.open(SAVE, FileAccess.WRITE)
 	f.store_string("{ ceci n'est pas du json")
 	f.close()
@@ -187,6 +189,7 @@ func _initialize() -> void:
 	# ---------- Parcours complet ----------
 	DirAccess.remove_absolute(SAVE)
 	DirAccess.remove_absolute(SAVE + ".bad")
+	DirAccess.remove_absolute(SAVE + SaveStore.BACKUP_SUFFIX)
 	root.size = Vector2i(720, 1280)
 	var main: Control = load("res://main.tscn").instantiate()
 	main.save_path = SAVE

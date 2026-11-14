@@ -11,7 +11,8 @@ signal open_rules
 ## La progression vient d'être effacée ou remplacée (les autres écrans doivent se remettre à jour).
 signal progress_reset
 
-const VERSION_TEXT := "Chevêche, prototype 0.9.35."
+## Le numéro vient du projet (application/config/version) : un seul endroit à changer, avec les presets d'export.
+static var VERSION_TEXT: String = "Chevêche, version %s." % ProjectSettings.get_setting("application/config/version", "")
 ## Délai pour confirmer par un second toucher (remise à zéro, restauration), et durée des messages d'état.
 const CONFIRM_SECONDS := 4.0
 
@@ -178,6 +179,11 @@ func _on_restore_pressed() -> void:
 	if SaveStore.decode_code(text).is_empty():
 		_armed = null
 		_say(_restore_state, "Copiez d’abord un code", Ds.TERRACOTTA)
+		return
+	if SaveStore.code_is_newer(text):
+		# Le code vient d'une version plus récente du jeu : on ne l'applique pas à moitié.
+		_armed = null
+		_say(_restore_state, "Mettez d’abord le jeu à jour", Ds.TERRACOTTA)
 		return
 	if _armed != _restore_state:
 		_arm(_restore_state, "Toucher encore pour remplacer")

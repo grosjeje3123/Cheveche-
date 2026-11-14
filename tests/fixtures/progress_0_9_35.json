@@ -1,0 +1,1745 @@
+{
+	"best_series": {
+		"10": 898,
+		"defi": 290
+	},
+	"daily": {
+		"2026-10-20": {
+			"done": true,
+			"points": 280,
+			"results": [
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "geographie02-q14",
+					"points": 30
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "sciences01-q21",
+					"points": 30
+				},
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "arts02-q08",
+					"points": 60
+				},
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "nature01-q19",
+					"points": 60
+				},
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "animaux01-q07",
+					"points": 100
+				}
+			]
+		},
+		"2026-10-21": {
+			"done": true,
+			"points": 220,
+			"results": [
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "geographie02-q10",
+					"points": 60
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "astro01-q11",
+					"points": 30
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "histoire02-q05",
+					"points": 100
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "svt01-q11",
+					"points": 30
+				},
+				{
+					"clues": 1,
+					"correct": false,
+					"id": "litterature02-q05",
+					"points": 0
+				}
+			]
+		},
+		"2026-10-22": {
+			"done": true,
+			"points": 220,
+			"results": [
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "arts02-q14",
+					"points": 100
+				},
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "nature01-q20",
+					"points": 30
+				},
+				{
+					"clues": 2,
+					"correct": false,
+					"id": "animaux01-q14",
+					"points": 0
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "astro01-q12",
+					"points": 60
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "svt01-q11",
+					"points": 30
+				}
+			]
+		},
+		"2026-10-24": {
+			"done": true,
+			"points": 220,
+			"results": [
+				{
+					"clues": 1,
+					"correct": false,
+					"id": "litterature01-q02",
+					"points": 0
+				},
+				{
+					"clues": 1,
+					"correct": false,
+					"id": "astro01-q11",
+					"points": 0
+				},
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "sciences01-q10",
+					"points": 100
+				},
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "geographie02-q03",
+					"points": 60
+				},
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "animaux01-q15",
+					"points": 60
+				}
+			]
+		},
+		"2026-10-26": {
+			"done": true,
+			"points": 250,
+			"results": [
+				{
+					"clues": 0,
+					"correct": false,
+					"id": "litterature02-q07",
+					"points": 0
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "arts01-q03",
+					"points": 60
+				},
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "geographie02-q01",
+					"points": 60
+				},
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "svt01-q11",
+					"points": 100
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "animaux01-q15",
+					"points": 30
+				}
+			]
+		},
+		"2026-10-27": {
+			"done": true,
+			"points": 120,
+			"results": [
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "geographie02-q04",
+					"points": 60
+				},
+				{
+					"clues": 2,
+					"correct": false,
+					"id": "astro01-q11",
+					"points": 0
+				},
+				{
+					"clues": 0,
+					"correct": false,
+					"id": "nature01-q17",
+					"points": 0
+				},
+				{
+					"clues": 2,
+					"correct": false,
+					"id": "litterature02-q05",
+					"points": 0
+				},
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "animaux01-q07",
+					"points": 60
+				}
+			]
+		},
+		"2026-10-29": {
+			"done": true,
+			"points": 190,
+			"results": [
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "geographie01-q11",
+					"points": 30
+				},
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "astro02-q15",
+					"points": 100
+				},
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "svt01-q10",
+					"points": 30
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "histoire02-q12",
+					"points": 30
+				},
+				{
+					"clues": 0,
+					"correct": false,
+					"id": "animaux01-q15",
+					"points": 0
+				}
+			]
+		},
+		"2026-10-30": {
+			"done": true,
+			"points": 250,
+			"results": [
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "sciences01-q23",
+					"points": 100
+				},
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "animaux02-q12",
+					"points": 60
+				},
+				{
+					"clues": 1,
+					"correct": false,
+					"id": "arts02-q02",
+					"points": 0
+				},
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "svt01-q09",
+					"points": 30
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "litterature02-q05",
+					"points": 60
+				}
+			]
+		},
+		"2026-11-01": {
+			"done": true,
+			"points": 180,
+			"results": [
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "nature01-q01",
+					"points": 30
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "litterature01-q10",
+					"points": 30
+				},
+				{
+					"clues": 1,
+					"correct": false,
+					"id": "astro02-q06",
+					"points": 0
+				},
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "svt01-q11",
+					"points": 60
+				},
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "arts01-q12",
+					"points": 60
+				}
+			]
+		},
+		"2026-11-03": {
+			"done": true,
+			"points": 90,
+			"results": [
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "svt01-q03",
+					"points": 30
+				},
+				{
+					"clues": 1,
+					"correct": false,
+					"id": "astro02-q12",
+					"points": 0
+				},
+				{
+					"clues": 2,
+					"correct": false,
+					"id": "animaux02-q15",
+					"points": 0
+				},
+				{
+					"clues": 2,
+					"correct": false,
+					"id": "arts01-q12",
+					"points": 0
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "svt01-q11",
+					"points": 60
+				}
+			]
+		},
+		"2026-11-04": {
+			"done": true,
+			"points": 290,
+			"results": [
+				{
+					"clues": 0,
+					"correct": false,
+					"id": "litterature02-q07",
+					"points": 0
+				},
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "astro02-q05",
+					"points": 100
+				},
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "arts02-q02",
+					"points": 60
+				},
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "animaux01-q07",
+					"points": 30
+				},
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "svt01-q11",
+					"points": 100
+				}
+			]
+		},
+		"2026-11-05": {
+			"done": true,
+			"points": 190,
+			"results": [
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "animaux02-q14",
+					"points": 30
+				},
+				{
+					"clues": 1,
+					"correct": false,
+					"id": "nature01-q20",
+					"points": 0
+				},
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "sciences01-q11",
+					"points": 30
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "litterature02-q05",
+					"points": 30
+				},
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "arts02-q03",
+					"points": 100
+				}
+			]
+		},
+		"2026-11-08": {
+			"done": true,
+			"points": 220,
+			"results": [
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "geographie01-q03",
+					"points": 60
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "astro02-q12",
+					"points": 100
+				},
+				{
+					"clues": 1,
+					"correct": false,
+					"id": "svt01-q08",
+					"points": 0
+				},
+				{
+					"clues": 1,
+					"correct": true,
+					"id": "svt01-q11",
+					"points": 60
+				},
+				{
+					"clues": 1,
+					"correct": false,
+					"id": "animaux01-q07",
+					"points": 0
+				}
+			]
+		},
+		"2026-11-09": {
+			"done": true,
+			"points": 190,
+			"results": [
+				{
+					"clues": 0,
+					"correct": false,
+					"id": "nature01-q12",
+					"points": 0
+				},
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "geographie02-q12",
+					"points": 100
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "sciences01-q14",
+					"points": 60
+				},
+				{
+					"clues": 2,
+					"correct": true,
+					"id": "litterature02-q05",
+					"points": 30
+				},
+				{
+					"clues": 2,
+					"correct": false,
+					"id": "arts01-q12",
+					"points": 0
+				}
+			]
+		},
+		"2026-11-10": {
+			"done": true,
+			"points": 200,
+			"results": [
+				{
+					"clues": 1,
+					"correct": false,
+					"id": "geographie01-q13",
+					"points": 0
+				},
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "nature01-q20",
+					"points": 100
+				},
+				{
+					"clues": 0,
+					"correct": false,
+					"id": "histoire02-q09",
+					"points": 0
+				},
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "animaux02-q15",
+					"points": 100
+				},
+				{
+					"clues": 2,
+					"correct": false,
+					"id": "arts01-q12",
+					"points": 0
+				}
+			]
+		},
+		"2026-11-11": {
+			"done": false,
+			"points": 0,
+			"results": [
+				{
+					"clues": 0,
+					"correct": true,
+					"id": "histoire02-q10",
+					"points": 60
+				},
+				{
+					"clues": 2,
+					"correct": false,
+					"id": "litterature02-q01",
+					"points": 0
+				}
+			]
+		}
+	},
+	"days": {
+		"2026-10-20": {
+			"answers": 12,
+			"correct": 12,
+			"points": 680,
+			"series": 2
+		},
+		"2026-10-21": {
+			"answers": 12,
+			"correct": 8,
+			"points": 620,
+			"series": 2
+		},
+		"2026-10-22": {
+			"answers": 13,
+			"correct": 12,
+			"points": 910,
+			"series": 2
+		},
+		"2026-10-23": {
+			"answers": 9,
+			"correct": 6,
+			"points": 460,
+			"series": 1
+		},
+		"2026-10-24": {
+			"answers": 17,
+			"correct": 14,
+			"points": 1030,
+			"series": 2
+		},
+		"2026-10-26": {
+			"answers": 13,
+			"correct": 10,
+			"points": 600,
+			"series": 2
+		},
+		"2026-10-27": {
+			"answers": 15,
+			"correct": 10,
+			"points": 600,
+			"series": 2
+		},
+		"2026-10-28": {
+			"answers": 10,
+			"correct": 7,
+			"points": 450,
+			"series": 1
+		},
+		"2026-10-29": {
+			"answers": 9,
+			"correct": 7,
+			"points": 450,
+			"series": 2
+		},
+		"2026-10-30": {
+			"answers": 14,
+			"correct": 11,
+			"points": 880,
+			"series": 2
+		},
+		"2026-11-01": {
+			"answers": 12,
+			"correct": 8,
+			"points": 580,
+			"series": 2
+		},
+		"2026-11-02": {
+			"answers": 7,
+			"correct": 6,
+			"points": 490,
+			"series": 1
+		},
+		"2026-11-03": {
+			"answers": 12,
+			"correct": 7,
+			"points": 440,
+			"series": 2
+		},
+		"2026-11-04": {
+			"answers": 9,
+			"correct": 7,
+			"points": 520,
+			"series": 2
+		},
+		"2026-11-05": {
+			"answers": 10,
+			"correct": 8,
+			"points": 550,
+			"series": 2
+		},
+		"2026-11-07": {
+			"answers": 5,
+			"correct": 5,
+			"points": 430,
+			"series": 1
+		},
+		"2026-11-08": {
+			"answers": 10,
+			"correct": 8,
+			"points": 680,
+			"series": 2
+		},
+		"2026-11-09": {
+			"answers": 15,
+			"correct": 10,
+			"points": 710,
+			"series": 2
+		},
+		"2026-11-10": {
+			"answers": 42,
+			"correct": 39,
+			"points": 3830,
+			"series": 2
+		},
+		"2026-11-11": {
+			"answers": 8,
+			"correct": 6,
+			"points": 280,
+			"series": 1
+		}
+	},
+	"dossiers": {
+		"animaux01-q03": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-08",
+			"wins": 1
+		},
+		"animaux01-q07": {
+			"best": 100,
+			"boite": 0,
+			"first": 100,
+			"plays": 6,
+			"revoir": "2026-11-09",
+			"wins": 4
+		},
+		"animaux01-q11": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-09",
+			"wins": 1
+		},
+		"animaux01-q12": {
+			"best": 0,
+			"boite": 0,
+			"first": 0,
+			"plays": 1,
+			"revoir": "2026-10-22",
+			"wins": 0
+		},
+		"animaux01-q14": {
+			"best": 100,
+			"boite": 2,
+			"first": 0,
+			"plays": 3,
+			"revoir": "2026-11-14",
+			"wins": 2
+		},
+		"animaux01-q15": {
+			"best": 60,
+			"boite": 0,
+			"first": 60,
+			"plays": 3,
+			"revoir": "2026-10-30",
+			"wins": 2
+		},
+		"animaux02-q03": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"animaux02-q11": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-10",
+			"wins": 1
+		},
+		"animaux02-q12": {
+			"best": 60,
+			"boite": 0,
+			"first": 60,
+			"plays": 1,
+			"revoir": "2026-10-31",
+			"wins": 1
+		},
+		"animaux02-q14": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-11-06",
+			"wins": 1
+		},
+		"animaux02-q15": {
+			"best": 100,
+			"boite": 1,
+			"first": 0,
+			"plays": 2,
+			"revoir": "2026-11-13",
+			"wins": 1
+		},
+		"arts01-q03": {
+			"best": 60,
+			"boite": 0,
+			"first": 60,
+			"plays": 1,
+			"revoir": "2026-10-27",
+			"wins": 1
+		},
+		"arts01-q04": {
+			"best": 0,
+			"boite": 0,
+			"first": 0,
+			"plays": 1,
+			"revoir": "2026-11-06",
+			"wins": 0
+		},
+		"arts01-q10": {
+			"best": 0,
+			"boite": 0,
+			"first": 0,
+			"plays": 1,
+			"revoir": "2026-10-29",
+			"wins": 0
+		},
+		"arts01-q12": {
+			"best": 60,
+			"boite": 0,
+			"first": 60,
+			"plays": 4,
+			"revoir": "2026-11-11",
+			"wins": 1
+		},
+		"arts01-q13": {
+			"best": 100,
+			"boite": 0,
+			"first": 100,
+			"plays": 2,
+			"revoir": "2026-11-12",
+			"wins": 2
+		},
+		"arts02-q01": {
+			"best": 100,
+			"boite": 1,
+			"first": 30,
+			"plays": 2,
+			"revoir": "2026-11-10",
+			"wins": 2
+		},
+		"arts02-q02": {
+			"best": 100,
+			"boite": 0,
+			"first": 100,
+			"plays": 3,
+			"revoir": "2026-11-05",
+			"wins": 2
+		},
+		"arts02-q03": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-12",
+			"wins": 1
+		},
+		"arts02-q06": {
+			"best": 100,
+			"boite": 0,
+			"first": 100,
+			"plays": 4,
+			"revoir": "2026-10-25",
+			"wins": 3
+		},
+		"arts02-q07": {
+			"best": 100,
+			"boite": 1,
+			"first": 0,
+			"plays": 4,
+			"revoir": "2026-11-04",
+			"wins": 3
+		},
+		"arts02-q08": {
+			"best": 100,
+			"boite": 1,
+			"first": 60,
+			"plays": 2,
+			"revoir": "2026-11-04",
+			"wins": 2
+		},
+		"arts02-q14": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-10-29",
+			"wins": 1
+		},
+		"astro01-q01": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"astro01-q02": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"astro01-q03": {
+			"best": 100,
+			"boite": 3,
+			"first": 100,
+			"plays": 2,
+			"wins": 2
+		},
+		"astro01-q04": {
+			"best": 100,
+			"boite": 3,
+			"first": 100,
+			"plays": 2,
+			"wins": 2
+		},
+		"astro01-q05": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"astro01-q06": {
+			"best": 100,
+			"boite": 1,
+			"first": 30,
+			"plays": 2,
+			"revoir": "2026-11-13",
+			"wins": 2
+		},
+		"astro01-q07": {
+			"best": 100,
+			"boite": 3,
+			"first": 100,
+			"plays": 5,
+			"wins": 5
+		},
+		"astro01-q08": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"astro01-q09": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"astro01-q10": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"astro01-q11": {
+			"best": 100,
+			"boite": 2,
+			"first": 30,
+			"plays": 7,
+			"revoir": "2026-11-17",
+			"wins": 5
+		},
+		"astro01-q12": {
+			"best": 100,
+			"boite": 1,
+			"first": 60,
+			"plays": 2,
+			"revoir": "2026-11-13",
+			"wins": 2
+		},
+		"astro01-q13": {
+			"best": 100,
+			"boite": 1,
+			"first": 100,
+			"plays": 5,
+			"revoir": "2026-11-13",
+			"wins": 5
+		},
+		"astro01-q14": {
+			"best": 100,
+			"boite": 1,
+			"first": 0,
+			"plays": 2,
+			"revoir": "2026-11-13",
+			"wins": 1
+		},
+		"astro01-q15": {
+			"best": 100,
+			"boite": 1,
+			"first": 60,
+			"plays": 3,
+			"revoir": "2026-11-13",
+			"wins": 3
+		},
+		"astro02-q01": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"astro02-q02": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"astro02-q03": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"astro02-q04": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"astro02-q05": {
+			"best": 100,
+			"boite": 3,
+			"first": 100,
+			"plays": 3,
+			"wins": 3
+		},
+		"astro02-q06": {
+			"best": 100,
+			"boite": 1,
+			"first": 0,
+			"plays": 3,
+			"revoir": "2026-11-13",
+			"wins": 2
+		},
+		"astro02-q07": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"astro02-q08": {
+			"best": 100,
+			"boite": 1,
+			"first": 30,
+			"plays": 4,
+			"revoir": "2026-11-13",
+			"wins": 3
+		},
+		"astro02-q09": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"astro02-q10": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"astro02-q11": {
+			"best": 100,
+			"boite": 3,
+			"first": 100,
+			"plays": 2,
+			"wins": 2
+		},
+		"astro02-q12": {
+			"best": 100,
+			"boite": 2,
+			"first": 0,
+			"plays": 3,
+			"revoir": "2026-11-17",
+			"wins": 2
+		},
+		"astro02-q13": {
+			"best": 100,
+			"boite": 1,
+			"first": 0,
+			"plays": 2,
+			"revoir": "2026-11-13",
+			"wins": 1
+		},
+		"astro02-q14": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-17",
+			"wins": 1
+		},
+		"astro02-q15": {
+			"best": 100,
+			"boite": 3,
+			"first": 100,
+			"plays": 3,
+			"wins": 3
+		},
+		"astron2-q01": {
+			"best": 100,
+			"boite": 1,
+			"first": 30,
+			"plays": 2,
+			"revoir": "2026-11-13",
+			"wins": 2
+		},
+		"astron2-q05": {
+			"best": 60,
+			"boite": 0,
+			"first": 0,
+			"plays": 3,
+			"revoir": "2026-11-12",
+			"wins": 1
+		},
+		"astron2-q09": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-08",
+			"wins": 1
+		},
+		"astron2-q11": {
+			"best": 100,
+			"boite": 1,
+			"first": 30,
+			"plays": 2,
+			"revoir": "2026-11-08",
+			"wins": 2
+		},
+		"astron2-q16": {
+			"best": 100,
+			"boite": 1,
+			"first": 60,
+			"plays": 2,
+			"revoir": "2026-11-12",
+			"wins": 2
+		},
+		"astron2-q17": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-11-03",
+			"wins": 1
+		},
+		"astron2-q18": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-10-31",
+			"wins": 1
+		},
+		"astron2-q20": {
+			"best": 100,
+			"boite": 0,
+			"first": 100,
+			"plays": 2,
+			"revoir": "2026-10-28",
+			"wins": 1
+		},
+		"astron2-q21": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-11-12",
+			"wins": 1
+		},
+		"astron2-q23": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-14",
+			"wins": 1
+		},
+		"astron2-q30": {
+			"best": 100,
+			"boite": 2,
+			"first": 60,
+			"plays": 3,
+			"revoir": "2026-11-16",
+			"wins": 3
+		},
+		"geographie01-q03": {
+			"best": 100,
+			"boite": 0,
+			"first": 60,
+			"plays": 3,
+			"revoir": "2026-11-09",
+			"wins": 3
+		},
+		"geographie01-q10": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-15",
+			"wins": 1
+		},
+		"geographie01-q11": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-10-30",
+			"wins": 1
+		},
+		"geographie01-q13": {
+			"best": 100,
+			"boite": 0,
+			"first": 100,
+			"plays": 5,
+			"revoir": "2026-11-11",
+			"wins": 3
+		},
+		"geographie01-q15": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-10-23",
+			"wins": 1
+		},
+		"geographie02-q01": {
+			"best": 60,
+			"boite": 0,
+			"first": 60,
+			"plays": 1,
+			"revoir": "2026-10-27",
+			"wins": 1
+		},
+		"geographie02-q03": {
+			"best": 60,
+			"boite": 0,
+			"first": 60,
+			"plays": 1,
+			"revoir": "2026-10-25",
+			"wins": 1
+		},
+		"geographie02-q04": {
+			"best": 100,
+			"boite": 0,
+			"first": 60,
+			"plays": 6,
+			"revoir": "2026-11-10",
+			"wins": 5
+		},
+		"geographie02-q06": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-11-04",
+			"wins": 1
+		},
+		"geographie02-q08": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-09",
+			"wins": 1
+		},
+		"geographie02-q09": {
+			"best": 100,
+			"boite": 3,
+			"first": 100,
+			"plays": 2,
+			"wins": 2
+		},
+		"geographie02-q10": {
+			"best": 60,
+			"boite": 0,
+			"first": 60,
+			"plays": 1,
+			"revoir": "2026-10-22",
+			"wins": 1
+		},
+		"geographie02-q11": {
+			"best": 100,
+			"boite": 1,
+			"first": 0,
+			"plays": 2,
+			"revoir": "2026-11-07",
+			"wins": 1
+		},
+		"geographie02-q12": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-16",
+			"wins": 1
+		},
+		"geographie02-q14": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-10-21",
+			"wins": 1
+		},
+		"histoire01-q01": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-11-08",
+			"wins": 1
+		},
+		"histoire01-q03": {
+			"best": 100,
+			"boite": 3,
+			"first": 100,
+			"plays": 2,
+			"wins": 2
+		},
+		"histoire01-q04": {
+			"best": 100,
+			"boite": 0,
+			"first": 30,
+			"plays": 5,
+			"revoir": "2026-11-09",
+			"wins": 5
+		},
+		"histoire01-q05": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-15",
+			"wins": 1
+		},
+		"histoire01-q14": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-16",
+			"wins": 1
+		},
+		"histoire02-q01": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 2,
+			"revoir": "2026-11-02",
+			"wins": 1
+		},
+		"histoire02-q04": {
+			"best": 100,
+			"boite": 1,
+			"first": 0,
+			"plays": 2,
+			"revoir": "2026-11-10",
+			"wins": 1
+		},
+		"histoire02-q05": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-10-28",
+			"wins": 1
+		},
+		"histoire02-q09": {
+			"best": 0,
+			"boite": 0,
+			"first": 0,
+			"plays": 1,
+			"revoir": "2026-11-11",
+			"wins": 0
+		},
+		"histoire02-q10": {
+			"best": 60,
+			"boite": 0,
+			"first": 60,
+			"plays": 1,
+			"revoir": "2026-11-12",
+			"wins": 1
+		},
+		"histoire02-q12": {
+			"best": 100,
+			"boite": 0,
+			"first": 100,
+			"plays": 2,
+			"revoir": "2026-10-30",
+			"wins": 2
+		},
+		"histoire02-q13": {
+			"best": 100,
+			"boite": 3,
+			"first": 100,
+			"plays": 2,
+			"wins": 2
+		},
+		"histoire02-q14": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-18",
+			"wins": 1
+		},
+		"litterature01-q02": {
+			"best": 0,
+			"boite": 0,
+			"first": 0,
+			"plays": 1,
+			"revoir": "2026-10-25",
+			"wins": 0
+		},
+		"litterature01-q10": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-11-02",
+			"wins": 1
+		},
+		"litterature01-q12": {
+			"best": 100,
+			"boite": 0,
+			"first": 100,
+			"plays": 2,
+			"revoir": "2026-11-05",
+			"wins": 1
+		},
+		"litterature01-q13": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 2,
+			"revoir": "2026-11-10",
+			"wins": 1
+		},
+		"litterature02-q01": {
+			"best": 60,
+			"boite": 0,
+			"first": 60,
+			"plays": 2,
+			"revoir": "2026-11-12",
+			"wins": 1
+		},
+		"litterature02-q04": {
+			"best": 100,
+			"boite": 3,
+			"first": 100,
+			"plays": 3,
+			"wins": 3
+		},
+		"litterature02-q05": {
+			"best": 60,
+			"boite": 0,
+			"first": 0,
+			"plays": 5,
+			"revoir": "2026-11-10",
+			"wins": 3
+		},
+		"litterature02-q07": {
+			"best": 0,
+			"boite": 0,
+			"first": 0,
+			"plays": 2,
+			"revoir": "2026-11-05",
+			"wins": 0
+		},
+		"litterature02-q08": {
+			"best": 0,
+			"boite": 0,
+			"first": 0,
+			"plays": 2,
+			"revoir": "2026-11-10",
+			"wins": 0
+		},
+		"litterature02-q09": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-10-27",
+			"wins": 1
+		},
+		"litterature02-q10": {
+			"best": 0,
+			"boite": 0,
+			"first": 0,
+			"plays": 1,
+			"revoir": "2026-11-10",
+			"wins": 0
+		},
+		"litterature02-q11": {
+			"best": 100,
+			"boite": 3,
+			"first": 100,
+			"plays": 2,
+			"wins": 2
+		},
+		"nature01-q01": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-11-02",
+			"wins": 1
+		},
+		"nature01-q08": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-05",
+			"wins": 1
+		},
+		"nature01-q12": {
+			"best": 0,
+			"boite": 0,
+			"first": 0,
+			"plays": 1,
+			"revoir": "2026-11-10",
+			"wins": 0
+		},
+		"nature01-q16": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-11-12",
+			"wins": 1
+		},
+		"nature01-q17": {
+			"best": 60,
+			"boite": 0,
+			"first": 60,
+			"plays": 3,
+			"revoir": "2026-10-31",
+			"wins": 1
+		},
+		"nature01-q19": {
+			"best": 60,
+			"boite": 0,
+			"first": 60,
+			"plays": 1,
+			"revoir": "2026-10-21",
+			"wins": 1
+		},
+		"nature01-q20": {
+			"best": 100,
+			"boite": 1,
+			"first": 30,
+			"plays": 3,
+			"revoir": "2026-11-13",
+			"wins": 2
+		},
+		"sciences01-q01": {
+			"best": 100,
+			"boite": 1,
+			"first": 30,
+			"plays": 3,
+			"revoir": "2026-11-02",
+			"wins": 3
+		},
+		"sciences01-q03": {
+			"best": 100,
+			"boite": 1,
+			"first": 60,
+			"plays": 3,
+			"revoir": "2026-11-02",
+			"wins": 3
+		},
+		"sciences01-q08": {
+			"best": 0,
+			"boite": 0,
+			"first": 0,
+			"plays": 1,
+			"revoir": "2026-10-30",
+			"wins": 0
+		},
+		"sciences01-q09": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-10-27",
+			"wins": 1
+		},
+		"sciences01-q10": {
+			"best": 100,
+			"boite": 3,
+			"first": 100,
+			"plays": 2,
+			"wins": 2
+		},
+		"sciences01-q11": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-11-06",
+			"wins": 1
+		},
+		"sciences01-q14": {
+			"best": 60,
+			"boite": 0,
+			"first": 60,
+			"plays": 1,
+			"revoir": "2026-11-10",
+			"wins": 1
+		},
+		"sciences01-q16": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-11-15",
+			"wins": 1
+		},
+		"sciences01-q18": {
+			"best": 0,
+			"boite": 0,
+			"first": 0,
+			"plays": 2,
+			"revoir": "2026-10-29",
+			"wins": 0
+		},
+		"sciences01-q21": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-10-21",
+			"wins": 1
+		},
+		"sciences01-q23": {
+			"best": 100,
+			"boite": 0,
+			"first": 100,
+			"plays": 2,
+			"revoir": "2026-11-11",
+			"wins": 2
+		},
+		"svt01-q02": {
+			"best": 100,
+			"boite": 0,
+			"first": 100,
+			"plays": 2,
+			"revoir": "2026-11-03",
+			"wins": 1
+		},
+		"svt01-q03": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-11-04",
+			"wins": 1
+		},
+		"svt01-q05": {
+			"best": 100,
+			"boite": 2,
+			"first": 100,
+			"plays": 1,
+			"revoir": "2026-10-31",
+			"wins": 1
+		},
+		"svt01-q08": {
+			"best": 0,
+			"boite": 0,
+			"first": 0,
+			"plays": 2,
+			"revoir": "2026-11-09",
+			"wins": 0
+		},
+		"svt01-q09": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-10-31",
+			"wins": 1
+		},
+		"svt01-q10": {
+			"best": 30,
+			"boite": 0,
+			"first": 30,
+			"plays": 1,
+			"revoir": "2026-10-30",
+			"wins": 1
+		},
+		"svt01-q11": {
+			"best": 100,
+			"boite": 0,
+			"first": 30,
+			"plays": 7,
+			"revoir": "2026-11-09",
+			"wins": 7
+		},
+		"svt01-q12": {
+			"best": 0,
+			"boite": 0,
+			"first": 0,
+			"plays": 1,
+			"revoir": "2026-10-25",
+			"wins": 0
+		},
+		"svt01-q13": {
+			"best": 100,
+			"boite": 1,
+			"first": 30,
+			"plays": 2,
+			"revoir": "2026-11-13",
+			"wins": 2
+		},
+		"svt01-q15": {
+			"best": 100,
+			"boite": 2,
+			"first": 60,
+			"plays": 3,
+			"revoir": "2026-11-06",
+			"wins": 3
+		}
+	},
+	"favoris": [
+		"histoire01-q04",
+		"sciences01-q01",
+		"animaux01-q12",
+		"geographie01-q13",
+		"astro01-q03",
+		"litterature01-q12",
+		"arts02-q07"
+	],
+	"series_played": 35,
+	"version": 3
+}

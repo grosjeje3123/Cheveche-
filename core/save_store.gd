@@ -3,13 +3,23 @@ extends RefCounted
 ## Progression du joueur, gardée sur l'appareil (user://progress.json). Rien n'est envoyé nulle part.
 ## Une « connaissance collectée » est un dossier trouvé au moins une fois.
 ## Le fichier est écrit en entier à chaque réponse (quelques ko) : on peut quitter à tout moment.
-## Si la sauvegarde est illisible, on repart de zéro (l'ancien fichier est mis de côté en .bad)
-## et un échec d'écriture ne bloque jamais le jeu.
+## À chaque lancement réussi, le fichier lu est recopié à côté (.bak). Si la sauvegarde est illisible, elle est
+## mise de côté (.bad) et la copie prend sa place ; sans copie, on repart de zéro.
+## Un fichier présent mais impossible à ouvrir n'est jamais écrasé : la partie continue sans écrire.
+## Un échec d'écriture ne bloque jamais le jeu.
 ## Pour changer d'appareil sans compte ni serveur : export_code() donne un texte de quelques ko (la progression
 ## compressée), que le joueur copie et garde lui-même ; import_code() le relit et remplace la progression.
 
+## Version du format écrit. Les versions 1 à 3 se lisent telles quelles (voir _migrate) ; un code de sauvegarde
+## d'une version plus récente que celle-ci est refusé (le jeu doit d'abord être mis à jour).
 const VERSION := 3
 const DEFAULT_PATH := "user://progress.json"
+## Copie du dernier fichier lu sans erreur, et fichier illisible mis de côté.
+const BACKUP_SUFFIX := ".bak"
+const BAD_SUFFIX := ".bad"
+## Défis du jour dont on garde le détail des réponses (les plus récents) ; des autres, terminés, on ne garde
+## que « fait » et les points : c'est tout ce que lisent les jours de suite, et le code de sauvegarde reste court.
+const KEEP_DAILY_DETAILS := 2
 ## Nombre de jours d'historique gardés (le bilan de la semaine n'en demande que 14).
 const KEEP_DAYS := 120
 ## Défis du jour gardés (pour compter les jours de suite).
@@ -27,6 +37,12 @@ const CODE_PREFIX := "CHEVECHE1-"
 const CODE_MAX_BYTES := 4 * 1024 * 1024
 
 var path: String
+
+## Ce qui s'est passé au dernier chargement.
+enum LoadState { NEW, READ, RESTORED, UNREADABLE }
+var load_state := LoadState.NEW
+# Vrai quand le fichier existe mais n'a pas pu être ouvert : on ne l'écrase pas (voir save).
+var _write_locked := false
 
 ## id du dossier -> {"best": int, "plays": int, "wins": int, "first": int, "boite": int, "revoir": "AAAA-MM-JJ" (facultatif)}
 ## « boite » : la révision espacée (voir RETURN_DAYS). 0 : à revoir demain (manqué, ou trouvé avec un indice) ;
@@ -53,21 +69,73 @@ func _init(save_path := DEFAULT_PATH) -> void:
 
 func load_from_disk() -> void:
 	_clear()
+	load_state = LoadState.NEW
+	_write_locked = false
+	var backup := path + BACKUP_SUFFIX
 	if not FileAccess.file_exists(path):
+		# Pas de sauvegarde : une copie restée là viendrait d'une autre vie du fichier, on ne la reprend pas.
+		DirAccess.remove_absolute(backup)
 		return
 	var file := FileAccess.open(path, FileAccess.READ)
 	if file == null:
-		push_warning("Sauvegarde illisible : %s" % path)
+		# Le fichier est là mais ne s'ouvre pas (disque, droits) : on joue avec la copie si elle existe,
+		# et on n'écrit rien par-dessus un fichier qu'on n'a pas pu lire.
+		push_warning("Sauvegarde illisible, laissée telle quelle : %s" % path)
+		_write_locked = true
+		load_state = LoadState.RESTORED if _restore_backup() else LoadState.UNREADABLE
 		return
-	var json := JSON.new()
-	var parsed := json.parse(file.get_as_text())
+	var data = _parse(file.get_as_text())
 	file.close()
-	var data = json.data if parsed == OK else null
 	if not _is_valid(data):
-		push_warning("Sauvegarde invalide, on repart de zéro : %s" % path)
-		DirAccess.rename_absolute(path, path + ".bad")
+		push_warning("Sauvegarde invalide, mise de côté : %s" % path)
+		_set_aside()
+		if _restore_backup():
+			load_state = LoadState.RESTORED
+			save()
+		else:
+			load_state = LoadState.UNREADABLE
 		return
-	_apply(data)
+	_apply(_migrate(data))
+	load_state = LoadState.READ
+	# Le fichier vient d'être lu sans erreur : c'est lui la nouvelle copie de secours.
+	DirAccess.copy_absolute(path, backup)
+
+
+static func _parse(text: String):
+	var json := JSON.new()
+	return json.data if json.parse(text) == OK else null
+
+
+# Reprend la copie de secours. Faux s'il n'y en a pas de valide.
+func _restore_backup() -> bool:
+	var file := FileAccess.open(path + BACKUP_SUFFIX, FileAccess.READ)
+	if file == null:
+		return false
+	var data = _parse(file.get_as_text())
+	file.close()
+	if not _is_valid(data):
+		return false
+	_apply(_migrate(data))
+	return true
+
+
+# Met le fichier illisible de côté, sans écraser celui d'un incident précédent.
+func _set_aside() -> void:
+	var target := path + BAD_SUFFIX
+	if FileAccess.file_exists(target):
+		target += "-" + Time.get_datetime_string_from_system().replace(":", "").replace("-", "")
+	DirAccess.rename_absolute(path, target)
+
+
+## Version du format d'une progression lue (les toutes premières sauvegardes n'en portaient pas : 1).
+static func version_of(data: Dictionary) -> int:
+	return maxi(1, int(data.get("version", 1)))
+
+
+# Amène une progression lue au format courant. Les versions 1 à 3 ont les mêmes champs, lus avec leurs valeurs
+# par défaut dans _apply : rien à convertir. Une prochaine version ajoute ici sa conversion, par numéro.
+static func _migrate(data: Dictionary) -> Dictionary:
+	return data
 
 
 func _clear() -> void:
@@ -152,6 +220,8 @@ func _data() -> Dictionary:
 
 ## Écrit la sauvegarde. Renvoie faux (sans planter) si le disque refuse.
 func save() -> bool:
+	if _write_locked:
+		return false
 	_prune_days()
 	var data := _data()
 	var tmp := path + ".tmp"
@@ -255,12 +325,19 @@ static func decode_code(text: String) -> Dictionary:
 	return json.data
 
 
-## Remplace la progression par celle du code. Faux (et rien de changé) si le code n'est pas valide.
+## Vrai si le texte contient un code valide, mais écrit par une version du jeu plus récente que celle-ci.
+static func code_is_newer(text: String) -> bool:
+	var data := decode_code(text)
+	return not data.is_empty() and version_of(data) > VERSION
+
+
+## Remplace la progression par celle du code. Faux (et rien de changé) si le code n'est pas valide,
+## ou s'il vient d'une version plus récente du jeu.
 func import_code(text: String) -> bool:
 	var data := decode_code(text)
-	if data.is_empty():
+	if data.is_empty() or version_of(data) > VERSION:
 		return false
-	_apply(data)
+	_apply(_migrate(data))
 	save()
 	return true
 
@@ -273,6 +350,7 @@ func _day(key: String) -> Dictionary:
 
 
 # On ne garde que les KEEP_DAYS derniers jours (les clés se trient comme les dates), et KEEP_DAILY défis.
+# Des défis terminés, seuls les KEEP_DAILY_DETAILS plus récents gardent le détail de leurs réponses.
 func _prune_days() -> void:
 	for pair in [[_days, KEEP_DAYS], [_daily, KEEP_DAILY]]:
 		var table: Dictionary = pair[0]
@@ -282,6 +360,12 @@ func _prune_days() -> void:
 		keys.sort()
 		for k in keys.slice(0, keys.size() - int(pair[1])):
 			table.erase(k)
+	var daily_keys := _daily.keys()
+	daily_keys.sort()
+	for k in daily_keys.slice(0, maxi(0, daily_keys.size() - KEEP_DAILY_DETAILS)):
+		var d: Dictionary = _daily[k]
+		if bool(d.get("done", false)) and not (d["results"] as Array).is_empty():
+			d["results"] = []
 
 
 # ---------- Défi du jour ----------
